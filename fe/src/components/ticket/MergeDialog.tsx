@@ -6,7 +6,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/u
 import { useSessionStore } from '@/store/sessions';
 import { useBoardStore } from '@/store/board';
 import { useBranchStore } from '@/store/branches';
-import { createBranchChatSession } from '@/lib/question-branch-chat';
+import { createBranchChatSession, questionContext } from '@/lib/question-branch-chat';
 import type { createQuestionSession, MergePreview, TaskProposal } from '@/lib/question-branch';
 import type { TicketContext } from './TicketChat';
 import { TASK_PROPOSAL_PROMPT } from '@/lib/team-prompts';
@@ -39,29 +39,32 @@ export function MergeDialog({
     const messages = useSessionStore.getState().messagesByTicket[ticket.sessionKey] ?? [];
     const branch = useBranchStore.getState().branchesByTicket[ticket.ticketId]
       ?.find((item) => item.id === ticket.sessionKey);
-    const mainContext = JSON.stringify({
+    const mock = branch?.mock ?? true;
+    const mainContext = questionContext({
       ticket,
       comments: useBoardStore.getState().commentsByCard[ticket.ticketId] ?? [],
       messages: useSessionStore.getState().messagesByTicket[ticket.ticketId] ?? [],
+      mock,
     });
-    const session = createBranchChatSession({
-      branchId: ticket.sessionKey,
-      mainContext,
-      branchContext: branch?.mainContext ?? mainContext,
-      messages,
-      taskProposalPrompt: TASK_PROPOSAL_PROMPT,
-    });
-    session.previewMerge(ticket.sessionKey, controller.signal)
-      .then(async (preview) => {
-        if (!cancelled) {
-          setCompact(preview.compact);
-          setPrepared({ session, preview, transcript: JSON.stringify(messages) });
-          if (mode === 'work') {
-            const proposal = await session.suggestTask(ticket.sessionKey, preview.id, ticket, controller.signal);
-            if (!cancelled) setTask(proposal);
-          }
+    Promise.resolve().then(async () => {
+      const session = createBranchChatSession({
+        branchId: ticket.sessionKey,
+        mainContext,
+        branchContext: branch?.mainContext ?? mainContext,
+        messages,
+        taskProposalPrompt: TASK_PROPOSAL_PROMPT,
+        mock,
+      });
+      const preview = await session.previewMerge(ticket.sessionKey, controller.signal);
+      if (!cancelled) {
+        setCompact(preview.compact);
+        setPrepared({ session, preview, transcript: JSON.stringify(messages) });
+        if (mode === 'work') {
+          const proposal = await session.suggestTask(ticket.sessionKey, preview.id, ticket, controller.signal);
+          if (!cancelled) setTask(proposal);
         }
-      })
+      }
+    })
       .catch((e) => {
         if (!cancelled) setError(e instanceof Error ? e.message : 'compact failed');
       });

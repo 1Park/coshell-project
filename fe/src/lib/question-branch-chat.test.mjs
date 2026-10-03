@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import { readUIMessageStream } from 'ai';
-import { branchChatResponse, createBranchChatSession, QUESTION_BRANCH_MOCK } from './question-branch-chat.ts';
+import { branchChatResponse, createBranchChatSession, QUESTION_BRANCH_MOCK, questionContext } from './question-branch-chat.ts';
 import { createQuestionSession } from './question-branch.ts';
 
 const message = (id, role, text) => ({ id, role, parts: [{ type: 'text', text }] });
@@ -21,6 +21,7 @@ test('HTTP origins without crypto.randomUUID support chat and approved merge', a
     const response = await branchChatResponse({
       branchId: 'q-http', mainContext: 'Main', branchContext: 'Snapshot',
       messages: [message('u1', 'user', 'Question')],
+      mock: true,
     });
     const text = await response.text();
     assert.match(text, /MOCK answer/);
@@ -30,14 +31,15 @@ test('HTTP origins without crypto.randomUUID support chat and approved merge', a
   }
 });
 
-test('default UI transport produces a valid assistant stream without API access', async () => {
-  assert.equal(QUESTION_BRANCH_MOCK, true);
+test('explicit Mock UI transport produces a valid assistant stream without API access', async () => {
+  assert.equal(QUESTION_BRANCH_MOCK, false);
   const originalFetch = globalThis.fetch;
   globalThis.fetch = () => { throw new Error('No network allowed'); };
   try {
     const response = await branchChatResponse({
       branchId: 'q-1', mainContext: 'Main', branchContext: 'Snapshot',
       messages: [message('u1', 'user', 'Question')],
+      mock: true,
     });
     assert.match(response.headers.get('content-type'), /text\/event-stream/);
     const chunks = (await response.text()).split('\n\n')
@@ -63,6 +65,7 @@ test('saved UI history is restored and compacted only on approval', async () => 
   const session = createBranchChatSession({
     branchId: 'q-existing', mainContext: 'Latest main', branchContext: 'Starting snapshot',
     messages: [message('u1', 'user', 'Earlier question'), message('a1', 'assistant', 'Earlier answer')],
+    mock: true,
   });
   assert.equal(session.getState().branches['q-existing'].mainContext, 'Starting snapshot');
   assert.equal(session.getState().branches['q-existing'].messages.length, 2);
@@ -75,6 +78,7 @@ test('saved UI history is restored and compacted only on approval', async () => 
 
 test('follow-up transport, empty questions and cancellation', async () => {
   const options = {
+    mock: true,
     branchId: 'q-1', mainContext: 'Main', branchContext: 'Snapshot',
     messages: [message('u1', 'user', 'First'), message('a1', 'assistant', 'Answer'), message('u2', 'user', 'Follow-up')],
   };
@@ -83,4 +87,26 @@ test('follow-up transport, empty questions and cancellation', async () => {
   await assert.rejects(branchChatResponse({ ...options, messages: [message('u1', 'user', ' ')] }), /empty/);
   await assert.rejects(branchChatResponse({ ...options, signal: AbortSignal.abort() }), { name: 'AbortError' });
   await assert.rejects(branchChatResponse({ ...options, messages: [] }), /text questions/);
+});
+
+test('live UI wrapper sends no credentials and excludes marked mock context', async () => {
+  const originalFetch = globalThis.fetch;
+  let request;
+  globalThis.fetch = async (url, init) => {
+    request = { url, ...init };
+    return Response.json({ content: [{ type: 'text', text: 'Live reply' }], stop_reason: 'end_turn' });
+  };
+  try {
+    const session = createBranchChatSession({ branchId: 'q-live', mainContext: 'Main', branchContext: 'Main', messages: [] });
+    assert.equal((await session.sendMessage('q-live', 'Question')).content, 'Live reply');
+    assert.equal(request.url, '/api/claude');
+    assert.equal(request.headers['x-api-key'], undefined);
+    const context = JSON.parse(questionContext({
+      ticket: {}, mock: false,
+      comments: [{ text: '[MOCK compact] fake' }, { text: 'Verified context' }],
+      messages: [message('u1', 'user', 'Question'), message('a1', 'assistant', '[MOCK answer] fake')],
+    }));
+    assert.deepEqual(context.comments, [{ text: 'Verified context' }]);
+    assert.deepEqual(context.messages, []);
+  } finally { globalThis.fetch = originalFetch; }
 });

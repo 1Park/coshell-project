@@ -2,6 +2,7 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { useBoardStore } from './board';
 import { useSessionStore } from './sessions';
+import { QUESTION_BRANCH_MOCK, questionContext } from '../lib/question-branch-chat';
 
 export interface Branch {
   id: string;
@@ -9,11 +10,12 @@ export interface Branch {
   title: string;
   createdAt: string;
   mainContext?: string;
+  mock?: boolean;
 }
 
 interface BranchState {
   branchesByTicket: Record<string, Branch[]>;
-  createBranch: (ticketId: string) => Branch;
+  createBranch: (ticketId: string, mock?: boolean) => Branch;
   renameBranch: (ticketId: string, branchId: string, title: string) => void;
   deleteBranch: (ticketId: string, branchId: string) => void;
 }
@@ -23,17 +25,19 @@ export const useBranchStore = create<BranchState>()(
     (set) => ({
       branchesByTicket: {},
 
-      createBranch: (ticketId) => {
+      createBranch: (ticketId, mock = QUESTION_BRANCH_MOCK) => {
         const board = useBoardStore.getState();
         const branch: Branch = {
           id: `q-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 6)}`,
           ticketId,
           title: 'New question',
           createdAt: new Date().toISOString(),
-          mainContext: JSON.stringify({
+          mock,
+          mainContext: questionContext({
             ticket: board.cards[ticketId],
             comments: board.commentsByCard[ticketId] ?? [],
             messages: useSessionStore.getState().messagesByTicket[ticketId] ?? [],
+            mock,
           }),
         };
         set((state) => ({

@@ -10,7 +10,7 @@ import { useSessionStore } from '@/store/sessions';
 import { TicketChat, type TicketContext } from './TicketChat';
 import { MergeDialog } from './MergeDialog';
 import { buildTaskStartPrompt } from '@/lib/task-start-prompt';
-import { QUESTION_BRANCH_MOCK } from '@/lib/question-branch-chat';
+import { questionContext } from '@/lib/question-branch-chat';
 import type { TaskProposal } from '@/lib/question-branch';
 import { cn } from '@/lib/utils';
 
@@ -116,14 +116,16 @@ export function TicketPanel({ ticketId }: { ticketId: string }) {
         ticketId: card.id,
         prompt: buildTaskStartPrompt({
           ticket,
-          mainContext: JSON.stringify({
+          mainContext: questionContext({
+            ticket,
             comments: board.commentsByCard[card.id] ?? [],
             messages: useSessionStore.getState().messagesByTicket[card.id] ?? [],
+            mock: branch.mock ?? true,
           }),
-          mock: QUESTION_BRANCH_MOCK,
+          mock: branch.mock ?? true,
           task,
         }),
-        mock: QUESTION_BRANCH_MOCK,
+        mock: branch.mock ?? true,
       });
       close();
       return;
@@ -161,7 +163,7 @@ export function TicketPanel({ ticketId }: { ticketId: string }) {
           <div className="min-w-0 flex-1">
             <p className="text-muted-foreground flex items-center gap-1.5 text-[11px] font-medium">
               <MessageSquareIcon className="size-3" />
-              Question Branch · {QUESTION_BRANCH_MOCK ? 'Mock · ' : ''}{base.status}
+              Question Branch · {(selected?.mock ?? true) ? 'Mock' : 'Live · Sonnet 5.5'} · {base.status}
               <span className={cn('ml-1 inline-block size-1.5 rounded-full', PRIORITY_META[card.priority].dot)} />
               {PRIORITY_META[card.priority].name}
             </p>
@@ -181,6 +183,13 @@ export function TicketPanel({ ticketId }: { ticketId: string }) {
           <p className="text-muted-foreground mt-1 line-clamp-2 text-xs">{card.description}</p>
         ) : null}
       </div>
+
+      <Button size="sm" variant="ghost" className="mx-3 my-1 shrink-0" disabled={running || merging !== null} onClick={() => {
+        const branch = useBranchStore.getState().createBranch(card.id, !(selected?.mock ?? true));
+        setActiveTicket(card.id, branch.id);
+      }}>
+        {(selected?.mock ?? true) ? 'Start new Live QB' : 'Start new Mock QB'}
+      </Button>
 
       <div className="border-border flex shrink-0 items-center gap-1.5 border-b px-3 py-1.5">
         <GitBranchIcon className="text-muted-foreground size-3.5 shrink-0" />
