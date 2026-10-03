@@ -643,13 +643,14 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
                     {comments.map((c) => {
                       if (c.ai) {
                         const merged = c.text.match(/^\[(.+?) merged\]\n?([\s\S]*)$/);
+                        const authorName = MEMBERS[c.authorId]?.name ?? 'CoRAID member';
                         return (
-                          <div key={c.id} className="bg-muted/60 rounded-xl px-3 py-2.5">
+                          <div key={c.id} className="rounded-xl border border-border/60 bg-muted/40 px-3 py-2.5 opacity-80">
                             <p className="flex items-center gap-1.5 text-[11px] font-semibold tracking-wide text-muted-foreground">
-                              <SparklesIcon className="size-3 text-violet-500" />
-                              AI SUMMARY
+                              <SparklesIcon className="size-3 text-zinc-500" />
+                              {authorName} · AI SUMMARY
                               {merged && (
-                                <span className="rounded-full bg-violet-500/15 px-1.5 py-px text-[10px] text-violet-600 dark:text-violet-400">
+                                 <span className="rounded-full bg-zinc-500/15 px-1.5 py-px text-[10px] text-zinc-600 dark:text-zinc-400">
                                   {merged[1]}
                                 </span>
                               )}
@@ -698,10 +699,10 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
                         );
                       }
                       return (
-                        <div key={c.id} className={cn('group flex flex-col', mine ? 'items-end' : 'items-start')}>
-                          <p className="mb-0.5 flex items-center gap-1 px-1 text-[11px] text-muted-foreground">
-                            {!mine && <span className="font-semibold">{member?.name ?? 'Unknown'}</span>}
-                            {!mine && ' · '}
+                        <div key={c.id} className={cn('group flex flex-col rounded-xl border border-violet-500/30 bg-violet-500/5 p-2 shadow-sm shadow-violet-500/5', mine ? 'items-end' : 'items-start')}>
+                          <p className="mb-1 flex w-full items-center gap-1 px-1 text-[11px] text-muted-foreground">
+                            <span className="font-semibold text-violet-700 dark:text-violet-300">{member?.name ?? 'Unknown'}</span>
+                            <span>·</span>
                             {formatTime(c.createdAt)}
                             {mine && shown && (
                               <span className="ml-1 hidden gap-0.5 group-hover:flex">
@@ -731,8 +732,8 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
                             className={cn(
                               'max-w-[85%] rounded-2xl px-3 py-1.5 text-sm whitespace-pre-wrap',
                               mine
-                                ? 'bg-primary text-primary-foreground rounded-br-md'
-                                : 'bg-muted rounded-bl-md',
+                                ? 'bg-violet-600 text-white rounded-br-md'
+                                : 'bg-violet-100 text-violet-950 dark:bg-violet-500/15 dark:text-violet-50 rounded-bl-md',
                             )}
                           >
                             {c.text}
