@@ -171,6 +171,10 @@ function PeopleField({
 
 export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose: () => void }) {
   const card = useBoardStore((s) => (cardId ? s.cards[cardId] : undefined));
+  const panelOpen = useAppStore((s) => s.activeTicketId !== null);
+  const sidePanelWidth = useAppStore((s) => s.sidePanelWidth);
+  const resizingSidePanel = useAppStore((s) => s.resizingSidePanel);
+  const sidePanelResizeEndedAt = useAppStore((s) => s.sidePanelResizeEndedAt);
   const [commentDraft, setCommentDraft] = useState('');
   const [commentMode, setCommentMode] = useState<'comment' | 'ai'>('ai');
   const [editingId, setEditingId] = useState<string | null>(null);
@@ -210,8 +214,17 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
   const addLabel = useBoardStore((s) => s.addLabel);
   const deleteLabel = useBoardStore((s) => s.deleteLabel);
   const setActiveTicket = useAppStore((s) => s.setActiveTicket);
+  const mergeAnimatingTicketId = useAppStore((s) => s.mergeAnimatingTicketId);
+  const clearMergeAnimation = useAppStore((s) => s.clearMergeAnimation);
   const createBranch = useBranchStore((s) => s.createBranch);
   const queueQuestion = useSessionStore((s) => s.queueQuestion);
+  const showMergeAnimation = Boolean(shown && mergeAnimatingTicketId === shown.id);
+
+  useEffect(() => {
+    if (!showMergeAnimation) return;
+    const timer = window.setTimeout(clearMergeAnimation, 2200);
+    return () => window.clearTimeout(timer);
+  }, [clearMergeAnimation, showMergeAnimation]);
 
   useEffect(() => {
     if (!labelsOpen) return;
@@ -275,7 +288,6 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
     queueQuestion(branch.id, question);
     setCommentDraft('');
     setActiveTicket(card.id, branch.id);
-    onClose();
   };
 
   const [editingTitle, setEditingTitle] = useState(false);
@@ -289,8 +301,20 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
   };
 
   return (
-    <Dialog open={cardId !== null} onOpenChange={(open) => { if (!open) onClose(); }}>
-      <DialogContent initialFocus={false} className="max-h-[85vh] overflow-y-auto sm:max-w-2xl">
+    <Dialog
+      open={cardId !== null}
+      onOpenChange={(open) => {
+        if (open) return;
+        if (resizingSidePanel || Date.now() - sidePanelResizeEndedAt < 600) return;
+        onClose();
+      }}
+    >
+      <DialogContent
+        initialFocus={false}
+        overlayClassName={cn(panelOpen && '!bg-transparent [backdrop-filter:none]', resizingSidePanel && 'pointer-events-none')}
+        style={panelOpen ? { left: `calc((100vw - ${sidePanelWidth}px) / 2)` } : undefined}
+        className="max-h-[85vh] overflow-y-auto sm:max-w-2xl"
+      >
         {!shown ? null : (
           <>
             <DialogHeader>
@@ -574,11 +598,27 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
 
               <div>
                 <p className="mb-2 text-xs font-semibold tracking-wide text-muted-foreground">
-                  COMMENTS · {comments.length}
+                  THREADS · {comments.length}
                 </p>
+                {showMergeAnimation && (
+                  <div className="mb-2 overflow-hidden rounded-xl border border-violet-500/20 bg-violet-500/10 px-3 py-2.5 text-[13px] text-violet-700 shadow-sm dark:text-violet-300">
+                    <div className="flex items-center gap-2">
+                      <span className="relative flex size-5 shrink-0 items-center justify-center rounded-full bg-violet-600 text-white">
+                        <SparklesIcon className="size-3 animate-pulse" />
+                        <span className="absolute inset-0 animate-ping rounded-full bg-violet-500/40" />
+                      </span>
+                      <span className="font-medium">Merging AI summary into this ticket</span>
+                      <span className="flex gap-0.5">
+                        <span className="size-1 animate-bounce rounded-full bg-current [animation-delay:-0.2s]" />
+                        <span className="size-1 animate-bounce rounded-full bg-current [animation-delay:-0.1s]" />
+                        <span className="size-1 animate-bounce rounded-full bg-current" />
+                      </span>
+                    </div>
+                  </div>
+                )}
                 {comments.length === 0 ? (
                   <p className="text-muted-foreground rounded-lg bg-muted/40 px-3 py-2.5 text-[13px]">
-                    No comments yet. Write below or ask AI.
+                    No threads yet. Write below or ask AI.
                   </p>
                 ) : (
                   <div className="space-y-2.5">
@@ -648,8 +688,8 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
                             {mine && shown && (
                               <span className="ml-1 hidden gap-0.5 group-hover:flex">
                                 <button
-                                  title="Edit comment"
-                                  aria-label="Edit comment"
+                                  title="Edit thread"
+                                  aria-label="Edit thread"
                                   onClick={() => {
                                     setEditingId(c.id);
                                     setEditDraft(c.text);
@@ -659,8 +699,8 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
                                   <PencilIcon className="size-3" />
                                 </button>
                                 <button
-                                  title="Delete comment"
-                                  aria-label="Delete comment"
+                                  title="Delete thread"
+                                  aria-label="Delete thread"
                                   onClick={() => deleteComment(shown.id, c.id)}
                                   className="rounded p-0.5 hover:bg-muted hover:text-rose-500"
                                 >
@@ -689,7 +729,7 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
                     value={commentDraft}
                     onChange={(e) => setCommentDraft(e.target.value)}
                     onKeyDown={(e) => { if (e.key === 'Enter') submitComment(); }}
-                    placeholder={commentMode === 'ai' ? 'Ask AI (Enter to send)' : 'Write a comment (Enter to post)'}
+                    placeholder={commentMode === 'ai' ? 'Ask AI (Enter to send)' : 'Write a thread (Enter to post)'}
                     className="h-8 text-sm"
                   />
                   <div
@@ -700,7 +740,7 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
                     {(
                       [
                         { id: 'ai', icon: SparklesIcon, label: 'Ask AI mode' },
-                        { id: 'comment', icon: SendIcon, label: 'Comment mode' },
+                        { id: 'comment', icon: SendIcon, label: 'Thread mode' },
                       ] as const
                     ).map((m) => (
                       <button

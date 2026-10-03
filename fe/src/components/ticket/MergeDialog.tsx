@@ -88,13 +88,13 @@ export function MergeDialog({
 
   return (
     <Dialog open onOpenChange={(open) => { if (!open) onClose(); }}>
-      <DialogContent className="max-h-[90dvh] overflow-y-auto sm:max-w-lg">
+      <DialogContent overlayClassName="z-[70]" className="z-[80] max-h-[90dvh] overflow-y-auto sm:max-w-lg">
         <DialogHeader>
           <DialogTitle className="text-sm">{mode === 'work' ? 'Review compact and Task' : 'Review compact'} — {branchTitle}</DialogTitle>
         </DialogHeader>
         <div className="space-y-3">
           <p className="text-muted-foreground text-xs">
-            Approving records the compact below as a ticket comment and deletes the branch. Rejecting keeps the branch.
+            Approving records the compact below as a ticket thread and deletes the branch. Rejecting keeps the branch.
             {mode === 'work' && ' The proposed Task stays separate from the main summary and is included in the Claude Code handoff only after approval.'}
           </p>
           {error && (

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
 import { GitBranchIcon, MessageSquareIcon, PencilIcon, PlusIcon, XIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useAppStore } from '@/store/app';
@@ -22,6 +22,10 @@ export function TicketPanel({ ticketId }: { ticketId: string }) {
   const columns = useBoardStore((s) => s.columns);
   const close = useAppStore((s) => s.closePanel);
   const openDetail = useAppStore((s) => s.setDetailTicket);
+  const showMergeAnimation = useAppStore((s) => s.showMergeAnimation);
+  const sidePanelWidth = useAppStore((s) => s.sidePanelWidth);
+  const setSidePanelWidth = useAppStore((s) => s.setSidePanelWidth);
+  const setResizingSidePanel = useAppStore((s) => s.setResizingSidePanel);
   const activeBranchId = useAppStore((s) => s.activeBranchId);
   const setActiveTicket = useAppStore((s) => s.setActiveTicket);
   const addComment = useBoardStore((s) => s.addComment);
@@ -75,6 +79,23 @@ export function TicketPanel({ ticketId }: { ticketId: string }) {
     setActiveTicket(card.id, branch.id);
   };
 
+  const startResize = (event: ReactPointerEvent<HTMLDivElement>) => {
+    event.preventDefault();
+    setResizingSidePanel(true);
+    const startX = event.clientX;
+    const startWidth = sidePanelWidth;
+    const move = (e: PointerEvent) => setSidePanelWidth(startWidth + startX - e.clientX);
+    const up = () => {
+      window.removeEventListener('pointermove', move);
+      window.removeEventListener('pointerup', up);
+      window.removeEventListener('blur', up);
+      window.setTimeout(() => setResizingSidePanel(false), 250);
+    };
+    window.addEventListener('pointermove', move);
+    window.addEventListener('pointerup', up);
+    window.addEventListener('blur', up);
+  };
+
   const approveMerge = (branch: Branch, compact: string, startWork: boolean, task?: TaskProposal) => {
     if (startWork && !task) throw new Error('Approve a Task proposal before starting a Task');
     const trimmed = compact.trim();
@@ -85,11 +106,7 @@ export function TicketPanel({ ticketId }: { ticketId: string }) {
         moveCard(card.id, progress.id, progress.cardIds.length);
       }
     }
-    clearSession(branch.id);
-    deleteBranch(card.id, branch.id);
-    setMerging(null);
-    const rest = useBranchStore.getState().branchesByTicket[card.id] ?? [];
-    setActiveTicket(card.id, rest[rest.length - 1]?.id ?? null);
+    finishMerge(branch);
     if (startWork && task) {
       const board = useBoardStore.getState();
       const updated = board.cards[card.id];
@@ -107,13 +124,36 @@ export function TicketPanel({ ticketId }: { ticketId: string }) {
         task,
       }));
       setShowTaskPrompt(true);
+      return;
     }
+    showMergeAnimation(card.id);
+    close();
+  };
+
+  const finishMerge = (branch: Branch) => {
+    clearSession(branch.id);
+    deleteBranch(card.id, branch.id);
+    setMerging(null);
+    const rest = useBranchStore.getState().branchesByTicket[card.id] ?? [];
+    setActiveTicket(card.id, rest[rest.length - 1]?.id ?? null);
   };
 
   const mergingBranch = merging ? branches.find((b) => b.id === merging.branchId) ?? null : null;
 
   return (
-    <aside className="border-border bg-card flex w-[380px] shrink-0 flex-col border-l">
+    <aside
+      className="border-border bg-card relative z-[60] flex shrink-0 animate-in slide-in-from-right-8 flex-col border-l duration-300 ease-out"
+      style={{ width: sidePanelWidth }}
+    >
+      <div
+        role="separator"
+        aria-orientation="vertical"
+        title="Resize panel"
+        onPointerDown={startResize}
+        className="absolute inset-y-0 left-0 z-10 w-2 -translate-x-1 cursor-col-resize touch-none"
+      >
+        <div className="mx-auto h-full w-px bg-transparent transition-colors hover:bg-violet-500/50" />
+      </div>
       <div className="border-border shrink-0 border-b px-3 py-2.5">
         <div className="flex items-start gap-2">
           <div className="min-w-0 flex-1">
@@ -205,7 +245,15 @@ export function TicketPanel({ ticketId }: { ticketId: string }) {
         />
       )}
       {showTaskPrompt && taskPrompt && (
-        <TaskStartDialog prompt={taskPrompt} mock={QUESTION_BRANCH_MOCK} onClose={() => setShowTaskPrompt(false)} />
+        <TaskStartDialog
+          prompt={taskPrompt}
+          mock={QUESTION_BRANCH_MOCK}
+          onClose={() => {
+            setShowTaskPrompt(false);
+            showMergeAnimation(card.id);
+            close();
+          }}
+        />
       )}
     </aside>
   );
