@@ -3,7 +3,7 @@ import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/streamableHttp.js';
 import { getUser } from './auth.mjs';
 import { DATA_DIR } from './store.mjs';
-import { registerTools } from './tools.mjs';
+import { loadPrompt, registerTools } from './tools.mjs';
 
 const HOST = process.env.HOST || '0.0.0.0';
 const PORT = Number(process.env.PORT || 3001);
@@ -27,7 +27,10 @@ async function handleMcp(req, res) {
   } catch {
     return sendJson(res, 400, { jsonrpc: '2.0', error: { code: -32700, message: 'Parse error' }, id: null });
   }
-  const server = new McpServer({ name: 'coshell-task', version: '0.1.0' });
+  const server = new McpServer(
+    { name: 'coraid', version: '0.1.0' },
+    { instructions: await loadPrompt('server.instructions.md') },
+  );
   const transport = new StreamableHTTPServerTransport({ sessionIdGenerator: undefined });
   res.on('close', () => {
     transport.close();
@@ -52,5 +55,5 @@ createServer(async (req, res) => {
     if (!res.headersSent) sendJson(res, 500, { jsonrpc: '2.0', error: { code: -32603, message: 'Internal error' }, id: null });
   }
 }).listen(PORT, HOST, () => {
-  console.log(`coshell MCP listening on http://${HOST}:${PORT}/mcp (data: ${DATA_DIR})`);
+  console.log(`coraid MCP listening on http://${HOST}:${PORT}/mcp (data: ${DATA_DIR})`);
 });

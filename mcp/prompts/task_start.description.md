@@ -1,1 +1,12 @@
-버그 티켓의 Task 브랜치를 만들고 작업을 시작합니다. 사용자가 특정 티켓(예: BUG-104)의 작업을 시작하자고 하면 호출하세요. 결과로 티켓의 메인 컨텍스트와 작업 지침이 반환됩니다.
+Start a CoRAID Task for a ticket and read its context before implementation.
+
+Call this tool when the user pastes a CoRAID task handoff prompt, asks you to work on a CoRAID ticket, or provides a CoRAID ticket_id (for example BUG-104).
+
+The tool creates a Task branch and returns:
+- the branch_id needed later for task_merge;
+- ticket title and description;
+- the append-only common context;
+- discussion entries;
+- the required workflow.
+
+After calling this tool, restate the implementation goal briefly and start working unless the task is ambiguous.

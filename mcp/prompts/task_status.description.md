@@ -1,1 +1,5 @@
-Task 브랜치 상태를 조회합니다. branch_id를 주면 그 브랜치를, 생략하면 현재 사용자의 열린(open) Task 브랜치 목록을 반환합니다. branch_id를 잊었을 때 사용하세요.
+Show CoRAID Task branches for the current user.
+
+Without branch_id, list the current user's open Task branches. With branch_id, return that branch's details.
+
+Use this tool only when the user asks which CoRAID tasks are open, or when you need a branch_id for task_merge that is missing from the conversation.

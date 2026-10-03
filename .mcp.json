@@ -1,6 +1,6 @@
 {
   "mcpServers": {
-    "coshell-task": {
+    "coraid": {
       "type": "http",
       "url": "${CORAID_MCP_URL:-http://localhost:3001/mcp}",
       "headers": {

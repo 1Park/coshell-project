@@ -11,7 +11,7 @@ const ID_PATTERN = /^[A-Za-z0-9_-]+$/;
 export class StoreError extends Error {}
 
 function assertId(id, label) {
-  if (!ID_PATTERN.test(id)) throw new StoreError(`잘못된 ${label}: ${id}`);
+  if (!ID_PATTERN.test(id)) throw new StoreError(`Invalid ${label}: ${id}`);
 }
 
 const ticketDir = (ticketId) => join(DATA_DIR, 'tickets', ticketId);
@@ -35,7 +35,7 @@ async function writeJson(path, data) {
 export async function readMain(ticketId) {
   assertId(ticketId, 'ticket_id');
   const main = await readJson(mainPath(ticketId));
-  if (!main) throw new StoreError(`티켓 ${ticketId}이(가) 없습니다.`);
+  if (!main) throw new StoreError(`Ticket ${ticketId} does not exist.`);
   return main;
 }
 
@@ -51,6 +51,9 @@ export async function createBranch({ ticketId, author, baseContextAt }) {
     ticket_id: ticketId,
     author,
     status: 'open',
+    task_status: 'in_progress',
+    status_note: null,
+    task_status_updated_at: now,
     base_context_at: baseContextAt,
     summary: null,
     work_log: [],

@@ -207,6 +207,9 @@ Task와 Question이 같은 형식을 쓰고 `type`으로 구분한다. 머지된
   "ticket_id": "BUG-108",
   "author": "eunhak",
   "status": "merged",
+  "task_status": "in_review",
+  "status_note": null,
+  "task_status_updated_at": "2026-10-03T05:20:00.000Z",
   "base_context_at": "2026-10-03T04:00:00.000Z",
   "summary": "resize 리스너 추가, iOS 17/18에서 확인.",
   "work_log": ["Composer.tsx 수정", "iOS 17/18 시뮬레이터 확인"],
@@ -218,6 +221,9 @@ Task와 Question이 같은 형식을 쓰고 `type`으로 구분한다. 머지된
 | 필드 | 설명 |
 |---|---|
 | `work_log` | 작업 과정 기록 (string[]). |
+| `task_status` | 작업 진행 상태: `in_progress`(시작 시 자동), `blocked`, `in_review`(머지 시 자동), `done`(사람이 설정). |
+| `status_note` | `blocked`된 이유 등 상태 메모. 없으면 `null`. |
+| `task_status_updated_at` | `task_status`가 마지막으로 바뀐 시각. |
 
 **Question 전용** (웹 백엔드가 작성)
 

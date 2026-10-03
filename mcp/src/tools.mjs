@@ -13,7 +13,7 @@ import {
 
 const PROMPTS_DIR = fileURLToPath(new URL('../prompts/', import.meta.url));
 
-async function loadPrompt(name) {
+export async function loadPrompt(name) {
   const text = await readFile(PROMPTS_DIR + name, 'utf8');
   return text.replace(/<!--[\s\S]*?-->\s*/g, '').trim();
 }
@@ -33,6 +33,13 @@ function formatKst(date) {
   return `${p.year}-${p.month}-${p.day} ${p.hour}:${p.minute}`;
 }
 
+function formatDiscussions(discussions) {
+  if (!Array.isArray(discussions) || discussions.length === 0) return '(none)';
+  return discussions
+    .map((d) => `- ${d.author_id ?? 'unknown'}${d.ai ? ' (AI)' : ''} · ${d.created_at ?? ''}: ${d.text ?? ''}`)
+    .join('\n');
+}
+
 const text = (body) => ({ content: [{ type: 'text', text: body }] });
 const error = (body) => ({ ...text(body), isError: true });
 
@@ -47,19 +54,44 @@ function handled(fn) {
   };
 }
 
+// Finds the branch a status or merge call refers to. Throws StoreError so handled() reports it.
+async function resolveOpenBranch(user, branchId, ticketId) {
+  let branch;
+  if (branchId) {
+    branch = await findBranch(branchId);
+    if (!branch) throw new StoreError(`Branch ${branchId} does not exist.`);
+  } else {
+    const open = await findTaskBranches({ author: user, ticketId, status: 'open' });
+    if (open.length === 0) throw new StoreError('No open Task branch. Call task_start first.');
+    if (open.length > 1) {
+      const list = open.map((b) => `${b.branch_id} (${b.ticket_id})`).join(', ');
+      throw new StoreError(`Multiple open Task branches. Specify branch_id: ${list}`);
+    }
+    branch = open[0];
+  }
+  if (branch.status !== 'open') throw new StoreError(`Branch already merged: ${branch.branch_id}`);
+  return branch;
+}
+
+const branchLookup = {
+  branch_id: z.string().optional().describe('Task branch ID returned by task_start. If omitted, the current user\'s single open branch is used.'),
+  ticket_id: z.string().optional().describe('Ticket ID to narrow the open-branch lookup when branch_id is unknown'),
+};
+
 export async function registerTools(server, user) {
-  const [startDesc, startInstructions, mergeDesc, statusDesc] = await Promise.all([
+  const [startDesc, startInstructions, mergeDesc, statusDesc, updateDesc] = await Promise.all([
     loadPrompt('task_start.description.md'),
     loadPrompt('task_start.instructions.md'),
     loadPrompt('task_merge.description.md'),
     loadPrompt('task_status.description.md'),
+    loadPrompt('task_update_status.description.md'),
   ]);
 
   server.registerTool(
     'task_start',
     {
       description: startDesc,
-      inputSchema: { ticket_id: z.string().describe('작업할 티켓 ID (예: BUG-104)') },
+      inputSchema: { ticket_id: z.string().describe('CoRAID ticket ID to work on, for example BUG-104') },
     },
     handled(async ({ ticket_id }) => {
       const main = await readMain(ticket_id);
@@ -71,9 +103,34 @@ export async function registerTools(server, user) {
       return text(render(startInstructions, {
         ticket_id,
         title: main.title ?? '',
+        description: main.description || '(none)',
         branch_id: branch.branch_id,
-        main_context: main.context || '(아직 메인 컨텍스트가 비어 있습니다.)',
+        main_context: main.context || '(empty)',
+        discussions: formatDiscussions(main.discussions),
       }));
+    }),
+  );
+
+  server.registerTool(
+    'task_update_status',
+    {
+      description: updateDesc,
+      inputSchema: {
+        task_status: z.enum(['in_progress', 'blocked']).describe('blocked when you cannot continue; in_progress when resuming after a block'),
+        note: z.string().optional().describe('Why the task is blocked, or what unblocked it. Required for blocked.'),
+        ...branchLookup,
+      },
+    },
+    handled(async ({ task_status, note, branch_id, ticket_id }) => {
+      if (task_status === 'blocked' && !note?.trim()) return error('A note explaining the block is required.');
+      const branch = await resolveOpenBranch(user, branch_id, ticket_id);
+      Object.assign(branch, {
+        task_status,
+        status_note: note?.trim() || null,
+        task_status_updated_at: new Date().toISOString(),
+      });
+      await writeBranch(branch);
+      return text(`Task ${branch.branch_id} (${branch.ticket_id}) is now ${task_status}.`);
     }),
   );
 
@@ -82,27 +139,13 @@ export async function registerTools(server, user) {
     {
       description: mergeDesc,
       inputSchema: {
-        summary: z.string().min(1).describe('메인 컨텍스트에 이어 붙일 작업 요약'),
-        work_log: z.array(z.string()).optional().describe('작업 과정 기록 (변경 파일, 테스트 결과 등)'),
-        branch_id: z.string().optional().describe('머지할 Task 브랜치 ID. 생략하면 현재 사용자의 열린 브랜치를 찾습니다.'),
-        ticket_id: z.string().optional().describe('branch_id를 모를 때 열린 브랜치를 찾을 티켓 ID'),
+        summary: z.string().min(1).describe('The user-approved completion report to append to the common context'),
+        work_log: z.array(z.string()).optional().describe('Short factual entries of the work process'),
+        ...branchLookup,
       },
     },
     handled(async ({ summary, work_log, branch_id, ticket_id }) => {
-      let branch;
-      if (branch_id) {
-        branch = await findBranch(branch_id);
-        if (!branch) return error(`브랜치 ${branch_id}이(가) 없습니다.`);
-      } else {
-        const open = await findTaskBranches({ author: user, ticketId: ticket_id, status: 'open' });
-        if (open.length === 0) return error('열린 Task 브랜치가 없습니다. task_start로 먼저 시작하세요.');
-        if (open.length > 1) {
-          const list = open.map((b) => `${b.branch_id} (${b.ticket_id})`).join(', ');
-          return error(`열린 Task 브랜치가 여러 개입니다. branch_id를 지정하세요: ${list}`);
-        }
-        branch = open[0];
-      }
-      if (branch.status !== 'open') return error(`이미 머지된 브랜치입니다: ${branch.branch_id}`);
+      const branch = await resolveOpenBranch(user, branch_id, ticket_id);
 
       const now = new Date();
       const entry = `[Task · ${branch.author} · ${formatKst(now)}]\n${summary.trim()}`;
@@ -116,10 +159,13 @@ export async function registerTools(server, user) {
         work_log: work_log ?? [],
         status: 'merged',
         merged_at: now.toISOString(),
+        task_status: 'in_review',
+        status_note: null,
+        task_status_updated_at: now.toISOString(),
       });
       await writeBranch(branch);
 
-      return text(`${branch.ticket_id} 메인 컨텍스트에 머지했습니다 (${branch.branch_id}).\n\n${entry}`);
+      return text(`Merged into the ${branch.ticket_id} common context (${branch.branch_id}). Task status is now in_review.\n\n${entry}`);
     }),
   );
 
@@ -127,17 +173,19 @@ export async function registerTools(server, user) {
     'task_status',
     {
       description: statusDesc,
-      inputSchema: { branch_id: z.string().optional().describe('조회할 Task 브랜치 ID') },
+      inputSchema: { branch_id: z.string().optional().describe('Task branch ID to look up') },
     },
     handled(async ({ branch_id }) => {
       if (branch_id) {
         const branch = await findBranch(branch_id);
-        if (!branch) return error(`브랜치 ${branch_id}이(가) 없습니다.`);
+        if (!branch) return error(`Branch ${branch_id} does not exist.`);
         return text(JSON.stringify(branch, null, 2));
       }
       const open = await findTaskBranches({ author: user, status: 'open' });
-      if (open.length === 0) return text('열린 Task 브랜치가 없습니다.');
-      return text(open.map((b) => `${b.branch_id} · ${b.ticket_id} · ${b.created_at}`).join('\n'));
+      if (open.length === 0) return text('No open Task branches.');
+      return text(open
+        .map((b) => `${b.branch_id} · ${b.ticket_id} · ${b.task_status ?? 'in_progress'} · ${b.created_at}`)
+        .join('\n'));
     }),
   );
 }
