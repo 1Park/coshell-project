@@ -644,8 +644,9 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
                       if (c.ai) {
                         const merged = c.text.match(/^\[(.+?) merged\]\n?([\s\S]*)$/);
                         const authorName = MEMBERS[c.authorId]?.name ?? 'CoRAID member';
+                        const mine = c.authorId === ME;
                         return (
-                          <div key={c.id} className="rounded-xl border border-border/60 bg-muted/40 px-3 py-2.5 opacity-80">
+                          <div key={c.id} className="group rounded-xl border border-border/60 bg-muted/40 px-3 py-2.5 opacity-80">
                             <p className="flex items-center gap-1.5 text-[11px] font-semibold tracking-wide text-muted-foreground">
                               <SparklesIcon className="size-3 text-zinc-500" />
                               {authorName} · AI SUMMARY
@@ -655,6 +656,16 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
                                 </span>
                               )}
                               <span className="ml-auto font-normal">{formatTime(c.createdAt)}</span>
+                              {mine && shown && (
+                                <button
+                                  title="Delete AI summary"
+                                  aria-label="Delete AI summary"
+                                  onClick={() => deleteComment(shown.id, c.id)}
+                                  className="ml-1 hidden rounded p-0.5 group-hover:inline-flex hover:bg-muted hover:text-rose-500"
+                                >
+                                  <Trash2Icon className="size-3" />
+                                </button>
+                              )}
                             </p>
                             <p className="mt-1 text-[13px] whitespace-pre-wrap">{merged ? merged[2] : c.text}</p>
                           </div>

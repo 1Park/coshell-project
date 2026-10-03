@@ -71,7 +71,7 @@ interface BoardState {
   addColumn: (title: string) => void;
   addComment: (cardId: string, text: string, opts?: { authorId?: string; ai?: boolean }) => void;
   editComment: (cardId: string, commentId: string, text: string) => void;
-  deleteComment: (cardId: string, commentId: string) => void;
+  deleteComment: (cardId: string, commentId: string, authorId?: string) => void;
   addLabel: (name: string, colorId: string) => Label | null;
   deleteLabel: (labelId: string) => void;
   resetBoard: () => void;
@@ -322,11 +322,11 @@ export const useBoardStore = create<BoardState>()(
           };
         }),
 
-      deleteComment: (cardId, commentId) =>
+      deleteComment: (cardId, commentId, authorId = 'jh') =>
         set((state) => {
           const list = state.commentsByCard[cardId];
           const target = list?.find((c) => c.id === commentId);
-          if (!list || !target || target.ai) return state;
+          if (!list || !target || target.authorId !== authorId) return state;
           const card = state.cards[cardId];
           return {
             commentsByCard: {
