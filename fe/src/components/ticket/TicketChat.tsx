@@ -18,6 +18,7 @@ export interface TicketContext {
   priority: string;
   labels: string[];
   assignees: string[];
+  reporter: string | null;
   startDate: string | null;
   dueDate: string | null;
   description: string;

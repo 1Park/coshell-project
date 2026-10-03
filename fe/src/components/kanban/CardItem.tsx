@@ -4,7 +4,6 @@ import { CalendarDaysIcon, MessageSquareIcon, PaperclipIcon } from 'lucide-react
 import {
   MEMBERS,
   PRIORITY_META,
-  resolveLabel,
   useBoardStore,
   type BoardCard,
 } from '@/store/board';
@@ -57,7 +56,6 @@ export function AvatarStack({ memberIds, size = 'sm' }: { memberIds: string[]; s
 export function CardFace({ card, overlay = false }: { card: BoardCard; overlay?: boolean }) {
   const due = dueMeta(card.dueDate);
   const commentCount = useBoardStore((s) => s.commentsByCard[card.id]?.length ?? 0);
-  const labelDefs = useBoardStore((s) => s.labels);
   const start = shortDate(card.startDate);
 
   return (
@@ -68,19 +66,9 @@ export function CardFace({ card, overlay = false }: { card: BoardCard; overlay?:
       )}
     >
       <div className="space-y-2 p-3">
-        {card.labels.length > 0 && (
-          <div className="flex flex-wrap gap-x-2.5 gap-y-1">
-            {card.labels.map((id) => {
-              const l = resolveLabel(labelDefs, id);
-              return (
-                <span key={id} className={cn('flex items-center gap-1 text-[10px] font-bold tracking-[0.08em] uppercase', l.text)}>
-                  <span className={cn('size-1.5 rounded-full', l.dot)} />
-                  {l.name}
-                </span>
-              );
-            })}
-          </div>
-        )}
+        <p className="font-mono text-[10px] font-medium tracking-wide text-muted-foreground tabular-nums">
+          {card.id}
+        </p>
         <p className="text-[13px] leading-snug font-medium">{card.title}</p>
         {card.description && <p className="text-muted-foreground line-clamp-2 text-xs leading-relaxed">{card.description}</p>}
         <div className="flex items-center gap-2.5 pt-0.5">

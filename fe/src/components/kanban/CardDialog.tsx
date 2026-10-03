@@ -1,9 +1,11 @@
-import { useState } from 'react';
-import { CalendarDaysIcon, PencilIcon, PlusIcon, SendIcon, SparklesIcon, Trash2Icon, XIcon } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
+import { CheckIcon, ChevronDownIcon, PencilIcon, PlusIcon, SendIcon, SparklesIcon, Trash2Icon, XIcon } from 'lucide-react';
 import {
   LABEL_COLORS,
   MEMBERS,
   PRIORITY_META,
+  resolveLabel,
   useBoardStore,
   type CardComment,
   type Priority,
@@ -15,6 +17,7 @@ import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { Markdown } from '@/components/ui/markdown';
 import { AvatarStack } from './CardItem';
 import { cn } from '@/lib/utils';
 
@@ -38,11 +41,146 @@ function toDateInput(iso: string | null): string {
   return `${y}-${m}-${day}`;
 }
 
+function Field({ caption, children }: { caption: string; children: React.ReactNode }) {
+  return (
+    <div className="flex min-w-0 flex-col gap-1">
+      <span className="text-[10px] font-semibold tracking-wide text-muted-foreground">{caption}</span>
+      {children}
+    </div>
+  );
+}
+
+function PeopleField({
+  value,
+  onChange,
+  multiple,
+  placeholder,
+}: {
+  value: string[];
+  onChange: (ids: string[]) => void;
+  multiple?: boolean;
+  placeholder: string;
+}) {
+  const [open, setOpen] = useState(false);
+  const [pos, setPos] = useState<{ top: number; left: number; width: number } | null>(null);
+  const btnRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const close = () => setOpen(false);
+    window.addEventListener('resize', close);
+    window.addEventListener('scroll', close, true);
+    return () => {
+      window.removeEventListener('resize', close);
+      window.removeEventListener('scroll', close, true);
+    };
+  }, [open ]);
+
+  const toggleOpen = () => {
+    if (open) {
+      setOpen(false);
+      return;
+    }
+    const r = btnRef.current?.getBoundingClientRect();
+    if (r) {
+      setPos({
+        top: r.bottom + 4,
+        left: Math.max(8, Math.min(r.left, window.innerWidth - 280)),
+        width: Math.min(Math.max(r.width, 240), window.innerWidth - 16),
+      });
+    }
+    setOpen(true);
+  };
+
+  const toggle = (id: string) => {
+    if (multiple) onChange(value.includes(id) ? value.filter((v) => v !== id) : [...value, id]);
+    else onChange(value[0] === id ? [] : [id]);
+  };
+  return (
+    <div>
+      <button
+        ref={btnRef}
+        onClick={toggleOpen}
+        aria-expanded={open}
+        className="bg-muted/60 hover:bg-muted flex h-8 w-full items-center gap-1.5 rounded-md px-2 text-xs transition"
+      >
+        <span className="flex min-w-0 flex-1 items-center gap-1.5">
+          {value.length > 0 ? (
+            <>
+              <AvatarStack memberIds={value} size="md" />
+              <span className="min-w-0 flex-1 truncate text-xs">
+                {value.map((id) => MEMBERS[id]?.name ?? id).join(', ')}
+              </span>
+            </>
+          ) : (
+            <span className="text-muted-foreground">{placeholder}</span>
+          )}
+        </span>
+        <ChevronDownIcon className={cn('size-3.5 shrink-0 text-muted-foreground transition', open && 'rotate-180')} />
+      </button>
+      {open && pos && createPortal(
+        <>
+          <div className="fixed inset-0 z-[60]" onClick={() => setOpen(false)} />
+          <div
+            className="border-border fixed z-[61] max-h-64 overflow-y-auto rounded-lg border bg-popover p-1 shadow-xl"
+            style={{ top: pos.top, left: pos.left, width: pos.width }}
+          >
+            {Object.values(MEMBERS).map((m) => {
+              const on = value.includes(m.id);
+              return (
+                <button
+                  key={m.id}
+                  onClick={() => toggle(m.id)}
+                  className="hover:bg-muted/60 flex w-full items-center gap-2 rounded-md px-2 py-1.5 text-left text-[13px] transition"
+                >
+                  <span className={cn('flex size-6 items-center justify-center rounded-full text-[10px] font-bold text-white', m.color)}>
+                    {m.initials}
+                  </span>
+                  <span className="min-w-0 flex-1 truncate">{m.name}</span>
+                  {on && <CheckIcon className="size-3.5 shrink-0" />}
+                </button>
+              );
+            })}
+          </div>
+        </>,
+        document.body,
+      )}
+    </div>
+  );
+}
+
 export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose: () => void }) {
   const card = useBoardStore((s) => (cardId ? s.cards[cardId] : undefined));
+  const [commentDraft, setCommentDraft] = useState('');
+  const [commentMode, setCommentMode] = useState<'comment' | 'ai'>('ai');
+  const [editingId, setEditingId] = useState<string | null>(null);
+  const [editDraft, setEditDraft] = useState('');
+  const [addingLabel, setAddingLabel] = useState(false);
+  const [labelsOpen, setLabelsOpen] = useState(false);
+  const [labelPos, setLabelPos] = useState<{ top: number; left: number; width: number } | null>(null);
+  const labelBtnRef = useRef<HTMLButtonElement>(null);
+  // Keep the last opened card so the close animation never renders an empty shell.
+  const lastCardRef = useRef(card);
+  useEffect(() => {
+    if (card) lastCardRef.current = card;
+  }, [card]);
+  const shown = card ?? lastCardRef.current;
+
+  // Reset per-ticket UI state whenever the ticket changes or the dialog closes.
+  // Never re-key the popup itself: a key change mid-close remounts an orphan
+  // popup that is already "closed" and can't be dismissed.
+  // Dropdown portals live outside the dialog tree, so close them here too.
+  useEffect(() => {
+    setLabelsOpen(false);
+    setAddingLabel(false);
+    setEditingTitle(false);
+    setEditingDesc(false);
+    setEditingId(null);
+    setCommentMode('ai');
+  }, [cardId]);
   const updateCard = useBoardStore((s) => s.updateCard);
   const deleteCard = useBoardStore((s) => s.deleteCard);
-  const comments = useBoardStore((s) => (cardId ? (s.commentsByCard[cardId] ?? EMPTY_COMMENTS) : EMPTY_COMMENTS));
+  const comments = useBoardStore((s) => (shown ? (s.commentsByCard[shown.id] ?? EMPTY_COMMENTS) : EMPTY_COMMENTS));
   const addComment = useBoardStore((s) => s.addComment);
   const editComment = useBoardStore((s) => s.editComment);
   const deleteComment = useBoardStore((s) => s.deleteComment);
@@ -52,11 +190,33 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
   const setActiveTicket = useAppStore((s) => s.setActiveTicket);
   const createBranch = useBranchStore((s) => s.createBranch);
   const queueQuestion = useSessionStore((s) => s.queueQuestion);
-  const [commentDraft, setCommentDraft] = useState('');
-  const [commentMode, setCommentMode] = useState<'comment' | 'ai'>('comment');
-  const [editingId, setEditingId] = useState<string | null>(null);
-  const [editDraft, setEditDraft] = useState('');
-  const [addingLabel, setAddingLabel] = useState(false);
+
+  useEffect(() => {
+    if (!labelsOpen) return;
+    const close = () => setLabelsOpen(false);
+    window.addEventListener('resize', close);
+    window.addEventListener('scroll', close, true);
+    return () => {
+      window.removeEventListener('resize', close);
+      window.removeEventListener('scroll', close, true);
+    };
+  }, [labelsOpen]);
+
+  const toggleLabels = () => {
+    if (labelsOpen) {
+      setLabelsOpen(false);
+      return;
+    }
+    const r = labelBtnRef.current?.getBoundingClientRect();
+    if (r) {
+      setLabelPos({
+        top: r.bottom + 4,
+        left: Math.max(8, Math.min(r.left, window.innerWidth - 280)),
+        width: Math.min(Math.max(r.width, 260), window.innerWidth - 16),
+      });
+    }
+    setLabelsOpen(true);
+  };
   const [labelDraft, setLabelDraft] = useState('');
   const [labelColor, setLabelColor] = useState('violet');
 
@@ -90,76 +250,96 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
     onClose();
   };
 
+  const [editingTitle, setEditingTitle] = useState(false);
+  const [titleDraft, setTitleDraft] = useState('');
+  const [editingDesc, setEditingDesc] = useState(false);
+  const [descDraft, setDescDraft] = useState('');
+
+  const saveTitle = () => {
+    if (card && titleDraft.trim()) updateCard(card.id, { title: titleDraft.trim() });
+    setEditingTitle(false);
+  };
+
   return (
     <Dialog open={cardId !== null} onOpenChange={(open) => { if (!open) onClose(); }}>
-      <DialogContent className="max-h-[85vh] overflow-y-auto sm:max-w-lg">
-        {!card ? null : (
+      <DialogContent initialFocus={false} className="max-h-[85vh] overflow-y-auto sm:max-w-2xl">
+        {!shown ? null : (
           <>
             <DialogHeader>
               <DialogTitle>
-                <Input
-                  value={card.title}
-                  onChange={(e) => updateCard(card.id, { title: e.target.value })}
-                  className="border-transparent px-2 text-base font-semibold shadow-none focus-visible:border-input"
-                />
+                <span className="px-2 font-mono text-[11px] font-medium tracking-wide text-muted-foreground">
+                  {shown.id}
+                </span>
+                {editingTitle ? (
+                  <Input
+                    autoFocus
+                    value={titleDraft}
+                    onChange={(e) => setTitleDraft(e.target.value)}
+                    onBlur={saveTitle}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') saveTitle();
+                      if (e.key === 'Escape') setEditingTitle(false);
+                    }}
+                    className="px-2 text-xl font-semibold"
+                  />
+                ) : (
+                  <button
+                    title="Edit title"
+                    onClick={() => {
+                      setTitleDraft(shown.title);
+                      setEditingTitle(true);
+                    }}
+                    className="hover:bg-muted/60 block w-full rounded-md px-2 py-1 text-left text-xl font-semibold transition"
+                  >
+                    {shown.title || <span className="text-muted-foreground">Untitled</span>}
+                  </button>
+                )}
               </DialogTitle>
             </DialogHeader>
 
             <div className="space-y-5 px-1 pb-1">
-              <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
-                <div className="flex items-center gap-2">
-                  <AvatarStack memberIds={card.assignees} size="md" />
-                  <div className="flex -space-x-1">
-                    {Object.values(MEMBERS).map((m) => {
-                      const on = card.assignees.includes(m.id);
-                      return (
-                        <button
-                          key={m.id}
-                          title={m.name}
-                          onClick={() =>
-                            updateCard(card.id, {
-                              assignees: on ? card.assignees.filter((a) => a !== m.id) : [...card.assignees, m.id],
-                            })
-                          }
-                          className={cn(
-                            'size-7 rounded-full text-xs font-bold text-white ring-2 transition',
-                            m.color,
-                            on ? 'ring-foreground scale-110' : 'opacity-30 ring-transparent hover:opacity-70',
-                          )}
-                        >
-                          {m.initials}
-                        </button>
-                      );
-                    })}
-                  </div>
-                </div>
-                <label className="text-muted-foreground flex items-center gap-1.5 text-xs">
-                  <CalendarDaysIcon className="size-3.5" />
-                  <span className="font-medium">Start</span>
+              <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+                <Field caption="ASSIGNEES">
+                  <PeopleField
+                    key={`assignees-${shown.id}`}
+                    multiple
+                    value={shown.assignees}
+                    placeholder="Unassigned"
+                    onChange={(ids) => updateCard(shown.id, { assignees: ids })}
+                  />
+                </Field>
+                <Field caption="REPORTER">
+                  <PeopleField
+                    key={`reporter-${shown.id}`}
+                    value={shown.reporter ? [shown.reporter] : []}
+                    placeholder="Unassigned"
+                    onChange={(ids) => updateCard(shown.id, { reporter: ids[0] ?? null })}
+                  />
+                </Field>
+                <Field caption="START">
                   <input
                     type="date"
-                    value={toDateInput(card.startDate)}
+                    value={toDateInput(shown.startDate)}
                     onChange={(e) =>
-                      updateCard(card.id, {
+                      updateCard(shown.id, {
                         startDate: e.target.value ? new Date(`${e.target.value}T12:00:00`).toISOString() : null,
                       })
                     }
-                    className="bg-muted rounded-md px-2 py-1 text-xs text-foreground outline-none"
+                    className="bg-muted h-8 w-full rounded-md px-2 text-xs text-foreground outline-none"
                   />
-                </label>
-                <label className="text-muted-foreground flex items-center gap-1.5 text-xs">
-                  <span className="font-medium">Due</span>
+                </Field>
+                <Field caption="DUE">
                   <input
                     type="date"
-                    value={toDateInput(card.dueDate)}
+                    value={toDateInput(shown.dueDate)}
                     onChange={(e) =>
-                      updateCard(card.id, {
+                      updateCard(shown.id, {
                         dueDate: e.target.value ? new Date(`${e.target.value}T12:00:00`).toISOString() : null,
                       })
                     }
-                    className="bg-muted rounded-md px-2 py-1 text-xs text-foreground outline-none"
+                    className="bg-muted h-8 w-full rounded-md px-2 text-xs text-foreground outline-none"
                   />
-                </label>
+                </Field>
               </div>
 
               <div>
@@ -168,10 +348,10 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
                   {PRIORITIES.map((p) => (
                     <button
                       key={p}
-                      onClick={() => updateCard(card.id, { priority: p })}
+                      onClick={() => updateCard(shown.id, { priority: p })}
                       className={cn(
                         'flex items-center gap-1 rounded-lg border px-2.5 py-1.5 text-xs font-medium transition',
-                        card.priority === p
+                        shown.priority === p
                           ? 'border-foreground/30 bg-muted'
                           : 'border-transparent text-muted-foreground hover:bg-muted/60',
                       )}
@@ -184,92 +364,171 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
               </div>
 
               <div>
-                <p className="mb-2 text-xs font-semibold tracking-wide text-muted-foreground">LABELS</p>
-                <div className="flex flex-wrap gap-1.5">
-                  {Object.values(labelDefs).map((l) => {
-                    const on = card.labels.includes(l.id);
-                    return (
-                      <span
-                        key={l.id}
-                        className={cn(
-                          'group/label flex items-center gap-0.5 rounded-lg py-1.5 pr-1 pl-2.5 text-[11px] font-bold tracking-[0.06em] uppercase transition',
-                          on ? cn('bg-muted', l.text) : 'text-muted-foreground hover:bg-muted/60',
-                        )}
-                      >
-                        <button
-                          onClick={() =>
-                            updateCard(card.id, {
-                              labels: on ? card.labels.filter((x) => x !== l.id) : [...card.labels, l.id],
-                            })
-                          }
-                          className="flex items-center gap-1.5"
+                <button
+                  ref={labelBtnRef}
+                  onClick={toggleLabels}
+                  aria-expanded={labelsOpen}
+                  className="mb-2 flex items-center gap-1 text-xs font-semibold tracking-wide text-muted-foreground"
+                >
+                  LABELS · {shown.labels.length}
+                  <ChevronDownIcon className={cn('size-3.5 transition', labelsOpen && 'rotate-180')} />
+                </button>
+                {shown.labels.length > 0 && (
+                  <div className="mb-2 flex flex-wrap gap-1.5">
+                    {shown.labels.map((id) => {
+                      const l = resolveLabel(labelDefs, id);
+                      return (
+                        <span
+                          key={id}
+                          className={cn('bg-muted flex items-center gap-1 rounded-md px-2 py-1 text-[11px] font-bold tracking-[0.06em] uppercase', l.text)}
                         >
                           <span className={cn('size-2 rounded-full', l.dot)} />
                           {l.name}
-                        </button>
-                        <button
-                          title={`Delete label ${l.name}`}
-                          aria-label={`Delete label ${l.name}`}
-                          onClick={() => deleteLabel(l.id)}
-                          className="invisible rounded p-0.5 group-hover/label:visible hover:text-rose-500"
-                        >
-                          <XIcon className="size-3" />
-                        </button>
-                      </span>
-                    );
-                  })}
-                </div>
-                {addingLabel ? (
-                  <div className="mt-2 space-y-2">
-                    <div className="flex gap-1.5">
-                      {LABEL_COLORS.map((c) => (
-                        <button
-                          key={c.id}
-                          title={c.id}
-                          aria-label={`Color ${c.id}`}
-                          onClick={() => setLabelColor(c.id)}
-                          className={cn(
-                            'size-5 rounded-full transition',
-                            c.dot,
-                            labelColor === c.id ? 'ring-foreground ring-2 ring-offset-2 ring-offset-card' : 'opacity-50 hover:opacity-100',
-                          )}
-                        />
-                      ))}
-                    </div>
-                    <div className="flex items-center gap-1.5">
-                      <Input
-                        autoFocus
-                        value={labelDraft}
-                        onChange={(e) => setLabelDraft(e.target.value)}
-                        onKeyDown={(e) => {
-                          if (e.key === 'Enter') submitLabel();
-                          if (e.key === 'Escape') { setLabelDraft(''); setAddingLabel(false); }
-                        }}
-                        placeholder="New label name"
-                        className="h-8 text-sm"
-                      />
-                      <Button size="sm" onClick={submitLabel} disabled={!labelDraft.trim()}>Add</Button>
-                      <Button variant="ghost" size="sm" onClick={() => { setLabelDraft(''); setAddingLabel(false); }}>Cancel</Button>
-                    </div>
+                          <button
+                            title={`Remove ${l.name}`}
+                            aria-label={`Remove ${l.name} from ticket`}
+                            onClick={() => updateCard(shown.id, { labels: shown.labels.filter((x) => x !== id) })}
+                            className="rounded p-px hover:text-rose-500"
+                          >
+                            <XIcon className="size-3" />
+                          </button>
+                        </span>
+                      );
+                    })}
                   </div>
-                ) : (
-                  <button
-                    onClick={() => setAddingLabel(true)}
-                    className="text-muted-foreground hover:text-foreground mt-1.5 flex items-center gap-1 text-xs transition"
-                  >
-                    <PlusIcon className="size-3.5" /> New label
-                  </button>
+                )}
+                {labelsOpen && labelPos && createPortal(
+                  <>
+                    <div className="fixed inset-0 z-[60]" onClick={() => setLabelsOpen(false)} />
+                    <div
+                      className="border-border fixed z-[61] max-h-72 space-y-1 overflow-y-auto rounded-lg border bg-popover p-1 shadow-xl"
+                      style={{ top: labelPos.top, left: labelPos.left, width: labelPos.width }}
+                    >
+                    {Object.values(labelDefs).map((l) => {
+                      const on = shown.labels.includes(l.id);
+                      return (
+                        <div
+                          key={l.id}
+                          className="hover:bg-muted/60 group/label flex items-center gap-1 rounded-md py-1 pr-1 pl-2 transition"
+                        >
+                          <button
+                            onClick={() =>
+                              updateCard(shown.id, {
+                                labels: on ? shown.labels.filter((x) => x !== l.id) : [...shown.labels, l.id],
+                              })
+                            }
+                            className="flex min-w-0 flex-1 items-center gap-1.5 text-left"
+                          >
+                            <span className={cn('size-2 shrink-0 rounded-full', l.dot)} />
+                            <span className={cn('min-w-0 flex-1 truncate text-[13px]', !on && 'text-muted-foreground')}>{l.name}</span>
+                            {on && <CheckIcon className="size-3.5 shrink-0" />}
+                          </button>
+                          <button
+                            title={`Delete label ${l.name}`}
+                            aria-label={`Delete label ${l.name}`}
+                            onClick={() => deleteLabel(l.id)}
+                            className="invisible shrink-0 rounded p-0.5 group-hover/label:visible hover:text-rose-500"
+                          >
+                            <XIcon className="size-3" />
+                          </button>
+                        </div>
+                      );
+                    })}
+                    {addingLabel ? (
+                      <div className="space-y-2 p-1">
+                        <div className="flex gap-1.5">
+                          {LABEL_COLORS.map((c) => (
+                            <button
+                              key={c.id}
+                              title={c.id}
+                              aria-label={`Color ${c.id}`}
+                              onClick={() => setLabelColor(c.id)}
+                              className={cn(
+                                'size-5 rounded-full transition',
+                                c.dot,
+                                labelColor === c.id ? 'ring-foreground ring-2 ring-offset-2 ring-offset-card' : 'opacity-50 hover:opacity-100',
+                              )}
+                            />
+                          ))}
+                        </div>
+                        <div className="flex items-center gap-1.5">
+                          <Input
+                            autoFocus
+                            value={labelDraft}
+                            onChange={(e) => setLabelDraft(e.target.value)}
+                            onKeyDown={(e) => {
+                              if (e.key === 'Enter') submitLabel();
+                              if (e.key === 'Escape') { setLabelDraft(''); setAddingLabel(false); }
+                            }}
+                            placeholder="New label name"
+                            className="h-8 text-sm"
+                          />
+                          <Button size="sm" onClick={submitLabel} disabled={!labelDraft.trim()}>Add</Button>
+                          <Button variant="ghost" size="sm" onClick={() => { setLabelDraft(''); setAddingLabel(false); }}>Cancel</Button>
+                        </div>
+                      </div>
+                    ) : (
+                      <button
+                        onClick={() => setAddingLabel(true)}
+                        className="text-muted-foreground hover:text-foreground flex items-center gap-1 px-2 py-1.5 text-xs transition"
+                      >
+                        <PlusIcon className="size-3.5" /> New label
+                      </button>
+                    )}
+                    </div>
+                  </>,
+                  document.body,
                 )}
               </div>
 
               <div>
-                <p className="mb-2 text-xs font-semibold tracking-wide text-muted-foreground">DESCRIPTION</p>
-                <Textarea
-                  value={card.description}
-                  onChange={(e) => updateCard(card.id, { description: e.target.value })}
-                  placeholder="Add a description"
-                  rows={3}
-                />
+                <div className="mb-2 flex items-center gap-1">
+                  <p className="text-xs font-semibold tracking-wide text-muted-foreground">DESCRIPTION</p>
+                  {!editingDesc && (
+                    <button
+                      title="Edit description"
+                      aria-label="Edit description"
+                      onClick={() => {
+                        setDescDraft(shown.description);
+                        setEditingDesc(true);
+                      }}
+                      className="text-muted-foreground rounded p-0.5 transition hover:bg-muted hover:text-foreground"
+                    >
+                      <PencilIcon className="size-3" />
+                    </button>
+                  )}
+                </div>
+                {editingDesc ? (
+                  <>
+                    <Textarea
+                      autoFocus
+                      value={descDraft}
+                      onChange={(e) => setDescDraft(e.target.value)}
+                      rows={4}
+                      className="text-sm"
+                    />
+                    <div className="mt-1.5 flex gap-1.5">
+                      <Button size="sm" onClick={() => { updateCard(shown.id, { description: descDraft }); setEditingDesc(false); }}>
+                        Save
+                      </Button>
+                      <Button variant="ghost" size="sm" onClick={() => setEditingDesc(false)}>
+                        Cancel
+                      </Button>
+                    </div>
+                  </>
+                ) : shown.description ? (
+                  <Markdown text={shown.description} />
+                ) : (
+                  <button
+                    onClick={() => {
+                      setDescDraft('');
+                      setEditingDesc(true);
+                    }}
+                    className="text-muted-foreground/60 text-sm transition hover:text-foreground"
+                  >
+                    Add a description…
+                  </button>
+                )}
               </div>
 
               <div>
@@ -313,7 +572,7 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
                               onKeyDown={(e) => {
                                 if (e.key === 'Enter' && !e.shiftKey) {
                                   e.preventDefault();
-                                  if (card && editDraft.trim()) editComment(card.id, c.id, editDraft);
+                                  if (shown && editDraft.trim()) editComment(shown.id, c.id, editDraft);
                                   setEditingId(null);
                                 }
                                 if (e.key === 'Escape') setEditingId(null);
@@ -326,7 +585,7 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
                                 size="sm"
                                 disabled={!editDraft.trim()}
                                 onClick={() => {
-                                  if (card && editDraft.trim()) editComment(card.id, c.id, editDraft);
+                                  if (shown && editDraft.trim()) editComment(shown.id, c.id, editDraft);
                                   setEditingId(null);
                                 }}
                               >
@@ -345,7 +604,7 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
                             {!mine && <span className="font-semibold">{member?.name ?? 'Unknown'}</span>}
                             {!mine && ' · '}
                             {formatTime(c.createdAt)}
-                            {mine && card && (
+                            {mine && shown && (
                               <span className="ml-1 hidden gap-0.5 group-hover:flex">
                                 <button
                                   title="Edit comment"
@@ -361,7 +620,7 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
                                 <button
                                   title="Delete comment"
                                   aria-label="Delete comment"
-                                  onClick={() => deleteComment(card.id, c.id)}
+                                  onClick={() => deleteComment(shown.id, c.id)}
                                   className="rounded p-0.5 hover:bg-muted hover:text-rose-500"
                                 >
                                   <Trash2Icon className="size-3" />
@@ -399,8 +658,8 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
                   >
                     {(
                       [
-                        { id: 'comment', icon: SendIcon, label: 'Comment mode' },
                         { id: 'ai', icon: SparklesIcon, label: 'Ask AI mode' },
+                        { id: 'comment', icon: SendIcon, label: 'Comment mode' },
                       ] as const
                     ).map((m) => (
                       <button
@@ -434,7 +693,7 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
                   variant="ghost"
                   size="sm"
                   className="text-rose-600 hover:text-rose-600 dark:text-rose-400"
-                  onClick={() => { deleteCard(card.id); onClose(); }}
+                  onClick={() => { deleteCard(shown.id); onClose(); }}
                 >
                   <Trash2Icon /> Delete
                 </Button>

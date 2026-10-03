@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { GitBranchIcon, MessageSquareIcon, PencilIcon, PlusIcon, XIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useAppStore } from '@/store/app';
-import { PRIORITY_META, useBoardStore } from '@/store/board';
+import { MEMBERS, PRIORITY_META, useBoardStore } from '@/store/board';
 import { useBranchStore, type Branch } from '@/store/branches';
 import { useSessionStore } from '@/store/sessions';
 import { TicketChat, type TicketContext } from './TicketChat';
@@ -47,7 +47,7 @@ export function TicketPanel({ ticketId }: { ticketId: string }) {
 
   const base = useMemo(() => {
     if (!card) return null;
-    const { id, title, priority, labels, assignees, startDate, dueDate, description } = card;
+    const { id, title, priority, labels, assignees, reporter, startDate, dueDate, description } = card;
     return {
       ticketId: id,
       title,
@@ -55,6 +55,7 @@ export function TicketPanel({ ticketId }: { ticketId: string }) {
       priority,
       labels,
       assignees,
+      reporter: reporter ? (MEMBERS[reporter]?.name ?? reporter) : null,
       startDate,
       dueDate,
       description,

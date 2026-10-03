@@ -32,6 +32,7 @@ function ticketSystemPrompt(ticket) {
     lines.push(`Assignees: ${ticket.assignees.join(', ')}.`);
   }
   if (ticket.dueDate) lines.push(`Due: ${ticket.dueDate}.`);
+  if (ticket.reporter) lines.push(`Reporter: ${ticket.reporter}.`);
   if (ticket.startDate) lines.push(`Start: ${ticket.startDate}.`);
   if (ticket.description) lines.push(`Description: ${ticket.description}`);
   lines.push('Answer in the context of this ticket. Keep replies concise and actionable.');

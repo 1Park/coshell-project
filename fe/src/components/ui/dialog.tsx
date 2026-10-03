@@ -56,15 +56,15 @@ function DialogContent({
         )}
         {...props}
       >
-        {children}
         {showCloseButton && (
           <DialogPrimitive.Close
             data-slot="dialog-close"
+            className="sticky top-2 z-10 -mb-9 justify-self-end"
             render={
               <Button
                 variant="ghost"
-                className="absolute top-2 right-2"
                 size="icon-sm"
+                className="rounded-full bg-background/80 shadow-sm backdrop-blur-sm hover:bg-muted"
               />
             }
           >
@@ -73,6 +73,7 @@ function DialogContent({
             <span className="sr-only">Close</span>
           </DialogPrimitive.Close>
         )}
+        {children}
       </DialogPrimitive.Popup>
     </DialogPortal>
   )

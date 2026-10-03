@@ -9,7 +9,7 @@ import { useAppStore } from '@/store/app';
 export function App() {
   const activeTicketId = useAppStore((s) => s.activeTicketId);
   const detailTicketId = useAppStore((s) => s.detailTicketId);
-  const setDetailTicket = useAppStore((s) => s.setDetailTicket);
+  const closeDetail = useAppStore((s) => s.closeDetail);
 
   return (
     <TooltipProvider>
@@ -24,7 +24,7 @@ export function App() {
           {activeTicketId ? <TicketPanel key={activeTicketId} ticketId={activeTicketId} /> : null}
         </main>
       </div>
-      <CardDialog cardId={detailTicketId} onClose={() => setDetailTicket(null)} />
+      <CardDialog cardId={detailTicketId} onClose={closeDetail} />
     </TooltipProvider>
   );
 }

@@ -25,6 +25,7 @@ export interface BoardCard {
   labels: string[];
   priority: Priority;
   assignees: string[];
+  reporter: string | null;
   startDate: string | null;
   dueDate: string | null;
   comments: number;
@@ -116,65 +117,286 @@ const daysFromNow = (days: number) => {
 };
 
 function seed(): { columns: BoardColumn[]; cards: Record<string, BoardCard> } {
+  const md = (value: string) => value.trim();
   const cards: Record<string, BoardCard> = {
     'BUG-101': {
       id: 'BUG-101', columnId: 'col-backlog', title: 'Redesign landing page hero',
-      description: 'Tighten hero copy and visuals for the launch. Dark mode included.',
-      labels: ['design'], priority: 'high', assignees: ['jh'], startDate: daysFromNow(-2), dueDate: daysFromNow(4),
+      description: md(`Tighten the landing hero for launch: headline, subcopy, CTA row, and hero visual.
+
+> Launch blocker: mobile conversion is still below target.
+
+## Background
+
+Current hero converts **2.1% on desktop** and **0.9% on mobile**. Copy was written pre-rebrand and still mentions the old tagline.
+
+## Checklist
+
+- [x] Lock final copy with marketing
+- [x] Ship variant A behind <code>hero_redesign_v3</code>
+- [ ] Ship variant B behind <code>hero_redesign_v3_b</code>
+- [ ] Dark-mode pass on hero assets
+- [ ] Run 50/50 test for one week
+
+## Experiment Targets
+
+| Metric | Current | Target |
+| --- | ---: | ---: |
+| Desktop CVR | 2.1% | 3.0% |
+| Mobile CVR | 0.9% | 1.5% |
+| LCP | 2.9s | < 2.5s |
+
+## Links
+
+- [Figma: hero-v3](https://example.com/figma/hero-v3)
+- [Launch copy freeze](https://example.com/docs/launch-copy-freeze)`),
+      labels: ['design'], priority: 'high', assignees: [], reporter: null, startDate: daysFromNow(-2), dueDate: daysFromNow(4),
       comments: 0, attachments: 0,
     },
     'BUG-102': {
       id: 'BUG-102', columnId: 'col-backlog', title: 'Add social login',
-      description: 'Wire Google / GitHub OAuth. Need to settle on the session strategy.',
-      labels: ['backend', 'frontend'], priority: 'medium', assignees: ['tw'], startDate: daysFromNow(-1), dueDate: daysFromNow(9),
+      description: md(`Add Google and GitHub social login alongside email login.
+
+## Background
+
+Support tickets about password resets doubled last quarter. Social login removes the reset loop entirely.
+
+## Implementation Notes
+
+Use a signed <code>state</code> parameter and reject callbacks where <code>email_verified !== true</code>.
+
+~~~ts
+if (!profile.email_verified) {
+  throw new AuthError('verified email required');
+}
+~~~
+
+## Acceptance Criteria
+
+1. Google OAuth works on staging and prod.
+2. GitHub org restriction is configurable.
+3. Existing password users are linked only by verified email.
+4. Every account-link event appears in the audit log.
+
+## Risks
+
+- Token rotation strategy is still open.
+- GitHub private email behavior needs product sign-off.`),
+      labels: ['backend', 'frontend'], priority: 'medium', assignees: [], reporter: null, startDate: daysFromNow(-1), dueDate: daysFromNow(9),
       comments: 0, attachments: 0,
     },
     'BUG-103': {
       id: 'BUG-103', columnId: 'col-backlog', title: 'Document event logging schema',
-      description: 'Write up the Mixpanel event naming convention.',
-      labels: ['docs'], priority: 'low', assignees: [], startDate: null, dueDate: null,
+      description: md(`Document the product event taxonomy so every team logs the same way.
+
+## Problem
+
+Three teams invented three naming styles; funnels break every other sprint.
+
+## Proposed Convention
+
+Use <code>object_action</code> names with snake_case payload keys.
+
+| Good | Bad |
+| --- | --- |
+| <code>ticket_created</code> | <code>CreateTicket</code> |
+| <code>branch_merged</code> | <code>mergedBranch</code> |
+| <code>comment_submitted</code> | <code>new-comment</code> |
+
+## Tasks
+
+- [x] Collect current events from staging
+- [ ] Review naming with data engineering
+- [ ] Publish examples in handbook
+- [ ] Add linter warning for off-spec names
+
+> Keep the handbook page under two screens or teams will ignore it.`),
+      labels: ['docs'], priority: 'low', assignees: [], reporter: null, startDate: null, dueDate: null,
       comments: 0, attachments: 0,
     },
     'BUG-104': {
       id: 'BUG-104', columnId: 'col-progress', title: 'Polish assistant-ui streaming UX',
-      description: 'Review typing indicator, autoscroll, and retry behaviour.',
-      labels: ['frontend'], priority: 'high', assignees: ['jh', 'sm'], startDate: daysFromNow(-3), dueDate: daysFromNow(1),
+      description: md(`Polish the assistant streaming UX: typing indicator, pinned autoscroll, and retry on error.
+
+## Current Status
+
+- **Desktop:** autoscroll fixed
+- **Mobile Safari:** composer still jumps
+- **Network retry:** design approved, implementation pending
+
+## Repro
+
+1. Open a long ticket thread.
+2. Ask AI a question that streams for 5+ seconds.
+3. Scroll during the response.
+4. Toggle the iOS keyboard.
+
+## Expected vs Actual
+
+| Area | Expected | Actual |
+| --- | --- | --- |
+| Autoscroll | Sticks while streaming | Fixed on desktop |
+| Composer | Never jumps | Jumps on iOS Safari |
+| Retry | Exponential backoff | Not implemented |
+
+## Related
+
+See **BUG-108** before changing viewport logic.`),
+      labels: ['frontend'], priority: 'high', assignees: [], reporter: null, startDate: daysFromNow(-3), dueDate: daysFromNow(1),
       comments: 2, attachments: 0,
     },
     'BUG-105': {
       id: 'BUG-105', columnId: 'col-progress', title: 'Harden local deploy health check',
-      description: 'Serialize rapid pushes and verify the rollback path end to end.',
-      labels: ['backend'], priority: 'urgent', assignees: ['tw'], startDate: daysFromNow(-5), dueDate: daysFromNow(-1),
+      description: md(`Harden the local deploy pipeline: serialize rapid pushes and prove rollback works.
+
+## Incident Summary
+
+Two rapid pushes raced and left staging half-deployed for **58 minutes**.
+
+## Runbook Draft
+
+~~~bash
+deploy queue status
+deploy rollback --env staging --to previous
+deploy verify --gate healthcheck
+~~~
+
+## Done When
+
+- [x] Per-branch deploy lock exists locally
+- [ ] Health-check gate blocks bad releases
+- [ ] Rollback finishes in under 3 minutes
+- [ ] Five pushes in 60 seconds do not race
+
+## Escalation
+
+If the gate fails twice, page the merger and post the failed release id in <code>#deploys</code>.`),
+      labels: ['backend'], priority: 'urgent', assignees: [], reporter: null, startDate: daysFromNow(-5), dueDate: daysFromNow(-1),
       comments: 0, attachments: 0,
     },
     'BUG-106': {
       id: 'BUG-106', columnId: 'col-progress', title: 'Add empty state illustrations',
-      description: 'Three illustrations for when the thread or board is empty.',
-      labels: ['design'], priority: 'low', assignees: ['mj'], startDate: daysFromNow(0), dueDate: daysFromNow(6),
+      description: md(`Draw three empty-state illustrations: empty thread, empty board, no search results.
+
+## Art Direction
+
+> Friendly but not cute. Enterprise users should feel guided, not entertained.
+
+## Deliverables
+
+| Surface | Asset | Dark Mode |
+| --- | --- | --- |
+| Empty thread | <code>empty-thread.svg</code> | Required |
+| Empty board | <code>empty-board.svg</code> | Required |
+| No search results | <code>empty-search.svg</code> | Required |
+
+## Constraints
+
+- Reuse current palette.
+- No new brand colors.
+- SVG only; no raster fallback.
+- Keep each asset under 40KB.`),
+      labels: ['design'], priority: 'low', assignees: [], reporter: null, startDate: daysFromNow(0), dueDate: daysFromNow(6),
       comments: 0, attachments: 0,
     },
     'BUG-107': {
       id: 'BUG-107', columnId: 'col-review', title: 'Audit dark mode tokens',
-      description: 'Snapshot review to confirm oklch tokens reach every component.',
-      labels: ['frontend', 'design'], priority: 'medium', assignees: ['sm'], startDate: daysFromNow(-4), dueDate: daysFromNow(2),
+      description: md(`Audit that every component resolves through the oklch design tokens in dark mode.
+
+## Findings
+
+| Status | Count |
+| --- | ---: |
+| Found | 12 |
+| Fixed | 9 |
+| Pending owner review | 3 |
+
+## Check Command
+
+~~~bash
+rg "#[0-9a-fA-F]{3,8}|rgb\(" fe/src
+~~~
+
+## Acceptance Criteria
+
+- [ ] No hardcoded <code>hex</code> or <code>rgb()</code> outside token files
+- [ ] Text contrast is at least **4.5:1**
+- [ ] CI fails on new raw colors
+
+## Note
+
+Add the grep to CI so this never regresses.`),
+      labels: ['frontend', 'design'], priority: 'medium', assignees: [], reporter: null, startDate: daysFromNow(-4), dueDate: daysFromNow(2),
       comments: 0, attachments: 0,
     },
     'BUG-108': {
       id: 'BUG-108', columnId: 'col-review', title: 'Composer jumps on iOS Safari',
-      description: 'The virtual keyboard covers the composer. Needs visualViewport handling.',
-      labels: ['bug', 'frontend'], priority: 'urgent', assignees: ['jh'], startDate: daysFromNow(-6), dueDate: daysFromNow(0),
+      description: md(`Fix the iOS Safari bug where the virtual keyboard covers the chat composer.
+
+## Repro Matrix
+
+| Device | OS | Result |
+| --- | --- | --- |
+| iPhone 15 Pro | iOS 17 | Composer visible |
+| iPhone SE | iOS 17 | 40px gap on rotate |
+| Android Chrome | 14 | No regression |
+
+## Implementation Sketch
+
+Listen to <code>visualViewport.resize</code> and pin the composer above the keyboard.
+
+~~~ts
+const offset = window.innerHeight - visualViewport.height - visualViewport.offsetTop;
+composer.style.setProperty('--keyboard-offset', String(offset) + 'px');
+~~~
+
+## Must Verify
+
+- [ ] VoiceOver focus order
+- [ ] Rotation while typing
+- [ ] Long streaming response while keyboard is open
+- [ ] No conflict with **BUG-104** autoscroll changes`),
+      labels: ['bug', 'frontend'], priority: 'urgent', assignees: [], reporter: null, startDate: daysFromNow(-6), dueDate: daysFromNow(0),
       comments: 1, attachments: 0,
     },
     'BUG-109': {
       id: 'BUG-109', columnId: 'col-done', title: 'Cut onboarding to three steps',
-      description: '',
-      labels: ['design', 'research'], priority: 'medium', assignees: ['mj', 'sm'], startDate: daysFromNow(-12), dueDate: daysFromNow(-6),
+      description: md(`Cut onboarding from five screens to three without losing activation signal.
+
+## Proposed Flow
+
+1. Role and team size
+2. Connect first workspace
+3. Invite teammates or skip
+
+## Removed
+
+- Persona quiz
+- Duplicate notification preference screen
+
+## Success Metric
+
+Activation should improve from **42% → 55%** within two weeks.`),
+      labels: ['design', 'research'], priority: 'medium', assignees: [], reporter: null, startDate: daysFromNow(-12), dueDate: daysFromNow(-6),
       comments: 0, attachments: 0,
     },
     'BUG-110': {
       id: 'BUG-110', columnId: 'col-done', title: 'Run typecheck as part of build',
-      description: '',
-      labels: ['backend'], priority: 'low', assignees: ['tw'], startDate: daysFromNow(-5), dueDate: daysFromNow(-3),
+      description: md(`Run typecheck as part of every production build.
+
+## Change
+
+Add <code>npm run typecheck -w fe</code> before <code>npm run build -w fe</code>.
+
+## Why
+
+The app built successfully while TypeScript still reported stale prop types.
+
+## Acceptance
+
+- [x] Local command passes
+- [x] CI blocks on type errors
+- [ ] Build log links directly to the failing file`),
+      labels: ['backend'], priority: 'low', assignees: [], reporter: null, startDate: daysFromNow(-5), dueDate: daysFromNow(-3),
       comments: 0, attachments: 0,
     },
   };
@@ -305,7 +527,7 @@ export const useBoardStore = create<BoardState>()(
           const id = `BUG-${maxNum + 1}`;
           const card: BoardCard = {
             id, columnId, title: trimmed, description: '', labels: [],
-            priority: 'medium', assignees: [], startDate: null, dueDate: null,
+            priority: 'medium', assignees: [], reporter: null, startDate: null, dueDate: null,
             comments: 0, attachments: 0,
           };
           return {
@@ -378,7 +600,7 @@ export const useBoardStore = create<BoardState>()(
     }),
     {
       name: 'coshell-board',
-      version: 8,
+      version: 12,
       migrate: (persistedState, version) => {
         const s = persistedState as Partial<BoardState>;
         if (version < 6 && Object.keys(s.cards ?? {}).some((id) => id.startsWith('card-'))) {
@@ -392,6 +614,37 @@ export const useBoardStore = create<BoardState>()(
           }
         }
         const cards = { ...(s.cards ?? {}) };
+        if (version < 12) {
+          const fresh = seed().cards;
+          for (const [id, card] of Object.entries(cards)) {
+            if (fresh[id]?.description && id.startsWith('BUG-')) {
+              cards[id] = { ...card, description: fresh[id].description };
+            }
+          }
+        }
+        if (version < 11) {
+          // v10 shipped plain "Summary: ..." mock descriptions; swap in the
+          // markdown versions, but only where the user hasn't edited them.
+          const fresh = seed().cards;
+          for (const [id, card] of Object.entries(cards)) {
+            if (fresh[id]?.description && card.description.startsWith('Summary: ')) {
+              cards[id] = { ...card, description: fresh[id].description };
+            }
+          }
+        }
+        if (version < 10) {
+          const fresh = seed().cards;
+          for (const [id, card] of Object.entries(cards)) {
+            if (fresh[id] && fresh[id].description) {
+              cards[id] = { ...card, description: fresh[id].description };
+            }
+          }
+        }
+        if (version < 9) {
+          for (const [id, card] of Object.entries(cards)) {
+            if (card.reporter === undefined) cards[id] = { ...card, reporter: null };
+          }
+        }
         if (version < 8) {
           const fresh = seed().cards;
           for (const [id, card] of Object.entries(cards)) {
