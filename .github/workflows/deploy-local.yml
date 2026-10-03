@@ -1,0 +1,29 @@
+name: Deploy to local Mac
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: coshell-local-deploy
+  cancel-in-progress: false
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    runs-on: [self-hosted, macOS, coshell-local]
+    timeout-minutes: 15
+    env:
+      REPO_PATH: ${{ vars.COSHELL_REPO_PATH }}
+      GIT_TERMINAL_PROMPT: '0'
+    steps:
+      - name: Update main and deploy
+        shell: bash
+        run: |
+          set -euo pipefail
+          export PATH="$HOME/.local/share/coshell/runtime/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+          cd "${REPO_PATH:?Set COSHELL_REPO_PATH repository variable}"
+          test "$(git branch --show-current)" = main
+          test -z "$(git status --porcelain)"
+          git pull --ff-only origin main
+          bash scripts/deploy-local.sh
