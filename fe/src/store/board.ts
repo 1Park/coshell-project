@@ -340,7 +340,7 @@ export const useBoardStore = create<BoardState>()(
     }),
     {
       name: 'coshell-board',
-      version: 12,
+      version: 13,
       migrate: (persistedState, version) => {
         const s = persistedState as Partial<BoardState>;
         if (version < 6 && Object.keys(s.cards ?? {}).some((id) => id.startsWith('card-'))) {
@@ -354,6 +354,14 @@ export const useBoardStore = create<BoardState>()(
           }
         }
         const cards = { ...(s.cards ?? {}) };
+        if (version < 13) {
+          const fresh = seed().cards;
+          for (const [id, card] of Object.entries(cards)) {
+            if (fresh[id] && id.startsWith('BUG-')) {
+              cards[id] = { ...card, assignees: fresh[id].assignees, reporter: fresh[id].reporter };
+            }
+          }
+        }
         if (version < 12) {
           const fresh = seed().cards;
           for (const [id, card] of Object.entries(cards)) {

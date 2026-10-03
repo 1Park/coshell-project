@@ -62,6 +62,7 @@ function PeopleField({
   placeholder: string;
 }) {
   const [open, setOpen] = useState(false);
+  const [query, setQuery] = useState('');
   const [pos, setPos] = useState<{ top: number; left: number; width: number } | null>(null);
   const btnRef = useRef<HTMLButtonElement>(null);
 
@@ -89,6 +90,7 @@ function PeopleField({
         width: Math.min(Math.max(r.width, 240), window.innerWidth - 16),
       });
     }
+    setQuery('');
     setOpen(true);
   };
 
@@ -96,6 +98,11 @@ function PeopleField({
     if (multiple) onChange(value.includes(id) ? value.filter((v) => v !== id) : [...value, id]);
     else onChange(value[0] === id ? [] : [id]);
   };
+  const q = query.trim().toLowerCase();
+  const members = Object.values(MEMBERS).filter((m) => {
+    if (!q) return true;
+    return `${m.name} ${m.id} ${m.initials}`.toLowerCase().includes(q);
+  }).sort((a, b) => Number(value.includes(b.id)) - Number(value.includes(a.id)));
   return (
     <div>
       <button
@@ -122,10 +129,19 @@ function PeopleField({
         <>
           <div className="fixed inset-0 z-[60]" onClick={() => setOpen(false)} />
           <div
-            className="border-border fixed z-[61] max-h-64 overflow-y-auto rounded-lg border bg-popover p-1 shadow-xl"
+            className="border-border fixed z-[61] rounded-lg border bg-popover p-1 shadow-xl"
             style={{ top: pos.top, left: pos.left, width: pos.width }}
           >
-            {Object.values(MEMBERS).map((m) => {
+            <Input
+              autoFocus
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              onKeyDown={(e) => { if (e.key === 'Escape') setOpen(false); }}
+              placeholder="Search members..."
+              className="mb-1 h-8 text-sm"
+            />
+            <div className="max-h-56 overflow-y-auto">
+            {members.map((m) => {
               const on = value.includes(m.id);
               return (
                 <button
@@ -141,6 +157,10 @@ function PeopleField({
                 </button>
               );
             })}
+            {members.length === 0 && (
+              <div className="px-2 py-3 text-center text-xs text-muted-foreground">No members found</div>
+            )}
+            </div>
           </div>
         </>,
         document.body,
@@ -157,6 +177,7 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
   const [editDraft, setEditDraft] = useState('');
   const [addingLabel, setAddingLabel] = useState(false);
   const [labelsOpen, setLabelsOpen] = useState(false);
+  const [labelQuery, setLabelQuery] = useState('');
   const [labelPos, setLabelPos] = useState<{ top: number; left: number; width: number } | null>(null);
   const labelBtnRef = useRef<HTMLButtonElement>(null);
   // Keep the last opened card so the close animation never renders an empty shell.
@@ -172,6 +193,7 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
   // Dropdown portals live outside the dialog tree, so close them here too.
   useEffect(() => {
     setLabelsOpen(false);
+    setLabelQuery('');
     setAddingLabel(false);
     setEditingTitle(false);
     setEditingDesc(false);
@@ -215,10 +237,16 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
         width: Math.min(Math.max(r.width, 260), window.innerWidth - 16),
       });
     }
+    setLabelQuery('');
     setLabelsOpen(true);
   };
   const [labelDraft, setLabelDraft] = useState('');
   const [labelColor, setLabelColor] = useState('violet');
+  const normalizedLabelQuery = labelQuery.trim().toLowerCase();
+  const filteredLabels = Object.values(labelDefs).filter((l) => {
+    if (!normalizedLabelQuery) return true;
+    return `${l.name} ${l.id}`.toLowerCase().includes(normalizedLabelQuery);
+  }).sort((a, b) => Number(shown?.labels.includes(b.id)) - Number(shown?.labels.includes(a.id)));
 
   const submitLabel = () => {
     if (!card || !labelDraft.trim()) return;
@@ -401,10 +429,19 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
                   <>
                     <div className="fixed inset-0 z-[60]" onClick={() => setLabelsOpen(false)} />
                     <div
-                      className="border-border fixed z-[61] max-h-72 space-y-1 overflow-y-auto rounded-lg border bg-popover p-1 shadow-xl"
+                      className="border-border fixed z-[61] rounded-lg border bg-popover p-1 shadow-xl"
                       style={{ top: labelPos.top, left: labelPos.left, width: labelPos.width }}
                     >
-                    {Object.values(labelDefs).map((l) => {
+                    <Input
+                      autoFocus
+                      value={labelQuery}
+                      onChange={(e) => setLabelQuery(e.target.value)}
+                      onKeyDown={(e) => { if (e.key === 'Escape') setLabelsOpen(false); }}
+                      placeholder="Search labels..."
+                      className="mb-1 h-8 text-sm"
+                    />
+                    <div className="max-h-52 space-y-1 overflow-y-auto">
+                    {filteredLabels.map((l) => {
                       const on = shown.labels.includes(l.id);
                       return (
                         <div
@@ -434,6 +471,10 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
                         </div>
                       );
                     })}
+                    {filteredLabels.length === 0 && (
+                      <div className="px-2 py-3 text-center text-xs text-muted-foreground">No labels found</div>
+                    )}
+                    </div>
                     {addingLabel ? (
                       <div className="space-y-2 p-1">
                         <div className="flex gap-1.5">
