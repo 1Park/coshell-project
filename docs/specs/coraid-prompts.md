@@ -347,7 +347,7 @@ Answering rules:
 - Do not append to the common session unless the user explicitly chooses merge/report behavior in the UI.
 
 Output language:
-- Answer the user in Korean unless the user asks for English.
+- Answer the user in English.
 - Keep code identifiers, commands, file paths, PR titles, and API/tool names in their original language.
 ```
 
