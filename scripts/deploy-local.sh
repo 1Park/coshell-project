@@ -8,10 +8,15 @@ domain="gui/$(id -u)"
 sha="$(git rev-parse HEAD)"
 mkdir -p "$base/releases" "$base/logs" "$HOME/Library/LaunchAgents"
 release="$(mktemp -d "$base/releases/${sha:0:12}.XXXXXX")"
+echo "Archiving $sha to $release"
 git archive HEAD | tar -x -C "$release"
 cd "$release"
-npm ci --no-audit --no-fund
-npm run build
+echo "::group::Install dependencies"
+time npm ci --no-audit --no-fund
+echo "::endgroup::"
+echo "::group::Build frontend"
+time npm run build
+echo "::endgroup::"
 
 # launchd owns the server, independently of the Actions job process tree.
 export COSHELL_BASE="$base" COSHELL_RELEASE="$release" COSHELL_SHA="$sha"
@@ -48,6 +53,7 @@ switch_release() {
   ln -s "$1" "$base/current.next"
   mv -fh "$base/current.next" "$base/current"
 }
+echo "Activating release $sha"
 switch_release "$release"
 rollback() {
   if [ -n "$previous" ]; then
@@ -65,6 +71,7 @@ if launchctl print "$domain/$label" >/dev/null 2>&1; then
 else
   launchctl bootstrap "$domain" "$plist"
 fi
+echo "Checking server health and commit"
 healthy=false
 for attempt in {1..30}; do
   if curl -fsS --max-time 2 http://127.0.0.1:3000/healthz 2>/dev/null | python3 -c 'import json,sys; sys.exit(0 if json.load(sys.stdin).get("commit") == sys.argv[1] else 1)' "$sha" 2>/dev/null; then

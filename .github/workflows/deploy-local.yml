@@ -12,12 +12,30 @@ jobs:
   deploy:
     if: github.ref == 'refs/heads/main'
     runs-on: [self-hosted, macOS, coshell-local]
-    timeout-minutes: 15
+    timeout-minutes: 30
     env:
       REPO_PATH: ${{ vars.COSHELL_REPO_PATH }}
       GIT_TERMINAL_PROMPT: '0'
     steps:
-      - name: Update main and deploy
+      - name: Check deployment checkout
+        timeout-minutes: 1
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "Checking deployment directory: ${REPO_PATH:?Set COSHELL_REPO_PATH repository variable}"
+          case "$REPO_PATH" in
+            "$HOME/Desktop"|"$HOME/Desktop/"*|"$HOME/Documents"|"$HOME/Documents/"*|"$HOME/Downloads"|"$HOME/Downloads/"*)
+              echo "::error::Use a checkout outside macOS protected folders, e.g. $HOME/coshell-project"
+              exit 1
+              ;;
+          esac
+          cd "$REPO_PATH"
+          echo "Checking branch"
+          test "$(git branch --show-current)" = main
+          echo "Checking for local changes"
+          test -z "$(git status --porcelain)"
+      - name: Update main
+        timeout-minutes: 3
         shell: bash
         env:
           DEPLOY_TOKEN: ${{ github.token }}
@@ -25,14 +43,20 @@ jobs:
           set -euo pipefail
           export PATH="$HOME/.local/share/coshell/runtime/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin"
           cd "${REPO_PATH:?Set COSHELL_REPO_PATH repository variable}"
-          test "$(git branch --show-current)" = main
-          test -z "$(git status --porcelain)"
+          echo "Pulling origin/main"
           # Use the job's read-only token instead of an interactive macOS keychain prompt.
           auth="$(printf 'x-access-token:%s' "$DEPLOY_TOKEN" | base64 | tr -d '\n')"
           echo "::add-mask::$auth"
           GIT_CONFIG_COUNT=2 \
           GIT_CONFIG_KEY_0=credential.helper GIT_CONFIG_VALUE_0='' \
           GIT_CONFIG_KEY_1=http.https://github.com/.extraheader GIT_CONFIG_VALUE_1="AUTHORIZATION: basic $auth" \
-            git pull --ff-only origin main
+            git -c http.lowSpeedLimit=1000 -c http.lowSpeedTime=60 pull --ff-only origin main
           unset auth DEPLOY_TOKEN
+          git log -1 --format='%h %s'
+      - name: Build and restart server
+        timeout-minutes: 25
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "$REPO_PATH"
           bash scripts/deploy-local.sh

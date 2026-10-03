@@ -43,7 +43,8 @@ npm run dev                  # http://localhost:5173, /api/chat 포함 단일 �
 
 ### 이 맥의 구성
 
-- 저장소 변수 `COSHELL_REPO_PATH`: 로컬 checkout 경로
+- 저장소 변수 `COSHELL_REPO_PATH`: `/Users/won/coshell-project` (배포 전용 checkout). macOS 백그라운드 프로세스의 파일 접근이 멈출 수 있는 Desktop/Documents/Downloads 아래 경로는 사용하지 않습니다.
+- 전체 배포 제한은 30분이며 checkout 검사 1분, Git 갱신 3분, 빌드·재시작 25분으로 나누어 실패 구간을 표시합니다. 설치·빌드 소요 시간도 Actions 로그에 남깁니다.
 - runner 전용 라벨: `coshell-local`
 - Node 22 및 runner: `~/.local/share/coshell/{runtime,runner}`
 - 배포 버전: `~/.local/share/coshell/releases/` (자동 삭제하지 않음)
