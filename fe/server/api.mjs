@@ -1,3 +1,6 @@
+import { readdir, readFile } from 'node:fs/promises';
+import { homedir } from 'node:os';
+import { join, resolve } from 'node:path';
 import { Readable } from 'node:stream';
 import { pipeline } from 'node:stream/promises';
 
@@ -140,6 +143,53 @@ async function handleCompact(req, res) {
   }
 }
 
+// Same folder the coraid MCP server writes to (mcp/src/store.mjs).
+const DATA_DIR = resolve(process.env.DATA_DIR || join(homedir(), '.local/share/coshell/data'));
+
+async function readDirOrEmpty(path) {
+  try {
+    return await readdir(path, { withFileTypes: true });
+  } catch (error) {
+    if (error.code === 'ENOENT') return [];
+    throw error;
+  }
+}
+
+/** Task branches merged through the coraid MCP server, oldest first. Read-only. */
+async function handleTaskMerges(req, res) {
+  if (req.method !== 'GET') {
+    return sendJson(res, 405, { error: 'Method not allowed' });
+  }
+  try {
+    const merges = [];
+    for (const ticket of await readDirOrEmpty(join(DATA_DIR, 'tickets'))) {
+      if (!ticket.isDirectory()) continue;
+      const dir = join(DATA_DIR, 'tickets', ticket.name, 'branches');
+      for (const file of await readDirOrEmpty(dir)) {
+        if (!file.name.startsWith('task-') || !file.name.endsWith('.json')) continue;
+        try {
+          const branch = JSON.parse(await readFile(join(dir, file.name), 'utf8'));
+          if (branch.type !== 'task' || branch.status !== 'merged' || !branch.summary) continue;
+          merges.push({
+            branchId: branch.branch_id,
+            ticketId: branch.ticket_id,
+            author: branch.author,
+            summary: branch.summary,
+            mergedAt: branch.merged_at,
+          });
+        } catch (error) {
+          console.error('[api/task-merges] skipped', file.name, error);
+        }
+      }
+    }
+    merges.sort((a, b) => String(a.mergedAt).localeCompare(String(b.mergedAt)));
+    sendJson(res, 200, { merges });
+  } catch (error) {
+    console.error('[api/task-merges]', error);
+    sendJson(res, 500, { error: 'Failed to read task merges' });
+  }
+}
+
 /**
  * Mounts the API routes onto a Node http request/response pair.
  * Returns true when the request was handled.
@@ -153,6 +203,10 @@ export async function handleApi(req, res) {
   }
   if (pathname === '/api/compact') {
     await handleCompact(req, res);
+    return true;
+  }
+  if (pathname === '/api/task-merges') {
+    await handleTaskMerges(req, res);
     return true;
   }
   return false;

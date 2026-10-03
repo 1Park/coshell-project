@@ -5,11 +5,13 @@ import { KanbanBoard } from '@/components/kanban/Board';
 import { CardDialog } from '@/components/kanban/CardDialog';
 import { TicketPanel } from '@/components/ticket/TicketPanel';
 import { useAppStore } from '@/store/app';
+import { useTaskMergeSync } from '@/hooks/use-task-merge-sync';
 
 export function App() {
   const activeTicketId = useAppStore((s) => s.activeTicketId);
   const detailTicketId = useAppStore((s) => s.detailTicketId);
   const closeDetail = useAppStore((s) => s.closeDetail);
+  useTaskMergeSync();
 
   return (
     <TooltipProvider>
