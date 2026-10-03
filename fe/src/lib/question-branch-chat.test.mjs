@@ -2,8 +2,33 @@ import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import { readUIMessageStream } from 'ai';
 import { branchChatResponse, createBranchChatSession, QUESTION_BRANCH_MOCK } from './question-branch-chat.ts';
+import { createQuestionSession } from './question-branch.ts';
 
 const message = (id, role, text) => ({ id, role, parts: [{ type: 'text', text }] });
+
+test('HTTP origins without crypto.randomUUID support chat and approved merge', async () => {
+  const descriptor = Object.getOwnPropertyDescriptor(globalThis, 'crypto');
+  Object.defineProperty(globalThis, 'crypto', { value: {}, configurable: true });
+  try {
+    const session = createQuestionSession({ mock: true });
+    const branch = session.createBranch();
+    const other = session.createBranch();
+    assert.notEqual(branch.id, other.id);
+    await session.sendMessage(branch.id, 'Question');
+    const preview = await session.previewMerge(branch.id);
+    assert.ok(preview.id);
+    assert.match(session.approveMerge(branch.id, preview.id), /MOCK compact/);
+    const response = await branchChatResponse({
+      branchId: 'q-http', mainContext: 'Main', branchContext: 'Snapshot',
+      messages: [message('u1', 'user', 'Question')],
+    });
+    const text = await response.text();
+    assert.match(text, /MOCK answer/);
+    assert.ok(!text.includes('"type":"error"'));
+  } finally {
+    Object.defineProperty(globalThis, 'crypto', descriptor);
+  }
+});
 
 test('default UI transport produces a valid assistant stream without API access', async () => {
   assert.equal(QUESTION_BRANCH_MOCK, true);

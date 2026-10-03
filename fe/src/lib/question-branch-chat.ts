@@ -1,5 +1,6 @@
 import { createUIMessageStream, createUIMessageStreamResponse, type UIMessage } from 'ai';
 import { createQuestionSession, type QuestionMessage } from './question-branch.ts';
+import { createId } from './id.ts';
 
 // Local demo default. Live mode must also supply a key at runtime, never in a bundle.
 export const QUESTION_BRANCH_MOCK = true;
@@ -62,8 +63,8 @@ export async function branchChatResponse(options: {
   return createUIMessageStreamResponse({
     stream: createUIMessageStream({
       execute: ({ writer }) => {
-        const id = crypto.randomUUID();
-        writer.write({ type: 'start', messageId: crypto.randomUUID() });
+        const id = createId();
+        writer.write({ type: 'start', messageId: createId() });
         writer.write({ type: 'text-start', id });
         writer.write({ type: 'text-delta', id, delta: answer.content });
         writer.write({ type: 'text-end', id });
