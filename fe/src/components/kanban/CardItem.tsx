@@ -77,8 +77,8 @@ export function CardFace({ card, overlay = false }: { card: BoardCard; overlay?:
   return (
     <div
       className={cn(
-        'bg-card border-border rounded-[10px] border transition-colors',
-        overlay ? 'rotate-1 shadow-xl' : 'hover:border-foreground/25',
+        'bg-card rounded-[10px] shadow-sm shadow-amber-950/5 transition-shadow',
+        overlay ? 'rotate-1 shadow-xl' : 'hover:shadow-md hover:shadow-amber-950/10',
       )}
     >
       <div className="space-y-2 p-3">
