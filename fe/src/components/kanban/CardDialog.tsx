@@ -18,7 +18,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/u
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Markdown } from '@/components/ui/markdown';
-import { AvatarStack } from './CardItem';
+import { AvatarStack, memberColorClass } from './CardItem';
 import { cn } from '@/lib/utils';
 
 const PRIORITIES: Priority[] = ['low', 'medium', 'high', 'urgent'];
@@ -133,7 +133,7 @@ function PeopleField({
                   onClick={() => toggle(m.id)}
                   className="hover:bg-muted/60 flex w-full items-center gap-2 rounded-md px-2 py-1.5 text-left text-[13px] transition"
                 >
-                  <span className={cn('flex size-6 items-center justify-center rounded-full text-[10px] font-bold text-white', m.color)}>
+                  <span className={cn('flex size-6 items-center justify-center rounded-full text-[10px] font-bold text-white', memberColorClass(m.color))}>
                     {m.initials}
                   </span>
                   <span className="min-w-0 flex-1 truncate">{m.name}</span>

@@ -9,6 +9,22 @@ import {
 } from '@/store/board';
 import { cn } from '@/lib/utils';
 
+export const MEMBER_FALLBACK_COLOR = 'bg-zinc-400';
+
+const MEMBER_COLOR_CLASSES = new Set([
+  MEMBER_FALLBACK_COLOR,
+  'bg-violet-600',
+  'bg-sky-600',
+  'bg-emerald-600',
+  'bg-amber-600',
+  'bg-rose-600',
+  'bg-indigo-600',
+]);
+
+export function memberColorClass(color?: string | null): string {
+  return color && MEMBER_COLOR_CLASSES.has(color) ? color : MEMBER_FALLBACK_COLOR;
+}
+
 export function dueMeta(dueDate: string | null): { label: string; overdue: boolean } | null {  if (!dueDate) return null;
   const day = 24 * 60 * 60 * 1000;
   const today = new Date();
@@ -41,7 +57,7 @@ export function AvatarStack({ memberIds, size = 'sm' }: { memberIds: string[]; s
             title={m.name}
             className={cn(
               'flex items-center justify-center rounded-full font-bold text-white ring-2 ring-card',
-              m.color,
+              memberColorClass(m.color),
               cls,
             )}
           >
