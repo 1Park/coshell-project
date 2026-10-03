@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "coshell-task": {
+      "type": "http",
+      "url": "${CORAID_MCP_URL:-http://localhost:3001/mcp}",
+      "headers": {
+        "X-Coraid-User": "${CORAID_USER:-anonymous}"
+      }
+    }
+  }
+}
