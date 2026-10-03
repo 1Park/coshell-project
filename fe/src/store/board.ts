@@ -341,7 +341,7 @@ export const useBoardStore = create<BoardState>()(
     }),
     {
       name: 'coshell-board',
-      version: 14,
+      version: 15,
       migrate: (persistedState, version) => {
         const s = persistedState as Partial<BoardState>;
         if (version < 6 && Object.keys(s.cards ?? {}).some((id) => id.startsWith('card-'))) {
@@ -434,6 +434,18 @@ export const useBoardStore = create<BoardState>()(
               cards[id] = fresh.cards[id];
               comments[id] = freshComments[id] ?? [];
             }
+          }
+        }
+        if (version < 15 && columns && !cards['BUG-204']) {
+          // BUG-204 is the live demo ticket; restore it if it was deleted in this browser.
+          const fresh = seed();
+          const home = fresh.cards['BUG-204']?.columnId;
+          if (home && columns.some((column) => column.id === home)) {
+            columns = columns.map((column) =>
+              column.id === home ? { ...column, cardIds: ['BUG-204', ...column.cardIds.filter((id) => id !== 'BUG-204')] } : column,
+            );
+            cards['BUG-204'] = fresh.cards['BUG-204'];
+            comments['BUG-204'] = seedComments()['BUG-204'] ?? [];
           }
         }
         return { ...s, columns, cards, commentsByCard: comments } as BoardState;
