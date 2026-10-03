@@ -2,8 +2,9 @@
 
 **Status:** Draft — pending review
 
-> 이 폴더는 데이터 형식 문서만 둔다. 실제 데이터는 맥미니의 `~/.local/share/coshell/data`(`DATA_DIR`)에 있다.
-> repo 안에 데이터를 두면 배포할 때마다 새 폴더에서 시작해 사라진다.
+> repo의 `data/`는 **시드(초기값)**다. 프론트가 빌드할 때 이 JSON을 가져와 보드 초기 데이터로 쓴다.
+> 실행 중에 바뀌는 실제 데이터는 맥미니의 `~/.local/share/coshell/data`(`DATA_DIR`)에 둔다.
+> repo 안의 파일은 배포할 때마다 새 릴리스 폴더로 다시 풀리므로, 실행 중에 이 폴더에 쓴 내용은 남지 않는다.
 
 ## Problem
 
