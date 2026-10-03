@@ -4,6 +4,10 @@ import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { useSessionStore } from '@/store/sessions';
+import { useBoardStore } from '@/store/board';
+import { useBranchStore } from '@/store/branches';
+import { createBranchChatSession } from '@/lib/question-branch-chat';
+import type { createQuestionSession, MergePreview } from '@/lib/question-branch';
 import type { TicketContext } from './TicketChat';
 
 export function MergeDialog({
@@ -21,31 +25,59 @@ export function MergeDialog({
 }) {
   const [compact, setCompact] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [prepared, setPrepared] = useState<{
+    session: ReturnType<typeof createQuestionSession>;
+    preview: MergePreview;
+    transcript: string;
+  } | null>(null);
 
   useEffect(() => {
     let cancelled = false;
+    const controller = new AbortController();
     const messages = useSessionStore.getState().messagesByTicket[ticket.sessionKey] ?? [];
-    fetch('/api/compact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ ticketContext: ticket, messages }),
-    })
-      .then(async (res) => {
-        const data = await res.json().catch(() => null);
-        if (!res.ok) throw new Error(data?.error ?? `compact failed (${res.status})`);
-        return data.compact as string;
-      })
-      .then((text) => {
-        if (!cancelled) setCompact(text);
+    const branch = useBranchStore.getState().branchesByTicket[ticket.ticketId]
+      ?.find((item) => item.id === ticket.sessionKey);
+    const mainContext = JSON.stringify({
+      ticket,
+      comments: useBoardStore.getState().commentsByCard[ticket.ticketId] ?? [],
+      messages: useSessionStore.getState().messagesByTicket[ticket.ticketId] ?? [],
+    });
+    const session = createBranchChatSession({
+      branchId: ticket.sessionKey,
+      mainContext,
+      branchContext: branch?.mainContext ?? mainContext,
+      messages,
+    });
+    session.previewMerge(ticket.sessionKey, controller.signal)
+      .then((preview) => {
+        if (!cancelled) {
+          setCompact(preview.compact);
+          setPrepared({ session, preview, transcript: JSON.stringify(messages) });
+        }
       })
       .catch((e) => {
         if (!cancelled) setError(e instanceof Error ? e.message : 'compact failed');
       });
     return () => {
       cancelled = true;
+      controller.abort();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  const approve = () => {
+    if (!prepared || !compact) return;
+    try {
+      const messages = useSessionStore.getState().messagesByTicket[ticket.sessionKey] ?? [];
+      if (JSON.stringify(messages) !== prepared.transcript) {
+        throw new Error('Branch changed after compacting. Close and generate a new preview.');
+      }
+      prepared.session.approveMerge(ticket.sessionKey, prepared.preview.id);
+      onApprove(compact);
+    } catch (e) {
+      setError(e instanceof Error ? e.message : 'merge failed');
+    }
+  };
 
   return (
     <Dialog open onOpenChange={(open) => { if (!open) onClose(); }}>
@@ -72,7 +104,7 @@ export function MergeDialog({
             <Button variant="ghost" size="sm" onClick={onClose}>
               Reject
             </Button>
-            <Button size="sm" disabled={compact === null} onClick={() => compact && onApprove(compact)}>
+            <Button size="sm" disabled={compact === null || error !== null} onClick={approve}>
               {mode === 'work' ? 'Merge & start work' : 'Approve & merge'}
             </Button>
           </div>

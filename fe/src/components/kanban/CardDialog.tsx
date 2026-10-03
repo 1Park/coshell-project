@@ -83,7 +83,6 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
   const askAi = () => {
     if (!card || !commentDraft.trim()) return;
     const question = commentDraft.trim();
-    addComment(card.id, question);
     const branch = createBranch(card.id);
     queueQuestion(branch.id, question);
     setCommentDraft('');
