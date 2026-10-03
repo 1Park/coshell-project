@@ -46,9 +46,11 @@ function shortDate(iso: string | null): string | null {
 export function AvatarStack({ memberIds, size = 'sm' }: { memberIds: string[]; size?: 'sm' | 'md' }) {
   if (memberIds.length === 0) return null;
   const cls = size === 'sm' ? 'size-5 text-[9px]' : 'size-6 text-[10px]';
+  const visibleMemberIds = memberIds.slice(0, 2);
+  const remaining = memberIds.length - visibleMemberIds.length;
   return (
     <div className="flex -space-x-1">
-      {memberIds.map((id) => {
+      {visibleMemberIds.map((id) => {
         const m = MEMBERS[id];
         if (!m) return null;
         return (
@@ -65,6 +67,14 @@ export function AvatarStack({ memberIds, size = 'sm' }: { memberIds: string[]; s
           </span>
         );
       })}
+      {remaining > 0 && (
+        <span
+          title={`${remaining} more assignee${remaining === 1 ? '' : 's'}`}
+          className={cn('bg-muted text-muted-foreground flex items-center justify-center rounded-full font-bold ring-2 ring-card', cls)}
+        >
+          +{remaining}
+        </span>
+      )}
     </div>
   );
 }
