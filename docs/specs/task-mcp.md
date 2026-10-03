@@ -132,7 +132,7 @@ Claude Code가 MCP 툴 실행 전에 허용 여부를 묻는 것도 승인 단�
 
 ## 데이터 형식
 
-보드와 카드 필드, Question 브랜치까지 포함한 전체 형식은 [data-format.md](data-format.md)를 따른다.
+보드와 카드 필드, Question 브랜치까지 포함한 전체 형식은 [data/README.md](../../data/README.md)를 따른다.
 아래는 Task MCP가 읽고 쓰는 부분이다.
 
 ```

@@ -2,6 +2,9 @@
 
 **Status:** Draft — pending review
 
+> 이 폴더는 데이터 형식 문서만 둔다. 실제 데이터는 맥미니의 `~/.local/share/coshell/data`(`DATA_DIR`)에 있다.
+> repo 안에 데이터를 두면 배포할 때마다 새 폴더에서 시작해 사라진다.
+
 ## Problem
 
 대시보드(칸반 보드, 카드, 댓글)와 Question 브랜치는 코드에 하드코딩된 시드와 각자의 브라우저 localStorage에
@@ -160,7 +163,7 @@ API가 응답할 때 `columnId`는 `board.json`에서, `comments`는 `discussion
 `attachments`는 `0`으로 채운다.
 
 **Question 머지 결과는 Discussion이 아니라 `context`에 들어간다.** 현재 코드는 머지 결과를 AI 댓글로
-추가하는데([TicketPanel.tsx](../../fe/src/components/ticket/TicketPanel.tsx)), 이를 `context`에 이어 붙이도록 바꾼다.
+추가하는데([TicketPanel.tsx](../fe/src/components/ticket/TicketPanel.tsx)), 이를 `context`에 이어 붙이도록 바꾼다.
 
 ### Main 컨텍스트에 이어 붙이는 형식
 
@@ -256,7 +259,7 @@ Task와 Question이 같은 형식을 쓰고 `type`으로 구분한다. 머지된
 
 ## API 초안 (참고)
 
-웹 백엔드([fe/server/api.mjs](../../fe/server/api.mjs))에 추가할 엔드포인트. 상세 설계는 별도로 정한다.
+웹 백엔드([fe/server/api.mjs](../fe/server/api.mjs))에 추가할 엔드포인트. 상세 설계는 별도로 정한다.
 
 | 메서드 | 경로 | 동작 |
 |---|---|---|
