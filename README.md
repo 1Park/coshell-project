@@ -1,2 +1,5 @@
 # coshell-project
-Coshell hackathon on 2026.10.03
+
+2026년 10월 3일 Coshell 해커톤 프로젝트입니다.
+
+해커톤에서 만든 코드와 아이디어를 이 저장소에 정리합니다.
