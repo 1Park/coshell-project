@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from 'react';
+import { LoaderCircleIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { useSessionStore } from '@/store/sessions';
@@ -107,8 +108,9 @@ export function MergeDialog({
           )}
           <h3 className="text-xs font-semibold">Summary to merge</h3>
           {compact === null ? (
-            <p className="text-muted-foreground animate-pulse rounded-lg bg-muted/40 px-3 py-2.5 text-[13px]">
-              Compacting branch…
+            <p className="text-muted-foreground flex items-center gap-2 rounded-lg bg-muted/40 px-3 py-2.5 text-[13px]">
+              <LoaderCircleIcon className="size-3.5 animate-spin" />
+              Compacting branch context…
             </p>
           ) : (
             <p className="rounded-lg bg-muted/40 px-3 py-2.5 text-[13px] whitespace-pre-wrap">{compact}</p>
@@ -133,7 +135,14 @@ export function MergeDialog({
                     </ul>
                   ) : <p className="text-muted-foreground text-xs">None proposed.</p>}
                 </>
-              ) : <p className="text-muted-foreground text-xs">{error ? 'Task proposal unavailable. Reject to keep the branch.' : 'Suggesting a Task from the compact…'}</p>}
+              ) : error ? (
+                <p className="text-muted-foreground text-xs">Task proposal unavailable. Reject to keep the branch.</p>
+              ) : (
+                <p className="text-muted-foreground flex items-center gap-2 text-xs">
+                  <LoaderCircleIcon className="size-3.5 animate-spin" />
+                  Drafting implementation task…
+                </p>
+              )}
             </section>
           )}
           <div className="flex justify-end gap-1.5">
