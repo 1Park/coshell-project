@@ -11,6 +11,7 @@ import bug107 from '../../../data/tickets/BUG-107/main.json';
 import bug108 from '../../../data/tickets/BUG-108/main.json';
 import bug109 from '../../../data/tickets/BUG-109/main.json';
 import bug110 from '../../../data/tickets/BUG-110/main.json';
+import bug204 from '../../../data/tickets/BUG-204/main.json';
 
 export type Priority = 'low' | 'medium' | 'high' | 'urgent';
 
@@ -129,7 +130,7 @@ interface TicketData {
   }>;
 }
 
-const TICKETS = [bug101, bug102, bug103, bug104, bug105, bug106, bug107, bug108, bug109, bug110] as TicketData[];
+const TICKETS = [bug101, bug102, bug103, bug104, bug105, bug106, bug107, bug108, bug109, bug110, bug204] as TicketData[];
 
 function ticketColumnId(columns: BoardData['columns'], ticketId: string): string {
   return columns.find((column) => column.card_ids.includes(ticketId))?.id ?? 'col-backlog';
@@ -340,7 +341,7 @@ export const useBoardStore = create<BoardState>()(
     }),
     {
       name: 'coshell-board',
-      version: 13,
+      version: 14,
       migrate: (persistedState, version) => {
         const s = persistedState as Partial<BoardState>;
         if (version < 6 && Object.keys(s.cards ?? {}).some((id) => id.startsWith('card-'))) {
@@ -415,7 +416,27 @@ export const useBoardStore = create<BoardState>()(
             };
           }
         }
-        return { ...s, cards, commentsByCard: comments } as BoardState;
+        let columns = s.columns;
+        if (version < 14 && columns) {
+          // Add seed tickets this browser has never seen (e.g. BUG-204), leaving existing cards untouched.
+          const fresh = seed();
+          const freshComments = seedComments();
+          const missing = Object.keys(fresh.cards).filter((id) => !cards[id]);
+          if (missing.length > 0) {
+            columns = columns.map((column) => {
+              const seedColumn = fresh.columns.find((c) => c.id === column.id);
+              const added = (seedColumn?.cardIds ?? []).filter((id) => missing.includes(id));
+              return added.length ? { ...column, cardIds: [...added, ...column.cardIds] } : column;
+            });
+            for (const id of missing) {
+              const placed = columns.some((column) => column.cardIds.includes(id));
+              if (!placed) continue;
+              cards[id] = fresh.cards[id];
+              comments[id] = freshComments[id] ?? [];
+            }
+          }
+        }
+        return { ...s, columns, cards, commentsByCard: comments } as BoardState;
       },
     },
   ),

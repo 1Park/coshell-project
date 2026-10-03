@@ -1,7 +1,7 @@
 {
   "columns": [
     { "id": "col-backlog", "title": "Backlog", "accent": "bg-zinc-400", "card_ids": ["BUG-101", "BUG-102", "BUG-103"] },
-    { "id": "col-progress", "title": "In Progress", "accent": "bg-sky-500", "card_ids": ["BUG-104", "BUG-105", "BUG-106"] },
+    { "id": "col-progress", "title": "In Progress", "accent": "bg-sky-500", "card_ids": ["BUG-204", "BUG-104", "BUG-105", "BUG-106"] },
     { "id": "col-review", "title": "In Review", "accent": "bg-amber-500", "card_ids": ["BUG-107", "BUG-108"] },
     { "id": "col-done", "title": "Done", "accent": "bg-emerald-500", "card_ids": ["BUG-109", "BUG-110"] }
   ],

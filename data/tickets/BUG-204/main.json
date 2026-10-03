@@ -1,0 +1,32 @@
+{
+  "ticket_id": "BUG-204",
+  "title": "Cart total shows stale value after quantity change and refresh",
+  "description": "Changing an item quantity updates the total immediately, but after a refresh the total returns to the value before the change. The cause has not been confirmed yet.\n\n## Repro\n\n1. Click **Reset demo**. Canvas Tote costs $20, quantity is 1, total is $20.\n2. Change the quantity to 3. The total updates to $60.\n3. Refresh the browser, or click **Leave cart** then **Open cart**.\n4. Quantity is still 3, but the total shows $20.\n\n## Expected\n\nAfter refresh, the total reflects the latest quantity ($60).\n\n## Repository\n\n`coraid-cart-demo` (React + TypeScript + Vite)",
+  "labels": ["bug", "frontend"],
+  "priority": "high",
+  "assignees": ["el"],
+  "reporter": "sm",
+  "start_date": "2026-10-03T00:00:00.000Z",
+  "due_date": "2026-10-05T00:00:00.000Z",
+  "context": "[Question · sm · 2026-10-03 13:30]\nAfter a quantity change, the server database stores the latest quantity and the cart read API returns it correctly. Server response caching does not apply to the checked path. The next priority is the frontend initial-render total calculation or cache usage.",
+  "discussions": [
+    {
+      "id": "d-204-1",
+      "author_id": "el",
+      "text": "The total is correct right after changing the quantity, but returns to the previous amount after refresh. I'll check the frontend initialization path.",
+      "mentions": [],
+      "ai": false,
+      "created_at": "2026-10-03T04:00:00.000Z"
+    },
+    {
+      "id": "d-204-2",
+      "author_id": "sm",
+      "text": "I'll check whether the quantity update API and cart read API return up-to-date values.",
+      "mentions": [],
+      "ai": false,
+      "created_at": "2026-10-03T04:05:00.000Z"
+    }
+  ],
+  "created_at": "2026-10-03T00:00:00.000Z",
+  "updated_at": "2026-10-03T04:30:00.000Z"
+}
