@@ -30,6 +30,7 @@ test('server-held key powers live chat, compact and Task without returning the k
   assert.equal(session.approveMerge(branch.id, preview.id), 'Compact');
   assert.equal(calls.length, 3);
   assert.ok(calls.every((call) => call.headers['x-api-key'] === 'server-secret' && call.body.model === 'claude-sonnet-5-5'));
+  assert.ok(calls.every((call) => call.body.output_config.effort === 'low'));
   assert.ok(!JSON.stringify(session.getState()).includes('server-secret'));
 });
 

@@ -251,7 +251,7 @@ async function handleClaude(req, res, dependencies) {
     const response = await (dependencies.fetch ?? fetch)('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'x-api-key': apiKey, 'anthropic-version': '2023-06-01' },
-      body: JSON.stringify({ model: 'claude-sonnet-5-5', max_tokens: 4096, system: payload.system, messages: payload.messages }),
+      body: JSON.stringify({ model: 'claude-sonnet-5-5', max_tokens: 4096, output_config: { effort: 'low' }, system: payload.system, messages: payload.messages }),
       signal: AbortSignal.any([controller.signal, AbortSignal.timeout(120000)]),
     });
     const data = await response.json();
