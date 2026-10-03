@@ -31,6 +31,22 @@ const updatedMainContext = session.approveMerge(branch.id, preview.id);
 
 ## Mock Mode
 
+The existing Question Branch UI is now connected to the browser module via
+`src/lib/question-branch-chat.ts`. `QUESTION_BRANCH_MOCK = true` is the local-demo
+flag for both chat and compact. The transport returns a local AI SDK response;
+neither `/api/chat` nor `/api/compact` receives QB requests. No API key is required.
+
+The existing session store remains the persisted UI transcript. Branches capture
+ticket details, comments and main history when created. Existing saved branches
+without a snapshot use the current context. Approval writes only the compact to
+the ticket's main comments, then removes the branch and its private transcript.
+Unapproved questions and answers are not automatically published as comments.
+New branches include approved comments in their starting context.
+
+The core's `initialState` option lets the UI adapter restore its existing saved
+transcript without replaying model calls. Core persistence, when supplied, takes
+precedence over `initialState`.
+
 Use `mock: true` to test the same conversation, preview and approval workflow
 without a key, internet access or API charges:
 
@@ -92,6 +108,7 @@ On Node 22.6+:
 
 ```sh
 node --experimental-strip-types --test fe/src/lib/question-branch.test.mjs
+node --experimental-strip-types --test fe/src/lib/question-branch-chat.test.mjs
 npm run typecheck
 ```
 

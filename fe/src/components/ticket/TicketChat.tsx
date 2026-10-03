@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef } from 'react';
+import { useEffect, useMemo } from 'react';
 import { AssistantRuntimeProvider } from '@assistant-ui/react';
 import { AssistantChatTransport, useChatRuntime } from '@assistant-ui/ai-sdk';
 import type { UIMessage } from 'ai';
@@ -8,6 +8,7 @@ import { Thread } from '@/components/assistant-ui/elements/thread.aui';
 import { useBoardStore } from '@/store/board';
 import { useBranchStore } from '@/store/branches';
 import { useSessionStore } from '@/store/sessions';
+import { branchChatResponse } from '@/lib/question-branch-chat';
 
 export interface TicketContext {
   ticketId: string;
@@ -22,17 +23,37 @@ export interface TicketContext {
   description: string;
 }
 
-export function TicketChat({ ticket }: { ticket: TicketContext }) {
+export function TicketChat({ ticket, onRunningChange }: {
+  ticket: TicketContext;
+  onRunningChange: (running: boolean) => void;
+}) {
   const initialMessages = useSessionStore((s) => s.messagesByTicket[ticket.sessionKey]);
   const setMessages = useSessionStore((s) => s.setMessages);
-  const addComment = useBoardStore((s) => s.addComment);
-  const linkedAnswer = useRef(false);
 
   const transport = useMemo(
     () =>
       new AssistantChatTransport({
         api: '/api/chat',
         body: { ticketId: ticket.ticketId, ticketContext: ticket },
+        fetch: async (input, init) => {
+          const request = new Request(input, init);
+          const { messages } = await request.json() as { messages: UIMessage[] };
+          const branch = useBranchStore.getState().branchesByTicket[ticket.ticketId]
+            ?.find((item) => item.id === ticket.sessionKey);
+          if (!branch) throw new Error('Question branch not found');
+          const mainContext = JSON.stringify({
+            ticket,
+            comments: useBoardStore.getState().commentsByCard[ticket.ticketId] ?? [],
+            messages: useSessionStore.getState().messagesByTicket[ticket.ticketId] ?? [],
+          });
+          return branchChatResponse({
+            branchId: branch.id,
+            mainContext,
+            branchContext: branch.mainContext ?? mainContext,
+            messages,
+            signal: request.signal,
+          });
+        },
       }),
     [ticket],
   );
@@ -43,18 +64,22 @@ export function TicketChat({ ticket }: { ticket: TicketContext }) {
     onFinish: ({ messages }) => {
       setMessages(ticket.sessionKey, messages);
       autoTitleBranch(ticket.ticketId, ticket.sessionKey, messages);
-      if (linkedAnswer.current) {
-        linkedAnswer.current = false;
-        const text = lastAssistantText(messages);
-        if (text) addComment(ticket.ticketId, text, { ai: true });
-      }
     },
   });
 
   useEffect(() => {
+    const update = () => onRunningChange(runtime.thread.getState().isRunning);
+    update();
+    const unsubscribe = runtime.thread.subscribe(update);
+    return () => {
+      unsubscribe();
+      onRunningChange(false);
+    };
+  }, [runtime, onRunningChange]);
+
+  useEffect(() => {
     const question = useSessionStore.getState().consumeQuestion(ticket.sessionKey);
     if (question) {
-      linkedAnswer.current = true;
       runtime.thread.append(question);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -83,14 +108,4 @@ function autoTitleBranch(ticketId: string, sessionKey: string, messages: UIMessa
   const firstUser = messages.find((m) => m.role === 'user');
   const text = firstUser ? messageText(firstUser) : '';
   if (text) useBranchStore.getState().renameBranch(ticketId, branch.id, text);
-}
-
-function lastAssistantText(messages: UIMessage[]): string {
-  for (let i = messages.length - 1; i >= 0; i--) {
-    const m = messages[i];
-    if (m.role !== 'assistant') continue;
-    const text = messageText(m);
-    if (text) return text;
-  }
-  return '';
 }

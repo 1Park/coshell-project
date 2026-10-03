@@ -1,11 +1,14 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
+import { useBoardStore } from './board';
+import { useSessionStore } from './sessions';
 
 export interface Branch {
   id: string;
   ticketId: string;
   title: string;
   createdAt: string;
+  mainContext?: string;
 }
 
 interface BranchState {
@@ -21,11 +24,17 @@ export const useBranchStore = create<BranchState>()(
       branchesByTicket: {},
 
       createBranch: (ticketId) => {
+        const board = useBoardStore.getState();
         const branch: Branch = {
           id: `q-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 6)}`,
           ticketId,
           title: 'New question',
           createdAt: new Date().toISOString(),
+          mainContext: JSON.stringify({
+            ticket: board.cards[ticketId],
+            comments: board.commentsByCard[ticketId] ?? [],
+            messages: useSessionStore.getState().messagesByTicket[ticketId] ?? [],
+          }),
         };
         set((state) => ({
           branchesByTicket: {

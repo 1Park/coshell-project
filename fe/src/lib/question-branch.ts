@@ -29,6 +29,7 @@ interface Options {
   apiKey?: string;
   mock?: boolean;
   mainContext?: string;
+  initialState?: QuestionSession;
   model?: string;
   fetch?: typeof globalThis.fetch;
   // Use one key per ticket. The API key is never included in persisted state.
@@ -44,7 +45,9 @@ export function createQuestionSession(options: Options) {
   const stored = options.persistence?.storage.getItem(options.persistence.key);
   let state: QuestionSession = stored
     ? JSON.parse(stored)
-    : { mainContext: options.mainContext ?? '', branches: {}, previews: {} };
+    : structuredClone(options.initialState ?? {
+      mainContext: options.mainContext ?? '', branches: {}, previews: {},
+    });
   let busy = false;
 
   function commit(next: QuestionSession) {

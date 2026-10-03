@@ -27,6 +27,7 @@ export function TicketPanel({ ticketId }: { ticketId: string }) {
   const clearSession = useSessionStore((s) => s.clearSession);
 
   const [merging, setMerging] = useState<{ branchId: string; startWork: boolean } | null>(null);
+  const [running, setRunning] = useState(false);
   const didInit = useRef(false);
 
   const selectedId = branches.some((b) => b.id === activeBranchId)
@@ -93,7 +94,7 @@ export function TicketPanel({ ticketId }: { ticketId: string }) {
           <div className="min-w-0 flex-1">
             <p className="text-muted-foreground flex items-center gap-1.5 text-[11px] font-medium">
               <MessageSquareIcon className="size-3" />
-              AI session · {base.status}
+              Question Branch · Mock · {base.status}
               <span className={cn('ml-1 inline-block size-1.5 rounded-full', PRIORITY_META[card.priority].dot)} />
               {PRIORITY_META[card.priority].name}
             </p>
@@ -102,7 +103,7 @@ export function TicketPanel({ ticketId }: { ticketId: string }) {
           <Button variant="ghost" size="icon-sm" aria-label="Edit details" title="Edit details" onClick={() => openDetail(card.id)}>
             <PencilIcon />
           </Button>
-          <Button variant="ghost" size="icon-sm" aria-label="New branch" title="Start a new question branch" onClick={startBranch}>
+          <Button variant="ghost" size="icon-sm" aria-label="New branch" title="Start a new question branch" disabled={running} onClick={startBranch}>
             <PlusIcon />
           </Button>
           <Button variant="ghost" size="icon-sm" aria-label="Close panel" onClick={close}>
@@ -121,6 +122,7 @@ export function TicketPanel({ ticketId }: { ticketId: string }) {
             value={selected.id}
             onChange={(e) => setActiveTicket(card.id, e.target.value)}
             aria-label="Select branch"
+            disabled={running}
             className="bg-muted min-w-0 flex-1 truncate rounded-md px-1.5 py-1 text-xs font-medium outline-none"
           >
             {branches.map((b) => (
@@ -135,10 +137,10 @@ export function TicketPanel({ ticketId }: { ticketId: string }) {
         <span className="flex-1" />
         {selected && (
           <>
-            <Button size="sm" disabled={!hasMessages} onClick={() => setMerging({ branchId: selected.id, startWork: false })}>
+            <Button size="sm" disabled={!hasMessages || running} onClick={() => setMerging({ branchId: selected.id, startWork: false })}>
               Merge
             </Button>
-            <Button size="sm" variant="secondary" disabled={!hasMessages} onClick={() => setMerging({ branchId: selected.id, startWork: true })}>
+            <Button size="sm" variant="secondary" disabled={!hasMessages || running} onClick={() => setMerging({ branchId: selected.id, startWork: true })}>
               Merge & start work
             </Button>
           </>
@@ -147,8 +149,8 @@ export function TicketPanel({ ticketId }: { ticketId: string }) {
 
       <div className="flex min-h-0 flex-1 flex-col">
         {selected ? (
-          <div className="min-h-0 flex-1">
-            <TicketChat key={selected.id} ticket={{ ...base, sessionKey: selected.id } satisfies TicketContext} />
+          <div className="min-h-0 flex-1" inert={merging !== null}>
+            <TicketChat key={selected.id} ticket={{ ...base, sessionKey: selected.id } satisfies TicketContext} onRunningChange={setRunning} />
           </div>
         ) : (
           <div className="flex flex-1 flex-col items-center justify-center gap-2 p-6 text-center">
