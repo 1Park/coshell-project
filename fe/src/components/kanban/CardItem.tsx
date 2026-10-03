@@ -97,7 +97,7 @@ export function CardFace({ card, overlay = false }: { card: BoardCard; overlay?:
           {due && (
             <span
               className={cn(
-                'flex items-center gap-1 font-mono text-[10px] font-medium tabular-nums',
+                'flex min-w-[3.5rem] shrink-0 items-center gap-1 whitespace-nowrap font-mono text-[10px] font-medium tabular-nums',
                 due.overdue ? 'text-rose-600 dark:text-rose-400' : 'text-muted-foreground',
               )}
             >
