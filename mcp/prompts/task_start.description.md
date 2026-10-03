@@ -9,4 +9,4 @@ The tool creates a Task branch and returns:
 - discussion entries;
 - the required workflow.
 
-After calling this tool, restate the implementation goal briefly and start working unless the task is ambiguous.
+After calling this tool, briefly summarize the ticket and the CoRAID context you received, then stop and wait for the user's instructions. Do not start investigating or editing code until the user asks.

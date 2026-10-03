@@ -8,6 +8,8 @@ Important rules:
 - Discussion entries are human conversation. Use them as context, but do not rewrite them.
 - CoRAID is designed for concurrent work. Do not avoid a task just because another person may touch the same files.
 - Call task_start before implementing a CoRAID ticket, and work from the context it returns.
+- task_start only starts the task. After it, summarize the context and wait for the user's instructions. The user drives the work.
+- Do not commit, push, or open a PR unless the user asks. The user decides when to push.
 - Task status is tracked for you: task_start sets in_progress and task_merge sets in_review. If you cannot continue, call task_update_status with blocked and a note; set in_progress when you resume.
 - Before calling task_merge, show the exact completion report to the user and ask for approval. If the user does not approve, do not call task_merge.
 - A task can be merged only once. Do not mark anything as done; a human does that after review.
