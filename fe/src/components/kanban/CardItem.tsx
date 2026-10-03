@@ -2,15 +2,15 @@ import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
 import { CalendarDaysIcon, MessageSquareIcon, PaperclipIcon } from 'lucide-react';
 import {
-  LABELS,
   MEMBERS,
   PRIORITY_META,
+  resolveLabel,
+  useBoardStore,
   type BoardCard,
 } from '@/store/board';
 import { cn } from '@/lib/utils';
 
-export function dueMeta(dueDate: string | null): { label: string; overdue: boolean } | null {
-  if (!dueDate) return null;
+export function dueMeta(dueDate: string | null): { label: string; overdue: boolean } | null {  if (!dueDate) return null;
   const day = 24 * 60 * 60 * 1000;
   const today = new Date();
   today.setHours(0, 0, 0, 0);
@@ -20,6 +20,12 @@ export function dueMeta(dueDate: string | null): { label: string; overdue: boole
   if (diff < 0) return { label: `D+${-diff}`, overdue: true };
   if (diff === 0) return { label: 'D-Day', overdue: false };
   return { label: `D-${diff}`, overdue: false };
+}
+
+function shortDate(iso: string | null): string | null {
+  if (!iso) return null;
+  const d = new Date(iso);
+  return `${d.getMonth() + 1}/${d.getDate()}`;
 }
 
 export function AvatarStack({ memberIds, size = 'sm' }: { memberIds: string[]; size?: 'sm' | 'md' }) {
@@ -50,9 +56,9 @@ export function AvatarStack({ memberIds, size = 'sm' }: { memberIds: string[]; s
 
 export function CardFace({ card, overlay = false }: { card: BoardCard; overlay?: boolean }) {
   const due = dueMeta(card.dueDate);
-  const doneCount = card.subtasks.filter((s) => s.done).length;
-  const hasSubtasks = card.subtasks.length > 0;
-  const progress = hasSubtasks ? Math.round((doneCount / card.subtasks.length) * 100) : 0;
+  const commentCount = useBoardStore((s) => s.commentsByCard[card.id]?.length ?? 0);
+  const labelDefs = useBoardStore((s) => s.labels);
+  const start = shortDate(card.startDate);
 
   return (
     <div
@@ -65,8 +71,7 @@ export function CardFace({ card, overlay = false }: { card: BoardCard; overlay?:
         {card.labels.length > 0 && (
           <div className="flex flex-wrap gap-x-2.5 gap-y-1">
             {card.labels.map((id) => {
-              const l = LABELS[id];
-              if (!l) return null;
+              const l = resolveLabel(labelDefs, id);
               return (
                 <span key={id} className={cn('flex items-center gap-1 text-[10px] font-bold tracking-[0.08em] uppercase', l.text)}>
                   <span className={cn('size-1.5 rounded-full', l.dot)} />
@@ -78,17 +83,13 @@ export function CardFace({ card, overlay = false }: { card: BoardCard; overlay?:
         )}
         <p className="text-[13px] leading-snug font-medium">{card.title}</p>
         {card.description && <p className="text-muted-foreground line-clamp-2 text-xs leading-relaxed">{card.description}</p>}
-        {hasSubtasks && (
-          <div className="flex items-center gap-2">
-            <div className="bg-muted h-1 flex-1 overflow-hidden rounded-full">
-              <div className="h-full rounded-full bg-emerald-500 transition-all" style={{ width: `${progress}%` }} />
-            </div>
-            <span className="font-mono text-[10px] text-muted-foreground tabular-nums">
-              {doneCount}/{card.subtasks.length}
-            </span>
-          </div>
-        )}
         <div className="flex items-center gap-2.5 pt-0.5">
+          {start && (
+            <span className="text-muted-foreground flex items-center gap-1 font-mono text-[10px] tabular-nums">
+              <CalendarDaysIcon className="size-3" />
+              {start}
+            </span>
+          )}
           {due && (
             <span
               className={cn(
@@ -104,10 +105,10 @@ export function CardFace({ card, overlay = false }: { card: BoardCard; overlay?:
             <span className={cn('size-1.5 rounded-full', PRIORITY_META[card.priority].dot)} />
             {PRIORITY_META[card.priority].name}
           </span>
-          {card.comments > 0 && (
+          {commentCount > 0 && (
             <span className="text-muted-foreground flex items-center gap-1 font-mono text-[10px] tabular-nums">
               <MessageSquareIcon className="size-3" />
-              {card.comments}
+              {commentCount}
             </span>
           )}
           {card.attachments > 0 && (

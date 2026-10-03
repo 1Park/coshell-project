@@ -3,7 +3,7 @@ import { pipeline } from 'node:stream/promises';
 
 import { anthropic } from '@ai-sdk/anthropic';
 import { frontendTools } from '@assistant-ui/ai-sdk';
-import { convertToModelMessages, streamText } from 'ai';
+import { convertToModelMessages, generateText, streamText } from 'ai';
 
 const MODEL = process.env.ANTHROPIC_MODEL || 'claude-sonnet-5';
 
@@ -32,13 +32,8 @@ function ticketSystemPrompt(ticket) {
     lines.push(`Assignees: ${ticket.assignees.join(', ')}.`);
   }
   if (ticket.dueDate) lines.push(`Due: ${ticket.dueDate}.`);
+  if (ticket.startDate) lines.push(`Start: ${ticket.startDate}.`);
   if (ticket.description) lines.push(`Description: ${ticket.description}`);
-  if (Array.isArray(ticket.subtasks) && ticket.subtasks.length > 0) {
-    const subs = ticket.subtasks
-      .map((s) => `- [${s && s.done ? 'x' : ' '}] ${s ? s.title : ''}`)
-      .join('\n');
-    lines.push(`Subtasks:\n${subs}`);
-  }
   lines.push('Answer in the context of this ticket. Keep replies concise and actionable.');
   return lines.join('\n');
 }
@@ -102,6 +97,48 @@ async function handleChat(req, res) {
   }
 }
 
+function compactSystemPrompt(ticket) {
+  const name = ticket && ticket.title ? `"${ticket.title}"` : 'the ticket';
+  return [
+    `You are CoRAID's Main recorder. Compress the following Question Branch conversation about ${name} into compact prose another AI can use directly.`,
+    'Rules: conclusions and decisions first, then key rationale, then open items.',
+    'Korean, plain sentences, max 10 lines. No greeting, no markdown headers.',
+  ].join('\n');
+}
+
+async function handleCompact(req, res) {
+  if (req.method !== 'POST') {
+    return sendJson(res, 405, { error: 'Method not allowed' });
+  }
+  if (!process.env.ANTHROPIC_API_KEY) {
+    return sendJson(res, 500, { error: 'ANTHROPIC_API_KEY is not set' });
+  }
+
+  let payload;
+  try {
+    payload = JSON.parse(await readBody(req));
+  } catch {
+    return sendJson(res, 400, { error: 'Invalid JSON body' });
+  }
+
+  const { messages, ticketContext } = payload ?? {};
+  if (!Array.isArray(messages) || messages.length === 0) {
+    return sendJson(res, 400, { error: 'messages must be a non-empty array' });
+  }
+
+  try {
+    const result = await generateText({
+      model: anthropic(MODEL),
+      system: compactSystemPrompt(ticketContext),
+      messages: await convertToModelMessages(messages),
+    });
+    sendJson(res, 200, { compact: result.text.trim() });
+  } catch (error) {
+    console.error('[api/compact]', error);
+    sendJson(res, 500, { error: 'Failed to compact branch' });
+  }
+}
+
 /**
  * Mounts the API routes onto a Node http request/response pair.
  * Returns true when the request was handled.
@@ -111,6 +148,10 @@ export async function handleApi(req, res) {
 
   if (pathname === '/api/chat') {
     await handleChat(req, res);
+    return true;
+  }
+  if (pathname === '/api/compact') {
+    await handleCompact(req, res);
     return true;
   }
   return false;

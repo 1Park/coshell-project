@@ -109,7 +109,7 @@ export function KanbanBoard() {
     <div className="flex h-full flex-col">
       <div className="flex shrink-0 flex-wrap items-center gap-2 px-4 pt-3 pb-2">
         <div className="flex items-baseline gap-2.5">
-          <h1 className="text-sm font-bold tracking-tight">Coshell Sprint</h1>
+          <h1 className="text-sm font-bold tracking-tight">CoRAID Sprint</h1>
           <p className="text-muted-foreground font-mono text-[11px] tabular-nums">
             {stats.done}/{stats.total} done
             {stats.overdue > 0 && <span className="text-rose-600 dark:text-rose-400"> · {stats.overdue} overdue</span>}
@@ -121,11 +121,11 @@ export function KanbanBoard() {
           <Input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="카드 검색"
+            placeholder="Search cards"
             className="h-8 w-44 pl-8 text-sm"
           />
         </div>
-        <Button variant="ghost" size="icon-sm" aria-label="보드 초기화" title="데모 데이터로 초기화" onClick={resetBoard}>
+        <Button variant="ghost" size="icon-sm" aria-label="Reset board" title="Reset to demo data" onClick={resetBoard}>
           <RotateCcwIcon />
         </Button>
       </div>
@@ -158,12 +158,12 @@ export function KanbanBoard() {
                   if (e.key === 'Enter') submitColumn();
                   if (e.key === 'Escape') { setColumnDraft(''); setAddingColumn(false); }
                 }}
-                placeholder="컬럼 이름"
+                placeholder="Column name"
                 className="h-8 text-sm"
               />
               <div className="flex gap-1.5">
-                <Button size="sm" onClick={submitColumn} disabled={!columnDraft.trim()}>추가</Button>
-                <Button variant="ghost" size="sm" onClick={() => { setColumnDraft(''); setAddingColumn(false); }}>취소</Button>
+                <Button size="sm" onClick={submitColumn} disabled={!columnDraft.trim()}>Add</Button>
+                <Button variant="ghost" size="sm" onClick={() => { setColumnDraft(''); setAddingColumn(false); }}>Cancel</Button>
               </div>
             </div>
           ) : (
@@ -171,7 +171,7 @@ export function KanbanBoard() {
               onClick={() => setAddingColumn(true)}
               className="text-muted-foreground hover:text-foreground hover:border-foreground/25 flex w-72 shrink-0 items-center justify-center gap-1.5 rounded-[10px] border border-dashed py-3 text-[13px] transition"
             >
-              <PlusIcon className="size-4" /> 컬럼 추가
+              <PlusIcon className="size-4" /> Add column
             </button>
           )}
         </div>

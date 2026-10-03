@@ -6,22 +6,24 @@ import { AssistantChatTransport, useChatRuntime } from '@assistant-ui/ai-sdk';
 import type { UIMessage } from 'ai';
 import { Thread } from '@/components/assistant-ui/elements/thread.aui';
 import { useBoardStore } from '@/store/board';
+import { useBranchStore } from '@/store/branches';
 import { useSessionStore } from '@/store/sessions';
 
 export interface TicketContext {
   ticketId: string;
+  sessionKey: string;
   title: string;
   status: string;
   priority: string;
   labels: string[];
   assignees: string[];
+  startDate: string | null;
   dueDate: string | null;
   description: string;
-  subtasks: { title: string; done: boolean }[];
 }
 
 export function TicketChat({ ticket }: { ticket: TicketContext }) {
-  const initialMessages = useSessionStore((s) => s.messagesByTicket[ticket.ticketId]);
+  const initialMessages = useSessionStore((s) => s.messagesByTicket[ticket.sessionKey]);
   const setMessages = useSessionStore((s) => s.setMessages);
   const addComment = useBoardStore((s) => s.addComment);
   const linkedAnswer = useRef(false);
@@ -39,7 +41,8 @@ export function TicketChat({ ticket }: { ticket: TicketContext }) {
     transport,
     messages: initialMessages ?? undefined,
     onFinish: ({ messages }) => {
-      setMessages(ticket.ticketId, messages);
+      setMessages(ticket.sessionKey, messages);
+      autoTitleBranch(ticket.ticketId, ticket.sessionKey, messages);
       if (linkedAnswer.current) {
         linkedAnswer.current = false;
         const text = lastAssistantText(messages);
@@ -49,7 +52,7 @@ export function TicketChat({ ticket }: { ticket: TicketContext }) {
   });
 
   useEffect(() => {
-    const question = useSessionStore.getState().consumeQuestion(ticket.ticketId);
+    const question = useSessionStore.getState().consumeQuestion(ticket.sessionKey);
     if (question) {
       linkedAnswer.current = true;
       runtime.thread.append(question);
@@ -64,15 +67,29 @@ export function TicketChat({ ticket }: { ticket: TicketContext }) {
   );
 }
 
+function messageText(m: UIMessage): string {
+  return m.parts
+    .filter((p): p is Extract<UIMessage['parts'][number], { type: 'text' }> => p.type === 'text')
+    .map((p) => p.text)
+    .join('\n')
+    .trim();
+}
+
+function autoTitleBranch(ticketId: string, sessionKey: string, messages: UIMessage[]) {
+  const branch = (useBranchStore.getState().branchesByTicket[ticketId] ?? []).find(
+    (b) => b.id === sessionKey,
+  );
+  if (!branch || (branch.title !== 'New question' && !/^Q\d+$/.test(branch.title))) return;
+  const firstUser = messages.find((m) => m.role === 'user');
+  const text = firstUser ? messageText(firstUser) : '';
+  if (text) useBranchStore.getState().renameBranch(ticketId, branch.id, text);
+}
+
 function lastAssistantText(messages: UIMessage[]): string {
   for (let i = messages.length - 1; i >= 0; i--) {
     const m = messages[i];
     if (m.role !== 'assistant') continue;
-    const text = m.parts
-      .filter((p): p is Extract<UIMessage['parts'][number], { type: 'text' }> => p.type === 'text')
-      .map((p) => p.text)
-      .join('\n')
-      .trim();
+    const text = messageText(m);
     if (text) return text;
   }
   return '';

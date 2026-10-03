@@ -50,7 +50,7 @@ export function KanbanColumn({
           {visibleCardIds.length}
         </span>
         <span className="flex-1" />
-        <Button variant="ghost" size="icon-xs" aria-label="카드 추가" onClick={() => setComposing(true)}>
+        <Button variant="ghost" size="icon-xs" aria-label="Add card" onClick={() => setComposing(true)}>
           <PlusIcon />
         </Button>
       </header>
@@ -87,14 +87,14 @@ export function KanbanColumn({
                   setComposing(false);
                 }
               }}
-              placeholder="카드 제목을 입력하세요"
+              placeholder="Enter card title"
               className="bg-transparent text-[13px] outline-none placeholder:text-muted-foreground/60 w-full resize-none"
             />
             <div className="flex items-center gap-1.5">
               <Button size="sm" onClick={submit} disabled={!draft.trim()}>
-                <CheckIcon /> 추가
+                <CheckIcon /> Add
               </Button>
-              <Button variant="ghost" size="icon-sm" aria-label="취소" onClick={() => { setDraft(''); setComposing(false); }}>
+              <Button variant="ghost" size="icon-sm" aria-label="Cancel" onClick={() => { setDraft(''); setComposing(false); }}>
                 <XIcon />
               </Button>
             </div>
