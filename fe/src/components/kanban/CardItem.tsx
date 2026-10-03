@@ -85,7 +85,7 @@ export function CardFace({ card, overlay = false }: { card: BoardCard; overlay?:
         <p className="font-mono text-[10px] font-medium tracking-wide text-muted-foreground tabular-nums">
           {card.id}
         </p>
-        <p className="text-[13px] leading-snug font-medium">{card.title}</p>
+        <p title={card.title} className="truncate text-[13px] leading-snug font-medium">{card.title}</p>
         {card.description && <p className="text-muted-foreground line-clamp-2 text-xs leading-relaxed">{card.description}</p>}
         <div className="flex items-center gap-2.5 pt-0.5">
           {start && (
