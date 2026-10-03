@@ -9,6 +9,7 @@ import { useBoardStore } from '@/store/board';
 import { useBranchStore } from '@/store/branches';
 import { useSessionStore } from '@/store/sessions';
 import { branchChatResponse } from '@/lib/question-branch-chat';
+import { QUESTION_SYSTEM_PROMPT } from '@/lib/team-prompts';
 
 export interface TicketContext {
   ticketId: string;
@@ -53,6 +54,7 @@ export function TicketChat({ ticket, onRunningChange }: {
             branchContext: branch.mainContext ?? mainContext,
             messages,
             signal: request.signal,
+            questionPrompt: QUESTION_SYSTEM_PROMPT,
           });
         },
       }),

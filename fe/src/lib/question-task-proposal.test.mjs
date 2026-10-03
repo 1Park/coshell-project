@@ -1,7 +1,13 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
+import { readFileSync } from 'node:fs';
 import { createQuestionSession } from './question-branch.ts';
-import { QUESTION_COMPACT_PROMPT, TASK_PROPOSAL_PROMPT } from './question-prompts.ts';
+import { QUESTION_COMPACT_PROMPT } from './question-prompts.ts';
+import { extractPrompt } from './prompt-document.ts';
+
+const document = readFileSync(new URL('../../../docs/specs/coraid-prompts.md', import.meta.url), 'utf8');
+const TASK_PROPOSAL_PROMPT = extractPrompt(document, '### Internal AI Task Draft Format');
+const QUESTION_SYSTEM_PROMPT = extractPrompt(document, '## 3. CoRAID Internal AI Prompt');
 
 const ticket = { ticketId: 'BUG-101', title: 'Fix login', description: 'Login times out' };
 const proposal = {
@@ -13,6 +19,7 @@ const proposal = {
 function ready(options = {}) {
   return createQuestionSession({
     mock: true,
+    taskProposalPrompt: TASK_PROPOSAL_PROMPT,
     initialState: {
       mainContext: 'Original main',
       branches: { q1: { id: 'q1', mainContext: 'Snapshot', revision: 1,
@@ -32,6 +39,23 @@ test('mock task proposal is structured, makes no network request and does not mu
   assert.deepEqual(session.getState(), before);
   assert.equal(session.approveMerge('q1', 'p1'), `Original main\n\n${before.previews.q1.compact}`);
   assert.ok(!session.getState().mainContext.includes(task.title));
+});
+
+test('QB conversation uses the exact team MD system prompt', async () => {
+  let request;
+  const session = ready({
+    mock: false, apiKey: 'test', questionPrompt: QUESTION_SYSTEM_PROMPT,
+    fetch: async (_url, init) => {
+      request = JSON.parse(init.body);
+      return Response.json({ content: [{ type: 'text', text: 'Answer' }], stop_reason: 'end_turn' });
+    },
+  });
+  await session.sendMessage('q1', 'Question');
+  assert.ok(request.system.startsWith(QUESTION_SYSTEM_PROMPT));
+  assert.match(request.system, /Snapshot/);
+  assert.match(QUESTION_SYSTEM_PROMPT, /Answer the user in Korean/);
+  assert.match(TASK_PROPOSAL_PROMPT, /Return only JSON/);
+  assert.throws(() => extractPrompt(document, '## Missing'), /not found/);
 });
 
 test('live proposal uses the separate team-based prompt and ticket + compact, not private transcript', async () => {

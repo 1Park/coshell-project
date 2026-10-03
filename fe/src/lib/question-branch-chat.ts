@@ -12,6 +12,8 @@ export function createBranchChatSession(options: {
   messages: UIMessage[];
   mock?: boolean;
   apiKey?: string;
+  questionPrompt?: string;
+  taskProposalPrompt?: string;
 }) {
   const transcript: QuestionMessage[] = options.messages
     .filter((message) => message.role === 'user' || message.role === 'assistant')
@@ -25,6 +27,8 @@ export function createBranchChatSession(options: {
   return createQuestionSession({
     mock: options.mock ?? QUESTION_BRANCH_MOCK,
     apiKey: options.apiKey,
+    questionPrompt: options.questionPrompt,
+    taskProposalPrompt: options.taskProposalPrompt,
     initialState: {
       mainContext: options.mainContext,
       branches: {
@@ -49,6 +53,7 @@ export async function branchChatResponse(options: {
   signal?: AbortSignal;
   mock?: boolean;
   apiKey?: string;
+  questionPrompt?: string;
 }): Promise<Response> {
   const question = options.messages.at(-1);
   if (!question || question.role !== 'user' || question.parts.some((part) => part.type !== 'text')) {
