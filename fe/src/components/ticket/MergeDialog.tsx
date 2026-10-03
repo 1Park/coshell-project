@@ -9,6 +9,7 @@ import { useBranchStore } from '@/store/branches';
 import { createBranchChatSession } from '@/lib/question-branch-chat';
 import type { createQuestionSession, MergePreview, TaskProposal } from '@/lib/question-branch';
 import type { TicketContext } from './TicketChat';
+import { TASK_PROPOSAL_PROMPT } from '@/lib/team-prompts';
 
 export function MergeDialog({
   ticket,
@@ -48,6 +49,7 @@ export function MergeDialog({
       mainContext,
       branchContext: branch?.mainContext ?? mainContext,
       messages,
+      taskProposalPrompt: TASK_PROPOSAL_PROMPT,
     });
     session.previewMerge(ticket.sessionKey, controller.signal)
       .then(async (preview) => {

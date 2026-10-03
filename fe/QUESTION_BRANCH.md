@@ -97,7 +97,7 @@ example, quota exceeded); a failed write does not change the in-memory session.
 Both merge actions use the same `QUESTION_COMPACT_PROMPT` in
 `src/lib/question-prompts.ts`. It records findings and uncertainty without adding
 new proposed tasks. The Task action then calls `suggestTask(branchId, previewId,
-ticket, signal?)` using a separate `TASK_PROPOSAL_PROMPT`, adapted from the team's
+ticket, signal?)` using a separate `TASK_PROPOSAL_PROMPT`, extracted directly from the team's
 `docs/specs/coraid-prompts.md` Internal AI Task Draft Format.
 
 Task proposals contain `title`, `instruction`, `acceptance_criteria`,
@@ -112,6 +112,14 @@ publishes only the compact into main comments and includes the approved Task fie
 in the Claude Code handoff. Proposed work is never recorded as completed findings.
 MCP calls remain `task_start` / `task_merge`; the proposed MCP tool names in the
 team's design document are not implemented yet.
+
+The web UI imports `docs/specs/coraid-prompts.md` as raw text through
+`src/lib/team-prompts.ts`. QB conversation uses the exact `CoRAID Internal AI
+Prompt` block; Task suggestion uses the exact `Internal AI Task Draft Format`
+block, not a rewritten copy. Changes to these MD blocks take effect after rebuild
+and deployment. Compact remains a separate prompt because the team document has
+no QB merge-compaction prompt. Standalone live core callers must supply
+`taskProposalPrompt`; the UI supplies it from the MD automatically.
 
 ## Security
 
