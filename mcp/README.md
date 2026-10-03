@@ -19,6 +19,12 @@ npm start      # http://0.0.0.0:3001/mcp
 
 상태 확인: `GET /healthz`
 
+**맥미니 데모 티켓 초기화**: `data/reset.json`의 `id`를 새 값으로 바꾸고 push하면, 배포 때 `tickets`에 적은 티켓의 맥미니 데이터(브랜치, Main 기록)를 지우고 시드 상태로 되돌립니다. 같은 `id`로는 다시 실행되지 않습니다.
+
+```json
+{ "id": "2026-10-03-full-test-2", "tickets": ["BUG-204"] }
+```
+
 맥미니에서는 main push 시 `scripts/deploy-local.sh`가 프론트 배포 후 launchd 서비스 `local.coshell.mcp`로 자동 실행합니다 (`DATA_DIR=~/.local/share/coshell/data`, 로그 `~/.local/share/coshell/logs/mcp{,.error}.log`). MCP 배포가 실패해도 프론트는 되돌리지 않습니다.
 
 ## Claude Code에 연결
