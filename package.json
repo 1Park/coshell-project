@@ -4,8 +4,12 @@
   "private": true,
   "type": "module",
   "engines": { "node": ">=22" },
+  "workspaces": ["fe"],
   "scripts": {
-    "build": "node scripts/build.mjs",
-    "start": "node scripts/server.mjs"
+    "dev": "npm run dev -w fe",
+    "build": "npm run build -w fe",
+    "preview": "npm run preview -w fe",
+    "start": "npm run start -w fe",
+    "typecheck": "npm run typecheck -w fe"
   }
 }

@@ -33,6 +33,12 @@ cat > "$base/start-server.sh" <<'SH'
 #!/bin/bash
 set -euo pipefail
 cd "$HOME/.local/share/coshell/current"
+# Optional machine-local secrets (e.g. ANTHROPIC_API_KEY). Never committed.
+if [ -f "$HOME/.local/share/coshell/env" ]; then
+  set -a
+  . "$HOME/.local/share/coshell/env"
+  set +a
+fi
 export RELEASE_SHA="$(cat .release-sha)"
 exec npm start
 SH

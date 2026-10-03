@@ -1,5 +1,6 @@
 node_modules/
 dist/
+*.tsbuildinfo
 
 # Local environment variables and secrets
 .env
