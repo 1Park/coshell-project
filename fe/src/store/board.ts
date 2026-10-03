@@ -341,7 +341,7 @@ export const useBoardStore = create<BoardState>()(
     }),
     {
       name: 'coshell-board',
-      version: 16,
+      version: 17,
       migrate: (persistedState, version) => {
         const s = persistedState as Partial<BoardState>;
         if (version < 6 && Object.keys(s.cards ?? {}).some((id) => id.startsWith('card-'))) {
@@ -460,6 +460,22 @@ export const useBoardStore = create<BoardState>()(
             cards['BUG-204'] = fresh.cards['BUG-204'];
             comments['BUG-204'] = seedComments()['BUG-204'] ?? [];
           }
+        }
+        if (version < 17) {
+          // Rename only the original demo discussion authors, retaining all other records.
+          comments['BUG-204'] = (comments['BUG-204'] ?? []).map((comment) =>
+            comment.id === 'd-204-1' && comment.authorId === 'el'
+              ? { ...comment, authorId: 'charles' }
+              : comment.id === 'd-204-2' && comment.authorId === 'sm'
+                ? { ...comment, authorId: 'clover' }
+                : comment,
+          );
+          const card = cards['BUG-204'];
+          if (card) cards['BUG-204'] = {
+            ...card,
+            assignees: card.assignees.map((id) => id === 'el' ? 'charles' : id),
+            reporter: card.reporter === 'sm' ? 'clover' : card.reporter,
+          };
         }
         return { ...s, columns, cards, commentsByCard: comments } as BoardState;
       },
