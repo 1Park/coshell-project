@@ -12,8 +12,17 @@ export function TaskStartDialog({ prompt, mock, onClose }: {
   onClose: () => void;
 }) {
   const input = useRef<HTMLTextAreaElement>(null);
+  const closing = useRef(false);
+  const [open, setOpen] = useState(true);
   const [copied, setCopied] = useState(false);
   const [error, setError] = useState(false);
+
+  const close = () => {
+    if (closing.current) return;
+    closing.current = true;
+    setOpen(false);
+    window.setTimeout(onClose, 180);
+  };
 
   const copy = async () => {
     setError(false);
@@ -35,7 +44,7 @@ export function TaskStartDialog({ prompt, mock, onClose }: {
   };
 
   return (
-    <Dialog open onOpenChange={(open) => { if (!open) onClose(); }}>
+    <Dialog open={open} onOpenChange={(nextOpen) => { if (!nextOpen) close(); }}>
       <DialogContent overlayClassName="z-[90]" className="z-[100] max-h-[90dvh] overflow-y-auto sm:max-w-2xl">
         <DialogHeader>
           <DialogTitle>Start Task in Claude Code</DialogTitle>
@@ -52,7 +61,7 @@ export function TaskStartDialog({ prompt, mock, onClose }: {
         <Textarea ref={input} aria-label="Task start prompt" value={prompt} readOnly rows={16} className="max-h-[50dvh] resize-none font-mono text-xs" />
         {error && <p role="alert" className="text-xs text-destructive">Copy unavailable. The prompt is selected; copy it manually.</p>}
         <div className="flex justify-end gap-2">
-          <Button variant="ghost" onClick={onClose}>Close</Button>
+          <Button variant="ghost" onClick={close}>Close</Button>
           <Button onClick={copy}>{copied ? <CheckIcon /> : <CopyIcon />}{copied ? 'Copied' : 'Copy prompt'}</Button>
         </div>
       </DialogContent>
