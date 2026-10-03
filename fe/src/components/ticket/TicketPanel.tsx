@@ -12,6 +12,7 @@ import { MergeDialog } from './MergeDialog';
 import { TaskStartDialog } from './TaskStartDialog';
 import { buildTaskStartPrompt } from '@/lib/task-start-prompt';
 import { QUESTION_BRANCH_MOCK } from '@/lib/question-branch-chat';
+import type { TaskProposal } from '@/lib/question-branch';
 import { cn } from '@/lib/utils';
 
 const EMPTY_BRANCHES: Branch[] = [];
@@ -74,10 +75,11 @@ export function TicketPanel({ ticketId }: { ticketId: string }) {
     setActiveTicket(card.id, branch.id);
   };
 
-  const approveMerge = (branch: Branch, compact: string, startWork: boolean) => {
+  const approveMerge = (branch: Branch, compact: string, startWork: boolean, task?: TaskProposal) => {
+    if (startWork && !task) throw new Error('Approve a Task proposal before starting a Task');
     const trimmed = compact.trim();
     addComment(card.id, trimmed, { ai: true });
-    if (startWork) {
+    if (startWork && task) {
       const progress = columns.find((c) => c.id === 'col-progress');
       if (progress && card.columnId !== progress.id) {
         moveCard(card.id, progress.id, progress.cardIds.length);
@@ -88,7 +90,7 @@ export function TicketPanel({ ticketId }: { ticketId: string }) {
     setMerging(null);
     const rest = useBranchStore.getState().branchesByTicket[card.id] ?? [];
     setActiveTicket(card.id, rest[rest.length - 1]?.id ?? null);
-    if (startWork) {
+    if (startWork && task) {
       const board = useBoardStore.getState();
       const updated = board.cards[card.id];
       const ticket = {
@@ -102,6 +104,7 @@ export function TicketPanel({ ticketId }: { ticketId: string }) {
           messages: useSessionStore.getState().messagesByTicket[card.id] ?? [],
         }),
         mock: QUESTION_BRANCH_MOCK,
+        task,
       }));
       setShowTaskPrompt(true);
     }
@@ -198,7 +201,7 @@ export function TicketPanel({ ticketId }: { ticketId: string }) {
           branchTitle={mergingBranch.title}
           mode={merging.startWork ? 'work' : 'merge'}
           onClose={() => setMerging(null)}
-          onApprove={(compact) => approveMerge(mergingBranch, compact, merging.startWork)}
+          onApprove={(compact, task) => approveMerge(mergingBranch, compact, merging.startWork, task)}
         />
       )}
       {showTaskPrompt && taskPrompt && (

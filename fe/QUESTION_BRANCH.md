@@ -92,6 +92,27 @@ Only one active instance/tab should own a ticket's storage key; cross-tab and
 multi-user coordination are not supported. localStorage writes can fail (for
 example, quota exceeded); a failed write does not change the in-memory session.
 
+## Compact And Task Proposal
+
+Both merge actions use the same `QUESTION_COMPACT_PROMPT` in
+`src/lib/question-prompts.ts`. It records findings and uncertainty without adding
+new proposed tasks. The Task action then calls `suggestTask(branchId, previewId,
+ticket, signal?)` using a separate `TASK_PROPOSAL_PROMPT`, adapted from the team's
+`docs/specs/coraid-prompts.md` Internal AI Task Draft Format.
+
+Task proposals contain `title`, `instruction`, `acceptance_criteria`,
+`relevant_context_summary` and `risks_or_open_questions`. They are generated from
+the ticket and compact, not the full private transcript. Generating a proposal
+does not change the main context or the saved compact. Invalid model JSON prevents
+approval; rejection preserves the branch. Mock mode returns a fixed `[MOCK task]`
+JSON fixture without API calls, while answer/compact mock text stays unchanged.
+
+The review dialog separates the summary to merge from the proposed Task. Approval
+publishes only the compact into main comments and includes the approved Task fields
+in the Claude Code handoff. Proposed work is never recorded as completed findings.
+MCP calls remain `task_start` / `task_merge`; the proposed MCP tool names in the
+team's design document are not implemented yet.
+
 ## Security
 
 Direct browser access explicitly uses Anthropic's
@@ -109,6 +130,7 @@ On Node 22.6+:
 ```sh
 node --experimental-strip-types --test fe/src/lib/question-branch.test.mjs
 node --experimental-strip-types --test fe/src/lib/question-branch-chat.test.mjs
+node --experimental-strip-types --test fe/src/lib/question-task-proposal.test.mjs
 npm run typecheck
 ```
 
