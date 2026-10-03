@@ -1,9 +1,24 @@
 # Question Branch Core
 
 UI-independent frontend module: `src/lib/question-branch.ts`.
-No backend, MCP, React components or extra dependencies are needed.
-Requests go directly from the browser to Anthropic Messages API using
-`claude-sonnet-5-5` for both conversation and compaction.
+QB context, compaction prompts, Task proposals and approved merges remain frontend-owned.
+Live web requests use `/api/claude`, a credential-only relay in the existing server,
+with `claude-sonnet-5-5` for conversation, compact and Task proposal calls.
+The relay reads `ANTHROPIC_API_KEY` from the server environment, never the browser.
+The Mac deployment startup already sources `~/.local/share/coshell/env`.
+
+## Live Web Testing
+
+New QBs default to Live. The panel shows `Live · Sonnet 5.5` and can create a new
+Mock QB without rebuilding. Each branch retains its own mode. Previously saved
+branches without a mode are treated as Mock so their history is not silently
+sent to a real model. Select `Start new Live QB` to begin real testing.
+Live branch context excludes marked Mock comments and mock-contaminated main history.
+
+No API key input or Vite key variable is needed. On the Mac, the environment file
+must contain `ANTHROPIC_API_KEY=...`; restart/redeploy the server after editing it.
+Missing keys, provider errors and request IDs are displayed without exposing the key.
+This is a trusted-local demo endpoint, not a publicly authenticated production API.
 
 ## Integration
 
@@ -12,7 +27,8 @@ import { createQuestionSession } from '@/lib/question-branch';
 
 // Keep one instance per ticket in the frontend, not one per render.
 const session = createQuestionSession({
-  apiKey, // Supply an existing key at runtime; never commit it.
+  endpoint: '/api/claude', // Server supplies the key; never bundle it.
+  mock: false,
   mainContext: ticketContext,
   persistence: { storage: localStorage, key: `synccontext:question:${ticketId}` },
 });
@@ -32,9 +48,9 @@ const updatedMainContext = session.approveMerge(branch.id, preview.id);
 ## Mock Mode
 
 The existing Question Branch UI is now connected to the browser module via
-`src/lib/question-branch-chat.ts`. `QUESTION_BRANCH_MOCK = true` is the local-demo
-flag for both chat and compact. The transport returns a local AI SDK response;
-neither `/api/chat` nor `/api/compact` receives QB requests. No API key is required.
+`src/lib/question-branch-chat.ts`. `QUESTION_BRANCH_MOCK = false` is the default
+for new branches. A branch with `mock: true` bypasses `/api/claude` for all calls.
+Neither `/api/chat` nor `/api/compact` receives QB requests.
 
 The existing session store remains the persisted UI transcript. Branches capture
 ticket details, comments and main history when created. Existing saved branches
@@ -65,8 +81,8 @@ Both headers are followed by the fixed message
 These are test fixtures, not genuine AI answers or semantic summaries. Cancellation
 is supported, but mock mode does not simulate latency or provider failures.
 
-For live testing, create a new instance with `mock: false` (the default) and
-`apiKey`. Use separate persistence keys for mock and live sessions so simulated
+For standalone live testing, supply `mock: false` and `endpoint: '/api/claude'`.
+Use separate persistence keys for mock and live sessions so simulated
 content does not enter live conversations. Do not build a real key into the app.
 
 `getState()` returns a copy containing main context, branches and pending previews.
@@ -123,13 +139,13 @@ no QB merge-compaction prompt. Standalone live core callers must supply
 
 ## Security
 
-Direct browser access explicitly uses Anthropic's
+The web UI never reads or stores the API key. The optional direct-call core path uses Anthropic's
 `anthropic-dangerous-direct-browser-access` header. This is for trusted local demos
 only: the key is visible to the browser and its network tools. Do not bundle a
 shared key in Vite environment variables or deploy this with a shared production
 key. A server-only `ANTHROPIC_API_KEY` is not automatically available in a browser;
-the frontend caller must supply the key. This module does not read `.env` or change
-the existing `/api/chat` route.
+the direct-call core caller must supply the key. The web UI instead uses the
+server-held key via `/api/claude`. The existing `/api/chat` route is unchanged.
 
 ## Verification
 
@@ -139,6 +155,7 @@ On Node 22.6+:
 node --experimental-strip-types --test fe/src/lib/question-branch.test.mjs
 node --experimental-strip-types --test fe/src/lib/question-branch-chat.test.mjs
 node --experimental-strip-types --test fe/src/lib/question-task-proposal.test.mjs
+node --experimental-strip-types --test fe/server/claude.test.mjs
 npm run typecheck
 ```
 

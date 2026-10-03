@@ -8,7 +8,7 @@ import { Thread } from '@/components/assistant-ui/elements/thread.aui';
 import { useBoardStore } from '@/store/board';
 import { useBranchStore } from '@/store/branches';
 import { useSessionStore } from '@/store/sessions';
-import { branchChatResponse } from '@/lib/question-branch-chat';
+import { branchChatResponse, questionContext } from '@/lib/question-branch-chat';
 import { QUESTION_SYSTEM_PROMPT } from '@/lib/team-prompts';
 
 export interface TicketContext {
@@ -43,10 +43,12 @@ export function TicketChat({ ticket, onRunningChange }: {
           const branch = useBranchStore.getState().branchesByTicket[ticket.ticketId]
             ?.find((item) => item.id === ticket.sessionKey);
           if (!branch) throw new Error('Question branch not found');
-          const mainContext = JSON.stringify({
+          const mock = branch.mock ?? true;
+          const mainContext = questionContext({
             ticket,
             comments: useBoardStore.getState().commentsByCard[ticket.ticketId] ?? [],
             messages: useSessionStore.getState().messagesByTicket[ticket.ticketId] ?? [],
+            mock,
           });
           return branchChatResponse({
             branchId: branch.id,
@@ -55,6 +57,7 @@ export function TicketChat({ ticket, onRunningChange }: {
             messages,
             signal: request.signal,
             questionPrompt: QUESTION_SYSTEM_PROMPT,
+            mock,
           });
         },
       }),

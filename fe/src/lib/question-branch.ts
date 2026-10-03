@@ -38,6 +38,7 @@ export interface QuestionSession {
 
 interface Options {
   apiKey?: string;
+  endpoint?: string;
   mock?: boolean;
   mainContext?: string;
   initialState?: QuestionSession;
@@ -53,7 +54,7 @@ interface Options {
 export function createQuestionSession(options: Options) {
   const mock = options.mock === true;
   const apiKey = options.apiKey?.trim() ?? '';
-  if (!mock && !apiKey) throw new Error('Anthropic API key is required');
+  if (!mock && !apiKey && !options.endpoint) throw new Error('Anthropic API key is required');
   const request = options.fetch ?? globalThis.fetch.bind(globalThis);
   const stored = options.persistence?.storage.getItem(options.persistence.key);
   let state: QuestionSession = stored
@@ -96,13 +97,15 @@ export function createQuestionSession(options: Options) {
       return `${purpose === 'compact' ? '[MOCK compact]' : '[MOCK answer]'} `
         + '[question] 질문을 받았음. 현재 mocking모드라 답변은 제공하지않음';
     }
-    const response = await request('https://api.anthropic.com/v1/messages', {
+    const response = await request(options.endpoint ?? 'https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'x-api-key': apiKey,
-        'anthropic-version': '2023-06-01',
-        'anthropic-dangerous-direct-browser-access': 'true',
+        ...(!options.endpoint ? {
+          'x-api-key': apiKey,
+          'anthropic-version': '2023-06-01',
+          'anthropic-dangerous-direct-browser-access': 'true',
+        } : {}),
       },
       body: JSON.stringify({
         model: options.model ?? QUESTION_BRANCH_MODEL,
@@ -112,7 +115,10 @@ export function createQuestionSession(options: Options) {
       }),
       signal,
     });
-    if (!response.ok) throw new Error(`Anthropic request failed (HTTP ${response.status})`);
+    if (!response.ok) {
+      const failure = await response.json().catch(() => null) as { error?: string; requestId?: string } | null;
+      throw new Error(`Claude request failed (HTTP ${response.status}): ${failure?.error ?? 'Unknown error'}${failure?.requestId ? ` [${failure.requestId}]` : ''}`);
+    }
     const result = await response.json() as {
       content: { type: string; text?: string }[];
       stop_reason: string;
@@ -229,7 +235,7 @@ export function createQuestionSession(options: Options) {
           signal,
           'task',
         );
-        const proposal = JSON.parse(text) as TaskProposal;
+        const proposal = JSON.parse(text.replace(/^```(?:json)?\s*/, '').replace(/\s*```$/, '')) as TaskProposal;
         const strings = ['title', 'instruction', 'relevant_context_summary'] as const;
         const arrays = ['acceptance_criteria', 'risks_or_open_questions'] as const;
         if (!proposal || strings.some((key) => typeof proposal[key] !== 'string' || !proposal[key].trim())

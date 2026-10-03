@@ -2,8 +2,22 @@ import { createUIMessageStream, createUIMessageStreamResponse, type UIMessage } 
 import { createQuestionSession, type QuestionMessage } from './question-branch.ts';
 import { createId } from './id.ts';
 
-// Local demo default. Live mode must also supply a key at runtime, never in a bundle.
-export const QUESTION_BRANCH_MOCK = true;
+// New QBs use the server-held key. Mock remains selectable per branch in the UI.
+export const QUESTION_BRANCH_MOCK = false;
+
+export function questionContext(options: {
+  ticket: unknown;
+  comments: { text: string }[];
+  messages: UIMessage[];
+  mock: boolean;
+}) {
+  const hasMockHistory = options.messages.some((message) => message.parts.some((part) => part.type === 'text' && part.text.includes('[MOCK')));
+  return JSON.stringify({
+    ticket: options.ticket,
+    comments: options.mock ? options.comments : options.comments.filter((comment) => !comment.text.includes('[MOCK')),
+    messages: !options.mock && hasMockHistory ? [] : options.messages,
+  });
+}
 
 export function createBranchChatSession(options: {
   branchId: string;
@@ -27,6 +41,7 @@ export function createBranchChatSession(options: {
   return createQuestionSession({
     mock: options.mock ?? QUESTION_BRANCH_MOCK,
     apiKey: options.apiKey,
+    endpoint: '/api/claude',
     questionPrompt: options.questionPrompt,
     taskProposalPrompt: options.taskProposalPrompt,
     initialState: {

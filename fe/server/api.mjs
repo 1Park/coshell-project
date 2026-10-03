@@ -194,9 +194,13 @@ async function handleTaskMerges(req, res) {
  * Mounts the API routes onto a Node http request/response pair.
  * Returns true when the request was handled.
  */
-export async function handleApi(req, res) {
+export async function handleApi(req, res, dependencies = {}) {
   const { pathname } = new URL(req.url, 'http://localhost');
 
+  if (pathname === '/api/claude') {
+    await handleClaude(req, res, dependencies);
+    return true;
+  }
   if (pathname === '/api/chat') {
     await handleChat(req, res);
     return true;
@@ -213,3 +217,54 @@ export async function handleApi(req, res) {
 }
 
 export { MODEL };
+
+// Credentials stay on the local server; QB context/state remains frontend-owned.
+async function handleClaude(req, res, dependencies) {
+  if (req.method !== 'POST') return sendJson(res, 405, { error: 'Method not allowed' });
+  if (req.headers['sec-fetch-site'] === 'cross-site') {
+    return sendJson(res, 403, { error: 'Cross-site requests are not allowed' });
+  }
+  if (req.headers.origin) {
+    let originHost;
+    try { originHost = new URL(req.headers.origin).host; } catch { return sendJson(res, 403, { error: 'Invalid origin' }); }
+    if (originHost !== req.headers.host && originHost !== req.headers['x-forwarded-host']) {
+      return sendJson(res, 403, { error: 'Cross-origin requests are not allowed' });
+    }
+  }
+  const apiKey = dependencies.apiKey ?? process.env.ANTHROPIC_API_KEY;
+  if (!apiKey) return sendJson(res, 503, { error: 'ANTHROPIC_API_KEY is not set on the server. Restart after updating ~/.local/share/coshell/env.' });
+  let payload;
+  try {
+    payload = JSON.parse(await readBody(req));
+  } catch (error) {
+    return sendJson(res, error.message === 'Request body too large' ? 413 : 400, { error: error.message });
+  }
+  if (typeof payload?.system !== 'string' || !Array.isArray(payload.messages) || !payload.messages.length
+    || payload.messages.some((message) => !message || !['user', 'assistant'].includes(message.role)
+      || typeof message.content !== 'string')) {
+    return sendJson(res, 400, { error: 'system and nonempty text messages are required' });
+  }
+  const controller = new AbortController();
+  const abort = () => { if (!res.writableEnded) controller.abort(); };
+  res.once('close', abort);
+  try {
+    const response = await (dependencies.fetch ?? fetch)('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-api-key': apiKey, 'anthropic-version': '2023-06-01' },
+      body: JSON.stringify({ model: 'claude-sonnet-5-5', max_tokens: 4096, system: payload.system, messages: payload.messages }),
+      signal: AbortSignal.any([controller.signal, AbortSignal.timeout(120000)]),
+    });
+    const data = await response.json();
+    if (!response.ok) {
+      const detail = typeof data?.error?.message === 'string' ? data.error.message : 'Anthropic request failed';
+      return sendJson(res, response.status, {
+        error: detail.replaceAll(apiKey, '[redacted]'), requestId: response.headers.get('request-id'),
+      });
+    }
+    sendJson(res, 200, { content: data.content, stop_reason: data.stop_reason });
+  } catch {
+    if (!res.destroyed) sendJson(res, 502, { error: 'Claude request failed or timed out. Check server connectivity and retry.' });
+  } finally {
+    res.off('close', abort);
+  }
+}
