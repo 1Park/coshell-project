@@ -65,15 +65,20 @@ function PeopleField({
   const [query, setQuery] = useState('');
   const [pos, setPos] = useState<{ top: number; left: number; width: number } | null>(null);
   const btnRef = useRef<HTMLButtonElement>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!open) return;
     const close = () => setOpen(false);
+    const onScroll = (event: Event) => {
+      if (event.target instanceof Node && dropdownRef.current?.contains(event.target)) return;
+      close();
+    };
     window.addEventListener('resize', close);
-    window.addEventListener('scroll', close, true);
+    window.addEventListener('scroll', onScroll, true);
     return () => {
       window.removeEventListener('resize', close);
-      window.removeEventListener('scroll', close, true);
+      window.removeEventListener('scroll', onScroll, true);
     };
   }, [open ]);
 
@@ -129,6 +134,7 @@ function PeopleField({
         <>
           <div className="fixed inset-0 z-[60]" onClick={() => setOpen(false)} />
           <div
+            ref={dropdownRef}
             className="border-border fixed z-[61] rounded-lg border bg-popover p-1 shadow-xl"
             style={{ top: pos.top, left: pos.left, width: pos.width }}
           >
@@ -140,7 +146,7 @@ function PeopleField({
               placeholder="Search members..."
               className="mb-1 h-8 text-sm"
             />
-            <div className="max-h-56 overflow-y-auto">
+            <div className="max-h-56 overflow-y-auto overscroll-contain">
             {members.map((m) => {
               const on = value.includes(m.id);
               return (
@@ -184,6 +190,7 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
   const [labelQuery, setLabelQuery] = useState('');
   const [labelPos, setLabelPos] = useState<{ top: number; left: number; width: number } | null>(null);
   const labelBtnRef = useRef<HTMLButtonElement>(null);
+  const labelDropdownRef = useRef<HTMLDivElement>(null);
   // Keep the last opened card so the close animation never renders an empty shell.
   const lastCardRef = useRef(card);
   useEffect(() => {
@@ -229,11 +236,15 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
   useEffect(() => {
     if (!labelsOpen) return;
     const close = () => setLabelsOpen(false);
+    const onScroll = (event: Event) => {
+      if (event.target instanceof Node && labelDropdownRef.current?.contains(event.target)) return;
+      close();
+    };
     window.addEventListener('resize', close);
-    window.addEventListener('scroll', close, true);
+    window.addEventListener('scroll', onScroll, true);
     return () => {
       window.removeEventListener('resize', close);
-      window.removeEventListener('scroll', close, true);
+      window.removeEventListener('scroll', onScroll, true);
     };
   }, [labelsOpen]);
 
@@ -459,6 +470,7 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
                   <>
                     <div className="fixed inset-0 z-[60]" onClick={() => setLabelsOpen(false)} />
                     <div
+                      ref={labelDropdownRef}
                       className="border-border fixed z-[61] rounded-lg border bg-popover p-1 shadow-xl"
                       style={{ top: labelPos.top, left: labelPos.left, width: labelPos.width }}
                     >
@@ -470,7 +482,7 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
                       placeholder="Search labels..."
                       className="mb-1 h-8 text-sm"
                     />
-                    <div className="max-h-52 space-y-1 overflow-y-auto">
+                    <div className="max-h-52 space-y-1 overflow-y-auto overscroll-contain">
                     {filteredLabels.map((l) => {
                       const on = shown.labels.includes(l.id);
                       return (
