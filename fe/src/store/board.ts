@@ -44,15 +44,25 @@ export interface BoardColumn {
   cardIds: string[];
 }
 
+export interface CardComment {
+  id: string;
+  authorId: string;
+  text: string;
+  createdAt: string;
+  ai: boolean;
+}
+
 interface BoardState {
   columns: BoardColumn[];
   cards: Record<string, BoardCard>;
+  commentsByCard: Record<string, CardComment[]>;
   moveCard: (cardId: string, toColumnId: string, toIndex: number) => void;
   addCard: (columnId: string, title: string) => void;
   updateCard: (cardId: string, patch: Partial<BoardCard>) => void;
   deleteCard: (cardId: string) => void;
   toggleSubtask: (cardId: string, subtaskId: string) => void;
   addColumn: (title: string) => void;
+  addComment: (cardId: string, text: string, opts?: { authorId?: string; ai?: boolean }) => void;
   resetBoard: () => void;
 }
 
@@ -171,6 +181,28 @@ export const useBoardStore = create<BoardState>()(
   persist(
     (set) => ({
       ...seed(),
+      commentsByCard: {},
+
+      addComment: (cardId, text, opts) =>
+        set((state) => {
+          const trimmed = text.trim();
+          if (!trimmed || !state.cards[cardId]) return state;
+          const comment: CardComment = {
+            id: `c-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 6)}`,
+            authorId: opts?.authorId ?? 'jh',
+            text: trimmed,
+            createdAt: new Date().toISOString(),
+            ai: opts?.ai ?? false,
+          };
+          const card = state.cards[cardId];
+          return {
+            commentsByCard: {
+              ...state.commentsByCard,
+              [cardId]: [...(state.commentsByCard[cardId] ?? []), comment],
+            },
+            cards: { ...state.cards, [cardId]: { ...card, comments: card.comments + 1 } },
+          };
+        }),
 
       moveCard: (cardId, toColumnId, toIndex) =>
         set((state) => {
@@ -220,8 +252,11 @@ export const useBoardStore = create<BoardState>()(
           if (!state.cards[cardId]) return state;
           const cards = { ...state.cards };
           delete cards[cardId];
+          const commentsByCard = { ...state.commentsByCard };
+          delete commentsByCard[cardId];
           return {
             cards,
+            commentsByCard,
             columns: state.columns.map((c) => ({ ...c, cardIds: c.cardIds.filter((id) => id !== cardId) })),
           };
         }),
@@ -249,8 +284,15 @@ export const useBoardStore = create<BoardState>()(
           return { columns: [...state.columns, { id, title: trimmed, accent: 'bg-zinc-400', cardIds: [] }] };
         }),
 
-      resetBoard: () => set(() => seed()),
+      resetBoard: () => set(() => ({ ...seed(), commentsByCard: {} })),
     }),
-    { name: 'coshell-board', version: 2 },
+    { 
+      name: 'coshell-board',
+      version: 3,
+      migrate: (persistedState) => ({
+        ...(persistedState as Record<string, unknown>),
+        commentsByCard: (persistedState as Partial<BoardState>).commentsByCard ?? {},
+      }) as BoardState,
+    },
   ),
 );

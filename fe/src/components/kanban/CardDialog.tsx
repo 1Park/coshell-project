@@ -1,12 +1,15 @@
 import { useState } from 'react';
-import { CalendarDaysIcon, PlusIcon, Trash2Icon } from 'lucide-react';
+import { CalendarDaysIcon, PlusIcon, SendIcon, SparklesIcon, Trash2Icon } from 'lucide-react';
 import {
   LABELS,
   MEMBERS,
   PRIORITY_META,
   useBoardStore,
+  type CardComment,
   type Priority,
 } from '@/store/board';
+import { useAppStore } from '@/store/app';
+import { useSessionStore } from '@/store/sessions';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
@@ -15,6 +18,12 @@ import { AvatarStack } from './CardItem';
 import { cn } from '@/lib/utils';
 
 const PRIORITIES: Priority[] = ['low', 'medium', 'high', 'urgent'];
+
+const EMPTY_COMMENTS: CardComment[] = [];
+
+function formatTime(iso: string): string {  const d = new Date(iso);
+  return d.toLocaleString('ko-KR', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+}
 
 function toDateInput(iso: string | null): string {
   if (!iso) return '';
@@ -30,7 +39,13 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
   const updateCard = useBoardStore((s) => s.updateCard);
   const deleteCard = useBoardStore((s) => s.deleteCard);
   const toggleSubtask = useBoardStore((s) => s.toggleSubtask);
+  const comments = useBoardStore((s) => (cardId ? (s.commentsByCard[cardId] ?? EMPTY_COMMENTS) : EMPTY_COMMENTS));
+  const addComment = useBoardStore((s) => s.addComment);
+  const setActiveTicket = useAppStore((s) => s.setActiveTicket);
+  const queueQuestion = useSessionStore((s) => s.queueQuestion);
   const [subtaskDraft, setSubtaskDraft] = useState('');
+  const [commentDraft, setCommentDraft] = useState('');
+  const [commentMode, setCommentMode] = useState<'comment' | 'ai'>('comment');
 
   const addSubtask = () => {
     if (!card || !subtaskDraft.trim()) return;
@@ -41,6 +56,26 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
       ],
     });
     setSubtaskDraft('');
+  };
+
+  const submitComment = () => {
+    if (commentMode === 'ai') {
+      askAi();
+      return;
+    }
+    if (!card || !commentDraft.trim()) return;
+    addComment(card.id, commentDraft.trim());
+    setCommentDraft('');
+  };
+
+  const askAi = () => {
+    if (!card || !commentDraft.trim()) return;
+    const question = commentDraft.trim();
+    addComment(card.id, question);
+    queueQuestion(card.id, question);
+    setCommentDraft('');
+    setActiveTicket(card.id);
+    onClose();
   };
 
   return (
@@ -192,6 +227,91 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
                   <Button variant="ghost" size="icon-sm" aria-label="하위 작업 추가" onClick={addSubtask}>
                     <PlusIcon />
                   </Button>
+                </div>
+              </div>
+
+              <div>
+                <p className="mb-2 text-xs font-semibold tracking-wide text-muted-foreground">
+                  COMMENTS · {comments.length}
+                </p>
+                {comments.length === 0 ? (
+                  <p className="text-muted-foreground rounded-lg bg-muted/40 px-3 py-2.5 text-[13px]">
+                    아직 댓글이 없습니다. 아래에 입력하거나 AI에게 질문해 보세요.
+                  </p>
+                ) : (
+                  <div className="space-y-2.5">
+                    {comments.map((c) => {
+                      const member = MEMBERS[c.authorId];
+                      return (
+                        <div key={c.id} className="flex gap-2">
+                          <span
+                            title={member?.name}
+                            className={cn(
+                              'flex size-6 shrink-0 items-center justify-center rounded-full text-[10px] font-bold text-white',
+                              member?.color ?? 'bg-zinc-500',
+                            )}
+                          >
+                            {member?.initials ?? '?'}
+                          </span>
+                          <div className="min-w-0 flex-1">
+                            <p className="flex items-center gap-1.5 text-xs">
+                              <span className="font-semibold">{member?.name ?? '알 수 없음'}</span>
+                              <span className="text-muted-foreground text-[11px]">{formatTime(c.createdAt)}</span>
+                              {c.ai && (
+                                <span className="flex items-center gap-0.5 rounded-full bg-violet-500/10 px-1.5 py-0.5 text-[10px] font-semibold text-violet-600 dark:text-violet-400">
+                                  <SparklesIcon className="size-2.5" /> AI
+                                </span>
+                              )}
+                            </p>
+                            <p className="mt-0.5 text-sm whitespace-pre-wrap">{c.text}</p>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+                <div className="mt-2 flex items-center gap-1.5">
+                  <Input
+                    value={commentDraft}
+                    onChange={(e) => setCommentDraft(e.target.value)}
+                    onKeyDown={(e) => { if (e.key === 'Enter') submitComment(); }}
+                    placeholder={commentMode === 'ai' ? 'AI에게 질문 (Enter로 전송)' : '댓글 작성 (Enter로 등록)'}
+                    className="h-8 text-sm"
+                  />
+                  <div
+                    role="group"
+                    aria-label="입력 모드"
+                    className="bg-muted flex shrink-0 items-center gap-0.5 rounded-lg p-0.5"
+                  >
+                    {(
+                      [
+                        { id: 'comment', icon: SendIcon, label: '댓글 모드' },
+                        { id: 'ai', icon: SparklesIcon, label: 'AI 질문 모드' },
+                      ] as const
+                    ).map((m) => (
+                      <button
+                        key={m.id}
+                        type="button"
+                        title={m.label}
+                        aria-label={m.label}
+                        aria-pressed={commentMode === m.id}
+                        onClick={() => {
+                          if (commentMode === m.id) submitComment();
+                          else setCommentMode(m.id);
+                        }}
+                        className={cn(
+                          'flex size-7 items-center justify-center rounded-md transition',
+                          commentMode === m.id
+                            ? m.id === 'ai'
+                              ? 'bg-violet-600 text-white shadow-sm'
+                              : 'bg-card text-foreground shadow-sm'
+                            : 'text-muted-foreground hover:text-foreground',
+                        )}
+                      >
+                        <m.icon className="size-3.5" />
+                      </button>
+                    ))}
+                  </div>
                 </div>
               </div>
 

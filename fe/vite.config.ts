@@ -37,6 +37,17 @@ export default defineConfig({
       '@': path.resolve(import.meta.dirname, 'src'),
     },
   },
+  server: {
+    host: '0.0.0.0',
+    port: 5173,
+    hmr: process.env.COSHELL_SLUG
+      ? {
+          host: `${process.env.COSHELL_SLUG}--5173.coshell.ai`,
+          protocol: 'wss',
+          clientPort: 443,
+        }
+      : true,
+  },
   build: {
     outDir: 'dist',
     emptyOutDir: true,

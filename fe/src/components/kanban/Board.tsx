@@ -12,8 +12,8 @@ import {
 } from '@dnd-kit/core';
 import { PlusIcon, RotateCcwIcon, SearchIcon } from 'lucide-react';
 import { useBoardStore } from '@/store/board';
+import { useAppStore } from '@/store/app';
 import { KanbanColumn } from './Column';
-import { CardDialog } from './CardDialog';
 import { CardFace } from './CardItem';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -26,8 +26,8 @@ export function KanbanBoard() {
   const resetBoard = useBoardStore((s) => s.resetBoard);
 
   const [activeId, setActiveId] = useState<string | null>(null);
-  const [openCardId, setOpenCardId] = useState<string | null>(null);
   const [query, setQuery] = useState('');
+  const setDetailTicket = useAppStore((s) => s.setDetailTicket);
   const [addingColumn, setAddingColumn] = useState(false);
   const [columnDraft, setColumnDraft] = useState('');
 
@@ -145,7 +145,7 @@ export function KanbanBoard() {
               column={col}
               visibleCardIds={visibleIds[col.id] ?? []}
               searchActive={query.trim().length > 0}
-              onOpenCard={setOpenCardId}
+              onOpenCard={setDetailTicket}
             />
           ))}
           {addingColumn ? (
@@ -184,8 +184,6 @@ export function KanbanBoard() {
           ) : null}
         </DragOverlay>
       </DndContext>
-
-      <CardDialog cardId={openCardId} onClose={() => setOpenCardId(null)} />
     </div>
   );
 }

@@ -18,6 +18,31 @@ async function readBody(req) {
   return Buffer.concat(chunks).toString('utf8');
 }
 
+function ticketSystemPrompt(ticket) {
+  if (!ticket || typeof ticket !== 'object') return null;
+  const lines = [
+    `You are helping with the ticket "${ticket.title ?? '(untitled)'}" (id: ${ticket.ticketId ?? 'unknown'}).`,
+  ];
+  if (ticket.status) lines.push(`Status: ${ticket.status}.`);
+  if (ticket.priority) lines.push(`Priority: ${ticket.priority}.`);
+  if (Array.isArray(ticket.labels) && ticket.labels.length > 0) {
+    lines.push(`Labels: ${ticket.labels.join(', ')}.`);
+  }
+  if (Array.isArray(ticket.assignees) && ticket.assignees.length > 0) {
+    lines.push(`Assignees: ${ticket.assignees.join(', ')}.`);
+  }
+  if (ticket.dueDate) lines.push(`Due: ${ticket.dueDate}.`);
+  if (ticket.description) lines.push(`Description: ${ticket.description}`);
+  if (Array.isArray(ticket.subtasks) && ticket.subtasks.length > 0) {
+    const subs = ticket.subtasks
+      .map((s) => `- [${s && s.done ? 'x' : ' '}] ${s ? s.title : ''}`)
+      .join('\n');
+    lines.push(`Subtasks:\n${subs}`);
+  }
+  lines.push('Answer in the context of this ticket. Keep replies concise and actionable.');
+  return lines.join('\n');
+}
+
 function sendJson(res, status, payload) {
   const body = JSON.stringify(payload);
   res.writeHead(status, {
@@ -49,15 +74,19 @@ async function handleChat(req, res) {
     return sendJson(res, 400, { error: 'Invalid JSON body' });
   }
 
-  const { messages, system, tools } = payload ?? {};
+  const { messages, system, tools, ticketContext } = payload ?? {};
   if (!Array.isArray(messages)) {
     return sendJson(res, 400, { error: 'messages must be an array' });
   }
 
+  const ticketPrompt = ticketSystemPrompt(ticketContext);
+  const baseSystem = system || 'You are a helpful assistant.';
+  const finalSystem = ticketPrompt ? `${ticketPrompt}\n\n${baseSystem}` : baseSystem;
+
   try {
     const result = streamText({
       model: anthropic(MODEL),
-      system: system || 'You are a helpful assistant.',
+      system: finalSystem,
       messages: await convertToModelMessages(messages),
       tools: frontendTools(tools ?? {}),
       onError: ({ error }) => console.error('[api/chat]', error),

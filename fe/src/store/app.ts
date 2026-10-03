@@ -1,22 +1,23 @@
 import { create } from 'zustand';
 
 export type Lang = 'ko' | 'en';
-export type View = 'board' | 'chat';
 
 interface AppState {
   lang: Lang;
-  view: View;
-  sidebarOpen: boolean;
-  toggleSidebar: () => void;
+  activeTicketId: string | null;
+  detailTicketId: string | null;
   setLang: (lang: Lang) => void;
-  setView: (view: View) => void;
+  setActiveTicket: (ticketId: string | null) => void;
+  closePanel: () => void;
+  setDetailTicket: (ticketId: string | null) => void;
 }
 
 export const useAppStore = create<AppState>()((set) => ({
   lang: 'ko',
-  view: 'board',
-  sidebarOpen: true,
-  toggleSidebar: () => set((state) => ({ sidebarOpen: !state.sidebarOpen })),
+  activeTicketId: null,
+  detailTicketId: null,
   setLang: (lang) => set({ lang }),
-  setView: (view) => set({ view }),
+  setActiveTicket: (ticketId) => set({ activeTicketId: ticketId }),
+  closePanel: () => set({ activeTicketId: null }),
+  setDetailTicket: (ticketId) => set({ detailTicketId: ticketId }),
 }));
