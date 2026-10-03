@@ -1,3 +1,5 @@
+import { createId } from './id.ts';
+
 export const QUESTION_BRANCH_MODEL = 'claude-sonnet-5-5';
 
 export interface QuestionMessage {
@@ -120,7 +122,7 @@ export function createQuestionSession(options: Options) {
     createBranch(): QuestionBranch {
       assertIdle();
       const branch: QuestionBranch = {
-        id: crypto.randomUUID(),
+        id: createId(),
         mainContext: state.mainContext,
         messages: [],
         revision: 0,
@@ -180,7 +182,7 @@ export function createQuestionSession(options: Options) {
           true,
         );
         const preview: MergePreview = {
-          id: crypto.randomUUID(), branchId, revision: branch.revision, compact,
+          id: createId(), branchId, revision: branch.revision, compact,
         };
         commit({ ...state, previews: { ...state.previews, [branchId]: preview } });
         return structuredClone(preview);
