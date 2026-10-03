@@ -9,6 +9,9 @@ import { useBranchStore, type Branch } from '@/store/branches';
 import { useSessionStore } from '@/store/sessions';
 import { TicketChat, type TicketContext } from './TicketChat';
 import { MergeDialog } from './MergeDialog';
+import { TaskStartDialog } from './TaskStartDialog';
+import { buildTaskStartPrompt } from '@/lib/task-start-prompt';
+import { QUESTION_BRANCH_MOCK } from '@/lib/question-branch-chat';
 import { cn } from '@/lib/utils';
 
 const EMPTY_BRANCHES: Branch[] = [];
@@ -28,6 +31,8 @@ export function TicketPanel({ ticketId }: { ticketId: string }) {
 
   const [merging, setMerging] = useState<{ branchId: string; startWork: boolean } | null>(null);
   const [running, setRunning] = useState(false);
+  const [taskPrompt, setTaskPrompt] = useState<string | null>(null);
+  const [showTaskPrompt, setShowTaskPrompt] = useState(false);
   const didInit = useRef(false);
 
   const selectedId = branches.some((b) => b.id === activeBranchId)
@@ -83,7 +88,23 @@ export function TicketPanel({ ticketId }: { ticketId: string }) {
     setMerging(null);
     const rest = useBranchStore.getState().branchesByTicket[card.id] ?? [];
     setActiveTicket(card.id, rest[rest.length - 1]?.id ?? null);
-    if (startWork) openDetail(card.id);
+    if (startWork) {
+      const board = useBoardStore.getState();
+      const updated = board.cards[card.id];
+      const ticket = {
+        ...base,
+        status: board.columns.find((column) => column.id === updated.columnId)?.title ?? updated.columnId,
+      };
+      setTaskPrompt(buildTaskStartPrompt({
+        ticket,
+        mainContext: JSON.stringify({
+          comments: board.commentsByCard[card.id] ?? [],
+          messages: useSessionStore.getState().messagesByTicket[card.id] ?? [],
+        }),
+        mock: QUESTION_BRANCH_MOCK,
+      }));
+      setShowTaskPrompt(true);
+    }
   };
 
   const mergingBranch = merging ? branches.find((b) => b.id === merging.branchId) ?? null : null;
@@ -95,7 +116,7 @@ export function TicketPanel({ ticketId }: { ticketId: string }) {
           <div className="min-w-0 flex-1">
             <p className="text-muted-foreground flex items-center gap-1.5 text-[11px] font-medium">
               <MessageSquareIcon className="size-3" />
-              Question Branch · Mock · {base.status}
+              Question Branch · {QUESTION_BRANCH_MOCK ? 'Mock · ' : ''}{base.status}
               <span className={cn('ml-1 inline-block size-1.5 rounded-full', PRIORITY_META[card.priority].dot)} />
               {PRIORITY_META[card.priority].name}
             </p>
@@ -142,11 +163,17 @@ export function TicketPanel({ ticketId }: { ticketId: string }) {
               Merge
             </Button>
             <Button size="sm" variant="secondary" disabled={!hasMessages || running} onClick={() => setMerging({ branchId: selected.id, startWork: true })}>
-              Merge & start work
+              Merge & start Task
             </Button>
           </>
         )}
       </div>
+
+      {taskPrompt && (
+        <Button size="sm" variant="secondary" className="mx-3 my-2 shrink-0" onClick={() => setShowTaskPrompt(true)}>
+          Show Task start prompt
+        </Button>
+      )}
 
       <div className="flex min-h-0 flex-1 flex-col">
         {selected ? (
@@ -173,6 +200,9 @@ export function TicketPanel({ ticketId }: { ticketId: string }) {
           onClose={() => setMerging(null)}
           onApprove={(compact) => approveMerge(mergingBranch, compact, merging.startWork)}
         />
+      )}
+      {showTaskPrompt && taskPrompt && (
+        <TaskStartDialog prompt={taskPrompt} mock={QUESTION_BRANCH_MOCK} onClose={() => setShowTaskPrompt(false)} />
       )}
     </aside>
   );

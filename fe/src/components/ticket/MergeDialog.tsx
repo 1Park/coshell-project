@@ -105,7 +105,7 @@ export function MergeDialog({
               Reject
             </Button>
             <Button size="sm" disabled={compact === null || error !== null} onClick={approve}>
-              {mode === 'work' ? 'Merge & start work' : 'Approve & merge'}
+              {mode === 'work' ? 'Merge & start Task' : 'Approve & merge'}
             </Button>
           </div>
         </div>
