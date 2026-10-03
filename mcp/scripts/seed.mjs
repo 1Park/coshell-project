@@ -1,11 +1,11 @@
-// Copies sample tickets into DATA_DIR. Existing tickets are kept unless --force is passed.
+// Copies the repo's seed tickets (data/tickets) into DATA_DIR. Existing tickets are kept unless --force is passed.
 import { cp, mkdir, readdir, stat } from 'node:fs/promises';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { DATA_DIR } from '../src/store.mjs';
 
 const force = process.argv.includes('--force');
-const source = fileURLToPath(new URL('../seed/tickets/', import.meta.url));
+const source = fileURLToPath(new URL('../../data/tickets/', import.meta.url));
 const target = join(DATA_DIR, 'tickets');
 await mkdir(target, { recursive: true });
 

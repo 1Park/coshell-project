@@ -20,12 +20,11 @@
 
 ## Data Assumptions
 
-Existing local JSON examples live under `data/` and `mcp/seed/`.
+Existing local JSON examples live under `data/`. The MCP seed script copies `data/tickets/` into the Mac mini `DATA_DIR`.
 
 ```text
 data/board.json
 data/tickets/{ticket_id}/main.json
-mcp/seed/tickets/BUG-123/main.json
 ```
 
 The current `main.json` shape is the baseline:

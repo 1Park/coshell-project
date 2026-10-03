@@ -7,7 +7,7 @@ Claude Code에서 버그 티켓의 Task 브랜치를 만들고(`task_start`), �
 ```bash
 cd mcp
 npm ci
-npm run seed   # 샘플 티켓 BUG-123 생성 (이미 있으면 건너뜀, --force로 덮어쓰기)
+npm run seed   # repo의 data/tickets를 DATA_DIR로 복사 (이미 있으면 건너뜀, --force로 덮어쓰기)
 npm start      # http://0.0.0.0:3001/mcp
 ```
 

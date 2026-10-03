@@ -59,7 +59,7 @@ export async function registerTools(server, user) {
     'task_start',
     {
       description: startDesc,
-      inputSchema: { ticket_id: z.string().describe('작업할 티켓 ID (예: BUG-123)') },
+      inputSchema: { ticket_id: z.string().describe('작업할 티켓 ID (예: BUG-104)') },
     },
     handled(async ({ ticket_id }) => {
       const main = await readMain(ticket_id);
