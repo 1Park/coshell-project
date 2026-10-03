@@ -1,0 +1,24 @@
+{
+  "ticket_id": "BUG-108",
+  "title": "Composer jumps on iOS Safari",
+  "description": "Fix the iOS Safari bug where the virtual keyboard covers the chat composer.\n\n## Repro Matrix\n\n| Device | OS | Result |\n| --- | --- | --- |\n| iPhone 15 Pro | iOS 17 | Composer visible |\n| iPhone SE | iOS 17 | 40px gap on rotate |\n| Android Chrome | 14 | No regression |\n\n## Implementation Sketch\n\nListen to <code>visualViewport.resize</code> and pin the composer above the keyboard.\n\n~~~ts\nconst offset = window.innerHeight - visualViewport.height - visualViewport.offsetTop;\ncomposer.style.setProperty('--keyboard-offset', String(offset) + 'px');\n~~~\n\n## Must Verify\n\n- [ ] VoiceOver focus order\n- [ ] Rotation while typing\n- [ ] Long streaming response while keyboard is open\n- [ ] No conflict with **BUG-104** autoscroll changes",
+  "labels": ["bug", "frontend"],
+  "priority": "urgent",
+  "assignees": [],
+  "reporter": null,
+  "start_date": "2026-09-27T12:00:00.000Z",
+  "due_date": "2026-10-03T12:00:00.000Z",
+  "context": "",
+  "discussions": [
+    {
+      "id": "seed-c3",
+      "author_id": "jh",
+      "text": "Repro confirmed on iOS Safari: the virtual keyboard resizes the layout viewport and covers the composer. Fix: pin the composer with a visualViewport.resize listener. Verify against TalkBack and VoiceOver before closing.",
+      "mentions": [],
+      "ai": true,
+      "created_at": "2026-10-02T17:00:00.000Z"
+    }
+  ],
+  "created_at": "2026-09-27T12:00:00.000Z",
+  "updated_at": "2026-10-03T00:00:00.000Z"
+}

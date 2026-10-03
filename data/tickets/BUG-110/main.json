@@ -1,0 +1,15 @@
+{
+  "ticket_id": "BUG-110",
+  "title": "Run typecheck as part of build",
+  "description": "Run typecheck as part of every production build.\n\n## Change\n\nAdd <code>npm run typecheck -w fe</code> before <code>npm run build -w fe</code>.\n\n## Why\n\nThe app built successfully while TypeScript still reported stale prop types.\n\n## Acceptance\n\n- [x] Local command passes\n- [x] CI blocks on type errors\n- [ ] Build log links directly to the failing file",
+  "labels": ["backend"],
+  "priority": "low",
+  "assignees": [],
+  "reporter": null,
+  "start_date": "2026-09-28T12:00:00.000Z",
+  "due_date": "2026-09-30T12:00:00.000Z",
+  "context": "",
+  "discussions": [],
+  "created_at": "2026-09-28T12:00:00.000Z",
+  "updated_at": "2026-10-03T00:00:00.000Z"
+}

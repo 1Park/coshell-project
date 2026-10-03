@@ -25,5 +25,5 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src", "components.json"]
+  "include": ["src", "components.json", "../data/**/*.json"]
 }

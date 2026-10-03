@@ -1,0 +1,15 @@
+{
+  "ticket_id": "BUG-109",
+  "title": "Cut onboarding to three steps",
+  "description": "Cut onboarding from five screens to three without losing activation signal.\n\n## Proposed Flow\n\n1. Role and team size\n2. Connect first workspace\n3. Invite teammates or skip\n\n## Removed\n\n- Persona quiz\n- Duplicate notification preference screen\n\n## Success Metric\n\nActivation should improve from **42% → 55%** within two weeks.",
+  "labels": ["design", "research"],
+  "priority": "medium",
+  "assignees": [],
+  "reporter": null,
+  "start_date": "2026-09-21T12:00:00.000Z",
+  "due_date": "2026-09-27T12:00:00.000Z",
+  "context": "",
+  "discussions": [],
+  "created_at": "2026-09-21T12:00:00.000Z",
+  "updated_at": "2026-10-03T00:00:00.000Z"
+}

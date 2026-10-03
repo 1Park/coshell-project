@@ -1,0 +1,15 @@
+{
+  "ticket_id": "BUG-106",
+  "title": "Add empty state illustrations",
+  "description": "Draw three empty-state illustrations: empty thread, empty board, no search results.\n\n## Art Direction\n\n> Friendly but not cute. Enterprise users should feel guided, not entertained.\n\n## Deliverables\n\n| Surface | Asset | Dark Mode |\n| --- | --- | --- |\n| Empty thread | <code>empty-thread.svg</code> | Required |\n| Empty board | <code>empty-board.svg</code> | Required |\n| No search results | <code>empty-search.svg</code> | Required |\n\n## Constraints\n\n- Reuse current palette.\n- No new brand colors.\n- SVG only; no raster fallback.\n- Keep each asset under 40KB.",
+  "labels": ["design"],
+  "priority": "low",
+  "assignees": [],
+  "reporter": null,
+  "start_date": "2026-10-03T12:00:00.000Z",
+  "due_date": "2026-10-09T12:00:00.000Z",
+  "context": "",
+  "discussions": [],
+  "created_at": "2026-10-03T12:00:00.000Z",
+  "updated_at": "2026-10-03T00:00:00.000Z"
+}

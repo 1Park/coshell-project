@@ -1,0 +1,15 @@
+{
+  "ticket_id": "BUG-103",
+  "title": "Document event logging schema",
+  "description": "Document the product event taxonomy so every team logs the same way.\n\n## Problem\n\nThree teams invented three naming styles; funnels break every other sprint.\n\n## Proposed Convention\n\nUse <code>object_action</code> names with snake_case payload keys.\n\n| Good | Bad |\n| --- | --- |\n| <code>ticket_created</code> | <code>CreateTicket</code> |\n| <code>branch_merged</code> | <code>mergedBranch</code> |\n| <code>comment_submitted</code> | <code>new-comment</code> |\n\n## Tasks\n\n- [x] Collect current events from staging\n- [ ] Review naming with data engineering\n- [ ] Publish examples in handbook\n- [ ] Add linter warning for off-spec names\n\n> Keep the handbook page under two screens or teams will ignore it.",
+  "labels": ["docs"],
+  "priority": "low",
+  "assignees": [],
+  "reporter": null,
+  "start_date": null,
+  "due_date": null,
+  "context": "",
+  "discussions": [],
+  "created_at": "2026-10-03T00:00:00.000Z",
+  "updated_at": "2026-10-03T00:00:00.000Z"
+}

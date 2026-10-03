@@ -1,0 +1,32 @@
+{
+  "ticket_id": "BUG-104",
+  "title": "Polish assistant-ui streaming UX",
+  "description": "Polish the assistant streaming UX: typing indicator, pinned autoscroll, and retry on error.\n\n## Current Status\n\n- **Desktop:** autoscroll fixed\n- **Mobile Safari:** composer still jumps\n- **Network retry:** design approved, implementation pending\n\n## Repro\n\n1. Open a long ticket thread.\n2. Ask AI a question that streams for 5+ seconds.\n3. Scroll during the response.\n4. Toggle the iOS keyboard.\n\n## Expected vs Actual\n\n| Area | Expected | Actual |\n| --- | --- | --- |\n| Autoscroll | Sticks while streaming | Fixed on desktop |\n| Composer | Never jumps | Jumps on iOS Safari |\n| Retry | Exponential backoff | Not implemented |\n\n## Related\n\nSee **BUG-108** before changing viewport logic.",
+  "labels": ["frontend"],
+  "priority": "high",
+  "assignees": [],
+  "reporter": null,
+  "start_date": "2026-09-30T12:00:00.000Z",
+  "due_date": "2026-10-04T12:00:00.000Z",
+  "context": "",
+  "discussions": [
+    {
+      "id": "seed-c1",
+      "author_id": "sm",
+      "text": "Retry works on desktop, still flaky on subway wifi. Can we replay from the last event id?",
+      "mentions": [],
+      "ai": false,
+      "created_at": "2026-10-03T07:00:00.000Z"
+    },
+    {
+      "id": "seed-c2",
+      "author_id": "jh",
+      "text": "Switched streaming to line-buffered events; retry resumes from the last event id. Open: mobile composer viewport jump on iOS — visualViewport handler pending.",
+      "mentions": [],
+      "ai": true,
+      "created_at": "2026-10-03T09:00:00.000Z"
+    }
+  ],
+  "created_at": "2026-09-30T12:00:00.000Z",
+  "updated_at": "2026-10-03T00:00:00.000Z"
+}

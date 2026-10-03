@@ -1,0 +1,23 @@
+{
+  "columns": [
+    { "id": "col-backlog", "title": "Backlog", "accent": "bg-zinc-400", "card_ids": ["BUG-101", "BUG-102", "BUG-103"] },
+    { "id": "col-progress", "title": "In Progress", "accent": "bg-sky-500", "card_ids": ["BUG-104", "BUG-105", "BUG-106"] },
+    { "id": "col-review", "title": "In Review", "accent": "bg-amber-500", "card_ids": ["BUG-107", "BUG-108"] },
+    { "id": "col-done", "title": "Done", "accent": "bg-emerald-500", "card_ids": ["BUG-109", "BUG-110"] }
+  ],
+  "labels": {
+    "design": { "id": "design", "name": "Design", "dot": "bg-violet-500", "text": "text-violet-600 dark:text-violet-400" },
+    "frontend": { "id": "frontend", "name": "Frontend", "dot": "bg-sky-500", "text": "text-sky-600 dark:text-sky-400" },
+    "backend": { "id": "backend", "name": "Backend", "dot": "bg-emerald-600", "text": "text-emerald-600 dark:text-emerald-400" },
+    "bug": { "id": "bug", "name": "Bug", "dot": "bg-rose-500", "text": "text-rose-600 dark:text-rose-400" },
+    "docs": { "id": "docs", "name": "Docs", "dot": "bg-amber-500", "text": "text-amber-600 dark:text-amber-400" },
+    "research": { "id": "research", "name": "Research", "dot": "bg-indigo-500", "text": "text-indigo-500 dark:text-indigo-400" }
+  },
+  "members": {
+    "jh": { "id": "jh", "name": "Jinhyun Kim", "initials": "JK", "color": "bg-violet-600" },
+    "sm": { "id": "sm", "name": "Sumin Jeon", "initials": "SJ", "color": "bg-sky-600" },
+    "mj": { "id": "mj", "name": "Minji Park", "initials": "MP", "color": "bg-emerald-600" },
+    "tw": { "id": "tw", "name": "Taewon Han", "initials": "TH", "color": "bg-amber-600" }
+  },
+  "updated_at": "2026-10-03T00:00:00.000Z"
+}

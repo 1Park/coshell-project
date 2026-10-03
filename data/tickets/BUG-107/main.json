@@ -1,0 +1,15 @@
+{
+  "ticket_id": "BUG-107",
+  "title": "Audit dark mode tokens",
+  "description": "Audit that every component resolves through the oklch design tokens in dark mode.\n\n## Findings\n\n| Status | Count |\n| --- | ---: |\n| Found | 12 |\n| Fixed | 9 |\n| Pending owner review | 3 |\n\n## Check Command\n\n~~~bash\nrg \"#[0-9a-fA-F]{3,8}|rgb\\(\" fe/src\n~~~\n\n## Acceptance Criteria\n\n- [ ] No hardcoded <code>hex</code> or <code>rgb()</code> outside token files\n- [ ] Text contrast is at least **4.5:1**\n- [ ] CI fails on new raw colors\n\n## Note\n\nAdd the grep to CI so this never regresses.",
+  "labels": ["frontend", "design"],
+  "priority": "medium",
+  "assignees": [],
+  "reporter": null,
+  "start_date": "2026-09-29T12:00:00.000Z",
+  "due_date": "2026-10-05T12:00:00.000Z",
+  "context": "",
+  "discussions": [],
+  "created_at": "2026-09-29T12:00:00.000Z",
+  "updated_at": "2026-10-03T00:00:00.000Z"
+}
