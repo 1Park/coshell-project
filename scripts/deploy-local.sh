@@ -86,3 +86,47 @@ if [ "$healthy" != true ]; then
 fi
 trap - ERR
 echo "Deployed $sha to http://localhost:3000"
+
+# MCP server runs after the frontend is healthy, so an MCP failure never rolls back the frontend.
+mcp_label="local.coshell.mcp"
+echo "::group::Install MCP dependencies"
+(cd "$release/mcp" && npm ci --no-audit --no-fund)
+echo "::endgroup::"
+mkdir -p "$base/data"
+DATA_DIR="$base/data" node "$release/mcp/scripts/seed.mjs"
+mcp_plist="$HOME/Library/LaunchAgents/$mcp_label.plist"
+python3 - "$mcp_plist" <<'PY'
+import os, plistlib, sys
+base = os.environ['COSHELL_BASE']
+config = {
+    'Label': 'local.coshell.mcp',
+    'ProgramArguments': ['/bin/bash', base + '/start-mcp.sh'],
+    'RunAtLoad': True, 'KeepAlive': True, 'ThrottleInterval': 5,
+    'EnvironmentVariables': {'PATH': os.environ['PATH'], 'HOME': os.environ['HOME'], 'PORT': '3001', 'HOST': '0.0.0.0', 'DATA_DIR': base + '/data'},
+    'StandardOutPath': base + '/logs/mcp.log',
+    'StandardErrorPath': base + '/logs/mcp.error.log',
+}
+with open(sys.argv[1], 'wb') as f: plistlib.dump(config, f)
+PY
+cat > "$base/start-mcp.sh" <<'SH'
+#!/bin/bash
+set -euo pipefail
+cd "$HOME/.local/share/coshell/current/mcp"
+export RELEASE_SHA="$(cat ../.release-sha)"
+exec node src/server.mjs
+SH
+if launchctl print "$domain/$mcp_label" >/dev/null 2>&1; then
+  launchctl kickstart -k "$domain/$mcp_label"
+else
+  launchctl bootstrap "$domain" "$mcp_plist"
+fi
+echo "Checking MCP server health and commit"
+for attempt in {1..30}; do
+  if curl -fsS --max-time 2 http://127.0.0.1:3001/healthz 2>/dev/null | python3 -c 'import json,sys; sys.exit(0 if json.load(sys.stdin).get("commit") == sys.argv[1] else 1)' "$sha" 2>/dev/null; then
+    echo "Deployed MCP server $sha to http://0.0.0.0:3001/mcp"
+    exit 0
+  fi
+  sleep 1
+done
+echo "MCP server health check failed (frontend is still deployed)" >&2
+exit 1

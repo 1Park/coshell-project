@@ -19,6 +19,8 @@ npm start      # http://0.0.0.0:3001/mcp
 
 상태 확인: `GET /healthz`
 
+맥미니에서는 main push 시 `scripts/deploy-local.sh`가 프론트 배포 후 launchd 서비스 `local.coshell.mcp`로 자동 실행합니다 (`DATA_DIR=~/.local/share/coshell/data`, 로그 `~/.local/share/coshell/logs/mcp{,.error}.log`). MCP 배포가 실패해도 프론트는 되돌리지 않습니다.
+
 ## Claude Code에 연결
 
 repo 루트의 `.mcp.json`이 서버를 등록합니다. 각자 셸에 아래 두 값을 설정한 뒤 repo에서 Claude Code를 열고, 처음 한 번 사용을 승인하면 됩니다. `/mcp`로 연결 상태를 볼 수 있습니다.
