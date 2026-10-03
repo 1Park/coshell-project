@@ -9,7 +9,6 @@ import { useBranchStore, type Branch } from '@/store/branches';
 import { useSessionStore } from '@/store/sessions';
 import { TicketChat, type TicketContext } from './TicketChat';
 import { MergeDialog } from './MergeDialog';
-import { TaskStartDialog } from './TaskStartDialog';
 import { buildTaskStartPrompt } from '@/lib/task-start-prompt';
 import { QUESTION_BRANCH_MOCK } from '@/lib/question-branch-chat';
 import type { TaskProposal } from '@/lib/question-branch';
@@ -26,6 +25,7 @@ export function TicketPanel({ ticketId }: { ticketId: string }) {
   const sidePanelWidth = useAppStore((s) => s.sidePanelWidth);
   const setSidePanelWidth = useAppStore((s) => s.setSidePanelWidth);
   const setResizingSidePanel = useAppStore((s) => s.setResizingSidePanel);
+  const showTaskStartPrompt = useAppStore((s) => s.showTaskStartPrompt);
   const activeBranchId = useAppStore((s) => s.activeBranchId);
   const setActiveTicket = useAppStore((s) => s.setActiveTicket);
   const addComment = useBoardStore((s) => s.addComment);
@@ -36,8 +36,6 @@ export function TicketPanel({ ticketId }: { ticketId: string }) {
 
   const [merging, setMerging] = useState<{ branchId: string; startWork: boolean } | null>(null);
   const [running, setRunning] = useState(false);
-  const [taskPrompt, setTaskPrompt] = useState<string | null>(null);
-  const [showTaskPrompt, setShowTaskPrompt] = useState(false);
   const didInit = useRef(false);
 
   const selectedId = branches.some((b) => b.id === activeBranchId)
@@ -114,16 +112,20 @@ export function TicketPanel({ ticketId }: { ticketId: string }) {
         ...base,
         status: board.columns.find((column) => column.id === updated.columnId)?.title ?? updated.columnId,
       };
-      setTaskPrompt(buildTaskStartPrompt({
-        ticket,
-        mainContext: JSON.stringify({
-          comments: board.commentsByCard[card.id] ?? [],
-          messages: useSessionStore.getState().messagesByTicket[card.id] ?? [],
+      showTaskStartPrompt({
+        ticketId: card.id,
+        prompt: buildTaskStartPrompt({
+          ticket,
+          mainContext: JSON.stringify({
+            comments: board.commentsByCard[card.id] ?? [],
+            messages: useSessionStore.getState().messagesByTicket[card.id] ?? [],
+          }),
+          mock: QUESTION_BRANCH_MOCK,
+          task,
         }),
         mock: QUESTION_BRANCH_MOCK,
-        task,
-      }));
-      setShowTaskPrompt(true);
+      });
+      close();
       return;
     }
     showMergeAnimation(card.id);
@@ -212,12 +214,6 @@ export function TicketPanel({ ticketId }: { ticketId: string }) {
         )}
       </div>
 
-      {taskPrompt && (
-        <Button size="sm" variant="secondary" className="mx-3 my-2 shrink-0" onClick={() => setShowTaskPrompt(true)}>
-          Show Task start prompt
-        </Button>
-      )}
-
       <div className="flex min-h-0 flex-1 flex-col">
         {selected ? (
           <div className="min-h-0 flex-1" inert={merging !== null}>
@@ -242,17 +238,6 @@ export function TicketPanel({ ticketId }: { ticketId: string }) {
           mode={merging.startWork ? 'work' : 'merge'}
           onClose={() => setMerging(null)}
           onApprove={(compact, task) => approveMerge(mergingBranch, compact, merging.startWork, task)}
-        />
-      )}
-      {showTaskPrompt && taskPrompt && (
-        <TaskStartDialog
-          prompt={taskPrompt}
-          mock={QUESTION_BRANCH_MOCK}
-          onClose={() => {
-            setShowTaskPrompt(false);
-            showMergeAnimation(card.id);
-            close();
-          }}
         />
       )}
     </aside>

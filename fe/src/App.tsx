@@ -4,13 +4,17 @@ import { TooltipProvider } from '@/components/ui/tooltip';
 import { KanbanBoard } from '@/components/kanban/Board';
 import { CardDialog } from '@/components/kanban/CardDialog';
 import { TicketPanel } from '@/components/ticket/TicketPanel';
+import { TaskStartDialog } from '@/components/ticket/TaskStartDialog';
 import { useAppStore } from '@/store/app';
 import { useTaskMergeSync } from '@/hooks/use-task-merge-sync';
 
 export function App() {
   const activeTicketId = useAppStore((s) => s.activeTicketId);
   const detailTicketId = useAppStore((s) => s.detailTicketId);
+  const taskStartPrompt = useAppStore((s) => s.taskStartPrompt);
   const closeDetail = useAppStore((s) => s.closeDetail);
+  const closeTaskStartPrompt = useAppStore((s) => s.closeTaskStartPrompt);
+  const showMergeAnimation = useAppStore((s) => s.showMergeAnimation);
   useTaskMergeSync();
 
   return (
@@ -27,6 +31,16 @@ export function App() {
         </main>
       </div>
       <CardDialog cardId={detailTicketId} onClose={closeDetail} />
+      {taskStartPrompt && (
+        <TaskStartDialog
+          prompt={taskStartPrompt.prompt}
+          mock={taskStartPrompt.mock}
+          onClose={() => {
+            closeTaskStartPrompt();
+            showMergeAnimation(taskStartPrompt.ticketId);
+          }}
+        />
+      )}
     </TooltipProvider>
   );
 }

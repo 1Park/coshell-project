@@ -312,8 +312,14 @@ export function CardDialog({ cardId, onClose }: { cardId: string | null; onClose
       <DialogContent
         initialFocus={false}
         overlayClassName={cn(panelOpen && '!bg-transparent [backdrop-filter:none]', resizingSidePanel && 'pointer-events-none')}
-        style={panelOpen ? { left: `calc((100vw - ${sidePanelWidth}px) / 2)` } : undefined}
-        className="max-h-[85vh] overflow-y-auto sm:max-w-2xl"
+        style={panelOpen
+          ? {
+              left: `calc((100vw - ${sidePanelWidth}px) / 2)`,
+              width: `max(12rem, min(42rem, calc(100vw - ${sidePanelWidth}px - 1rem)))`,
+              maxWidth: `max(12rem, min(42rem, calc(100vw - ${sidePanelWidth}px - 1rem)))`,
+            }
+          : undefined}
+        className={cn('max-h-[85vh] overflow-y-auto', panelOpen ? 'sm:max-w-none' : 'sm:max-w-2xl')}
       >
         {!shown ? null : (
           <>

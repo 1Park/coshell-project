@@ -36,7 +36,7 @@ export function TaskStartDialog({ prompt, mock, onClose }: {
 
   return (
     <Dialog open onOpenChange={(open) => { if (!open) onClose(); }}>
-      <DialogContent className="max-h-[90dvh] overflow-y-auto sm:max-w-2xl">
+      <DialogContent overlayClassName="z-[90]" className="z-[100] max-h-[90dvh] overflow-y-auto sm:max-w-2xl">
         <DialogHeader>
           <DialogTitle>Start Task in Claude Code</DialogTitle>
         </DialogHeader>

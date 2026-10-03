@@ -5,6 +5,7 @@ interface AppState {
   activeBranchId: string | null;
   detailTicketId: string | null;
   mergeAnimatingTicketId: string | null;
+  taskStartPrompt: { ticketId: string; prompt: string; mock: boolean } | null;
   sidePanelWidth: number;
   resizingSidePanel: boolean;
   sidePanelResizeEndedAt: number;
@@ -15,6 +16,8 @@ interface AppState {
   closeDetail: () => void;
   showMergeAnimation: (ticketId: string) => void;
   clearMergeAnimation: () => void;
+  showTaskStartPrompt: (payload: { ticketId: string; prompt: string; mock: boolean }) => void;
+  closeTaskStartPrompt: () => void;
   setSidePanelWidth: (width: number) => void;
   setResizingSidePanel: (resizing: boolean) => void;
 }
@@ -24,6 +27,7 @@ export const useAppStore = create<AppState>()((set, get) => ({
   activeBranchId: null,
   detailTicketId: null,
   mergeAnimatingTicketId: null,
+  taskStartPrompt: null,
   sidePanelWidth: 380,
   resizingSidePanel: false,
   sidePanelResizeEndedAt: 0,
@@ -39,6 +43,8 @@ export const useAppStore = create<AppState>()((set, get) => ({
   closeDetail: () => set({ detailTicketId: null, dialogClosedAt: Date.now() }),
   showMergeAnimation: (ticketId) => set({ mergeAnimatingTicketId: ticketId }),
   clearMergeAnimation: () => set({ mergeAnimatingTicketId: null }),
+  showTaskStartPrompt: (payload) => set({ taskStartPrompt: payload }),
+  closeTaskStartPrompt: () => set({ taskStartPrompt: null }),
   setSidePanelWidth: (width) => set({ sidePanelWidth: Math.max(320, Math.min(640, width)) }),
   setResizingSidePanel: (resizing) => set({ resizingSidePanel: resizing, sidePanelResizeEndedAt: resizing ? get().sidePanelResizeEndedAt : Date.now() }),
 }));
