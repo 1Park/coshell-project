@@ -2,6 +2,35 @@ import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import { createQuestionSession, QUESTION_BRANCH_MODEL } from './question-branch.ts';
 
+test('mock flag runs the entire workflow without a key or network requests', async () => {
+  let requests = 0;
+  const session = createQuestionSession({
+    mock: true,
+    mainContext: 'Original main',
+    fetch: async () => { requests++; throw new Error('Network must not be used'); },
+  });
+  const branch = session.createBranch();
+  const answer = await session.sendMessage(branch.id, 'Why does login fail?');
+  assert.equal(answer.content, '[MOCK answer] [question] 질문을 받았음. 현재 mocking모드라 답변은 제공하지않음');
+  await session.sendMessage(branch.id, 'What should I check?');
+  const preview = await session.previewMerge(branch.id);
+  assert.equal(preview.compact, '[MOCK compact] [question] 질문을 받았음. 현재 mocking모드라 답변은 제공하지않음');
+  assert.equal(session.getState().mainContext, 'Original main');
+  assert.equal(session.approveMerge(branch.id, preview.id), `Original main\n\n${preview.compact}`);
+  assert.equal(session.getState().branches[branch.id], undefined);
+  assert.equal(requests, 0);
+});
+
+test('live mode still requires a key, and mock requests respect cancellation', async () => {
+  assert.throws(() => createQuestionSession({}), /API key is required/);
+  assert.throws(() => createQuestionSession({ mock: false, apiKey: '  ' }), /API key is required/);
+  const session = createQuestionSession({ mock: true });
+  const branch = session.createBranch();
+  const before = session.getState();
+  await assert.rejects(session.sendMessage(branch.id, 'Question', AbortSignal.abort()), { name: 'AbortError' });
+  assert.deepEqual(session.getState(), before);
+});
+
 function setup(outputs = ['Answer', 'Compact summary']) {
   const calls = [];
   const data = new Map();

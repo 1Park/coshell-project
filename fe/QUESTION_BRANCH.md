@@ -29,6 +29,30 @@ const updatedMainContext = session.approveMerge(branch.id, preview.id);
 // The branch and preview have now been removed from session state.
 ```
 
+## Mock Mode
+
+Use `mock: true` to test the same conversation, preview and approval workflow
+without a key, internet access or API charges:
+
+```ts
+const session = createQuestionSession({
+  mock: true,
+  mainContext: ticketContext,
+  persistence: { storage: localStorage, key: `synccontext:question:mock:${ticketId}` },
+});
+```
+
+All model calls are bypassed, even if a key is supplied. Replies and compact
+previews are deterministic and labeled `[MOCK answer]` / `[MOCK compact]`.
+Both headers are followed by the fixed message
+`[question] 질문을 받았음. 현재 mocking모드라 답변은 제공하지않음`.
+These are test fixtures, not genuine AI answers or semantic summaries. Cancellation
+is supported, but mock mode does not simulate latency or provider failures.
+
+For live testing, create a new instance with `mock: false` (the default) and
+`apiKey`. Use separate persistence keys for mock and live sessions so simulated
+content does not enter live conversations. Do not build a real key into the app.
+
 `getState()` returns a copy containing main context, branches and pending previews.
 Optional persistence saves the whole session as JSON, never the API key. Without
 persistence, state lives only in memory. Restoring a saved session takes precedence
