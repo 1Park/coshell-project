@@ -1,0 +1,36 @@
+[
+  {
+    "id": "N070",
+    "name": "ReedTune — 실제 발음 응답을 듣고 관악기 리드를 조금씩 깎아 조정",
+    "status": "OPEN",
+    "stage": "v3_round11",
+    "duplicate_check": "R08/N042/N047/N032 대조. 연주 동작이나 철사 형상 보정이 아니라 리드의 실제 재료를 제거해 응답을 바꾸는 가공.",
+    "reason": "G06/G08/G09/G10 OPEN: 기성 자동 프로파일러와의 차이는 음향 피드백인데, 인공 입술/공기 공급과 정밀 절삭을 함께 만들고 연주자의 목표 음색·저항을 정의해야 한다.",
+    "sources": [
+      "https://reedmachines.com/products/configure/33.02.921.00-bptp-automatic-tip-profiler",
+      "https://www.logosfoundation.org/instrum_gwr/autosax.html"
+    ]
+  },
+  {
+    "id": "N071",
+    "name": "CoDrawForce — AI가 다음 형태를 물리적인 펜 저항으로 제안하는 공동 드로잉",
+    "status": "REJECTED",
+    "stage": "v3_round11",
+    "duplicate_check": "N018/R28/N046 대조. 숙련자 힘 재생·제스처 입력·소거 게임 대신 실제 펜의 의미 기반 공동 조작.",
+    "reason": "G07 FAIL: MagicPen이 사용자 압력으로 힘 안내 수준을 조절하는 협동 드로잉을 설명하고 AI 연계 응용도 공개했다. 프로그래밍 가능한 힘 안내 펜 연구도 가까움. 펜을 움직이는 AI 공동 작화라는 현재 핵심이 충분히 다르지 않다. 검색된 특허는 시판 구현의 증거로 쓰지 않음.",
+    "sources": [
+      "https://senscilab.com/pages/application/application",
+      "https://charm.stanford.edu/ME327/2023-Group4",
+      "https://patents.google.com/patent/US20250208712A1/en"
+    ]
+  },
+  {
+    "id": "N072",
+    "name": "FussyFold — 버려진 인쇄 포장재의 그림과 접힌 자국을 살려 새 용기 blank를 재단",
+    "status": "OPEN",
+    "stage": "v3_round11",
+    "duplicate_check": "R04/F06/N029/N043/N045/N059/N062 대조. 완충재·포장 안전 추정·비닐 위딩·출력물 복구·재단 지지·라벨 가림·종이 수선과 달리 기존 인쇄 그림의 의미와 접힘을 최종 입체 면에 배치해 실제 재료를 다시 자르는 작업.",
+    "reason": "G06/G07/G09/G13 OPEN: fussy cutting/printed-material registration/상자 리사이징 선행 확인. 기성 XY 칼날·접기 도구의 실제 재료 범위와, 단순 사용자가 지정한 사각형 보존 대비 의미 인식의 이득을 검토해야 함. 얇은 포장지로 시연한 뒤 골판지 배송 포장 강도까지 주장하지 않는다.",
+    "sources": []
+  }
+]

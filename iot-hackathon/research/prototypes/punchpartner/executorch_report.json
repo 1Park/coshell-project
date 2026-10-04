@@ -1,0 +1,43 @@
+{
+  "scope": "Actual local macOS CPU ExecuTorch/XNNPACK export and inference, not VENTUNO or NPU.",
+  "python": "3.14.3",
+  "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+  "torch": "2.14.1",
+  "executorch": "1.5.1",
+  "model_bytes": 318400,
+  "input_shape": [
+    1,
+    32
+  ],
+  "output_shape": [
+    1,
+    32,
+    16
+  ],
+  "cases": 52,
+  "max_abs_logit_error": 2.384185791015625e-06,
+  "allclose_rtol": 0.001,
+  "allclose_atol": 0.0001,
+  "local_call_median_ms": 0.2732920111157,
+  "delegates": [
+    "XnnpackBackend",
+    "XnnpackBackend",
+    "XnnpackBackend",
+    "XnnpackBackend",
+    "XnnpackBackend",
+    "XnnpackBackend",
+    "XnnpackBackend",
+    "XnnpackBackend",
+    "XnnpackBackend",
+    "XnnpackBackend",
+    "XnnpackBackend",
+    "XnnpackBackend",
+    "XnnpackBackend",
+    "XnnpackBackend",
+    "XnnpackBackend"
+  ],
+  "limits": [
+    "Host CPU parity does not validate embedded wiring, punching, or music quality.",
+    "Timing includes Python execute and output clone; no controlled benchmark or board speed claim."
+  ]
+}

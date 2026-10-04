@@ -1,0 +1,31 @@
+[
+  {
+    "id": "N083",
+    "name": "BubbleRoute — 이미 붙인 필름의 기포를 읽고 롤러 경로로 가장자리까지 밀어내는 장치",
+    "status": "REJECTED",
+    "stage": "v3_round14",
+    "duplicate_check": "N009/N024/N029 대조. 박리·초기 테이프 걸기·위딩 대신 이미 접착된 필름의 기포 복구를 목표로 함.",
+    "reason": "G08/G09/G13 FAIL: 보이는 기포와 접착 결함·먼지를 구별하고, 이미 붙은 막 아래에서 실제로 배출 가능한 경로를 확보해야 한다. 일반 롤러 압착이 가능한 상태만 시연하면 단순 압착/초기 부착이라는 강한 대안을 넘기 어렵다. 제조사의 자동 비전 정렬·롤러 부착은 예방 흐름의 선행이며 정확히 같은 사후 기포 복구 구현으로 단정하지 않음.",
+    "sources": ["https://www.hangmotech.com/", "https://kaisiai.com/"]
+  },
+  {
+    "id": "N084",
+    "name": "ReelDuel — 당김과 놓기 습관을 학습해 페인트 동작을 하는 힘 피드백 상대",
+    "status": "REJECTED",
+    "stage": "v3_round14",
+    "duplicate_check": "N001/N018/N034/N077/F10 대조. 운반 협조·힘 지도·제작물 조종·가상 잠금 훈련과 달리 인간의 시간적 힘 패턴을 상대하는 경기 구상.",
+    "reason": "G02/G06/G13 FAIL: 단순 줄다리기는 모터 힘/반응 속도가 지배하고, 출력·에너지·행동 제한을 추가한 안도 고정 타이밍/무작위 힘 변화보다 학습이 필요한 전략을 충분히 만들지 못했다. 숨은 목표를 사전에 정해도 물리 신호에 나타나지 않으면 모델이 알 수 없다. The Tight Game은 인간 간 힘 보정 선행이며 학습 AI 상대를 이미 구현한 것으로 오인하지 않음.",
+    "sources": ["https://shunichikasahara.com/portfolio/the-tight-game/", "https://www.microsoft.com/en-us/research/publication/haptic-battle-pong-high-degree-freedom-haptics-multiplayer-gaming-environment-2/?lang=zh-cn"]
+  },
+  {
+    "id": "N085",
+    "name": "StillPaper — 도구를 잡아당기지 않고 실제 종이를 움직여 떨림 흔적을 줄이는 작업대",
+    "status": "OPEN",
+    "stage": "v3_round14",
+    "parent_id": "N060",
+    "duplicate_check": "N060/N071/N018 대조. 화가의 다음 작업 영역/형태를 추측하거나 펜에 힘을 가하는 대신, 짧은 도구 운동을 예측해 종이의 상대 위치를 보상. 기존 이동 이젤의 위치 변경과 같은 역할이라고 세지 않지만, 일반 떨림 보상 장치의 작동 대상만 바꾼 것인지 G07/G13 재검토 필요.",
+    "reason": "G06/G07/G08/G09/G11/G13 OPEN: 실제 종이와 도구 사이 상대 운동을 보상하는 2축 지그로 범위를 잡음. 신호 예측 연구와 공개 좌표/시간 데이터 경로를 확보했으나 실제 모델/기구 성능·자발 운동 보존·사용자 이점은 아직 미검증. 지연 보상에 학습이 필요한지 선형 예측/적응 주파수 모델과 비교할 예정이며 의료 효능을 주장하지 않음.",
+    "card": "research/N085_STILL_PAPER.md",
+    "sources": ["https://pubmed.ncbi.nlm.nih.gov/36170410/", "https://archive.ics.uci.edu/dataset/395/parkinson%2B", "https://publications.ri.cmu.edu/active-tremor-compensation-in-handheld-instrument-for-microsurgery", "https://doi.org/10.1016/j.ijhcs.2026.103862"]
+  }
+]

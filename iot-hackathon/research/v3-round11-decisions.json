@@ -1,0 +1,22 @@
+{
+  "N069": {
+    "reason": "G02/G13/G14 FAIL: 추가 검토에서도 핵심이 기존 능동 청취 로봇에 비밀 전달 점수를 붙인 시연 수준을 넘는지 해소하지 못했다. 작은 레일에서는 ASR을 쓴 고정 순회가 강하고, 더 큰 공간·여러 발성/잡음·이동 전략을 넣으면 음향/게임 설계 범위가 커진다. 작은 가림막의 효과를 큰 사무실 파티션 연구로 증명할 수도 없다. 음성 인식 자체에 AI가 필요 없다는 판정은 아니며, 같은 완성 게임이 이미 존재한다고 단정하지 않는다.",
+    "sources": [
+      "https://heka-interior.com/products/heka-namizna-pregrada-fokus",
+      "https://www.workspace.com.au/product/solo-screen"
+    ]
+  },
+  "N070": {
+    "reason": "G08/G09/G10 FAIL: 실제 발음 피드백으로 자르는 양을 정하려면 리드 고정/정밀 절삭 외에 반복 가능한 공기 공급과 입술 접촉 조건이 필요하다. 자동 프로파일러와 인공 발음 장치가 각각 존재해도 두 장비의 제작·교정·비가역 제거 모델 학습을 행사 안에 새로 연결할 경로가 과도하다. 프로파일 복사로 줄이면 기존 기계의 핵심 흐름이고, 녹음만 분류하면 다시 물리적 사용자 결과가 빠진다.",
+    "sources": []
+  },
+  "N072": {
+    "reason": "G06/G07/G13 FAIL: Brother ScanNCut은 스캔한 실제 재료 위에 도안을 배치하고 입체 상자 부품을 자르는 흐름을 이미 지원한다. Eastman visionPRO와 IRIS는 인쇄 이미지·무늬·결함을 고려한 배치/재단을 설명한다. 골판지 강도를 다루지 않고 얇은 종이의 그림 보존으로 좁히면 사람이 보존 영역을 지정하는 강한 대안 대비 의미 인식의 추가 작업 가치가 약하다. 그 대신 기존 접힘의 구조적 적합성까지 자동 판단하도록 넓히면 새 계측·가공 범위가 커진다. 제조사가 같은 업사이클 상자 서비스를 제공한다는 주장은 아니다.",
+    "sources": [
+      "https://www.brother-usa.com/blogs/brother-crafts/using-scanncutcanvas-and-scanncut-to-make-heart-boxes",
+      "https://www.brother-usa.com/blogs/brother-crafts/-/media/xblog/scanncut/wp-content/uploads/2020/11/pdf-1.pdf",
+      "https://www.eastmancuts.com/products/visionpro/",
+      "https://www.intergrup.gr/en/%CE%BF%CE%BB%CE%BF%CE%BA%CE%BB%CE%B7%CF%81%CF%89%CE%BC%CE%AD%CE%BD%CE%B7-%CE%BB%CF%8D%CF%83%CE%B7-iris/"
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{"train": 22244, "validation": 5146, "test": 11830}
+epoch=10 validation_mse=0.388396
+epoch=20 validation_mse=0.377424
+epoch=30 validation_mse=0.376620
+epoch=40 validation_mse=0.377558
+epoch=50 validation_mse=0.375812
+{
+  "no_compensation": {
+    "pooled_rmse": 0.4915066063404083,
+    "median_record_rmse": 0.4970968961715698
+  },
+  "delayed_copy": {
+    "pooled_rmse": 0.564042866230011,
+    "median_record_rmse": 0.6005169749259949
+  },
+  "constant_velocity": {
+    "pooled_rmse": 1.943088412284851,
+    "median_record_rmse": 2.0449373722076416
+  },
+  "ridge_ar": {
+    "pooled_rmse": 0.4563372041259905,
+    "median_record_rmse": 0.4991800900862935
+  },
+  "local_adaptive_harmonic": {
+    "pooled_rmse": 0.5943289641557364,
+    "median_record_rmse": 0.5940675699091578
+  },
+  "small_mlp": {
+    "pooled_rmse": 0.45387768745422363,
+    "median_record_rmse": 0.4958338737487793
+  }
+}
+report=/Users/won/Desktop/projects/iot-hackathon/research/prototypes/stillpaper/forecast_report.fold2.json seconds=2.2

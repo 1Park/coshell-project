@@ -1,0 +1,95 @@
+[
+  {
+    "id": "N046",
+    "name": "Unwrite — 그림의 뜻을 지우려는 로봇과 겨루는 실물 드로잉 게임",
+    "status": "OPEN",
+    "stage": "v3_round7",
+    "duplicate_check": "F09/F10/N034/R11 대조. 물리 퍼즐의 숨은 상태 분류나 운동 모델 학습 대신, 상대가 이해할 그림에서 의미 있는 부분을 선택해 실제로 지우는 경기. 그림을 감상·판정만 하는 카메라 앱과 구별.",
+    "reason": "AI가 지운 뒤 사람이 다시 그려 다른 사람에게 단어를 전달하는 게임. G04/G07/G09/G13 재검토: 실물 소거의 역할, UnsTable/PICaSo/iNNk와 차이, XY 기구 조달·정밀도, 모델의 중요도와 사람의 이해를 같은 것으로 취급하지 않는 규칙 필요.",
+    "sources": [
+      "https://arxiv.org/abs/2402.03691",
+      "https://www.idoll.love/en/our-research/picaso-collaborative-art-creation",
+      "https://blogit.itu.dk/pxlab/projects/innk/",
+      "https://github.com/googlecreativelab/quickdraw-dataset"
+    ]
+  },
+  {
+    "id": "N047",
+    "name": "CrankCompanion — 사람의 루바토를 듣고 실제 종이테이프 오르골을 돌리는 반주기",
+    "status": "REJECTED",
+    "stage": "v3_round7",
+    "duplicate_check": "R08/N042와 대조. 목표 소리 복제/감쇠 대신 실물 오르골의 진행 속도를 연주자에게 맞추는 안.",
+    "reason": "G07/G13 FAIL: 인간 연주를 듣고 실제 악기의 박자와 표현을 맞추는 로봇 반주는 이미 구현. 오르골로 바꾸는 것 이상의 새로운 사용자 작업을 제시하지 못함. 음악상자 제품이 실시간 가수를 따른다고 확인한 것은 아님.",
+    "sources": [
+      "https://angelicalim.com/projects/hrp2/",
+      "https://link.springer.com/article/10.1186/1687-4722-2012-8",
+      "https://murobox.com/en/faq/"
+    ]
+  },
+  {
+    "id": "N048",
+    "name": "FairLadle — 섞인 국물의 건더기 종류까지 균등하게 나누는 배분기",
+    "status": "REJECTED",
+    "stage": "v3_round7",
+    "duplicate_check": "N006(호퍼), N022/N044(배수 분리) 대조. 이물질 보존이 아니라 여러 그릇의 재료 구성을 맞추는 작업.",
+    "reason": "G08/G09/G11 FAIL: 불투명한 국물에서 가려진 건더기 구성은 영상으로 확정하지 못함. 건더기를 분리·단층화·종류별 배분·국물 재합류하는 기구까지 필요. 마른 견과 몇 개로 바꾸면 국물 배분의 어려움을 제외한 시연이 됨.",
+    "sources": []
+  },
+  {
+    "id": "N049",
+    "name": "MarionetteRecast — 새로 만든 꼭두각시의 줄을 보정해 목표 동작을 재현",
+    "status": "REJECTED",
+    "stage": "v3_round7",
+    "duplicate_check": "R08/R10/F08와 대조. 일반 무대 큐나 소리 재현이 아닌 줄 인형의 결합 운동 보정.",
+    "reason": "G07 FAIL: PuppetMaster가 줄 인형 설계와 목표 동작으로 제어를 계산하고 여러 실물 인형에서 검증. 작은 보드와 모터로 옮기는 것만으로 새 작업이 되지 않음.",
+    "sources": [
+      "https://crl.ethz.ch/papers/puppetMaster.pdf",
+      "https://doi.org/10.1145/3306346.3323003"
+    ]
+  },
+  {
+    "id": "N050",
+    "name": "FoldoutTurn — 접힌 부록을 구별해 펼치며 넘기는 책 스캐너",
+    "status": "REJECTED",
+    "stage": "v3_round7",
+    "duplicate_check": "N037 및 R01과 대조. 책 고정/범용 수리 대신 접지 부록의 펼침·복원이라는 조작.",
+    "reason": "G09/G10 FAIL: 일반 페이지 넘김과 접지 부록의 여러 방향 펼침은 다른 기구. 특수 페이지의 가치가 생기는 비정형 접기까지 처리하면 한 지그·소형 데이터 범위를 넘음. 표준 한 번 접힌 종이만 처리하면 사용 범위가 크게 축소됨.",
+    "sources": [
+      "https://wvyw.ariadne.ac.uk/issue/67/rinaldo-et-al/",
+      "https://patents.google.com/patent/CN114604018B/en"
+    ]
+  },
+  {
+    "id": "N051",
+    "name": "VacuumEscrow — 청소기에서 작은 물건은 보존하고 먼지만 배출",
+    "status": "REJECTED",
+    "stage": "v3_round7",
+    "parent_id": "N044",
+    "duplicate_check": "N044/N022와 직접 비교. 수거 후 확인·선택 배출 흐름을 물 대신 공기에 옮긴 변형.",
+    "reason": "G01/G13 FAIL: SinkEscrow의 매질 교체에 가까움. 바닥에서 물건을 먼저 알아보고 피하는 제품도 강한 대안. Narwal이 흡입 후 자동 분리까지 한다고 주장하지 않음.",
+    "sources": [
+      "https://us.narwal.com/pages/flow-2-robot-vacuum-and-mop",
+      "https://www.mi.com/global/product/xiaomi-robot-vacuum-6-pro/"
+    ]
+  },
+  {
+    "id": "N052",
+    "name": "SegmentDry — 옷마다 무게 감소를 읽고 바람을 나눠 주는 건조대",
+    "status": "REJECTED",
+    "stage": "v3_round7",
+    "duplicate_check": "R27/N004/N040 대조. 방 환경 대신 개별 옷에 공기 전달을 배분.",
+    "reason": "G07/G06 FAIL: 하중 센서와 송풍이 결합된 개별 의류 건조대 Dryinator 공개 구현이 있음. 건조 종료·송풍 분배에 학습을 더할 실질적인 새 사용자 흐름도 부족.",
+    "sources": [
+      "https://blogs.ntu.edu.sg/ps5888-2025-g01/design-specifications/final-product-2/"
+    ]
+  },
+  {
+    "id": "N053",
+    "name": "SketchPatchboard — 그린 회로와 실제 접속을 비교해 스위치 매트릭스로 재배선",
+    "status": "OPEN",
+    "stage": "v3_round7",
+    "duplicate_check": "F02/R29/N028 대조. 물리 사건 재시험/케이블 연속성/자동화 반복 문제 대신 회로 연결을 실제로 바꾸는 도구.",
+    "reason": "G06/G07/G09 OPEN: Jumperless 같은 자동 배선 보드와의 차이, 수기 회로 인식이 실제로 유용한지, 매트릭스 구성 공수 확인 필요. 회로 시뮬레이터에 LED만 붙인 안으로 축소하지 않음.",
+    "sources": []
+  }
+]

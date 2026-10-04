@@ -1,0 +1,209 @@
+{
+  "evidence_level": "synthetic_geometry_only_no_AI_no_hardware",
+  "cube_edge_mm": 40.0,
+  "paper_mm": [
+    148,
+    105
+  ],
+  "world_edge_pairs": 12,
+  "hinges": 4,
+  "glued_seams": 8,
+  "tab_face_and_tab_tab_overlap": false,
+  "impossible_fixture_rejected": true,
+  "placements": {
+    "A": {
+      "rotation_quarters": 0,
+      "translation_mm": [
+        9,
+        7
+      ],
+      "faces": {
+        "top": [
+          [
+            9,
+            7
+          ],
+          [
+            49.0,
+            7
+          ],
+          [
+            49.0,
+            47.0
+          ],
+          [
+            9,
+            47.0
+          ]
+        ],
+        "front": [
+          [
+            9,
+            47.0
+          ],
+          [
+            49.0,
+            47.0
+          ],
+          [
+            49.0,
+            87.0
+          ],
+          [
+            9,
+            87.0
+          ]
+        ],
+        "right": [
+          [
+            49.0,
+            47.0
+          ],
+          [
+            89.0,
+            47.0
+          ],
+          [
+            89.0,
+            87.0
+          ],
+          [
+            49.0,
+            87.0
+          ]
+        ]
+      }
+    },
+    "B": {
+      "rotation_quarters": 0,
+      "translation_mm": [
+        9,
+        0
+      ],
+      "faces": {
+        "bottom": [
+          [
+            9,
+            0
+          ],
+          [
+            49.0,
+            0
+          ],
+          [
+            49.0,
+            40.0
+          ],
+          [
+            9,
+            40.0
+          ]
+        ],
+        "left": [
+          [
+            9,
+            40.0
+          ],
+          [
+            49.0,
+            40.0
+          ],
+          [
+            49.0,
+            80.0
+          ],
+          [
+            9,
+            80.0
+          ]
+        ],
+        "back": [
+          [
+            49.0,
+            40.0
+          ],
+          [
+            89.0,
+            40.0
+          ],
+          [
+            89.0,
+            80.0
+          ],
+          [
+            49.0,
+            80.0
+          ]
+        ]
+      }
+    }
+  },
+  "inputs": {
+    "paper_mm": [
+      148,
+      105
+    ],
+    "A": [
+      {
+        "role": "photo",
+        "required_face": "top",
+        "rect": [
+          25,
+          18,
+          43,
+          34
+        ]
+      },
+      {
+        "role": "event_name",
+        "required_face": "front",
+        "rect": [
+          22,
+          61,
+          47,
+          67
+        ]
+      },
+      {
+        "role": "date",
+        "required_face": "front",
+        "rect": [
+          22,
+          70,
+          45,
+          75
+        ]
+      }
+    ],
+    "B": [
+      {
+        "role": "destination",
+        "required_face": "left",
+        "rect": [
+          22,
+          61,
+          47,
+          67
+        ]
+      },
+      {
+        "role": "date",
+        "required_face": "left",
+        "rect": [
+          22,
+          70,
+          45,
+          75
+        ]
+      }
+    ]
+  },
+  "limits": [
+    "No OCR or face model was run.",
+    "No paper was cut or folded.",
+    "No material thickness, blade offset, kerf, glue strength or cutting tolerance was modeled.",
+    "No comparison of user effort or product value was performed.",
+    "Synthetic rectangles omit text orientation; readable orientation requires further constraints.",
+    "This shows a feasible two-piece cube, not a general unfolding or nesting solution."
+  ]
+}

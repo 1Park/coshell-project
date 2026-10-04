@@ -1,0 +1,1772 @@
+{
+  "schema": 1,
+  "goal_valid_count": 10,
+  "valid_count": 4,
+  "items": [
+    {
+      "id": "R01",
+      "name": "카메라로 어떤 물건이든 고쳐주는 수리 도우미",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "[FixMode](https://play.google.com/store/apps/details?hl=en&id=com.siafy.fixmode), [Gemini-Mechanic](https://devpost.com/software/gemini-mechanic) 등 핵심 흐름 중복. 범위도 큼",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "R02",
+      "name": "분해한 나사 출처와 트레이 위치를 기억해 재조립",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "[ScrewTrail](https://play.google.com/store/apps/details?hl=en_IN&id=net.ifmain.screwtrail)이 출처–트레이 연결·역순 조립 대기열을 명시. 자동 센싱 추가만으로 충분히 새롭다고 보기 어려움",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "R03",
+      "name": "종이접기 실시간 AI 코치",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "[CMU Origami Assistant](https://mscvprojects.ri.cmu.edu/f23team15/fall-2023-method-experiments/)가 카메라 상태 분류와 지시 투영을 구현",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "R04",
+      "name": "카메라로 빈 공간을 보고 완충재 양 최적화",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "[Ranpak AutoFill](https://ir.ranpak.com/news/news-details/2021/Ranpak-Announces-North-American-Launch-of-AutoFill-a-Completely-Automated-Packaging-Solution/default.aspx) 및 비전 솔루션과 중복",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "R05",
+      "name": "AI와 모터 사이 안전 방화벽",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "[Invariant](https://github.com/clay-good/invariant), [TrustRobotics](https://www.trustrobotics.ai/tech/actuator-trust), [Safety Chip 연구](https://arxiv.org/abs/2309.09919)와 중복",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "R06",
+      "name": "주변 소리를 진동으로 바꿔주는 접근성 장치",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "[Neosensory](https://neosensory.com/wp-content/uploads/2023/11/Neosensory-Sound-Awareness-User-Guide.pdf), [Sound Alert](https://www.soundalert.co/) 등 제품 존재. 오프라인만 추가해서는 차별화 부족",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "R07",
+      "name": "개인별로 헷갈리지 않는 진동 언어 자동 생성",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "[VibViz](https://www.cs.ubc.ca/labs/spin/vibviz), [adaptive smart gloves](https://pmc.ncbi.nlm.nih.gov/articles/PMC10825181/) 등 개인화 연구가 가까움. 짧은 사용자 실험의 일반화도 어려움",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "R08",
+      "name": "듣고 목표 음색을 따라 연주하는 Foley 로봇",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "[Timbral Learning](https://michaelkrzyzaniak.com/Research/Dissertation.pdf), [Audio Robot Learning](https://audio-robot-learning.github.io/)에서 목표 소리와 동작 학습이 이미 핵심",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "R09",
+      "name": "영화 촬영 소품의 연속성 검사",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "[InteScene](https://www.intescene.com/for/script-supervisors), [continuity-ai](https://github.com/Zachiran42/continuity-ai)가 직접 다룸",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "R10",
+      "name": "배우 대사·소품을 보고 무대 큐 실행",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "[Cue Killer](https://cue-killer.com/), [ShowRevue](https://www.showrevue.com/)와 가까움. 무대 장비 연동 범위도 커짐",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "R11",
+      "name": "AI 체스/보드게임 심판과 undo",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "[FlexyBoard](https://course.ece.cmu.edu/~ece500/projects/s26-teame2/wp-content/uploads/sites/433/2026/05/Team_E2_Mohanraj_Hayward_Bernitsas_final_report.pdf) 등 물리 보드·카메라·undo 공개 사례",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "R12",
+      "name": "AI가 스토리를 바꾸는 스마트 카드게임",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "[MIT Pocket Ink](https://tangible.media.mit.edu/project/pocket-ink/)가 물리 카드와 AI 개인화·적응형 플레이를 다룸. 일반 플랫폼은 범위도 큼",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "R13",
+      "name": "천·의류의 불량 검사 카메라",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "[Dowcloth](https://www.dowcloth.com/solutions/computer-vision-inspection) 등 기업의 직접 영역. 카메라 분류만으로 차별화 어려움",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "R14",
+      "name": "뜨개질 도안 생성·AI 질문·코수 카운터",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "[Yarnie](https://play.google.com/store/apps/details?hl=en_US&id=com.ai.crochet.knitting.stitch), [StitchMind](https://stitchmindapp.com/) 등 공개 앱과 중복",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "R15",
+      "name": "빌려준 공구 세트의 반납 검사",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "[MangoApps 반납 검사](https://www.mangoapps.com/templates/inspections/loan-a-tool-return-condition-and-damage-inspection-2), [반납 장비 cobot 제안](https://www.servicerobotco.com/blog/cobots-for-sorting-returned-rental-equipment)과 핵심 흐름 가까움",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "R16",
+      "name": "기계 소리로 고장 진단하는 상자",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "[HBK acoustic camera](https://www.hbkworld.com/en/solutions/applications/acoustics/noise-source-identification/noise-identification-acoustic-camera) 등 인접 제품이 강하고 원안이 너무 넓음",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "R17",
+      "name": "패널을 눌러보고 폼을 붙여 잡소리 해결하는 RattlePatch",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "[BSR 시험·예방 제품 설명](https://ifactoryapp.com/industries/automotive-manufacturing/automotive-squeak-rattle-bsr-testing-prevention-ai)과 기존 진단·재료 보강 절차에 가까움. 작은 상자로 바꾸는 것만으로는 부족",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "R18",
+      "name": "스마트 포장 상태를 운송 중 추적",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "[TransPak](https://www.transpak.com/design/field-data-packaging-analytics/) 등의 충격·진동 데이터 분석과 직접 겹침",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "R19",
+      "name": "보이지 않는 상자 내용물을 흔들어 맞히기",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "[Boombox](https://boombox.cs.columbia.edu/)와 [로봇 음향 지각](https://www.frontiersin.org/journals/neurorobotics/articles/10.3389/fnbot.2019.00096/full) 선행이 가까움",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "R20",
+      "name": "센서를 어디 붙일지 AI가 추천",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "[센서 배치·선택·융합 연구](https://www.sciencedirect.com/science/article/pii/S0888327015003271), [Monitron 설치 안내](https://docs.aws.amazon.com/Monitron/latest/user-guide/as-where-sensors.html)와 가까움. 제품 차이가 충분히 강하지 않음",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "R21",
+      "name": "조명 바꿔 AI 비전 성능을 검사하는 일반 BenchFuzz",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "[Imatest 지그](https://www.imatest.com/products/test-lab-setup/), [metamorphic testing 연구](https://arxiv.org/html/2602.22579v2)와 범주가 겹침",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "R22",
+      "name": "접촉한 표면을 오염됐다고 표시",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "[Deep Clean](https://github.com/nickbild/deepclean)과 직접 겹침. 실제 오염 여부는 감지 불가",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "R23",
+      "name": "건축 자투리 목재를 분석해 새 가구 생성",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "[off-cut wood 프레임워크](https://www.nature.com/articles/s44296-023-00002-8)와 인접. 재료 시험·하중 설계·제작을 이틀에 모두 검증하기 어려움",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "R24",
+      "name": "자동 미니 로봇팔이 모든 수리·분해 수행",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "학습 데이터·정밀 기구·미세 부품·고장 유형이 모두 열려 있음. 구현성 자체로 탈락; 개별 선행 검색 여부와 무관",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "R25",
+      "name": "발효 상태를 AI로 최적화하는 병뚜껑",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "긴 생물학적 시간과 실제 품질 라벨을 행사 중 검증하기 어려움. 빠른 대체 시연만으로 원래 가치 증명 불가",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "R26",
+      "name": "흔들리는 책상의 받침 위치를 AI가 추천",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "작은 지그는 가능하지만 중심 기능을 힘/변위 측정과 기하로 충분히 해결. 모델을 추가해도 아이디어가 깊어지지 않음",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "R27",
+      "name": "범용 주거 에너지·소음·쾌적함 통합 제어",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "사용자·장치·최적화 목표가 너무 많음. 특정 한 문제 없이 대시보드로 끝날 위험",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "R28",
+      "name": "개인 맞춤 제스처로 아무 기기나 조작",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "일반적 인터페이스 데모이고 기기별 제어 연동 범위가 열려 있음. 고유한 실패 장면이나 복구 행동 부족",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "R29",
+      "name": "케이블 연속성·단선·흔들림 검사",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "[PinPath](https://github.com/rwrife/pinpath) 등 공개 구현. 전기적 케이블 테스트 자체는 차별성 없음",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "R30",
+      "name": "모든 낙하·진동에서 배송 안전성을 보증하는 포장 AI",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "이틀짜리 저진폭 지그로 인증·파손 확률을 추정할 수 없음. 강하게 눌러 고정하면 안전하다는 오해 발생",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "F01",
+      "name": "Quantization Cliff",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "후속 리뷰 및 사용자 최종 판정으로 탈락. 이미 모델 테스트 도구 아닌가",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "F02",
+      "name": "Physical CI",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "후속 리뷰 및 사용자 최종 판정으로 탈락. 그냥 카메라로 구슬 보면 되지 않나",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "F03",
+      "name": "SeamBack",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "후속 리뷰 및 사용자 최종 판정으로 탈락. 자수 카운터와 뭐가 다른가",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "F04",
+      "name": "TouchDebt",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "후속 리뷰 및 사용자 최종 판정으로 탈락. 기존 접촉 감시의 새 이름 아닌가",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "F05",
+      "name": "TugMap",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "후속 리뷰 및 사용자 최종 판정으로 탈락. 케이블을 흔들면 다른 것도 움직인다",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "F06",
+      "name": "PackProbe",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "후속 리뷰 및 사용자 최종 판정으로 탈락. 포장 기업이 이미 하지 않나",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "F07",
+      "name": "PatchMatch",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "후속 리뷰 및 사용자 최종 판정으로 탈락. 천 시험기에 카메라만 붙인 것 아닌가",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "F08",
+      "name": "ReGrip",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "후속 리뷰 및 사용자 최종 판정으로 탈락. 적응형 그리퍼는 이미 있지 않나",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "F09",
+      "name": "Shadow Bargain",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "후속 리뷰 및 사용자 최종 판정으로 탈락. 그림자 놀이에 AI를 얹은 것 아닌가",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "F10",
+      "name": "BlackBox Duel",
+      "status": "REJECTED",
+      "stage": "historical_v1",
+      "reason": "후속 리뷰 및 사용자 최종 판정으로 탈락. 기존 능동 지각의 시연 아닌가",
+      "source": "archive/REVIEW_LOG.v1.md"
+    },
+    {
+      "id": "V2-01",
+      "name": "ResumeStitch — 실물 자수의 중단 후 재개",
+      "status": "REJECTED",
+      "stage": "historical_v2",
+      "reason": "사용자 탈락: 데스크탑과 카메라로 핵심 경험이 유지됨. Arduino 필요성 부족.",
+      "source": "archive/IDEAS.v2.md"
+    },
+    {
+      "id": "V2-02",
+      "name": "Live Acceptance — 비전 장치 재설치 검사",
+      "status": "REJECTED",
+      "stage": "historical_v2",
+      "reason": "사용자 탈락: 데스크탑과 카메라로 핵심 경험이 유지됨. Arduino 필요성 부족.",
+      "source": "archive/IDEAS.v2.md"
+    },
+    {
+      "id": "V2-03",
+      "name": "ResetCheck — 반복 체험 리셋 확인",
+      "status": "REJECTED",
+      "stage": "historical_v2",
+      "reason": "사용자 탈락: 데스크탑과 카메라로 핵심 경험이 유지됨. Arduino 필요성 부족.",
+      "source": "archive/IDEAS.v2.md"
+    },
+    {
+      "id": "S2-01",
+      "name": "접촉 오염 그래프 대신 형광 잔류물 직접 관찰",
+      "status": "REJECTED",
+      "stage": "historical_sketch",
+      "reason": "v2에서 대안으로 검토했으나 핵심 반론 또는 중복을 해결하지 못해 제외.",
+      "source": "REVISION_RESPONSE.md"
+    },
+    {
+      "id": "S2-02",
+      "name": "포장 검사 대신 트레이 미끄러짐을 줄이는 운반 제어",
+      "status": "REJECTED",
+      "stage": "historical_sketch",
+      "reason": "v2에서 대안으로 검토했으나 핵심 반론 또는 중복을 해결하지 못해 제외.",
+      "source": "REVISION_RESPONSE.md"
+    },
+    {
+      "id": "S2-03",
+      "name": "천 곡선 비교 대신 실제 수선 샘플 반복 손상 평가",
+      "status": "REJECTED",
+      "stage": "historical_sketch",
+      "reason": "v2에서 대안으로 검토했으나 핵심 반론 또는 중복을 해결하지 못해 제외.",
+      "source": "REVISION_RESPONSE.md"
+    },
+    {
+      "id": "S2-04",
+      "name": "그리퍼 재교정 대신 파손 전 힘 제어",
+      "status": "REJECTED",
+      "stage": "historical_sketch",
+      "reason": "v2에서 대안으로 검토했으나 핵심 반론 또는 중복을 해결하지 못해 제외.",
+      "source": "REVISION_RESPONSE.md"
+    },
+    {
+      "id": "S2-05",
+      "name": "AI 광원 제어를 삭제한 협동 그림자 놀이",
+      "status": "REJECTED",
+      "stage": "historical_sketch",
+      "reason": "v2에서 대안으로 검토했으나 핵심 반론 또는 중복을 해결하지 못해 제외.",
+      "source": "REVISION_RESPONSE.md"
+    },
+    {
+      "id": "N001",
+      "name": "CarryTogether — 두 사람이 큰 물체를 옮길 때 힘·IMU로 의도를 읽고 촉각으로 동기화",
+      "status": "REJECTED",
+      "stage": "v3_round1",
+      "duplicate_check": "R07/S2-02: 진동 언어·트레이 운반과 다르지만 운반 협조 연구 검색 필요",
+      "reason": "G07: 인간 간 부피 큰 물체 운반에 촉각 안내를 쓰는 선행이 확인됨. 상대의 힘이 이미 전달되는 상황에서 추가 가치도 약함.",
+      "sources": [
+        "https://usiena-air.unisi.it/retrieve/e0feeaaa-03c0-44d2-e053-6605fe0a8db0/phd_unisi_569207_2.pdf",
+        "https://www.epfl.ch/labs/biorob/research/humanoid/cogimon/"
+      ]
+    },
+    {
+      "id": "N002",
+      "name": "SlackKeeper — 작업자 이동에 맞춰 케이블·호스 장력을 줄이는 적응 릴",
+      "status": "REJECTED",
+      "stage": "v3_round1",
+      "duplicate_check": "F05/R29: 배선 식별과 달리 장력 제어. 목록에 직접 중복 없음.",
+      "reason": "G07/G06: 적응 장력 릴과 제어 선행 존재; 피드백 제어 대비 AI 기여도 불명확.",
+      "sources": [
+        "https://patents.google.com/patent/CN209265240U/en",
+        "https://www.sciencedirect.com/science/article/pii/S1270963826018377"
+      ]
+    },
+    {
+      "id": "N003",
+      "name": "QuietPhase — 같은 구조물에 붙은 기계가 진동을 겹치지 않게 작동 시점을 협의",
+      "status": "REJECTED",
+      "stage": "v3_round1",
+      "duplicate_check": "R16/R17/R27: 고장 감지·패치·범용 집 제어와 달리 여러 진동원의 동작 시점 조정.",
+      "reason": "G06/G13 FAIL: 같은 기계들의 동작 시점은 상태/주기와 스케줄링으로 정할 수 있다. 센서만으로 상태를 추론해야 하는 구체적인 사용처와 추가 효용을 확보하지 못함. 기존 위상 제어와 다른 핵심 가치도 미해결.",
+      "sources": [
+        "https://ira.lib.polyu.edu.hk/bitstream/10397/103109/1/Mak_Investigation_Vibration_Control.pdf"
+      ],
+      "review_round": "v3_round3"
+    },
+    {
+      "id": "N004",
+      "name": "RoomFold — 물리 흡음판의 각도를 자동 조절해 현장 음향 조정",
+      "status": "REJECTED",
+      "stage": "v3_round1",
+      "duplicate_check": "R27/R10: 환경·무대 자동화 인접. 센싱 후 흡음판 제어는 새 물리 행동.",
+      "reason": "G07: 조절형 음향 패널 제품과 능동 음향 제어 존재. 기구 축소만으로 차별화 부족.",
+      "sources": [
+        "https://demo.kaikua.fi/en/kaikua-variable-acoustics/",
+        "https://uk.yamaha.com/en/products/proaudio/afc/afc3/features.html"
+      ]
+    },
+    {
+      "id": "N005",
+      "name": "WetLink — 바뀐 관수 호스의 밸브와 화분 센서를 실제 급수 반응으로 자동 연결",
+      "status": "REJECTED",
+      "stage": "v3_round1",
+      "duplicate_check": "R27: 범용 에너지 제어와 다름. 기존 목록의 밸브-센서 자동 대응 없음.",
+      "reason": "G06 FAIL: 밸브를 순차로 열고 반응한 센서를 연결하는 기준 방법이 직접 문제를 해결한다. 이를 어렵게 만들기 위해 누수·토양 혼합·복수 밸브 동시 작동을 추가하지 않음.",
+      "sources": [
+        "https://www.rainbird.com/professionals/iq4-product-development-update-july-2021"
+      ],
+      "review_round": "v3_round3"
+    },
+    {
+      "id": "N006",
+      "name": "ArchAhead — 입자 호퍼의 막힘을 미리 예측해 진동으로 방지",
+      "status": "REJECTED",
+      "stage": "v3_round1",
+      "duplicate_check": "F06/F07: 물리 계측 인접하지만 입자 흐름은 별도.",
+      "reason": "G07/G08/G12: 직접 선행에서 예측이 막히기 수십 ms 전까지 어렵고 단순 모델 우위도 제한됨. 해커톤 핵심 현상으로 부적합.",
+      "sources": [
+        "https://pubs.rsc.org/en/content/articlehtml/2025/sm/d5sm00367a"
+      ]
+    },
+    {
+      "id": "N007",
+      "name": "SolderBreath — 납땜 단계와 열 손실에 맞추는 흄 흡입 제어",
+      "status": "REJECTED",
+      "stage": "v3_round2",
+      "duplicate_check": "R16/R27: 소음/범용 환경 제어 인접, 공정과 흡입의 충돌은 별도.",
+      "reason": "G06/G11: 단순 연동 흡입보다 유리한 근거 부족. 냉각 방해 감소가 흄 포집 감소로 바뀔 수 있어 둘 다 측정해야 함.",
+      "sources": [
+        "https://www.pure-airtech.com/product-category/electronics-producing-fume-extractor/"
+      ]
+    },
+    {
+      "id": "N008",
+      "name": "CureClamp — 접착 경화 중 압력이 변하면 조임을 조정하는 클램프",
+      "status": "REJECTED",
+      "stage": "v3_round2",
+      "duplicate_check": "F07/F08: 재료·그리퍼와 인접하지만 접착 과정의 압력 유지가 목표.",
+      "reason": "G06: 힘 센서와 PID가 강한 해법. 접착 품질까지 추정하면 관측·시간 문제가 커짐.",
+      "sources": [
+        "https://thor.inemi.org/webdownload/2022/Projects/Packaging/Dec2022_Packaging-Besi.pdf"
+      ]
+    },
+    {
+      "id": "N009",
+      "name": "PeelSense — 접착 필름이 늘어나거나 찢어지기 전에 힘·각도를 바꾸는 박리 장치",
+      "status": "REJECTED",
+      "stage": "v3_round2",
+      "duplicate_check": "F08: 물체 파손 방지 인접, 박리 작업 자체는 기존 목록에 없음.",
+      "reason": "G07/G09: 온라인 학습에 의한 로봇 박리 선행 존재. 작은 소재만 바꿔서는 충분한 차이 없음.",
+      "sources": [
+        "https://www.mdpi.com/1424-8220/22/3/1292"
+      ]
+    },
+    {
+      "id": "N010",
+      "name": "PauseBudget — 장비 전류·소리로 중단 가능한 단계를 알아 공유 전원을 배분",
+      "status": "REJECTED",
+      "stage": "v3_round2",
+      "duplicate_check": "R27/R05: 범용 전력 관리/안전 방화벽과 인접. 작업을 망치지 않는 중단 시점이 차이 후보.",
+      "reason": "G08/G09 FAIL: 전류·소리는 기계의 물리 단계는 알려도 그 작업을 중단해도 되는지 보장하지 않는다. 기기 API/사용자 명시 정보를 쓰면 핵심은 일반 부하 스케줄러가 된다. 가전 범위를 줄여도 중요한 반론이 남음.",
+      "sources": [],
+      "review_round": "v3_round3"
+    },
+    {
+      "id": "N011",
+      "name": "TarpPulse — 사람 없는 쪽을 골라 차양 고인 물을 털어내는 모서리 제어",
+      "status": "REJECTED",
+      "stage": "v3_round2",
+      "duplicate_check": "N004: 가변 패널과 물리 구조는 비슷하지만 고인 물 배출이 목표.",
+      "reason": "G02/G06/G09: 고정 배수로·적절한 경사라는 강한 대안. 사람이 없는 배출 방향 선택을 위해 비전과 기구를 붙일 충분한 이유가 약함.",
+      "sources": [
+        "https://patents.google.com/patent/US9714521B1/en",
+        "https://patents.google.com/patent/US6971433B2/en"
+      ]
+    },
+    {
+      "id": "N012",
+      "name": "Guyline Negotiator — 돌풍과 말뚝 밀림을 구분해 텐트 줄 장력을 재분배",
+      "status": "REJECTED",
+      "stage": "v3_round2",
+      "duplicate_check": "N002/R26: 적응 장력 릴·받침 위치와 인접. 여러 지점 재분배가 변경점.",
+      "reason": "G08/G09/G11: 힘 변화만으로 지반의 남은 지지력을 알 수 없음. 작은 지그 성공을 실제 텐트 안정성으로 연결할 수 없음.",
+      "sources": []
+    },
+    {
+      "id": "N013",
+      "name": "BenchTruce — 진동 민감한 계측기가 주변 기계에 짧은 조용한 구간을 요청",
+      "status": "REJECTED",
+      "stage": "v3_round2",
+      "duplicate_check": "N003의 파생: 진동 상쇄 대신 계측 작업과 기계의 시간 조정.",
+      "reason": "G06/G13 FAIL: 요청 즉시 잠깐 멈춤, 진동 임계값 대기, 장비 상태 API라는 강한 비교군을 이길 구체적인 작업을 확보하지 못함. 작은 데모의 계측 지연 절약이 실제 유의미한 효용이라는 근거가 없음.",
+      "sources": [],
+      "parent_id": "N003",
+      "review_round": "v3_round3"
+    },
+    {
+      "id": "N014",
+      "name": "CoupleCheck — 진동 센서가 스스로 두드려 부착 상태를 검사하고 클램프를 조정",
+      "status": "REJECTED",
+      "stage": "v3_round2",
+      "duplicate_check": "R20/V2-02: 센서 배치/재설치 검증 인접. 실제 기계 결합 상태를 능동 시험하는 차이.",
+      "reason": "G07/G06: 장착 방법 기반 진동 센서 자동 보정 특허 존재. 조임 모터를 추가해도 수동 지정 토크 대비 이득과 AI 역할 부족.",
+      "sources": [
+        "https://patents.google.com/patent/US20250076101A1/en"
+      ]
+    },
+    {
+      "id": "N015",
+      "name": "PhysicalWitness — 액추에이터의 작은 탐침 동작으로 재생된 센서 값을 가려냄",
+      "status": "REJECTED",
+      "stage": "v3_round2",
+      "duplicate_check": "R05: AI 모터 안전 방화벽과 인접. 센서 진위 확인이 차이.",
+      "reason": "G07: 물리 워터마킹을 통한 센서 재생 공격 탐지가 직접 선행.",
+      "sources": [
+        "https://www.sciencedirect.com/science/article/pii/S0959152422001093"
+      ]
+    },
+    {
+      "id": "N016",
+      "name": "SonarCourtesy — 여러 초음파 센서가 간섭을 학습해 발사 시점을 협의",
+      "status": "REJECTED",
+      "stage": "v3_round2",
+      "duplicate_check": "N003/N013: 여러 장치의 간섭 조정 인접. 음향 측정 간섭이라는 별도 입력.",
+      "reason": "G07/G06: 순차 발사와 신경망 크로스토크 저감 선행. 센서 수를 줄인 해커톤에서는 고정 순서가 특히 강함.",
+      "sources": [
+        "https://www.jackknott.com/finalyearproject.pdf",
+        "https://library.kaist.ac.kr/search/detail/view.do?bibCtrlNo=69739&flag=dissertation"
+      ]
+    },
+    {
+      "id": "N017",
+      "name": "DressYield — 옷을 당기는 보조 장치가 걸림을 읽고 풀어 주는 동작으로 전환",
+      "status": "REJECTED",
+      "stage": "v3_round2",
+      "duplicate_check": "N002/F08: 장력/파손 방지와 인접. 착의 과정의 오류 회복이 목표.",
+      "reason": "G07/G09: 힘·IMU·학습으로 착의 걸림을 감지하는 로봇 연구 존재. 로봇을 없애면 보조 가치도 줄어듦.",
+      "sources": [
+        "https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2017.00013/full"
+      ]
+    },
+    {
+      "id": "N018",
+      "name": "FeelTutor — 숙련자의 공예 도구 힘을 촉각 장치로 기록하고 초보자에게 재현",
+      "status": "REJECTED",
+      "stage": "v3_round2",
+      "duplicate_check": "R03/R07/F03: 공예 지도·촉각 개인화와 인접. 힘의 재현을 핵심으로 변경.",
+      "reason": "G07/G09: 공예의 촉각·힘·도구 감각 교육을 다루는 Craeft가 가까움. 저가 1축으로 제한하면 실제 기술의 중요한 자유도가 사라짐.",
+      "sources": [
+        "https://www.craeft.eu/craeftobjectives/"
+      ]
+    },
+    {
+      "id": "N019",
+      "name": "SlubPass — 장식용 실의 굵은 부분은 통과시키고 실제 매듭에는 이송 방식을 바꾸는 와인더",
+      "status": "REJECTED",
+      "stage": "v3_round3",
+      "duplicate_check": "N002/R14/F03: 장력 유지·뜨개 앱·자수 복구와 다르게 의미 있는 굵기 변화와 결함을 구별해 이송.",
+      "reason": "G07 FAIL: SILVER Fancy Yarn Clearer는 장식/굵은 편물용 실에서도 결함과 매듭을 다룬다. 작은 와인더와 보드 변경만으로 충분한 새 흐름이 아님.",
+      "sources": [
+        "https://garnotex.de/silver-for-fancy-yarn"
+      ]
+    },
+    {
+      "id": "N020",
+      "name": "SeamRescue — 실밥을 실제로 끊고 천 손상을 피하는 자동 봉제선 제거 장치",
+      "status": "REJECTED",
+      "stage": "v3_round3",
+      "duplicate_check": "F03/V2-01: 자수 상태·재개 안내와 달리 실제 봉제선 절단.",
+      "reason": "G07/G09 FAIL: Automatic Seam Ripping System에 스티치 인식·좌표 생성·물리적 제거가 이미 포함. 새로운 절단 기구도 행사 임계 경로를 키움.",
+      "sources": [
+        "https://www.sciencedirect.com/science/article/pii/S2351978919300459"
+      ]
+    },
+    {
+      "id": "N021",
+      "name": "SealFit — 섞인 재사용 용기와 뚜껑의 맞물림·밀폐를 직접 시험해 짝을 찾음",
+      "status": "REJECTED",
+      "stage": "v3_round3",
+      "duplicate_check": "F07/F08: 재료 적합성/그리퍼 교정과 인접하지만 용기-뚜껑 대응이 사용자 결과.",
+      "reason": "G09/G13 FAIL: 형상 선별·순응 압착·밀폐 계측이 모두 필요. 소수 용기로 줄이면 사람이 직접 맞춰 보는 방법 대비 이득이 작음. 로봇 뚜껑 맞춤 선행도 발견했으나 미열람 2차 결과만으로 중복 확정하지 않음.",
+      "sources": []
+    },
+    {
+      "id": "N022",
+      "name": "DropGuard — 싱크 배수 중 떨어진 금속 물건을 알아보고 회수 경로로 전환",
+      "status": "REJECTED",
+      "stage": "v3_round3",
+      "duplicate_check": "R15/R22: 공구 반납/접촉 교육과 다름. 물 흐름 속 낙하물 식별과 회수.",
+      "reason": "G06/G08 FAIL: 금속이면 모두 받는 유도 센서·거름망이 강한 비교군. 가치 있는 물건만 분류하려면 시야/물체 라벨 문제가 추가된다. 음식물 속 금속 감지 선행도 있음.",
+      "sources": [
+        "https://patents.google.com/patent/KR20160139957A/en"
+      ]
+    },
+    {
+      "id": "N023",
+      "name": "PocketBeforeWash — 세탁 전에 주머니 속 물건을 찾아 투입을 보류하는 입구 장치",
+      "status": "REJECTED",
+      "stage": "v3_round3",
+      "duplicate_check": "R15/R18: 반납 검사/운송 센싱과 다름. 보이지 않는 소지품의 세탁 손상 방지.",
+      "reason": "G07/G08 FAIL: 주머니 전자기기를 감지해 세탁을 금지하는 공개 선행 존재. 종이 등 모든 물건으로 확장하면 단추·지퍼·원단과 구분하는 관측 문제가 남음.",
+      "sources": [
+        "https://patents.google.com/patent/US7737839B1/en"
+      ]
+    },
+    {
+      "id": "N024",
+      "name": "TapeStart — 테이프 롤의 끝을 찾아 들어 올리고 자동으로 이송부에 끼우기",
+      "status": "REJECTED",
+      "stage": "v3_round4",
+      "duplicate_check": "N009: 접착 박리와 인접하지만 사용자 대신 초기 테이프 걸기를 수행하는 흐름.",
+      "reason": "G02/G09/G12 FAIL: 일반 디스펜서의 끝 유지·교체 카트리지 대비 반복 효용이 작다. 얇고 투명한 끝을 실제로 집는 기구의 성립이 미확인. 검색된 일반 자동 디스펜서를 자동 끝 찾기의 직접 구현으로 오인하지 않음.",
+      "sources": [
+        "https://ir.uitm.edu.my/id/eprint/55967/1/55967i.pdf"
+      ]
+    },
+    {
+      "id": "N025",
+      "name": "TangleComb — 엉킨 머리카락·털에서 빗질 경로와 힘을 조정",
+      "status": "REJECTED",
+      "stage": "v3_round4",
+      "duplicate_check": "N002/N017/N019: 장력·착의·실 결함과 달리 섬유 묶음의 엉킴 완화.",
+      "reason": "G07 FAIL: MIT RoboWig는 센서 달린 브러시와 카메라로 엉킴 정도에 맞춘 적응 빗질을 구현했다. 작은 빗이나 반려동물로 대상을 바꾸는 것은 충분한 차이가 아님.",
+      "sources": [
+        "https://www.csail.mit.edu/news/untangle-your-hair-help-robots"
+      ]
+    },
+    {
+      "id": "N026",
+      "name": "WetEdge — 수채화의 번짐·경계를 관찰하며 국소 습기와 바람을 조절",
+      "status": "REJECTED",
+      "stage": "v3_round4",
+      "duplicate_check": "N004/N007: 환경 제어와 인접하지만 실제 물감 건조 과정의 결과를 바꾸는 장치.",
+      "reason": "G06/G08/G10 FAIL: RGB와 주변 습도로 종이 내부의 국소 수분을 충분히 읽는 근거가 부족하다. 단순 덮개·습도 유지보다 유리한 예측 모델 데이터를 행사 중 얻기 어려움. 국소 가습/건조 화판 공개 설계도 존재하나 특허만으로 제품 구현을 주장하지 않음.",
+      "sources": [
+        "https://patents.google.com/patent/CN114312124A/en"
+      ]
+    },
+    {
+      "id": "N027",
+      "name": "FoamLid — 끓음과 거품을 구별해 냄비의 배출구를 조절하는 뚜껑",
+      "status": "REJECTED",
+      "stage": "v3_round4",
+      "duplicate_check": "R27/N010: 가전·전력 제어와 인접하지만 거품의 직접 물리 개입.",
+      "reason": "G03/G06/G13 FAIL: 뚜껑 틈·배출구·열원 조정이라는 단순 대안이 강함. 증기/거품을 더 어렵게 인식하는 비용을 정당화할 사용자 결과가 없음.",
+      "sources": [
+        "https://www.ikea.com/us/en/p/klockren-lid-glass-dark-gray-10633752/"
+      ]
+    },
+    {
+      "id": "N028",
+      "name": "Loopbreaker — IoT 기기끼리 물리적으로 유발하는 자동화 반복을 학습하고 끊기",
+      "status": "REJECTED",
+      "stage": "v3_round4",
+      "duplicate_check": "R05/R27/N003/N005: 방화벽·환경 제어·간섭·물리 대응 추정과 인접. 소프트웨어에 안 보이는 물리 경로를 겨냥.",
+      "reason": "G07/G09 FAIL: IoTSeer가 앱과 장치의 물리 상호작용·문제 원인·수정 방향을 다룬다. 현장 보드에서 같은 절차를 실행한다는 것 이상 차별점을 확보하지 못했고, 여러 물리 채널 모델링은 범위가 커짐.",
+      "sources": [
+        "https://arxiv.org/abs/2102.01812",
+        "https://github.com/purseclab/IoTSeer"
+      ]
+    },
+    {
+      "id": "N029",
+      "name": "WeedYield — 잘라낸 비닐의 남길 글자가 들리면 되감는 제초 롤러",
+      "status": "REJECTED",
+      "duplicate_check": "N009(균일 필름 벗기기), N024(테이프 끝 잡기)와 대조. 남길/버릴 영역을 구분하는 변형.",
+      "reason": "G06/G09/G13 FAIL: 유지할 글자의 들뜸을 감지해도 되감기로 다시 붙는다는 핵심 복구 동작을 확보하지 못함. 위딩 선 추가·수동 저각도 박리·산업용 매트릭스 박리보다 개선할 장면이 불명확.",
+      "sources": [
+        "https://www.visionengravers.com/support/SoftwareManuals/Vision_Pro_10_UserGuide.pdf",
+        "https://www.kollmorgen.com/sites/default/files/uploaded/Service_and_Support/Knowledge_Center/Success_Stories/Downloads/Kollmorgen%20CA%20OMET%20Printing%20Application%20UK.pdf"
+      ],
+      "stage": "v3_round5"
+    },
+    {
+      "id": "N030",
+      "name": "NeighborLoop — 아래층 소음을 위층 슬리퍼의 촉각으로 되돌리기",
+      "status": "REJECTED",
+      "duplicate_check": "R06/R07/N001과 대조. 소리→촉각 및 사람 간 조율의 인접 변형.",
+      "reason": "G03/G06/G07 FAIL: 소음 임계값을 진동으로 전달하는 구조만으로는 단순 알림을 넘지 못함. 진동 감지 층간소음 슬리퍼 공개 경진대회 후보도 확인.",
+      "sources": [
+        "https://grm-project-template-bucket.s3.ap-northeast-2.amazonaws.com/notice/kcf/58/SW%EA%B3%B5%EB%AA%A8%EC%A0%84%20%EC%B4%88%EB%93%B1%EB%B6%80%20%EC%88%9C%EC%84%9C%ED%91%9C.pdf",
+        "https://patents.google.com/patent/KR20220013498A/ko"
+      ],
+      "stage": "v3_round5"
+    },
+    {
+      "id": "N031",
+      "name": "BorrowedEar — 아래층 센서를 잠시 빌려 학습하고 돌려준 뒤 내 발걸음 영향 추정",
+      "status": "REJECTED",
+      "parent_id": "N030",
+      "duplicate_check": "N030/R27 대조. 수신부를 제거한 뒤 사용한다는 설치·프라이버시 문제를 새 핵심으로 설정.",
+      "reason": "G08/G11/G13 FAIL: 임시 아래층 측정 후 저가 착용 센서만으로 전달 소음을 예측하는 핵심 경로를 확보하지 못함. 발의 힘 추정과 실제 건물 전달음 사이에 위치·접촉·구조 전달의 변수가 남음. 바닥/벽 진동 CNN 소음 예측 연구는 있으나 그 정확도를 깔창으로 옮길 수 없음. 센서를 바닥 진동으로 바꾸면 기존 연구 및 선형 전달 모델과 차별화도 다시 필요. 같은 연구가 수신부 철거까지 구현했다고 단정하지 않음.",
+      "sources": [
+        "https://pure.uos.ac.kr/en/publications/sound-prediction-based-on-footstep-induced-vibrations-in-concrete/",
+        "https://doi.org/10.1109/JSEN.2019.2896595",
+        "https://pubmed.ncbi.nlm.nih.gov/37348185/",
+        "https://patents.google.com/patent/KR20220013498A/ko"
+      ],
+      "stage": "v3_round5",
+      "history": [
+        {
+          "stage": "before_round6_7_decision",
+          "status": "OPEN",
+          "reason": "임시 하층 마이크 + 상층 깔창 힘/IMU로 쌍 데이터를 수집한 후 개인용 예측. 단순 소음 알림과 다름. G08/G11 OPEN: 실제 두 층에서 신발·경로 조건을 나눈 학습/검증 가능성과 선형 전달 모델 대비 이득을 확인해야 함."
+        }
+      ]
+    },
+    {
+      "id": "N032",
+      "name": "BendScore — 성질을 모르는 재사용 철사를 시험 굽힘해 스프링백 보정",
+      "status": "REJECTED",
+      "duplicate_check": "F07/F08와 적응 교정 개념 인접. 철사 소성 변형은 새 작업이나 외부 선행 확인.",
+      "reason": "G07 FAIL: 로봇 아치와이어 굽힘에서 재료별 과굽힘·스프링백 보상과 실험 모델을 이미 다룸. 재사용 철사라는 대상 변경만으로 차이가 부족.",
+      "sources": [
+        "https://www.researchgate.net/publication/308829834_Motion_planning_and_control_of_a_robotic_system_for_orthodontic_archwire_bending"
+      ],
+      "stage": "v3_round5"
+    },
+    {
+      "id": "N033",
+      "name": "SupportSense — 3D 프린트 지지대 제거 중 본체 손상 전에 힘 방향을 바꾸는 플라이어",
+      "status": "REJECTED",
+      "duplicate_check": "R01(범용 수리), F08(집기 적응) 대조. 출력물 지지대 제거의 균열 경로 선택은 새 작업.",
+      "reason": "G08/G12/G13 FAIL: 균열이 시작된 뒤의 소리는 감지할 수 있어도 본체 손상 전에 안전한 힘 방향을 결정할 관측을 확보하지 못함. CAD가 있어도 층간 접착 편차가 남음. 핵심 예측 신호의 존재부터 새 실험이 필요하므로 해커톤 후보에서 제외.",
+      "sources": [],
+      "stage": "v3_round5"
+    },
+    {
+      "id": "N034",
+      "name": "WindNegotiator — 내가 조종할 수 있지만 AI는 아직 모르는 배",
+      "status": "VALID",
+      "duplicate_check": "F09/F10 대조. 그림자 조작/숨은 상태 추리 대신 실제 배의 돛·관성·바람을 바꾸는 제작 대전.",
+      "reason": "사람이 먼저 같은 팬·경로로 완주한 돛배만 AI에게 도전하게 하는 설계 경기로 수정. 한 배·세 팬·두 게이트로 범위 고정. 관측 운동을 학습해 실제 바람을 제어하며 교정 PID/선형·물리 모델과 비교. 14개 설계 검토 PASS; 하드웨어 성능과 재미 실측 전.",
+      "sources": [
+        "https://www.sailingscience.org/exhibits",
+        "https://www.stevens.edu/news/how-a-self-driving-boat-took-victory-laps-at-the-2025-stevens-gallois-robotics-competition",
+        "https://doi.org/10.1115/1.4044398",
+        "https://arxiv.org/abs/1805.12114"
+      ],
+      "stage": "v3_round5",
+      "history": [
+        {
+          "stage": "before_round6_7_decision",
+          "status": "OPEN",
+          "reason": "팬 3개와 수조의 배 2개, 참가자가 돛을 바꾸면 AI가 새 바람→이동 응답을 학습. G06/G07/G11 OPEN: 단순 추적 제어와 다른 플레이, 직접 선행, 실제 경기의 승부 조건 구체화 필요."
+        }
+      ],
+      "card": "research/N034_WIND_NEGOTIATOR.md",
+      "evidence_level": "design_review_not_hardware_test",
+      "gates": {
+        "G01": "PASS",
+        "G02": "PASS",
+        "G03": "PASS",
+        "G04": "PASS",
+        "G05": "PASS",
+        "G06": "PASS",
+        "G07": "PASS",
+        "G08": "PASS",
+        "G09": "PASS",
+        "G10": "PASS",
+        "G11": "PASS",
+        "G12": "PASS",
+        "G13": "PASS",
+        "G14": "PASS"
+      }
+    },
+    {
+      "id": "N035",
+      "name": "ThreadCross — 인타르시아 뜨개질의 실 교차를 추적해 보빈 위치를 바꾸는 받침대",
+      "status": "REJECTED",
+      "duplicate_check": "R14(뜨개 카운터), N019(장식 실 이송), N002(장력 릴) 대조. 다중 실의 교차 위상을 바꾸는 실제 보빈 이동.",
+      "reason": "G06/G09/G13 FAIL: 단순 전체 꼬임은 번갈아 돌리기·짧은 실로 대응 가능. 임의 교차를 실제로 풀려면 보빈 개별 교환 기구가 필요하여 지그→교차 추정→복구 순차 부담이 큼. 네 보빈으로 줄이면 큰 엉킴에서의 효용을 제외하게 됨.",
+      "sources": [
+        "https://www.moderndailyknitting.com/community/intarsia-the-full-ball-fallacy-and-other-tangle-tips/"
+      ],
+      "stage": "v3_round5"
+    },
+    {
+      "id": "N036",
+      "name": "ZipRelease — 지퍼 걸림의 촉각을 학습해 당기는 방향을 바꾸는 보조기",
+      "status": "REJECTED",
+      "duplicate_check": "N017(옷 입히기), F08(적응 그립) 대조. 지퍼 접촉 작업으로 축소했으나 외부 중복.",
+      "reason": "G07 FAIL: 시각과 촉각을 이용한 예측 학습으로 유연한 가방 지퍼의 당김 방향과 저항을 조정하는 연구가 이미 있음.",
+      "sources": [
+        "https://arxiv.org/abs/2112.06442"
+      ],
+      "stage": "v3_round5"
+    },
+    {
+      "id": "N037",
+      "name": "HoldAtWill — 수제 제본 중 종이 넘김과 실 당김을 구분하는 자동 클램프",
+      "status": "REJECTED",
+      "stage": "v3_round5",
+      "duplicate_check": "N008(접착 중 힘 유지), N018(공예 힘 지도), F08(그립 적응) 대조. 사람의 작업 단계에 맞춘 해제/유지로 틀었음.",
+      "reason": "G02/G06/G13 FAIL: 기존 제본 프레임·임시 무게·발 페달 클램프보다 절약할 작업이 분명하지 않음. 넘김 의도를 AI로 예측하면서 오해제 위험을 추가하는 비용을 정당화하지 못함.",
+      "sources": [
+        "https://www.schmedt.com/ww2000/pdf/e-general%20catalogue_v12.0_ebook.pdf",
+        "https://www.cxdinternational.com/content/files/PDFs/CXDCatVol2-2019.pdf"
+      ]
+    },
+    {
+      "id": "N038",
+      "name": "KnotKeeper — 한 손으로 매듭 공예를 할 때 놓는 실의 장력을 대신 이어받는 받침",
+      "status": "REJECTED",
+      "stage": "v3_round5",
+      "parent_id": "N037",
+      "duplicate_check": "N037/N035/N018 대조. 제본 전체 추종이나 실 엉킴 해소 대신 한 손에서 놓인 실의 지지 인계라는 과제. 단순 공예 코치와 구별.",
+      "reason": "G06/G13 FAIL: 한 손 매듭 작업의 지지는 유용하지만, 잡은 실을 풀고 놓은 실을 고정하는 범위에서는 수동 집게/페달·장력 규칙이 강함. AI로 순서나 다음 의도까지 읽게 하면 가려진 실과 선행 인계 판단이 병목. 클램프에 실을 재삽입하는 수고까지 줄이는 구체적인 기구를 확보하지 못해 제외. 동일한 시판 AI 매듭 보조기가 있다는 판정은 아님.",
+      "sources": [],
+      "history": [
+        {
+          "stage": "before_round6_7_decision",
+          "status": "OPEN",
+          "reason": "압력 감지 클램프 4개와 손/실 인식으로 놓이는 실을 고정하고 새로 잡은 실을 해제하는 흐름. G06/G07/G08/G13 OPEN: 손을 놓기 전 인계 관측, 버튼·고정 매듭판보다 나은 동작, 실제 보조기 선행 조사 필요. 고정 순서의 매듭이면 상태 머신이 충분하므로 제외해야 함."
+        }
+      ]
+    },
+    {
+      "id": "N039",
+      "name": "Unknit — 낡은 편물을 실 장력에 맞춰 되감아 재료 회수",
+      "status": "REJECTED",
+      "stage": "v3_round5",
+      "duplicate_check": "N002/N019/N020/R14 대조. 완성 편물 해체와 재료 회수라는 새 작업이나 이송 적응의 인접 변형.",
+      "reason": "G07/G13 FAIL: 자동 풀기·되감기 공개 구현을 확인. 장력 감지·인장/이완·양방향 구동 선행 특허도 있음. 복잡한 의복까지 확장하면 봉제선 처리와 실 절단이 새 병목이며 AI만 더하는 변형은 부족.",
+      "sources": [
+        "https://labs.cs.queensu.ca/istudio/wp-content/uploads/sites/12/2025/02/Its-Being-Unmade.pdf",
+        "https://patents.google.com/patent/CN1348515A/en"
+      ]
+    },
+    {
+      "id": "N040",
+      "name": "WetEdgeContact — 종이 뒤의 수분 센서와 영상으로 수채화 경계의 건조 개입 선택",
+      "status": "REJECTED",
+      "stage": "v3_round6",
+      "parent_id": "N026",
+      "duplicate_check": "N026의 RGB·주변 습도만으로 국소 수분을 읽는 문제를 재검토. 종이 뒤 비침습 수분 배열을 실제 관측에 추가하는 변형. N004/R27과는 방 전체 환경 제어가 아니라 작업 중 국소 번짐 제어.",
+      "reason": "G08/G09/G10 FAIL: 종이의 정전용량 수분 측정 원리는 알려져 있지만, 저가 다점 배열의 수분/안료/손 접촉 분리와 국소 바람 효과를 같은 직렬 경로에서 새로 교정해야 함. 계측을 추가했다는 설명만으로 원안의 수분 관측·시연 신뢰성 문제를 해결하지 못함. 공개 국소 습도 제어 도판 특허도 근접 선행이나 실제 제품으로 확인한 것은 아님.",
+      "sources": [
+        "https://www.stcuthbertsmill.com/advice-centre/?id=1027",
+        "https://schaller.pl/en/paper-board/mf-p-htd-paper-moisture-sensor",
+        "https://patents.google.com/patent/CN114312124A/en"
+      ],
+      "history": [
+        {
+          "stage": "before_round6_7_decision",
+          "status": "OPEN",
+          "reason": "G08/G09 OPEN: 센서 배열이 손 접촉·안료·종이 두께와 수분을 구별하는가, 국소 바람이 원하는 경계만 제어하는가. 관측을 추가했다고 자동 통과시키지 않음."
+        }
+      ]
+    },
+    {
+      "id": "N041",
+      "name": "MeltPact — 금속 조각으로 열 경로를 바꾸며 AI와 얼음 통로를 여닫는 물리 퍼즐",
+      "status": "REJECTED",
+      "stage": "v3_round6",
+      "duplicate_check": "F09/F10/N034와 대조. 광원·정해진 숨은 상태·바람 대신 비가역적 녹음과 열 지연이 입력/자원이 되는 경기.",
+      "reason": "G02/G06/G10 FAIL: 비가역적 녹음과 열 지연만으로 플레이어의 의미 있는 선택·학습 모델의 역할을 만들지 못함. 열원/접촉별 단순 열 모델을 넘는 이유가 부족하고, 녹은 얼음을 같은 시작 상태로 되돌리는 시간이 경기보다 길어질 수 있음. 새 게임 가치가 확보되지 않은 상태에서 기구 복잡도만 추가하는 안으로 제외.",
+      "sources": [],
+      "history": [
+        {
+          "stage": "before_round6_7_decision",
+          "status": "OPEN",
+          "reason": "G02/G06/G09/G14 OPEN: 구체적인 승리 조건과 사람이 매 턴 바꾸는 선택, 학습이 단순 열 모델보다 유용한 부분, 실제 경기 시간/리셋 시간이 필요."
+        }
+      ]
+    },
+    {
+      "id": "N042",
+      "name": "RestPartner — 사람이 두드린 실물 물체의 울림을 AI가 눌러 끊으며 합주",
+      "status": "REJECTED",
+      "stage": "v3_round6",
+      "duplicate_check": "R08(목표 음색을 따라 연주), N004(방 음향 조절) 대조. 사람이 만드는 타격에 대해 장치가 물체별 실제 감쇠와 쉼표를 연주.",
+      "reason": "G07 FAIL: Cyther는 인간과 로봇이 같은 실제 현을 타격하거나 감쇠하며, 양쪽이 impulse/filter 역할을 바꿀 수 있도록 이미 구현. 물체를 그릇으로 바꾸거나 생성 리듬 모델을 붙이는 것만으로 새로운 핵심 흐름이 되지 않음. Snar2의 펠트 댐퍼는 자동화하지 않았다고 원문에 명시되어 있어 그 사례를 자동 펠트 제어 근거로 사용하지 않음.",
+      "sources": [
+        "https://nime.org/proceedings/2017/nime2017_paper0061.pdf",
+        "https://www.logosfoundation.org/instrum_gwr/snar2.html",
+        "https://github.com/behzadhaki/GrooveTransformer"
+      ],
+      "history": [
+        {
+          "stage": "before_round6_7_decision",
+          "status": "OPEN",
+          "reason": "G06/G07 OPEN: 반응형 리듬 게이트·기존 로봇 타악기 감쇠와 구별되는 연주 경험이 있는가. 원래 음색 모사기를 새 이름으로 되살리지 않음."
+        }
+      ]
+    },
+    {
+      "id": "N043",
+      "name": "WarpRescue — 휜 3D 출력물의 바닥만 국소 가열·압박해 다시 맞추기",
+      "status": "REJECTED",
+      "stage": "v3_round6",
+      "duplicate_check": "N008(접착 압력), N032(철사 스프링백), F07(재료 시험) 대조. 이미 출력된 형상을 보존하면서 변형 복구.",
+      "reason": "G08/G09/G13 FAIL: 단순 평판 변형은 수동 온열·평판 압박이라는 강한 대안이 있음. 복잡한 출력물의 바닥만 복구하면서 다른 치수를 보존하려면 숨은 응력·국소 열 전달·변형의 동시 검증이 필요. 해커톤의 한 지그/작은 모델 범위에서 효과를 주장할 경로를 확보하지 못함. 특정 소재의 유리전이 수치나 복구 성공률은 확인 없이 인용하지 않음.",
+      "sources": [],
+      "history": [
+        {
+          "stage": "before_round6_7_decision",
+          "status": "OPEN",
+          "reason": "G08/G09/G13 OPEN: 목표가 바닥 평탄화뿐이면 뜨거운 물과 평판이 강한 대안. 복잡한 출력물의 다른 치수를 유지하려면 열 전달·잔류 응력 관측과 제어가 필요. 해커톤 범위와 양립하는지 검토."
+        }
+      ]
+    },
+    {
+      "id": "N044",
+      "name": "SinkEscrow — 배수 찌꺼기를 잠시 붙잡아 물건을 분리하고 나머지만 비우는 배수 받침",
+      "status": "REJECTED",
+      "stage": "v3_round6",
+      "parent_id": "N022",
+      "duplicate_check": "N022의 낙하 중 빠른 감지/회수에서, 먼저 물리적으로 붙잡고 분류 후 배출하는 흐름으로 변경. 물건의 가치를 추론하지 않고 사용자 지정 보존 종류를 사용.",
+      "reason": "G07/G13 FAIL: Root/Sepura 제조사는 싱크 고형물 자동 분리, 음식물 외 물체 감지 후 정지·회수를 이미 설명. 수거 후 확인이라는 핵심 사용 흐름이 근접하며, AI와 자동 분리통을 더하는 차이만으로 추가 효용을 확보하지 못함. 제조사 설명과 사전주문 상태를 확인한 것이며 독립적인 성능 실측/출하 완료 확인은 아님.",
+      "sources": [
+        "https://getmyroot.com/pages/meet-root",
+        "https://sepurahome.com/en-ca/pages/explore-sepura"
+      ],
+      "history": [
+        {
+          "stage": "before_round6_7_decision",
+          "status": "OPEN",
+          "reason": "G02/G06/G07/G08 OPEN: 보통 거름망보다 수작업을 줄이는가, 음식물에 가려진 물건을 어떻게 다루는가, 금속 감지형 분쇄기 보호 제품과의 차이가 실제 가치인지 조사."
+        }
+      ]
+    },
+    {
+      "id": "N045",
+      "name": "CutCatch — 자유롭게 자르는 판재의 분리 조각을 예상해 진공 지지를 재배치",
+      "status": "REJECTED",
+      "stage": "v3_round6",
+      "duplicate_check": "R05(모터 차단), F08(그립 적응), N008(클램프) 대조. 절단기의 힘을 제어하지 않고 분리될 조각 아래의 지지 영역을 제어.",
+      "reason": "G06/G13 FAIL: piSAVE sense 같은 수동 유량 감지 체크밸브가 노출된 흡착점의 누설을 제한하며 덮인 흡착점의 진공을 유지. 고정 진공 격자·체크밸브라는 강한 대안 대비, 절단 조각을 AI가 미리 예측해 구역을 바꾸는 추가 이득을 확보하지 못함. 정확히 같은 AI 절단 테이블이 있다는 판정은 아님.",
+      "sources": [
+        "https://www.piab.com/globalassets/productimages/pisave-sense-flow-characteristics-eu.pdf",
+        "https://www.piab.com/globalassets/productimages/0128731_datasheet_pisave_sense_multiple_port_fitting_04_60__blue__en-gb.pdf"
+      ],
+      "history": [
+        {
+          "stage": "before_round6_7_decision",
+          "status": "OPEN",
+          "reason": "G06/G07/G09 OPEN: 지능형 진공 테이블의 기존 구역 제어와 중복 가능. 지지에 필요한 해상도·흡입 유량과 영상 인식 이득이 핵심."
+        }
+      ]
+    },
+    {
+      "id": "N046",
+      "name": "Unwrite — 그림의 뜻을 지우려는 로봇과 겨루는 실물 드로잉 게임",
+      "status": "VALID",
+      "stage": "v3_round7",
+      "duplicate_check": "F09/F10/N034/R11 대조. 물리 퍼즐의 숨은 상태 분류나 운동 모델 학습 대신, 상대가 이해할 그림에서 의미 있는 부분을 선택해 실제로 지우는 경기. 그림을 감상·판정만 하는 카메라 앱과 구별.",
+      "reason": "AI가 정답을 알고 의미 단서를 작은 면적만 실제 소거하고, 인간 팀이 그림을 복구해 단어를 전달하는 경기. UnsTable/PICaSo/iNNk와 핵심 흐름 대조. 소형 CNN·공개 스케치 데이터·기성 XY 키트로 범위 고정. 14개 설계 검토 PASS; 소거 정밀도·모델 성능·재미는 실측 전.",
+      "sources": [
+        "https://arxiv.org/abs/2402.03691",
+        "https://www.idoll.love/en/our-research/picaso-collaborative-art-creation",
+        "https://blogit.itu.dk/pxlab/projects/innk/",
+        "https://github.com/googlecreativelab/quickdraw-dataset"
+      ],
+      "history": [
+        {
+          "stage": "before_round6_7_decision",
+          "status": "OPEN",
+          "reason": "AI가 지운 뒤 사람이 다시 그려 다른 사람에게 단어를 전달하는 게임. G04/G07/G09/G13 재검토: 실물 소거의 역할, UnsTable/PICaSo/iNNk와 차이, XY 기구 조달·정밀도, 모델의 중요도와 사람의 이해를 같은 것으로 취급하지 않는 규칙 필요."
+        }
+      ],
+      "card": "research/N046_UNWRITE.md",
+      "evidence_level": "design_review_not_hardware_test",
+      "gates": {
+        "G01": "PASS",
+        "G02": "PASS",
+        "G03": "PASS",
+        "G04": "PASS",
+        "G05": "PASS",
+        "G06": "PASS",
+        "G07": "PASS",
+        "G08": "PASS",
+        "G09": "PASS",
+        "G10": "PASS",
+        "G11": "PASS",
+        "G12": "PASS",
+        "G13": "PASS",
+        "G14": "PASS"
+      }
+    },
+    {
+      "id": "N047",
+      "name": "CrankCompanion — 사람의 루바토를 듣고 실제 종이테이프 오르골을 돌리는 반주기",
+      "status": "REJECTED",
+      "stage": "v3_round7",
+      "duplicate_check": "R08/N042와 대조. 목표 소리 복제/감쇠 대신 실물 오르골의 진행 속도를 연주자에게 맞추는 안.",
+      "reason": "G07/G13 FAIL: 인간 연주를 듣고 실제 악기의 박자와 표현을 맞추는 로봇 반주는 이미 구현. 오르골로 바꾸는 것 이상의 새로운 사용자 작업을 제시하지 못함. 음악상자 제품이 실시간 가수를 따른다고 확인한 것은 아님.",
+      "sources": [
+        "https://angelicalim.com/projects/hrp2/",
+        "https://link.springer.com/article/10.1186/1687-4722-2012-8",
+        "https://murobox.com/en/faq/"
+      ]
+    },
+    {
+      "id": "N048",
+      "name": "FairLadle — 섞인 국물의 건더기 종류까지 균등하게 나누는 배분기",
+      "status": "REJECTED",
+      "stage": "v3_round7",
+      "duplicate_check": "N006(호퍼), N022/N044(배수 분리) 대조. 이물질 보존이 아니라 여러 그릇의 재료 구성을 맞추는 작업.",
+      "reason": "G08/G09/G11 FAIL: 불투명한 국물에서 가려진 건더기 구성은 영상으로 확정하지 못함. 건더기를 분리·단층화·종류별 배분·국물 재합류하는 기구까지 필요. 마른 견과 몇 개로 바꾸면 국물 배분의 어려움을 제외한 시연이 됨.",
+      "sources": []
+    },
+    {
+      "id": "N049",
+      "name": "MarionetteRecast — 새로 만든 꼭두각시의 줄을 보정해 목표 동작을 재현",
+      "status": "REJECTED",
+      "stage": "v3_round7",
+      "duplicate_check": "R08/R10/F08와 대조. 일반 무대 큐나 소리 재현이 아닌 줄 인형의 결합 운동 보정.",
+      "reason": "G07 FAIL: PuppetMaster가 줄 인형 설계와 목표 동작으로 제어를 계산하고 여러 실물 인형에서 검증. 작은 보드와 모터로 옮기는 것만으로 새 작업이 되지 않음.",
+      "sources": [
+        "https://crl.ethz.ch/papers/puppetMaster.pdf",
+        "https://doi.org/10.1145/3306346.3323003"
+      ]
+    },
+    {
+      "id": "N050",
+      "name": "FoldoutTurn — 접힌 부록을 구별해 펼치며 넘기는 책 스캐너",
+      "status": "REJECTED",
+      "stage": "v3_round7",
+      "duplicate_check": "N037 및 R01과 대조. 책 고정/범용 수리 대신 접지 부록의 펼침·복원이라는 조작.",
+      "reason": "G09/G10 FAIL: 일반 페이지 넘김과 접지 부록의 여러 방향 펼침은 다른 기구. 특수 페이지의 가치가 생기는 비정형 접기까지 처리하면 한 지그·소형 데이터 범위를 넘음. 표준 한 번 접힌 종이만 처리하면 사용 범위가 크게 축소됨.",
+      "sources": [
+        "https://wvyw.ariadne.ac.uk/issue/67/rinaldo-et-al/",
+        "https://patents.google.com/patent/CN114604018B/en"
+      ]
+    },
+    {
+      "id": "N051",
+      "name": "VacuumEscrow — 청소기에서 작은 물건은 보존하고 먼지만 배출",
+      "status": "REJECTED",
+      "stage": "v3_round7",
+      "parent_id": "N044",
+      "duplicate_check": "N044/N022와 직접 비교. 수거 후 확인·선택 배출 흐름을 물 대신 공기에 옮긴 변형.",
+      "reason": "G01/G13 FAIL: SinkEscrow의 매질 교체에 가까움. 바닥에서 물건을 먼저 알아보고 피하는 제품도 강한 대안. Narwal이 흡입 후 자동 분리까지 한다고 주장하지 않음.",
+      "sources": [
+        "https://us.narwal.com/pages/flow-2-robot-vacuum-and-mop",
+        "https://www.mi.com/global/product/xiaomi-robot-vacuum-6-pro/"
+      ]
+    },
+    {
+      "id": "N052",
+      "name": "SegmentDry — 옷마다 무게 감소를 읽고 바람을 나눠 주는 건조대",
+      "status": "REJECTED",
+      "stage": "v3_round7",
+      "duplicate_check": "R27/N004/N040 대조. 방 환경 대신 개별 옷에 공기 전달을 배분.",
+      "reason": "G07/G06 FAIL: 하중 센서와 송풍이 결합된 개별 의류 건조대 Dryinator 공개 구현이 있음. 건조 종료·송풍 분배에 학습을 더할 실질적인 새 사용자 흐름도 부족.",
+      "sources": [
+        "https://blogs.ntu.edu.sg/ps5888-2025-g01/design-specifications/final-product-2/"
+      ]
+    },
+    {
+      "id": "N053",
+      "name": "SketchPatchboard — 그린 회로와 실제 접속을 비교해 스위치 매트릭스로 재배선",
+      "status": "REJECTED",
+      "stage": "v3_round7",
+      "duplicate_check": "F02/R29/N028 대조. 물리 사건 재시험/케이블 연속성/자동화 반복 문제 대신 회로 연결을 실제로 바꾸는 도구.",
+      "reason": "G07 FAIL: Jumperless가 스위치 매트릭스로 실제 배선을 바꾸며 전압/전류를 계측하고, 공식 문서에 LLM/MCP 자동화까지 제공. 스케치 인식 경로를 덧붙이는 것만으로 새 사용자 작업을 확보하지 못함.",
+      "sources": [
+        "https://docs.jumperless.org/07.5-automation/",
+        "https://github.com/Architeuthis-Flux/Jumperless",
+        "https://architeuthis-flux.github.io/JumperlessV5/"
+      ],
+      "history": [
+        {
+          "stage": "before_round6_7_decision",
+          "status": "OPEN",
+          "reason": "G06/G07/G09 OPEN: Jumperless 같은 자동 배선 보드와의 차이, 수기 회로 인식이 실제로 유용한지, 매트릭스 구성 공수 확인 필요. 회로 시뮬레이터에 LED만 붙인 안으로 축소하지 않음."
+        }
+      ]
+    },
+    {
+      "id": "N054",
+      "name": "SeamRain — 재사용 방수 의류의 누수 경로를 능동 분사로 찾는 수선 받침",
+      "status": "REJECTED",
+      "stage": "v3_round8",
+      "duplicate_check": "F07/S2-03/R13 대조. 강도 곡선이나 영상 불량 대신 실제 통과한 물로 누수 경로를 찾는 작업.",
+      "reason": "G06/G13 FAIL: 누수의 유입 위치를 찾기 위해 한 구역씩 실제 물을 가하는 것이 강한 비교군이다. 경로 역추론을 학습 모델로 추가해도 더 적은 시험으로 같은 실제 누수 위치를 찾는 근거가 부족하다. 단순 장비로 좁힐수록 AI가 주변 기능이 된다.",
+      "sources": [],
+      "history": [
+        {
+          "stage": "before_round8_decision",
+          "status": "OPEN",
+          "reason": "G06/G08/G09 OPEN: 물이 번져 나온 위치와 실제 유입 위치를 구분할 능동 분사, 순차 분사와 비교한 학습 이득, 젖은 의류를 지지하는 기구 범위 필요."
+        }
+      ]
+    },
+    {
+      "id": "N055",
+      "name": "RopeRecovery — 사람이 놓친 리듬에 맞춰 다시 진입할 틈을 만드는 자동 줄넘기",
+      "status": "REJECTED",
+      "stage": "v3_round8",
+      "duplicate_check": "N001/N018 대조. 힘 재현이나 운반 동기화 대신 실제 회전 줄과 사람의 재진입 리듬을 조정.",
+      "reason": "G07/G09 FAIL: 인간-로봇 협동 줄 돌리기와 리듬 동조 연구가 이미 있음. 큰 회전 줄의 위상·토크·동기화 지그를 작은 안전한 시연으로 줄이면 원래 사람의 재진입 과제를 보여주기 어려움.",
+      "sources": [
+        "https://www.tandfonline.com/doi/abs/10.1163/156855303321125631",
+        "https://link.springer.com/article/10.1186/1687-4722-2012-12",
+        "https://www.pbs.org/video/creating-a-robotic-double-dutch-machine-kczi0v/"
+      ]
+    },
+    {
+      "id": "N056",
+      "name": "FeedRecall — 먹고 남은 수조 사료만 골라 회수하는 급식 받침",
+      "status": "REJECTED",
+      "stage": "v3_round8",
+      "duplicate_check": "N044/N048과 대조. 사람의 배수 이물질 보존/음식 배분 대신 수조 잔여 사료 회수.",
+      "reason": "G07/G13 FAIL: 미섭취 사료를 찾아 제거하는 자율 수조 청소 연구가 있음. 고정 급식 받침으로 좁히면 일정 시간 뒤 통째로 회수하는 간단한 방식이 강하며, AI로 달라지는 사용자 결과가 부족.",
+      "sources": [
+        "https://arxiv.org/abs/2304.08185",
+        "https://par.nsf.gov/servlets/purl/10169904"
+      ]
+    },
+    {
+      "id": "N057",
+      "name": "LabelLock — 옷의 관리 라벨을 읽어 실제 세탁 다이얼의 선택 범위를 촉각으로 제한",
+      "status": "REJECTED",
+      "stage": "v3_round8",
+      "duplicate_check": "R07/R28/N010 대조. 개인 진동 언어/제스처 리모컨/전력 배분 대신 라벨의 조건과 실제 기계 옵션을 연결하는 물리 조작 보조.",
+      "reason": "G07/G13 FAIL: 삼성 SmartThings가 관리 라벨을 읽어 세탁 코스를 제안하며, ANY는 접근 가능한 햅틱 가전 다이얼을 공개했다. 두 선행이 이 조합 자체를 구현했다는 뜻은 아니나, 현재 제안의 추가 가치는 추천을 노브 저항으로 옮기는 수준이다. 실제 가전 부착·검증 부담에 비해 새로운 작업 가치가 충분히 구체화되지 않았다.",
+      "sources": [
+        "https://patents.google.com/patent/US20080127999A1",
+        "https://www.samsung.com/uk/support/apps-services/how-to-use-the-smartthings-scan-care-labels-and-detergent-features/",
+        "https://www.jamesdysonaward.org/en-US/2026/project/any"
+      ],
+      "history": [
+        {
+          "stage": "before_round8_decision",
+          "status": "OPEN",
+          "reason": "G02/G07/G09/G13 OPEN: 관리 라벨 앱·자동 세탁 설정·햅틱 가전 노브와 핵심 흐름 차이, 실제 다이얼 부착과 직접 시연, 종이 라벨만 읽고 보편적 세탁 안전을 주장하지 않는 범위 필요."
+        }
+      ]
+    },
+    {
+      "id": "N058",
+      "name": "FootTypeGuard — 장착 노루발을 보고 부적합한 재봉 다이얼 선택을 막기",
+      "status": "REJECTED",
+      "stage": "v3_round8",
+      "duplicate_check": "R05/R13/N057 대조. 범용 모터 안전이나 천 결함 검사 대신 장착 공구와 선택된 스티치의 호환 확인.",
+      "reason": "G07 FAIL: HUSQVARNA VIKING 계열 공식 설명서에 카메라·신경망 노루발 인식, 권장 스티치와의 불일치 및 장착 오류 안내가 있음. 경고를 다이얼 저항으로 바꾸는 것만으로 핵심 문제·흐름의 차별화가 부족.",
+      "sources": [
+        "https://svpworldwide.widen.net/content/p38crai6az/pdf/User-Manual_DE3_FR.pdf?u=cko5pg",
+        "https://ultimatesewingcompany.com/wp-content/uploads/2025/10/User-Manual_DE3_EN.pdf"
+      ]
+    },
+    {
+      "id": "N059",
+      "name": "RedactRoll — 택배 라벨의 개인정보를 찾아 실제 표면에 가림 인쇄",
+      "status": "REJECTED",
+      "stage": "v3_round8",
+      "duplicate_check": "N046과 대조. 의미 소거 게임 대신 재사용 포장의 개인정보 제거. 같은 XY 접촉 기구를 사용하는 응용 변형.",
+      "reason": "G02/G06/G13 FAIL: 택배 상자 재사용에서는 라벨 전체를 제거/덮는 간단한 대안이 강함. 기존 운송 바코드를 굳이 보존할 이유가 약함. AI로 영역만 선택해도 잉크 밑 원문의 복구 가능성은 해결되지 않음. 검색에서 나온 AI 블로그의 스마트 파쇄기 주장을 실제 제품 근거로 사용하지 않음.",
+      "sources": [
+        "https://www.mdpi.com/2076-3417/15/9/4923",
+        "https://help.shipstation.com/hc/en-us/articles/360045435152-Why-does-my-label-say-it-s-been-redacted"
+      ]
+    },
+    {
+      "id": "N060",
+      "name": "ReachCanvas — 머리 붓으로 그리는 사람에게 다음 작업 영역을 가져오는 이동 이젤",
+      "status": "REJECTED",
+      "stage": "v3_round8",
+      "duplicate_check": "N018/N037/R28 대조. 힘 지도·고정 클램프·제스처 리모컨 대신 물리 캔버스의 도달 범위를 옮기는 보조.",
+      "reason": "G06/G08/G13 FAIL: REMAP에는 실제 구강화가를 위한 다방향·360도 회전 전동 이젤 사례가 있다. 다음 붓질 의도를 추정하는 기능은 관측 근거가 부족하고, 명시적 스위치를 쓰면 기존 이젤의 핵심 흐름으로 돌아간다.",
+      "sources": [
+        "https://remap.org.uk/solutions/artists-head-harness/",
+        "https://remap.org.uk/solutions/?_solutions=special-switch"
+      ],
+      "history": [
+        {
+          "stage": "before_round8_decision",
+          "status": "OPEN",
+          "reason": "G06/G07/G08/G13 OPEN: 수동 위치 조절 이젤·스위치 이동 대비 학습이 필요한가. 붓이 닿는 중과 이동을 원하는 순간의 의도를 혼동하지 않는 명시적 입력/관측 필요."
+        }
+      ]
+    },
+    {
+      "id": "N061",
+      "name": "StoryBody — CAD 없이 만든 종이 인형의 줄 운동을 학습해 애니메이션 재현",
+      "status": "REJECTED",
+      "stage": "v3_round8",
+      "parent_id": "N049",
+      "duplicate_check": "N049와 직접 비교. 인형 설계 파일 대신 짧은 실제 동작 교정으로 모델을 얻는 변형.",
+      "reason": "G01/G07/G13 FAIL: CAD 입력을 교정 데이터로 바꾸지만 줄 인형에 목표 동작을 재현하는 핵심 사용자 흐름은 N049와 동일. 단순 녹화 재생·모터별 교정 대비 새로운 작업 가치도 부족하여 다시 집계해 통과시키지 않음.",
+      "sources": [
+        "https://crl.ethz.ch/papers/puppetMaster.pdf"
+      ]
+    },
+    {
+      "id": "N062",
+      "name": "PageMend — 찢어진 종이 경로를 찾아 보수지를 실제로 붙이는 수선기",
+      "duplicate_check": "N050/N037/N046 대조. 페이지 넘김·제본 고정·게임의 소거 대신 손상 종이를 실제 보강하는 작업.",
+      "reason": "G09/G10/G13 FAIL: 원문과 보수지의 정렬, 풀 양, 얇은 종이 이송과 눌러 말리기가 직렬로 필요하다. 테이프 한 줄만 붙이는 시연으로 줄이면 배경 잉크/찢김/누락 구분에 학습 모델을 추가할 사용자 이득이 약하다. 자동 손상 종이 수선 로봇 특허도 검색됨. 특허를 시판 구현으로 간주하지 않는다.",
+      "sources": [
+        "https://patents.google.com/patent/CN116497628B/en",
+        "https://ugalawlibrary.wordpress.com/2019/11/22/quick-dirty-how-to-run-your-own-book-repair-clinic/"
+      ],
+      "status": "REJECTED",
+      "stage": "v3_round9"
+    },
+    {
+      "id": "N063",
+      "name": "ChainRelease — 목걸이 매듭을 두 핀과 장력 센서로 풀어주는 받침",
+      "duplicate_check": "N025/N035/N036/N038/N039 대조. 빗질·실 공급·지퍼·매듭 지지·해체와 다르지만, 가려진 유연체 매듭을 복원하는 공통 문제가 있음.",
+      "reason": "G08/G09/G10 FAIL: 가는 금속 사슬의 아래/위 교차와 잠금 장식에 걸린 상태를 확인하고, 느슨하게 한 뒤 핀을 다시 삽입하는 정밀 기구가 필요하다. 굵은 단일 줄로 축소하면 실제 목걸이에서 어려운 조건이 사라짐. Berkeley의 케이블 매듭 해체 연구는 기술 근접 선행이며 목걸이 제품의 직접 중복이라고 주장하지 않는다.",
+      "sources": [
+        "https://www2.eecs.berkeley.edu/Pubs/TechRpts/2021/EECS-2021-121.html"
+      ],
+      "status": "REJECTED",
+      "stage": "v3_round9"
+    },
+    {
+      "id": "N064",
+      "name": "PaletteService — 구강 화가의 붓 세척과 다음 색 묻히기를 대신하는 받침",
+      "duplicate_check": "N026/N040/N060/N046 대조. 캔버스 위치·국소 건조·지우기 대신 붓 세척과 도료 보급.",
+      "reason": "G06/G13 FAIL: 입으로 작동하는 세척·배수 보조가 실제 REMAP 사례로 존재하며, 로봇의 붓 세척/색 찍기도 WaterColorBot에서 구현됐다. 명시적으로 다음 색을 선택하게 하면 순차 기구 제어로 충분하다. 다음 색을 추측하도록 바꾸는 것은 원하는 색을 관측하지 못하는 새 문제를 만든다.",
+      "sources": [
+        "https://remap.org.uk/solutions/mouth-operated-turps-and-water-dispenser/",
+        "https://bantamtools.com/products/bantam-tools-watercolorbot"
+      ],
+      "status": "REJECTED",
+      "stage": "v3_round9"
+    },
+    {
+      "id": "N065",
+      "name": "GraftHold — 줄기 단면을 맞춰 잡고 테이프를 감는 소형 접목 보조기",
+      "duplicate_check": "N008/N038/F07 대조. 접착 압력이나 공예 실 인계 대신 살아 있는 줄기의 접합면 정렬과 고정.",
+      "reason": "G07/G09/G11 FAIL: Horti Robotics가 3D 스캔과 제어 절단으로 형성층 정렬을 하는 접목 로봇을 제시한다. 소형/저가만으로 새 작업이 되지 않는다. 자르기·맞추기·테이핑 기구를 동시에 만들면서 며칠 뒤의 접목 성공을 현장 정렬 시연만으로 주장할 수도 없다.",
+      "sources": [
+        "https://hortirobotics.com/grafting-robot",
+        "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0189732"
+      ],
+      "status": "REJECTED",
+      "stage": "v3_round9"
+    },
+    {
+      "id": "N066",
+      "name": "TactileDock — 책상 밑 자석 구동으로 손가락을 원하는 실제 물건까지 안내",
+      "duplicate_check": "R06/R07/R28/N060 대조. 진동 신호 번역이나 이젤 이동 대신 움직이는 물체 배치에서 손가락의 실제 도달을 돕는 작업.",
+      "reason": "G07 FAIL: CHI 2023 FingerRover가 물체 찾기/책상 작업을 위해 손가락을 목표 지점까지 실제로 운반하는 핵심 흐름을 구현했다. AISLA/PalmSight에는 영상 인식과 손 안내도 있다. 자석 구동으로 바꾸는 것으로 핵심 사용자 흐름 차이가 생기지 않는다.",
+      "sources": [
+        "https://programs.sigchi.org/chi/2023/program/content/95848",
+        "https://www.aisla.org.uk/finding-objects",
+        "https://publications.ri.cmu.edu/palmsight-an-assistive-technology-helping-the-blind-to-locate-and-grasp-objects"
+      ],
+      "status": "REJECTED",
+      "stage": "v3_round9"
+    },
+    {
+      "id": "N067",
+      "name": "LaundryPact — 관리 라벨 조건으로 세탁 묶음을 정하고 실제 바구니로 분배",
+      "parent_id": "N057",
+      "duplicate_check": "N057/N023/N052 대조. 코스 다이얼·주머니 감지·건조 대신 의류 간 조건을 묶어 물리적으로 배분하는 변형.",
+      "reason": "G07/G09 FAIL: PickClothBot은 의류별 정보와 자유롭게 정의한 세탁 조건으로 실제 의류를 분류한다. 업체는 RFID 데이터를 사용하므로 자연 라벨 OCR까지 동일하다고 말하지 않는다. 그러나 OCR로 바꾸는 것만으로 새 작업 흐름이 되지 않으며, 뒤집힌/가려진 라벨을 펼치는 로봇까지 요구하면 범위도 커진다.",
+      "sources": [
+        "https://www.pi4.de/product-pck1.html",
+        "https://www.samsung.com/uk/support/apps-services/how-to-use-the-smartthings-scan-care-labels-and-detergent-features/"
+      ],
+      "status": "REJECTED",
+      "stage": "v3_round9"
+    },
+    {
+      "id": "N068",
+      "name": "ThrowPause — 도자기 벽이 무너지기 전에 물레 속도를 개입하는 보조기",
+      "duplicate_check": "N018/N033/N042 대조. 공예 힘 지도·파손 예측·악기 감쇠와 인접하나 실제 젖은 점토 성형 중 개입.",
+      "reason": "G08/G11/G13 FAIL: 보이는 실루엣과 모터 부하만으로 내부 벽 두께·젖음·손 압력에 따른 붕괴를 미리 구분할 근거가 부족하다. 회전을 멈추는 것이 붕괴를 막는다는 핵심 인과도 확보되지 않았다. 이미 무너진 것을 감지해 정지하는 시연은 사용자가 원하는 예방을 입증하지 못한다. Digital Pottery Wheel은 관련 디지털 공예 선행이며 같은 붕괴 방지 장치라는 주장은 하지 않는다.",
+      "sources": [
+        "https://doi.org/10.1145/3613904.3642361",
+        "https://www.mdpi.com/2076-3417/14/17/7989/xml"
+      ],
+      "status": "REJECTED",
+      "stage": "v3_round9"
+    },
+    {
+      "id": "N069",
+      "name": "WhisperHeist — 사람이 만든 소리 가림막을 돌아다니며 비밀 단어를 엿듣는 AI 상대",
+      "status": "REJECTED",
+      "stage": "v3_round10",
+      "duplicate_check": "N004/R06/R07/N015/N046/F10/N034 대조. 방음 설비 최적화·소리 진동 번역·센서 위조·의미 지우기·고정 가설 구분·풍력 항해와 다르다. 두 사람의 실제 음성 전달은 성공시키되 이동 마이크의 ASR에는 들키지 않도록 물리 배치를 설계하는 도청 대결.",
+      "reason": "G02/G13/G14 FAIL: 추가 검토에서도 핵심이 기존 능동 청취 로봇에 비밀 전달 점수를 붙인 시연 수준을 넘는지 해소하지 못했다. 작은 레일에서는 ASR을 쓴 고정 순회가 강하고, 더 큰 공간·여러 발성/잡음·이동 전략을 넣으면 음향/게임 설계 범위가 커진다. 작은 가림막의 효과를 큰 사무실 파티션 연구로 증명할 수도 없다. 음성 인식 자체에 AI가 필요 없다는 판정은 아니며, 같은 완성 게임이 이미 존재한다고 단정하지 않는다.",
+      "sources": [
+        "https://zenodo.org/records/20622100",
+        "https://www.jp.honda-ri.com/api/upload/document/entry/20110910/NakadaiK2003-ICRA_4150.pdf",
+        "https://blogit.itu.dk/pxlab/projects/innk/",
+        "https://pubmed.ncbi.nlm.nih.gov/39296048/",
+        "https://arxiv.org/abs/2504.00858",
+        "https://github.com/pytorch/executorch",
+        "https://heka-interior.com/products/heka-namizna-pregrada-fokus",
+        "https://www.workspace.com.au/product/solo-screen"
+      ],
+      "card": "research/N069_WHISPER_HEIST.md",
+      "history": [
+        {
+          "stage": "before_round11_decision",
+          "status": "OPEN",
+          "reason": "G02/G06/G07/G09/G12/G13/G14 OPEN: 실제 1축 이동 마이크와 작은 가림막에서 의미 있는 설계 선택이 생기는지, 고정 순회 ASR 대비 사용자 결과 차이, 능동 청취+iNNk 시연을 넘어서는 핵심 흐름, 선택 모델의 ExecuTorch 배포 경로를 추가 검토. 상세 미확인 사항을 카드에 남겼으며 통과 개수에는 포함하지 않음."
+        }
+      ]
+    },
+    {
+      "id": "N070",
+      "name": "ReedTune — 실제 발음 응답을 듣고 관악기 리드를 조금씩 깎아 조정",
+      "status": "REJECTED",
+      "stage": "v3_round11",
+      "duplicate_check": "R08/N042/N047/N032 대조. 연주 동작이나 철사 형상 보정이 아니라 리드의 실제 재료를 제거해 응답을 바꾸는 가공.",
+      "reason": "G08/G09/G10 FAIL: 실제 발음 피드백으로 자르는 양을 정하려면 리드 고정/정밀 절삭 외에 반복 가능한 공기 공급과 입술 접촉 조건이 필요하다. 자동 프로파일러와 인공 발음 장치가 각각 존재해도 두 장비의 제작·교정·비가역 제거 모델 학습을 행사 안에 새로 연결할 경로가 과도하다. 프로파일 복사로 줄이면 기존 기계의 핵심 흐름이고, 녹음만 분류하면 다시 물리적 사용자 결과가 빠진다.",
+      "sources": [
+        "https://reedmachines.com/products/configure/33.02.921.00-bptp-automatic-tip-profiler",
+        "https://www.logosfoundation.org/instrum_gwr/autosax.html",
+        "https://pubmed.ncbi.nlm.nih.gov/36859143/",
+        "https://phys.unsw.edu.au/jw/clarinetrobot.html"
+      ],
+      "history": [
+        {
+          "stage": "before_round11_decision",
+          "status": "OPEN",
+          "reason": "G06/G08/G09/G10 OPEN: 기성 자동 프로파일러와의 차이는 음향 피드백인데, 인공 입술/공기 공급과 정밀 절삭을 함께 만들고 연주자의 목표 음색·저항을 정의해야 한다."
+        }
+      ]
+    },
+    {
+      "id": "N071",
+      "name": "CoDrawForce — AI가 다음 형태를 물리적인 펜 저항으로 제안하는 공동 드로잉",
+      "status": "REJECTED",
+      "stage": "v3_round11",
+      "duplicate_check": "N018/R28/N046 대조. 숙련자 힘 재생·제스처 입력·소거 게임 대신 실제 펜의 의미 기반 공동 조작.",
+      "reason": "G07 FAIL: MagicPen이 사용자 압력으로 힘 안내 수준을 조절하는 협동 드로잉을 설명하고 AI 연계 응용도 공개했다. 프로그래밍 가능한 힘 안내 펜 연구도 가까움. 펜을 움직이는 AI 공동 작화라는 현재 핵심이 충분히 다르지 않다. 검색된 특허는 시판 구현의 증거로 쓰지 않음.",
+      "sources": [
+        "https://senscilab.com/pages/application/application",
+        "https://charm.stanford.edu/ME327/2023-Group4",
+        "https://patents.google.com/patent/US20250208712A1/en"
+      ]
+    },
+    {
+      "id": "N072",
+      "name": "FussyFold — 버려진 인쇄 포장재의 그림과 접힌 자국을 살려 새 용기 blank를 재단",
+      "status": "REJECTED",
+      "stage": "v3_round11",
+      "duplicate_check": "R04/F06/N029/N043/N045/N059/N062 대조. 완충재·포장 안전 추정·비닐 위딩·출력물 복구·재단 지지·라벨 가림·종이 수선과 달리 기존 인쇄 그림의 의미와 접힘을 최종 입체 면에 배치해 실제 재료를 다시 자르는 작업.",
+      "reason": "G06/G07/G13 FAIL: Brother ScanNCut은 스캔한 실제 재료 위에 도안을 배치하고 입체 상자 부품을 자르는 흐름을 이미 지원한다. Eastman visionPRO와 IRIS는 인쇄 이미지·무늬·결함을 고려한 배치/재단을 설명한다. 골판지 강도를 다루지 않고 얇은 종이의 그림 보존으로 좁히면 사람이 보존 영역을 지정하는 강한 대안 대비 의미 인식의 추가 작업 가치가 약하다. 그 대신 기존 접힘의 구조적 적합성까지 자동 판단하도록 넓히면 새 계측·가공 범위가 커진다. 제조사가 같은 업사이클 상자 서비스를 제공한다는 주장은 아니다.",
+      "sources": [
+        "https://www.brother-usa.com/blogs/brother-crafts/using-scanncutcanvas-and-scanncut-to-make-heart-boxes",
+        "https://www.brother-usa.com/blogs/brother-crafts/-/media/xblog/scanncut/wp-content/uploads/2020/11/pdf-1.pdf",
+        "https://www.eastmancuts.com/products/visionpro/",
+        "https://www.intergrup.gr/en/%CE%BF%CE%BB%CE%BF%CE%BA%CE%BB%CE%B7%CF%81%CF%89%CE%BC%CE%AD%CE%BD%CE%B7-%CE%BB%CF%8D%CF%83%CE%B7-iris/"
+      ],
+      "history": [
+        {
+          "stage": "before_round11_decision",
+          "status": "OPEN",
+          "reason": "G06/G07/G09/G13 OPEN: fussy cutting/printed-material registration/상자 리사이징 선행 확인. 기성 XY 칼날·접기 도구의 실제 재료 범위와, 단순 사용자가 지정한 사각형 보존 대비 의미 인식의 이득을 검토해야 함. 얇은 포장지로 시연한 뒤 골판지 배송 포장 강도까지 주장하지 않는다."
+        }
+      ]
+    },
+    {
+      "id": "N073",
+      "name": "SoloBoccia — 목표 위치를 지정하면 경사로를 조정해 공을 보내는 독립 보치아 보조",
+      "status": "REJECTED",
+      "stage": "v3_round12",
+      "duplicate_check": "N034/N055/N018/R28 대조. 바람으로 새 배를 조종하는 경기·줄넘기·공예 힘 지도·일반 제스처 입력과 다르며, 경사로 조작 보조인 없이 공을 보내는 접근성 과제.",
+      "reason": "G07/G13 FAIL: BCI-enabled Boccia 연구가 경사로 회전·높이·공 방출과 독립 플레이를 실제로 구현했고, 저기술 자가 조작 경사로도 공개됐다. 목표 지정/학습 제어 추가가 사용자의 새 작업을 충분히 만들지 못한다. 로봇 보치아 강화학습 연구는 시뮬레이션이라는 증거 수준을 구별한다.",
+      "sources": [
+        "https://www.sciexplor.com/ec/articles/ec.2026.0020",
+        "https://www.lboro.ac.uk/schools/design-creative-arts/inclusive-sports-product-design/previous-winners/bocca-1/",
+        "https://sigarra.up.pt/feup/en/pub_geral.pub_view?pi_pub_base_id=464726"
+      ]
+    },
+    {
+      "id": "N074",
+      "name": "FoldMemory — 여러 실물 인쇄 조각의 의미를 입체 면에 배치해 기념 상자로 재단·접선 가공",
+      "status": "REJECTED",
+      "stage": "v3_round12",
+      "parent_id": "N072",
+      "duplicate_check": "N072 직접 변형. 한 장의 그림 보존/기존 상자 blank 배치에서, 복수 티켓·엽서의 의미 영역과 입체 면 관계(목적지와 날짜가 함께, 그림은 접히지 않게)를 만족하는 분할 전개도로 변경. N046의 소거 게임과는 보존할 실물 결과를 제조하는 작업이 다름.",
+      "reason": "G02/G06/G13 FAIL: 합성 기하 코드로 닫히는 상자 분할·탭 배치를 확인했지만, 기존 상자에 원문 조각을 붙이는 대안보다 실제 수고나 결과가 나아지는 작업을 확보하지 못했다. 보존 관계 추가가 AI를 필요하게 만드는 인위적 복잡도로 남아 제외. 이전 카드/기하 코드/OPEN 이력은 보존.",
+      "sources": [
+        "https://www.brother-usa.com/blogs/brother-crafts/using-scanncutcanvas-and-scanncut-to-make-heart-boxes",
+        "https://www.eastmancuts.com/products/visionpro/",
+        "https://github.com/AntonFlorey/PolyZamboni",
+        "https://github.com/Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB",
+        "https://mindee.github.io/doctr/modules/models.html",
+        "https://github.com/pytorch/executorch/blob/main/docs/source/getting-started.md"
+      ],
+      "card": "research/N074_FOLD_MEMORY.md",
+      "history": [
+        {
+          "stage": "before_round13_geometry_probe",
+          "status": "OPEN",
+          "reason": "G02/G06/G07/G09/G13 OPEN: 복수 원문의 의미 영역을 입체 면에 맞추는 변형과 구현 경로를 카드로 구체화. 그러나 기존 상자에 원본 조각을 그대로 붙이는 대안 대비 시간·실수·완성 결과의 이득이 아직 분명하지 않다. 단순 보존 영역 지정을 AI로 치환한 정도라면 제외한다. 모델의 실제 인쇄물 성능/ExecuTorch 내보내기는 실행 전."
+        },
+        {
+          "stage": "before_round14_value_decision",
+          "status": "OPEN",
+          "reason": "G02/G06/G07/G09/G13 OPEN: 복수 원문의 의미 영역을 입체 면에 맞추는 변형과 구현 경로를 카드로 구체화. 그러나 기존 상자에 원본 조각을 그대로 붙이는 대안 대비 시간·실수·완성 결과의 이득이 아직 분명하지 않다. 단순 보존 영역 지정을 AI로 치환한 정도라면 제외한다. 모델의 실제 인쇄물 성능/ExecuTorch 내보내기는 실행 전. 13차 합성 기하 코드에서 두 카드의 세 면씩 분할·탭 배치·닫힌 모서리 대응을 확인했으나 실제 절단/AI/가치 검증은 아니므로 OPEN 유지."
+        }
+      ],
+      "artifacts": [
+        "research/prototypes/foldmemory/geometry_probe.py",
+        "research/prototypes/foldmemory/geometry_report.json",
+        "research/prototypes/foldmemory/layout.svg"
+      ]
+    },
+    {
+      "id": "N075",
+      "name": "ScentCoach — 냄새 찾기 행동을 읽고 보상·다음 냄새를 자동 선택하는 반려견 훈련기",
+      "status": "REJECTED",
+      "stage": "v3_round13",
+      "duplicate_check": "R28/N056 대조. 일반 제스처 입력이나 잔여 사료 회수와 다르지만 동물 행동 분류에 보상을 연결하는 기존 외부 흐름을 먼저 조사함.",
+      "reason": "G07/G13 FAIL: 실제 자동 냄새 탐지 훈련 장치가 독립 조작·샘플 전환·보상을 구현했고, ML 행동 인식 보상 장치도 공개됐다. 현재 구상의 적응 난도 추가만으로 새로운 훈련 과제를 만들지 못했다. Top Tier K9의 개발 중 홍보를 완성 제품 실측으로 취급하지 않음.",
+      "sources": [
+        "https://researchcommons.waikato.ac.nz/bitstreams/2e880b25-e022-4a87-b98d-1a63f67de507/download",
+        "https://arxiv.org/abs/2101.02380"
+      ]
+    },
+    {
+      "id": "N076",
+      "name": "BubbleKeeper — 실제 비눗방울을 관찰하며 담그기와 바람을 바꾸는 적응 버블 장치",
+      "status": "REJECTED",
+      "stage": "v3_round13",
+      "duplicate_check": "N034/N026 대조. 배의 운동이나 수채화 습도 대신 막 형성과 방울 발생을 제어하지만, 단순 자동 송풍 장치를 넘는 사용 결과가 필요한 후보.",
+      "reason": "G02/G06/G13 FAIL: 서보로 막대를 담그고 팬으로 부는 공개 장치가 있으며, 방울 수/크기 목표를 붙여도 속도·담금 주기 교정이라는 강한 비교군 대비 학습이 필요한 작업을 구체화하지 못했다. 정확히 같은 학습 제어 제품이 있다는 주장은 아님.",
+      "sources": [
+        "https://learn.adafruit.com/make-it-bubble/use",
+        "https://andieandmike.org/bubblecam/"
+      ]
+    },
+    {
+      "id": "N077",
+      "name": "LockTutor — 손의 힘에 맞춰 핀 저항을 바꾸는 햅틱 자물쇠 연습기",
+      "status": "REJECTED",
+      "stage": "v3_round13",
+      "duplicate_check": "N018/N071/R28 대조. 공예 힘 재현·협동 드로잉·일반 제스처가 아닌 양손 잠금 기구 조작이지만 햅틱 훈련 선행과 대조.",
+      "reason": "G07 FAIL: Stanford CHARM 2026 Group 4가 실제 모터 저항·핀 위치·과도 조작·클릭 피드백을 갖는 lock-picking simulator를 구현했다. 사용자별 난도 조정만 추가하는 안은 같은 핵심 연습 흐름이다.",
+      "sources": [
+        "https://charm.stanford.edu/ME327/2026-Group4"
+      ]
+    },
+    {
+      "id": "N078",
+      "name": "FlightCoach — 종이비행기 형상과 실제 발사 결과를 학습하는 제작·시험 장치",
+      "status": "REJECTED",
+      "stage": "v3_round13",
+      "duplicate_check": "N034 직접 대조. 사용자 제작물의 운동을 시험한다는 공통점이 크며 배를 비행기로 바꾸는 것만으로 독립 통과시키지 않음.",
+      "reason": "G07/G14 FAIL: 종이비행기 제작·로봇 발사·비행 기록·군집 모델·목표 비행에 대한 역설계를 실제 구현한 연구가 있다. 발사 각도만 자동 조정하도록 줄여도 새 사용자 과제가 약하고 N034와 포트폴리오 차이가 부족하다.",
+      "sources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC10015042/"
+      ]
+    },
+    {
+      "id": "N079",
+      "name": "CrokiPartner — 실제 판 상태를 보고 샷을 계획·발사하는 크로키놀 상대",
+      "status": "REJECTED",
+      "stage": "v3_round13",
+      "duplicate_check": "R11/N073 대조. 카메라 심판을 넘어 실제 샷을 수행하지만 기존 물리 보드게임 로봇·보치아 보조와 대조.",
+      "reason": "G07 FAIL: Crokibot 9900의 실제 판 상태 평가·샷 계획·발사 구현이 공개됐다. 지역 게임이나 다른 보드에 AI 상대를 붙이는 것만으로 새 안으로 세지 않음.",
+      "sources": [
+        "https://www.enggeomb.ca/pdf/Keystone/22Winter.pdf"
+      ]
+    },
+    {
+      "id": "N080",
+      "name": "PaperCasting — 손그림을 관절 부품으로 나눠 실물 종이 인형으로 재단",
+      "status": "REJECTED",
+      "stage": "v3_round13",
+      "parent_id": "N074",
+      "duplicate_check": "N074/N072의 의미 보존 재단에서 인형 부품 제작으로 변형. N049/N061은 완성 인형을 구동하는 안이므로 동일한 구현이라고 혼동하지 않음.",
+      "reason": "G06/G07/G13 FAIL: 단일 유기체 그림을 부품으로 자동 구조화하고 cardboard puppetry에 적용한 연구와 자동 종이 커터를 이용한 인형 제작이 공개됐다. 연구가 완전 자동 힌지 위치 생성까지 했다는 주장은 하지 않는다. 현재 차이는 그 힌지/실물 절단 통합에 남으며, 제한된 인형 범위에서 수동 관절 지정 대비 새 사용자 이득을 확보하지 못했다.",
+      "sources": [
+        "https://perso.telecom-paristech.fr/parakkat/PDF/cag19.pdf",
+        "https://tais.ca/paper-cutter-demo/"
+      ]
+    },
+    {
+      "id": "N081",
+      "name": "TasteMirror — 눈가림 시음 응답을 학습해 다음 음료 배합을 실제 주입하는 장치",
+      "status": "REJECTED",
+      "stage": "v3_round13",
+      "duplicate_check": "N048/N056 대조. 고형물 분배·사료 회수와 달리 시음 선호의 반복 학습과 액체 배합이며 기존 목록의 직접 복제는 아님.",
+      "reason": "G07/G13 FAIL: 취향을 학습해 음료를 조정한다는 MIXO의 공개 개발 방향과 겹친다. 해당 페이지는 출시 대기 상태이므로 완성 제품 성능으로 표현하지 않는다. TasteBud는 실제 다중 펌프 맛 전달의 근거이지 개인 선호 학습까지 구현한 증거는 아니다. 눈가림 선택을 넣는 것만으로 기존 개인화 음료 제조와 충분히 다른 작업이 되지 않음.",
+      "sources": [
+        "https://drinkmixo.com/",
+        "https://www.frontiersin.org/journals/computer-science/articles/10.3389/fcomp.2023.1128229/full"
+      ]
+    },
+    {
+      "id": "N082",
+      "name": "GraviPaint — 보존할 무늬와 채울 영역을 지정하면 실제 유동화 캔버스를 기울이는 보조대",
+      "status": "REJECTED",
+      "stage": "v3_round13",
+      "duplicate_check": "N026/N040/N060/N034 대조. 숨은 종이 수분 추정이나 화가의 다음 의도 추정 대신 사용자가 고른 무늬의 변형과 실제 물감 전면을 관측해 전역 경사를 조절. N034와 학습 동역학 제어는 공유하므로 실제 예술 작업/점성 도막이라는 차이가 충분한지도 G14에서 검토.",
+      "reason": "최종 설계 심사 제외(G06/G08/G09/G13 통과 근거 부족). 8개 RGB 기준점 이력에서 도막 상태를 구별할 경로와 같은 관측의 온라인 선형/물리 모델 대비 학습 이득을 확보하지 못함. 고정 배합·양으로 줄이면 구현은 쉬워지나 AI 필요성이 약해지고, 깊이 계측/정밀 유체 시뮬레이터를 추가하면 행사 범위를 넘어선다. 물리적으로 불가능하거나 실험에서 실패했다고 주장하지 않음. 사용자 요청에 따라 검토를 종료하고 새 후보를 만들지 않음.",
+      "card": "research/N082_GRAVI_PAINT.md",
+      "sources": [
+        "https://acrylicpouring.com/diagonal-pour/",
+        "https://digitalcommons.calpoly.edu/theses/2205/",
+        "https://devpost.com/software/the-pourtrait",
+        "https://www.pratt.edu/news/building-bridges-at-the-seoul-biennale/",
+        "https://arxiv.org/abs/1901.06028",
+        "https://goldenartistcolors.com/resources/color-pouring-mediums-gloss-and-matte",
+        "https://fluidlab2023.github.io/index.html",
+        "https://doi.org/10.1039/D3SM00177F"
+      ],
+      "history": [
+        {
+          "date": "2026-10-05",
+          "status": "OPEN",
+          "reason": "G06/G08/G09/G13 OPEN: 작은 2축 경사대와 실제 유동화 작업으로 범위를 잡음. 단순 색 덩어리 중심 추적이 아니라 보존 영역의 변형과 빈 영역의 충전을 함께 다룬다. 다만 같은 관측을 쓰는 온라인 선형 유동 모델보다 학습 모델이 나을 조건, 숨은 도막 두께에 대한 관측 충분성, 데이터 수집·교체 시간을 더 확인해야 함. 실제 물감을 제어한 실험은 없음."
+        }
+      ],
+      "final_review_date": "2026-10-05"
+    },
+    {
+      "id": "N083",
+      "name": "BubbleRoute — 이미 붙인 필름의 기포를 읽고 롤러 경로로 가장자리까지 밀어내는 장치",
+      "status": "REJECTED",
+      "stage": "v3_round14",
+      "duplicate_check": "N009/N024/N029 대조. 박리·초기 테이프 걸기·위딩 대신 이미 접착된 필름의 기포 복구를 목표로 함.",
+      "reason": "G08/G09/G13 FAIL: 보이는 기포와 접착 결함·먼지를 구별하고, 이미 붙은 막 아래에서 실제로 배출 가능한 경로를 확보해야 한다. 일반 롤러 압착이 가능한 상태만 시연하면 단순 압착/초기 부착이라는 강한 대안을 넘기 어렵다. 제조사의 자동 비전 정렬·롤러 부착은 예방 흐름의 선행이며 정확히 같은 사후 기포 복구 구현으로 단정하지 않음.",
+      "sources": [
+        "https://www.hangmotech.com/",
+        "https://kaisiai.com/"
+      ]
+    },
+    {
+      "id": "N084",
+      "name": "ReelDuel — 당김과 놓기 습관을 학습해 페인트 동작을 하는 힘 피드백 상대",
+      "status": "REJECTED",
+      "stage": "v3_round14",
+      "duplicate_check": "N001/N018/N034/N077/F10 대조. 운반 협조·힘 지도·제작물 조종·가상 잠금 훈련과 달리 인간의 시간적 힘 패턴을 상대하는 경기 구상.",
+      "reason": "G02/G06/G13 FAIL: 단순 줄다리기는 모터 힘/반응 속도가 지배하고, 출력·에너지·행동 제한을 추가한 안도 고정 타이밍/무작위 힘 변화보다 학습이 필요한 전략을 충분히 만들지 못했다. 숨은 목표를 사전에 정해도 물리 신호에 나타나지 않으면 모델이 알 수 없다. The Tight Game은 인간 간 힘 보정 선행이며 학습 AI 상대를 이미 구현한 것으로 오인하지 않음.",
+      "sources": [
+        "https://shunichikasahara.com/portfolio/the-tight-game/",
+        "https://www.microsoft.com/en-us/research/publication/haptic-battle-pong-high-degree-freedom-haptics-multiplayer-gaming-environment-2/?lang=zh-cn"
+      ]
+    },
+    {
+      "id": "N085",
+      "name": "StillPaper — 도구를 잡아당기지 않고 실제 종이를 움직여 떨림 흔적을 줄이는 작업대",
+      "status": "REJECTED",
+      "stage": "v3_round14",
+      "parent_id": "N060",
+      "duplicate_check": "N060/N071/N018 대조. 화가의 다음 작업 영역/형태를 추측하거나 펜에 힘을 가하는 대신, 짧은 도구 운동을 예측해 종이의 상대 위치를 보상. 기존 이동 이젤의 위치 변경과 같은 역할이라고 세지 않지만, 일반 떨림 보상 장치의 작동 대상만 바꾼 것인지 G07/G13 재검토 필요.",
+      "reason": "G06/G09/G11/G13 FAIL: UCI hw_dataset 40개 기록을 5회 파일 분할해 작은 MLP를 실제 학습/평가했다. 선형 AR 대비 평균 정규화 RMSE 감소 2.16%, 기록별 상대 감소 중앙값 0.78%로 현재 안의 AI 추가 이득이 작다. 고속 위치 측정·종이 구동·마찰·자발 운동 보존의 직렬 부담은 남는다. 필터 신호 예측 결과를 실제 필기 개선/의료 효능으로 바꾸어 주장하지 않음.",
+      "card": "research/N085_STILL_PAPER.md",
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/36170410/",
+        "https://archive.ics.uci.edu/dataset/395/parkinson%2B",
+        "https://publications.ri.cmu.edu/active-tremor-compensation-in-handheld-instrument-for-microsurgery",
+        "https://doi.org/10.1016/j.ijhcs.2026.103862"
+      ],
+      "history": [
+        {
+          "stage": "before_round14_offline_probe",
+          "status": "OPEN",
+          "reason": "G06/G07/G08/G09/G11/G13 OPEN: 실제 종이와 도구 사이 상대 운동을 보상하는 2축 지그로 범위를 잡음. 신호 예측 연구와 공개 좌표/시간 데이터 경로를 확보했으나 실제 모델/기구 성능·자발 운동 보존·사용자 이점은 아직 미검증. 지연 보상에 학습이 필요한지 선형 예측/적응 주파수 모델과 비교할 예정이며 의료 효능을 주장하지 않음."
+        }
+      ],
+      "evidence_level": "offline_recorded_data_forecast_not_hardware_or_clinical_test",
+      "artifacts": [
+        "research/prototypes/stillpaper/README.md",
+        "research/prototypes/stillpaper/forecast_probe.py",
+        "research/prototypes/stillpaper/forecast_report.json",
+        "research/prototypes/stillpaper/cross_validation_summary.json"
+      ]
+    },
+    {
+      "id": "N086",
+      "name": "PunchPartner — 손으로 바꾼 같은 오르골 종이 악보에 AI가 음을 더하는 공동 작곡기",
+      "status": "VALID",
+      "stage": "v3_round15",
+      "parent_id": "N047",
+      "duplicate_check": "N047/R08/N042/N046/N070 대조. 템포 추종 반주·음색 조정·그림 소거가 아닌, 실제 재편집한 악보를 재인식해 고정 음 사이를 생성하고 동일 종이에 천공하는 흐름. 외부 자동 천공기·AI 오르골·Grain as Note와 대조 필요.",
+      "reason": "동일 실물 악보를 손으로 고친 뒤 다시 읽어 고정 음 사이를 생성·천공하는 세 번의 공동 작곡 세션으로 한정. 자동 천공기/AI 오르골/Grain as Note와 작업 흐름 대조. 시판 펀치와 기성 XY 키트 전제. 독립 71,120-매개변수 모델을 학습하고 318,400바이트 ExecuTorch/XNNPACK 모델을 로컬 CPU에서 실제 실행, 52개 출력의 PyTorch 수치 일치 확인. 청취 품질·천공·보드 검증은 미실시. 14개 설계 게이트 PASS.",
+      "card": "research/N086_PUNCH_PARTNER.md",
+      "sources": [
+        "https://jshel.co/blog/music-box-hole-punch",
+        "https://arxiv.org/abs/1709.06404",
+        "https://musicboxmelodies.com/ai/",
+        "https://eccv-art-26.github.io/pieces/grain-as-note-a-bio-tangible-interface-for-interspecies-co-c/",
+        "https://music21.org/music21docs/about/referenceCorpus.html",
+        "https://docs.pytorch.org/executorch/stable/getting-started.html"
+      ],
+      "history": [
+        {
+          "stage": "before_round15_model_and_scope_review",
+          "status": "OPEN",
+          "reason": "G02/G06/G07/G09/G10/G13/G14 OPEN. 자동 천공과 AI 음악 생성 자체는 선행이 있다. 시판 펀치 전체를 누르는 구조로 금형 제작을 제외했고, 실제 악보 재교환과 위치 제약 선율 생성으로 범위를 고정. 공개 구형 모델을 즉시 배포 가능하다고 가정하지 않고 독립 학습 경로 확인 중."
+        }
+      ],
+      "evidence_level": "design_review_plus_offline_model_and_host_executorch_not_hardware_test",
+      "gates": {
+        "G01": "PASS",
+        "G02": "PASS",
+        "G03": "PASS",
+        "G04": "PASS",
+        "G05": "PASS",
+        "G06": "PASS",
+        "G07": "PASS",
+        "G08": "PASS",
+        "G09": "PASS",
+        "G10": "PASS",
+        "G11": "PASS",
+        "G12": "PASS",
+        "G13": "PASS",
+        "G14": "PASS"
+      },
+      "artifacts": [
+        "research/prototypes/punchpartner/README.md",
+        "research/prototypes/punchpartner/infill_probe.py",
+        "research/prototypes/punchpartner/infill_report.json",
+        "research/prototypes/punchpartner/executorch_probe.py",
+        "research/prototypes/punchpartner/executorch_report.json",
+        "research/prototypes/punchpartner/infill_model.pte"
+      ]
+    },
+    {
+      "id": "N087",
+      "name": "FaultCounterexample — 사용자의 고장 설명에 반례가 되는 실제 회로를 구성하는 실습대",
+      "status": "REJECTED",
+      "stage": "v3_round15",
+      "duplicate_check": "N053/F02/R16/N018 대조. 회로 전사·재시험·진단·힘 교육 대신 설명을 듣고 반례 측정 조건을 실제로 구성하는 학습 흐름을 검토.",
+      "reason": "G06/G13 FAIL. CircuTutor·BEETLE II 등은 실제 하드웨어와 동일하지 않지만, 자연어 설명·오개념 진단·적응 문제라는 핵심 교육 흐름은 공개되어 있다. 제한된 저전압 회로/고장 집합으로 줄이면 회로해석과 측정 선택은 규칙으로 해결되고 AI가 자연어 메뉴 선택으로 축소된다. 설명을 현물로 옮기는 것 이상의 새 실습 과제를 확보하지 못함. 실제 같은 하드웨어가 존재한다고 단정하지 않음.",
+      "sources": [
+        "https://arxiv.org/abs/2609.08254",
+        "https://doi.org/10.1007/s40593-014-0017-9",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC6310412/"
+      ]
+    },
+    {
+      "id": "N088",
+      "name": "ReachLayout — 사용자의 도달 패턴을 보고 실제 게임 버튼 배치를 모터로 바꾸는 컨트롤러",
+      "status": "REJECTED",
+      "stage": "v3_round15",
+      "duplicate_check": "R28/N057/N060/N073/N085 대조. 제스처 명령·햅틱 다이얼·이젤·보치아·떨림 보상과 달리 입력 버튼의 실제 위치를 바꾸는 안.",
+      "reason": "G02/G06/G09/G13 FAIL. 처음 도달 범위를 측정해 버튼을 손으로 배치하는 강한 대안에 비해 반복 재배치의 이득이 불명확하며 학습한 운동 습관을 깨뜨릴 수 있다. 실제 피로/통증을 도달 궤적만으로 추정해서는 안 된다. 여러 버튼의 독립 이동 기구가 핵심 사용자 이득보다 커짐. 외부 검색을 했으나 동일 제품을 확인했다고 주장하지 않고 내부 게이트에서 제외.",
+      "sources": []
+    },
+    {
+      "id": "N089",
+      "name": "FlowClaim — 공구의 실제 가공 단계에 따라 공유 집진 풍량을 배분",
+      "status": "REJECTED",
+      "stage": "v3_round16",
+      "duplicate_check": "N003/N007/N013/N045 대조. 진동 시점 협의·납땜 흄/냉각·조용한 계측·진공 지지와 달리 여러 공구의 실제 집진 수요와 덕트 풍량을 조정하는 흐름.",
+      "reason": "G07/G13 FAIL. Ecogate가 실제 작업 수요 감지→자동 게이트→압력/속도/체적 측정→전체 풍량/팬 조정 흐름을 제공한다. 전원 on/off만 감지하는 제품이라고 축소하지 않았다. 소리 기반 가공 단계 분류를 붙이는 것만으로 새 사용자 과제를 확보하지 못함.",
+      "sources": [
+        "https://www.ecogate.com/how-it-works",
+        "https://www.ecogate.com/product-page/gates",
+        "https://www.ecogate.com/post/workstation-activity-sensor-solutions"
+      ]
+    },
+    {
+      "id": "N090",
+      "name": "BreathingWindow — 필요한 환기를 유지하면서 소리 종류와 접근을 예측해 여닫는 창구",
+      "status": "REJECTED",
+      "stage": "v3_round16",
+      "duplicate_check": "N004/N007/N030/N031/R27 대조. 실내 음향 패널·공정 흄·층간소음과 달리 실외 소음 사건과 자연 환기의 충돌을 창구 구동으로 조정.",
+      "reason": "G07 FAIL. Fraunhofer Sound Controlled Ventilation이 외부 소리 종류/조기 감지, 실내 소음까지 포함한 자동 창문/환기구를 연구하고 실험실·피험자 검증을 보고했다. 1997년에도 접근 교통 소음과 실내 음악/말을 구별하며 창문을 제어한 프로토타입이 있다. 단순 임계값 제품으로 축소하거나 예측·종류 분류를 새 차별점으로 내세울 수 없음.",
+      "sources": [
+        "https://www.ibp.fraunhofer.de/en/projects-references/sound-controlled-ventilation.html",
+        "https://doi.org/10.1121/1.418917",
+        "https://www.bau.fraunhofer.de/en/fieldsofresearch/comfortandhealth/attentive-windows.html"
+      ]
+    },
+    {
+      "id": "N091",
+      "name": "KnobSeeker — 참고 음색을 듣고 실제 아날로그 페달의 노브를 찾아 맞추는 조정기",
+      "status": "VALID",
+      "stage": "v3_round16",
+      "parent_id": "R08",
+      "duplicate_check": "R08/N042/N047/N057/N086 대조. 물체를 목표 소리대로 연주하거나 곡을 생성하는 대신, 기존 아날로그 신호 경로의 실제 노브를 조절하고 되들으며 다른 연주 구절의 참고 음색에 접근. API 없는 기기의 음색 설정 작업으로 범위를 한정할 때 독립 가치 재검토.",
+      "reason": "G01–G14 설계 PASS. 한 아날로그 페달을 실제 되듣기로 조절하고 원래 연주 장치에 설정을 남기는 작업으로 고정. 다른 구절 비교를 담당하는 공개 AFx-Rep encoder의 실제 로컬 ExecuTorch 실행 성공. 36회/3–5분 탐색 목표와 9–13시간 직렬 제작 추정, 동일 예산 MFCC/스펙트럼/인간 비교. 보드·페달·청취 효과는 미실측.",
+      "sources": [
+        "https://csteinmetz1.github.io/st-ito/",
+        "https://neuraldsp.com/news/neural-dsp-amplifier-modeling-technology",
+        "https://www.addacsystem.com/en/products/standalone/addac-servo-controller",
+        "https://arxiv.org/abs/2505.11315",
+        "https://huggingface.co/csteinmetz1/afx-rep",
+        "https://www.tonemirror.so/tone-match",
+        "https://tonesmatch.com/"
+      ],
+      "card": "research/N091_KNOB_SEEKER.md",
+      "history": [
+        {
+          "status": "OPEN",
+          "reason": "G06/G07/G09/G13/G14 OPEN. ST-ITO는 임의 오디오 이펙트의 스타일 기반 검색, TINA는 실제 노브 구동/출력 수집에 의한 모델링, ADDAC은 시판 외부 노브 구동을 이미 제공. 같은 최종 실물 조정 흐름인지 구별해야 하며 단순 세 제품 연결을 신규성으로 주장하지 않음. 한 페달·세 노브·다른 구절의 참고 음색·실제 오디오 재측정으로 범위 설정 중."
+        }
+      ],
+      "gates": {
+        "G01": "PASS",
+        "G02": "PASS",
+        "G03": "PASS",
+        "G04": "PASS",
+        "G05": "PASS",
+        "G06": "PASS",
+        "G07": "PASS",
+        "G08": "PASS",
+        "G09": "PASS",
+        "G10": "PASS",
+        "G11": "PASS",
+        "G12": "PASS",
+        "G13": "PASS",
+        "G14": "PASS"
+      },
+      "evidence_level": "Design review; real host encoder export/runtime only, no pedal/hardware/listening test"
+    },
+    {
+      "id": "N092",
+      "name": "WeedGate — 접착 필름을 국소적으로 굽히며 필요한 글자를 남기는 자동 위딩",
+      "status": "REJECTED",
+      "stage": "v3_round16",
+      "parent_id": "N029",
+      "duplicate_check": "N029 WeedYield와 직접 대조. 떨어진 글자를 다시 붙이는 사후 복구를 버리고, 지지면 굽힘과 제거 순서로 처음부터 글자를 남기는 흐름을 검토. R07/N072의 천·종이 가공과도 구별.",
+      "reason": "G07/G13 FAIL. Galileo WM75가 벡터 파일 분석·최적 제거 순서·내부/외부 접착 필름 위딩을 이미 공개한다. VeloBlade도 자동 폐기 필름 분리를 제공한다. 국소 지지면 굽힘만으로 사용자가 하는 일이 달라지지 않고, 추가 복구를 얹으면 N029의 미검증 재접착 문제로 돌아감.",
+      "sources": [
+        "https://galileoweedingmachine.com/",
+        "https://www.vivid-online.com/products/veloblade-weeder/"
+      ]
+    },
+    {
+      "id": "N093",
+      "name": "ShareShade — 종이와 화면을 함께 쓰는 두 사람의 작업을 구별해 빛을 배분하는 조명",
+      "status": "REJECTED",
+      "stage": "v3_round16",
+      "duplicate_check": "F09/S2-05/R21/N004 대조. 그림자 게임·카메라 시험·음향 패널이 아닌 공유 책상의 실제 조도와 화면 반사 조정.",
+      "reason": "G07/G13 FAIL. AI Moving Lamp가 종이/태블릿을 시각적으로 구별해 실제 로봇 조명을 이동·점등하고 화면은 피한다. AUR의 협력 조명과 SenseRobot의 책 추종 광원도 선행이다. 두 사용자로 늘리는 것만으로 새로운 핵심 작업이 되지 않으며, 사람별 눈부심까지 약속하면 관찰 위치별 측광/기하가 추가됨. 수동 배치/차광과 비교할 새 효용이 부족함.",
+      "sources": [
+        "https://www.dimademler.com/portfolio/projects-1/",
+        "https://robots.media.mit.edu/portfolio/aur/",
+        "https://www.sensetime.com/en/news/51167432"
+      ]
+    }
+  ],
+  "search_status": "paused_by_user",
+  "search_stopped_at": "2026-10-05"
+}

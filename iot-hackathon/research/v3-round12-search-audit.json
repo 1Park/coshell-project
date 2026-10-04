@@ -1,0 +1,1556 @@
+{
+  "note": "반환 링크 메타데이터이며 전체를 정독/검증한 문헌 목록은 아니다. 6월 ExecuTorch 행사 및 같은 날짜의 Arm E8 행사는 대상 행사와 구분했다. 대상 행사의 사전 제작 허용/금지 상세 규칙은 확인하지 못했으며 임의로 허용 또는 금지한다고 전제하지 않는다. 의심스러운 LinkedIn 미러는 근거로 채택하지 않았다.",
+  "calls": [
+    {
+      "key": "r12boccia_0",
+      "query": "boccia automatic ramp AI assistive robot target camera",
+      "status": "fulfilled",
+      "source_links": [
+        {
+          "title": "Improvement of a BCI-enabled Boccia ramp through a patient engagement strategy",
+          "url": "https://www.sciexplor.com/ec/articles/ec.2026.0020"
+        },
+        {
+          "title": "Improvement of a BCI-enabled Boccia ramp through a patient engagement strategy - Empathic Computing | Science Exploration Press",
+          "url": "https://www.sciexplor.com/articles/ec.2026.0020"
+        },
+        {
+          "title": "448413_Print.indd",
+          "url": "https://www.prl.res.in/~library/gpdf/e-books/Springer_e-books/Recent%20Advances%20in%20Information%20Systems%20and%20Technologies%202017.pdf"
+        },
+        {
+          "title": "(PDF) Measuring Assistive Technology Outcomes via AI-Based Kinematic Modeling of Individualized Routine Learning in Elite Boccia Athletes with Severe Cerebral Palsy: A Longitudinal Case Series",
+          "url": "https://www.researchgate.net/publication/401226317_Measuring_Assistive_Technology_Outcomes_via_AI-Based_Kinematic_Modeling_of_Individualized_Routine_Learning_in_Elite_Boccia_Athletes_with_Severe_Cerebral_Palsy_A_Longitudinal_Case_Series"
+        },
+        {
+          "title": "Aiming at a Target - PhotonVision Docs",
+          "url": "https://docs.photonvision.org/en/v2026.0.0-alpha-2/docs/examples/aimingatatarget.html"
+        },
+        {
+          "title": "Simple Strategies - PhotonVision Docs",
+          "url": "https://docs.photonvision.org/en/v2025.3.1-rc3/docs/integration/simpleStrategies.html"
+        },
+        {
+          "title": "(PDF) Universalization of Boccia Ramps Through Motorization - Application of Assistive Technology to Adapted Sports -",
+          "url": "https://www.researchgate.net/publication/370410372_Universalization_of_Boccia_Ramps_Through_Motorization_-_Application_of_Assistive_Technology_to_Adapted_Sports_-"
+        },
+        {
+          "title": "\"USA Boccia Ball Ramp for Athletes with Quadriplegia\" by Alissa A. Koukourikos, Matthew Lee et al.",
+          "url": "https://digitalcommons.calpoly.edu/mesp/405/"
+        },
+        {
+          "title": "GitHub - SolidRun/bowling_target_nav · GitHub",
+          "url": "https://github.com/SolidRun/bowling_target_nav"
+        },
+        {
+          "title": "(PDF) Development of Boccia Robot and Its Throwing Support Interface",
+          "url": "https://www.researchgate.net/publication/334365250_Development_of_Boccia_Robot_and_Its_Throwing_Support_Interface"
+        },
+        {
+          "title": "(PDF) Evaluating Assistive Technology Outcomes in Boccia Athletes with Disabilities Using AI-Based Kinematic Analysis",
+          "url": "https://www.researchgate.net/publication/392988481_Evaluating_Assistive_Technology_Outcomes_in_Boccia_Athletes_with_Disabilities_Using_AI-Based_Kinematic_Analysis"
+        },
+        {
+          "title": "[Measuring the distance to a ball found by YOLO with Raycast]: \"Vision\" assistive technology trial series｜ikejunUI",
+          "url": "https://note.com/ipadtocode/n/n7f446993662a?hl=en"
+        },
+        {
+          "title": "Lecture Notes in Artificial Intelligence",
+          "url": "https://www.nzdr.ru/data/media/biblio/kolxoz/Cs/CsLn/A/Assistive%20Technology%20and%20Artificial%20Intelligence%28LNCS1458%2C%20Springer%2C%201998%29%28ISBN%203540647902%29%28551s%29_CsLn_.pdf"
+        },
+        {
+          "title": "ICCHP-AAATE 2022 Open Access Compendium \"Assistive Technology, Accessibility and (e)Inclusion\" PART 1",
+          "url": "https://aaate.net/wp-content/uploads/sites/12/2023/08/OAC22_V1.0_Part_1.pdf"
+        },
+        {
+          "title": "Marvin: an Innovative Omni-Directional Robotic Assistant for Domestic Environments",
+          "url": "https://arxiv.org/abs/2112.05597"
+        },
+        {
+          "title": "Virtual Landmark-Based Control of Docking Support for Assistive Mobility Devices",
+          "url": "https://arxiv.org/abs/2107.13365"
+        },
+        {
+          "title": "Target-driven Visual Navigation in Indoor Scenes using Deep Reinforcement Learning",
+          "url": "https://arxiv.org/abs/1609.05143"
+        },
+        {
+          "title": "Towards Vision-Based Deep Reinforcement Learning for Robotic Motion Control",
+          "url": "https://arxiv.org/abs/1511.03791"
+        }
+      ]
+    },
+    {
+      "key": "r12boccia_1",
+      "query": "boccia robot ramp control autonomous machine learning",
+      "status": "fulfilled",
+      "source_links": [
+        {
+          "title": "FEUP - Learning to Play Precision Ball Sports from scratch: a Deep Reinforcement Learning Approach",
+          "url": "https://sigarra.up.pt/feup/en/pub_geral.pub_view?pi_pub_base_id=464726"
+        },
+        {
+          "title": "Learning To Play Precision Ball Sports From Scratch: A Deep Reinforcement Learning Approach | Request PDF",
+          "url": "https://www.researchgate.net/profile/Liliana-Antao/publication/343769265_Learning_To_Play_Precision_Ball_Sports_From_Scratch_A_Deep_Reinforcement_Learning_Approach/links/5f3e7e38458515b72931d5e3/Learning-To-Play-Precision-Ball-Sports-From-Scratch-A-Deep-Reinforcement-Learning-Approach.pdf"
+        },
+        {
+          "title": "Learning to Play Precision Ball Sports from scratch: A Deep Reinforcement Learning Approach",
+          "url": "https://eurekamag.com/research/101/009/101009134.php"
+        },
+        {
+          "title": "Multimodal interaction robotic devices in a simulated environment",
+          "url": "https://recipp.ipp.pt/entities/publication/6decd11e-1db0-4962-92af-9e5cfec3c333"
+        },
+        {
+          "title": "Multimodal interaction robotic devices in a simulated environment | Request PDF",
+          "url": "https://www.researchgate.net/publication/305912954_Multimodal_interaction_robotic_devices_in_a_simulated_environment"
+        },
+        {
+          "title": "Improvement of a BCI-enabled Boccia ramp through a patient engagement strategy - Empathic Computing | Science Exploration Press",
+          "url": "https://www.sciexplor.com/articles/ec.2026.0020"
+        },
+        {
+          "title": "Extreme Parkour",
+          "url": "https://extreme-parkour.github.io/"
+        },
+        {
+          "title": "Multimodal interaction robotic devices in a simulated environment",
+          "url": "https://eurekamag.com/research/108/265/108265844.php"
+        },
+        {
+          "title": "Measuring Assistive Technology Outcomes via AI-Based Kinematic Modeling of Individualized Routine Learning in Elite Boccia Athletes with Severe Cerebral Palsy: A Longitudinal Case Series - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13024514/"
+        },
+        {
+          "title": "Measuring Assistive Technology Outcomes via AI-Based Kinematic Modeling of Individualized Routine Learning in Elite Boccia Athletes with Severe Cerebral Palsy: A Longitudinal Case Series | MDPI",
+          "url": "https://www.mdpi.com/2306-5354/13/3/261"
+        },
+        {
+          "title": "Improvement of a BCI-enabled Boccia ramp through a patient engagement strategy",
+          "url": "https://www.sciexplor.com/ec/articles/ec.2026.0020"
+        },
+        {
+          "title": "Machine learning driven robot control: A review - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/pii/S1568494626008562"
+        },
+        {
+          "title": "A Machine Learning System for",
+          "url": "https://2017.robocup.org/file/symposium/RoboCup_Symposium_2017_paper_45.pdf"
+        },
+        {
+          "title": "Local Navigation and Docking of an Autonomous Robot Mower using Reinforcement Learning and Computer Vision",
+          "url": "https://arxiv.org/abs/2101.06248"
+        },
+        {
+          "title": "Reaching the Limit in Autonomous Racing: Optimal Control versus Reinforcement Learning",
+          "url": "https://arxiv.org/abs/2310.10943"
+        },
+        {
+          "title": "Safe Learning in Robotics: From Learning-Based Control to Safe Reinforcement Learning",
+          "url": "https://arxiv.org/abs/2108.06266"
+        },
+        {
+          "title": "Gaussian Processes for Data-Efficient Learning in Robotics and Control",
+          "url": "https://arxiv.org/abs/1502.02860"
+        },
+        {
+          "title": "[R] Legged Robots performing Extreme Parkour using Deep Reinforcement Learning just from a Front Camera (link in comments)",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/173ioa5/r_legged_robots_performing_extreme_parkour_using/"
+        }
+      ]
+    },
+    {
+      "key": "r12boccia_2",
+      "query": "\"boccia\" \"ramp\" \"independent\" technology",
+      "status": "fulfilled",
+      "source_links": [
+        {
+          "title": "Improvement of a BCI-enabled Boccia ramp through a patient engagement strategy",
+          "url": "https://doi.org/10.70401/ec.2026.0020"
+        },
+        {
+          "title": "2425 Bocca Yihong Liu | Inclusive Sports Design Competition | Loughborough University",
+          "url": "https://www.lboro.ac.uk/schools/design-creative-arts/inclusive-sports-product-design/previous-winners/bocca-1/"
+        },
+        {
+          "title": "Frontiers | Institutionalization of assistive health technology in India: establishment of a national centre within the IIT-AIIMS ecosystem",
+          "url": "https://www.frontiersin.org/journals/rehabilitation-sciences/articles/10.3389/fresc.2026.1879168/full"
+        },
+        {
+          "title": "What is boccia at the Tokyo Paralympics? The rules explained | The Independent",
+          "url": "https://www.independent.co.uk/sport/olympics/paralympics/what-is-boccia-sport-rules-game-b1909052.html"
+        },
+        {
+          "title": "ABSTRACT BOOK",
+          "url": "https://bcisociety.org/wp-content/uploads/2025/05/11th_BCI_Meeting_DOI-Abstract-Book.pdf"
+        },
+        {
+          "title": "Round 01 — A–MEDICO",
+          "url": "https://amedico.ca/round-01"
+        },
+        {
+          "title": "EXPERIMENTAL POWERED BOCCIA RAMP - REMAP",
+          "url": "https://remap.org.uk/solutions/experimental-powered-boccia-ramp/"
+        },
+        {
+          "title": "The race is on in the hi-tech Paralympics | The Independent | The Independent",
+          "url": "https://www.the-independent.com/sport/olympics/paralympics/the-race-is-on-in-the-hitech-paralympics-8092782.html"
+        },
+        {
+          "title": "Improvement of a BCI-enabled Boccia ramp through a patient engagement strategy",
+          "url": "https://www.sciexplor.com/ec/articles/ec.2026.0020"
+        },
+        {
+          "title": "Boccia game simulator: Serious game adapted for people with disabilities - Faria - 2019 - Expert Systems - Wiley Online Library",
+          "url": "https://doi.org/10.1111%2Fexsy.12299"
+        },
+        {
+          "title": "Design Approaches and Decisions Employed During Low-Volume Product Development: A Case Series of Assistive Technology Commercialization | J. Mech. Des. | ASME Digital Collection",
+          "url": "https://doi.org/10.1115/1.4069151"
+        },
+        {
+          "title": "(PDF) Improvement of a BCI-enabled Boccia ramp through a patient engagement strategy",
+          "url": "https://www.researchgate.net/publication/403394533_Improvement_of_a_BCI-enabled_Boccia_ramp_through_a_patient_engagement_strategy"
+        },
+        {
+          "title": "Athlete Classification | Boccia India",
+          "url": "https://bocciaindia.ajeetgraphics.com/page.php?section=sport&slug=classification"
+        },
+        {
+          "title": "HANDBOOK",
+          "url": "https://wheelchairgames.org/wp-content/uploads/2025/04/2025-NVWG-Event-Handbook_April-2025.pdf"
+        },
+        {
+          "title": "Practical Guide to Play",
+          "url": "https://inclusiveplaygrounds.eu/media/pinc-io3-en.pdf"
+        },
+        {
+          "title": "448413_Print.indd",
+          "url": "https://www.prl.res.in/~library/gpdf/e-books/Springer_e-books/Recent%20Advances%20in%20Information%20Systems%20and%20Technologies%202017.pdf"
+        },
+        {
+          "title": "Annual Report",
+          "url": "https://freedomsolutions.org.au/wp-content/uploads/2025/08/annualreport-2023-freedomsolutions.pdf"
+        },
+        {
+          "title": "## About Freedom Solutions Austr",
+          "url": "https://freedomsolutions.org.au/wp-content/uploads/2026/03/FSA-Annual-Report-2025-for-website.pdf"
+        }
+      ]
+    },
+    {
+      "key": "r12boccia_3",
+      "query": "site:tomglobal.org \"boccia\"",
+      "status": "fulfilled",
+      "source_links": []
+    },
+    {
+      "key": "r12fold_0",
+      "query": "AI scrapbooking physical paper cutting preserve ticket memories box",
+      "status": "fulfilled",
+      "source_links": [
+        {
+          "title": "Fragile to Forever: Best Techniques to Preserve Precious Keepsakes in Your Scrapbook Layouts | Scrapbooking Tip 101",
+          "url": "https://scrapbookingtip101.com/fragile-to-forever-best-techniques-to-preserve-precious-keepsakes-in-your-scrapbook-layouts.html"
+        },
+        {
+          "title": "Turnstile - Your Ticket Stub Collection, Reimagined",
+          "url": "https://www.turnstilestubs.com/"
+        },
+        {
+          "title": "Free Vintage Travel Ephemera Printable — 6 Cut-outs | Tatter & Tag",
+          "url": "https://www.tatterandtag.com/printables/te01/"
+        },
+        {
+          "title": "Digital Ticket Diary vs Paper Scrapbook: Which One Fits You? | TicketShelf",
+          "url": "https://www.ticketshelf.app/en/blog/digital-vs-paper-scrapbook"
+        },
+        {
+          "title": "Bits & Pieces Album & Box Combo – Paper Phenomenon",
+          "url": "https://paperphenomenon.com/products/bits-pieces-album-box-combo"
+        },
+        {
+          "title": "19 Creative Scrapbook Ideas to Preserve All Your Memories",
+          "url": "https://www.marthastewart.com/274963/scrapbook-ideas-and-albums"
+        },
+        {
+          "title": "Digital Travel Scrapbook - Keep the Feeling, Skip the Glue | Triplium",
+          "url": "https://triplium.com/guides/travel-scrapbook"
+        },
+        {
+          "title": "Create a Travel Memory Scrapbook: A Step‑by‑Step Layout Guide — Paper Crafting & Scrapbooking Studio",
+          "url": "https://logzly.com/papercraftscrapbook/create-a-travel-memory-scrapbook-a-stepbystep-layout-guide"
+        },
+        {
+          "title": "Ticket Stub Memory Box - Tutorial - the thinking closet",
+          "url": "https://www.thinkingcloset.com/2012/09/07/ticket-stub-memory-box-tutorial/"
+        },
+        {
+          "title": "Digital Scrapbooking for Travelers: A 10-Minute Weekend Project · Ticketfolio",
+          "url": "https://www.ticketfolio.app/blog/digital-scrapbooking-for-travelers"
+        },
+        {
+          "title": "Ticket Memory Box Laser Cut, Personalized Shadow Box, Memory Box With Ticket Display, Memory Box for Travel Adventure, Ticket Holder Laser - Etsy",
+          "url": "https://www.etsy.com/listing/1779224049/ticket-memory-box-laser-cut-personalized"
+        },
+        {
+          "title": "Scrapbook in a Box: How to Make a Giftable Memory Box That Unfolds into an Album | Imaginisce",
+          "url": "https://www.imaginisce.com/posts/scrapbook-in-a-box.html"
+        },
+        {
+          "title": "19025_SCT_Covers",
+          "url": "https://scrapbookandcards.com/documents/2006/SCT_spring_2006.pdf"
+        },
+        {
+          "title": "Scrapbooking",
+          "url": "https://en.wikipedia.org/wiki/Scrapbooking"
+        },
+        {
+          "title": "Memory Printer: Exploring Everyday Reminiscing by Combining Slow Design with Generative AI-based Image Creation",
+          "url": "https://arxiv.org/abs/2603.13116"
+        },
+        {
+          "title": "The Scrapbook As an Autobiographical Memory Tool",
+          "url": "https://scispace.com/pdf/the-scrapbook-as-an-autobiographical-memory-tool-3syeed4i1x.pdf"
+        },
+        {
+          "title": "MEMENTO: A Digital Physical Scrapbook for",
+          "url": "https://citeseerx.ist.psu.edu/document?doi=fd3acd1c5b3fb24c7b2e1ffed818b90246e8ded3&repid=rep1&type=pdf"
+        },
+        {
+          "title": "Making Memories",
+          "url": "https://artmanuais.com.br/revistas/arquivo.pdf/craft-from-womans-weekly-2014-08.pdf"
+        },
+        {
+          "title": "Scrapbooking 11.29.2021",
+          "url": "https://co4h.colostate.edu/wp-content/uploads/sites/27/2025/11/Scrapbooking.pdf"
+        },
+        {
+          "title": "Unlocking Memories with AI: Exploring the Role of AI-Generated Cues in Personal Reminiscing",
+          "url": "https://arxiv.org/abs/2404.11227"
+        },
+        {
+          "title": "Best scrapbooks in 2026: showcase your photos and memories in style",
+          "url": "https://www.digitalcameraworld.com/buying-guides/the-best-scrapbook"
+        }
+      ]
+    },
+    {
+      "key": "r12fold_1",
+      "query": "semantic constraints papercraft printed paper reuse net fabrication",
+      "status": "fulfilled",
+      "source_links": [
+        {
+          "title": "STL to Paper Model, Unfold a 3D Mesh into a Printable Net",
+          "url": "https://edufacturing.com/en/tools/papercraft/"
+        },
+        {
+          "title": "Interactive design of developable surfaces by patch-based learning - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0010448525001319"
+        },
+        {
+          "title": "Learning to segment and unfold polyhedral mesh from failures - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0097849316300656"
+        },
+        {
+          "title": "Pulpform: A Hybrid Approach to Structuring Paper-like Composites | Proceedings of the 2026 Designing Interactive Systems Conference",
+          "url": "https://doi.org/10.1145/3800645.3812898"
+        },
+        {
+          "title": "LiqMetCraft: A Toolkit for Creating Papercraft with Embedded Electronics By Directly Cutting and Folding Liquid-Metal-Dyed Paper-like Fabric | CHI 2026 | HCI.TOP",
+          "url": "https://hci.top/en/papers/chi/223535/2026"
+        },
+        {
+          "title": "LiqMetCraft: A Toolkit for Creating Papercraft with Embedded Electronics by Directly Cutting and Folding Liquid-Metal-Dyed Paper-like Fabric - CityUHK Scholars",
+          "url": "https://scholars.cityu.edu.hk/en/publications/liqmetcraft-a-toolkit-for-creating-papercraft-with-embedded-elect-2/"
+        },
+        {
+          "title": "Frequently Asked Questions",
+          "url": "https://en.ud5.com/tool/3d-papercraft-unfolder/faq"
+        },
+        {
+          "title": "3D folded PrintGami: Transform passive 3D printed objects to interactive by inserted paper Origami circuits - Ewha Womans University",
+          "url": "https://pure.ewha.ac.kr/en/publications/3d-folded-printgami-transform-passive-3d-printed-objects-to-inter"
+        },
+        {
+          "title": "3D Printed Electronic Papercrafts — CoDeCraft Group",
+          "url": "https://www.codecraft.group/projects/pep"
+        },
+        {
+          "title": "Surface and contour-preserving origamic architecture paper pop-ups - DAU - Arxiu Digital de la URL",
+          "url": "https://dau.url.edu/handle/20.500.14342/5422"
+        },
+        {
+          "title": "Features & Capabilities",
+          "url": "https://en.ud5.com/tool/3d-papercraft-unfolder/features"
+        },
+        {
+          "title": "Surface and contour-preserving origamic architecture paper pop-ups",
+          "url": "https://openalex.org/W2168680058"
+        },
+        {
+          "title": "Ephemeral Fabrication:",
+          "url": "https://stemasov.dev/research/ephemeral-fabrication/stemasov-acm_tei_2022_ephemeral-fabrication.pdf"
+        },
+        {
+          "title": "Enhancing Reuse of Constraint Solutions to Improve Symbolic Execution",
+          "url": "https://arxiv.org/abs/1501.07174"
+        },
+        {
+          "title": "origami_tvcg_main.pdf",
+          "url": "https://vclab.kaist.ac.kr/tvcg2018/origami_tvcg_main-s.pdf"
+        },
+        {
+          "title": "Paper model",
+          "url": "https://en.wikipedia.org/wiki/Paper_model"
+        },
+        {
+          "title": "TRANSACTIONS ON VISUALIZATION AND COMPUTER GRAPHICS, VOL. XX, NO. Y, MARCH 2018",
+          "url": "https://www.minhkim.org/tvcg2018/origami_tvcg_main-s.pdf"
+        },
+        {
+          "title": "Knowledge Reuse for Customization: Metamodels in an Open Design Community for 3d Printing",
+          "url": "https://arxiv.org/abs/1702.08072"
+        },
+        {
+          "title": "Computational Design Tools and Techniques for Paper",
+          "url": "https://cucraftlab.org/wp-content/uploads/2019/04/joothesis.pdf"
+        },
+        {
+          "title": "Unmake to Remake: Materiality-Driven Rapid Prototyping",
+          "url": "https://hcied.info/papers/unmake.pdf"
+        },
+        {
+          "title": "Fabrication of a low-cost and high-resolution papercraft smartphone spectrometer",
+          "url": "https://arxiv.org/abs/1910.12616"
+        },
+        {
+          "title": "HingeCore: Laser-Cut Foamcore for Fast Assembly",
+          "url": "https://martintaraz.de/assets/papers/hingecore/hingecore.pdf"
+        },
+        {
+          "title": "Nested Papercrafts for Anatomical and Biological Edutainment",
+          "url": "https://arxiv.org/abs/2204.10901"
+        },
+        {
+          "title": "Paper toys",
+          "url": "https://en.wikipedia.org/wiki/Paper_toys"
+        },
+        {
+          "title": "Cardboard modeling",
+          "url": "https://en.wikipedia.org/wiki/Cardboard_modeling"
+        }
+      ]
+    },
+    {
+      "key": "r12fold_2",
+      "query": "computational papercraft existing printed images semantic layout",
+      "status": "fulfilled",
+      "source_links": [
+        {
+          "title": "Scan-and-Print: Patch-level Data Summarization and Augmentation for Content-aware Layout Generation in Poster Design",
+          "url": "https://thekinsley.github.io/Scan-and-Print/"
+        },
+        {
+          "title": "Scan-and-Print: Patch-level Data Summarization and Augmentation for Content-aware Layout Generation in Poster Design | IJCAI",
+          "url": "https://www.ijcai.org/proceedings/2025/1121"
+        },
+        {
+          "title": "Printed Patterns for Enhanced Shape Perception of Papercraft Models | Computer Graphics Group",
+          "url": "https://graphics.cs.yale.edu/publications/printed-patterns-enhanced-shape-perception-papercraft-models"
+        },
+        {
+          "title": "GitHub - AntonFlorey/PolyZamboni: A Blender Addon for Low-Poly Papercraft · GitHub",
+          "url": "https://github.com/AntonFlorey/PolyZamboni"
+        },
+        {
+          "title": "Learning to Generate Semantic Layouts for Higher Text-Image Correspondence in Text-to-Image Synthesis",
+          "url": "https://openaccess.thecvf.com/content/ICCV2023/papers/Park_Learning_to_Generate_Semantic_Layouts_for_Higher_Text-Image_Correspondence_in_ICCV_2023_paper.pdf"
+        },
+        {
+          "title": "SIGGRAPH Posters '25: Proceedings of the Special Interest Group on Computer Graphics and Interactive Techniques Conference Posters",
+          "url": "https://www.siggraph.org/wp-content/uploads/2025/08/Posters.html"
+        },
+        {
+          "title": "Image-Based OA-Style Paper Pop-Up Design via Mixed-Integer Programming",
+          "url": "https://openalex.org/W4284964327"
+        },
+        {
+          "title": "COrigami - an AI-based Origami Design Tool - Origami by Michał Kosmulski",
+          "url": "https://www.origami.kosmulski.org/blog/2026-07-02-corigami-ai-origami-design"
+        },
+        {
+          "title": "Surface and contour-preserving origamic architecture paper pop-ups.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/24356369/"
+        },
+        {
+          "title": "Interactive design of developable surfaces by patch-based learning - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0010448525001319"
+        },
+        {
+          "title": "Surface and contour-preserving origamic architecture paper pop-ups - DAU - Arxiu Digital de la URL",
+          "url": "https://dau.url.edu/handle/20.500.14342/5422"
+        },
+        {
+          "title": "Surface and contour-preserving origamic architecture paper pop-ups - Ramon Llull University",
+          "url": "https://merit.url.edu/en/publications/surface-and-contour-preserving-origamic-architecture-paper-pop-up-2/"
+        },
+        {
+          "title": "Inferring Semantic Layout for Text-to-Image Synthesis",
+          "url": "https://research.google/pubs/inferring-semantic-layout-for-text-to-image-synthesis/"
+        },
+        {
+          "title": "Inferring Semantic Layout for Hierarchical Text-to-Image Synthesis",
+          "url": "https://arxiv.org/abs/1801.05091"
+        },
+        {
+          "title": "Learning to Generate Semantic Layouts for Higher Text-Image Correspondence in Text-to-Image Synthesis",
+          "url": "https://arxiv.org/abs/2308.08157"
+        },
+        {
+          "title": "Photographic Image Synthesis with Cascaded Refinement Networks",
+          "url": "https://arxiv.org/abs/1707.09405"
+        },
+        {
+          "title": "Inferring Semantic Layout for Hierarchical Text-to-Image Synthesis",
+          "url": "https://openaccess.thecvf.com/content_cvpr_2018/papers/Hong_Inferring_Semantic_Layout_CVPR_2018_paper.pdf"
+        },
+        {
+          "title": "Computational Visual Media",
+          "url": "https://iccvm.org/2021/papers/S1-3-CVMJ.pdf"
+        },
+        {
+          "title": "No AI can get this right as far as I can tell.",
+          "url": "https://www.reddit.com/r/PromptEngineering/comments/1sbd4ry/no_ai_can_get_this_right_as_far_as_i_can_tell/"
+        },
+        {
+          "title": "N-up",
+          "url": "https://en.wikipedia.org/wiki/N-up"
+        },
+        {
+          "title": "Nested Papercrafts for Anatomical and Biological Edutainment",
+          "url": "https://arxiv.org/abs/2204.10901"
+        },
+        {
+          "title": "<visual_element id=\"e1\">",
+          "url": "https://computationalcreativity.net/iccc21/wp-content/uploads/2021/09/ICCC_2021_paper_52.pdf"
+        },
+        {
+          "title": "Paper model",
+          "url": "https://en.wikipedia.org/wiki/Paper_model"
+        },
+        {
+          "title": "Tiled printing",
+          "url": "https://en.wikipedia.org/wiki/Tiled_printing"
+        }
+      ]
+    },
+    {
+      "key": "r12fold_3",
+      "query": "computer vision scrapbooking automatic cutting memory boxes",
+      "status": "fulfilled",
+      "source_links": [
+        {
+          "title": "Shadowboxr | AI-Powered Tool Tracing & Shadowboard Generator",
+          "url": "https://shadowboxr.app/"
+        },
+        {
+          "title": "Smart Vision-Guided Dual-Head Sheet Die Cutter VSC-350Ultra Supplier",
+          "url": "https://www.cncvicut.com/vulcan-families/smart-vision-guided-dual-head-sheet-die-cutter-vsc-350ultra.html"
+        },
+        {
+          "title": "How To Use ScanNCutCanvas and ScanNCut to Make Heart Boxes | Brother Crafts",
+          "url": "https://www.brother-usa.com/blogs/brother-crafts/using-scanncutcanvas-and-scanncut-to-make-heart-boxes"
+        },
+        {
+          "title": "Automatic Dual Heads Sheet Cutter VSC-350Pro Supplier China",
+          "url": "https://www.cncvicut.com/vulcan-families/automatic-dual-heads-sheet-cutter-vsc-350pro.html"
+        },
+        {
+          "title": "Automatic Digital Die-Cutting and Creasing Machine | VICUT",
+          "url": "https://digitalfinisher.com/automatic-digital-die-cutting-creasing-machine-1-20.html"
+        },
+        {
+          "title": "Kutter(A)+AF - Automatic die-cutter to create cardboard boxes with automatic folding and gluing",
+          "url": "https://www.embalitec.com/packaging_machines/kutter-a-af_en.html"
+        },
+        {
+          "title": "Libellula OPTIA - Libellula",
+          "url": "https://libellula.eu/en/software/libellula-optia/"
+        },
+        {
+          "title": "Automatic Box Cutter | CASi-IBOD | Cornerstone Automation Systems",
+          "url": "https://www.casiusa.com/solutions/automatic-box-cutter-casi-ibod/"
+        },
+        {
+          "title": "Modbox HDX Cardboard Box Machine - ModProcess",
+          "url": "https://modprocess.us/modbox-hdx-cardboard-box-machine/"
+        },
+        {
+          "title": "Compact machine for automatic cutting – SR1",
+          "url": "https://www.comelz.com/en/sr1/"
+        },
+        {
+          "title": "Case Studies: 3D vision in automated laser cutting | Zebra Technologies Slovakia s.r.o.",
+          "url": "https://www.automate.org/case-studies/automated-laser-cutting-of-heavy-parts"
+        },
+        {
+          "title": "Scrapbooking",
+          "url": "https://en.wikipedia.org/wiki/Scrapbooking"
+        },
+        {
+          "title": "Digital scrapbooking",
+          "url": "https://en.wikipedia.org/wiki/Digital_scrapbooking"
+        },
+        {
+          "title": "Digital Scrapbook Artist",
+          "url": "https://en.wikipedia.org/wiki/Digital_Scrapbook_Artist"
+        },
+        {
+          "title": "Scrapbooking Reference and Activity Book",
+          "url": "https://www1.agric.gov.ab.ca/%24Department/deptdocs.nsf/all/4h7895/%24FILE/ScrapbookingRAB.pdf"
+        },
+        {
+          "title": "Design and Implementation of Automatic",
+          "url": "https://sistemaenlinea.proinnovate.gob.pe/modules/online/publicaciones/uploads/246fe026a2435a7da57a08b1b2838a5d18573a70"
+        },
+        {
+          "title": "revised 11/2022",
+          "url": "https://www.extension.purdue.edu/county/white/_docs/project-docs/scrapbook-resource-book-2023.pdf"
+        },
+        {
+          "title": "Scrapbooking 11.29.2021",
+          "url": "https://co4h.colostate.edu/wp-content/uploads/sites/27/2025/11/Scrapbooking.pdf"
+        },
+        {
+          "title": "Plotter",
+          "url": "https://en.wikipedia.org/wiki/Plotter"
+        },
+        {
+          "title": "Punched card sorter",
+          "url": "https://en.wikipedia.org/wiki/Punched_card_sorter"
+        },
+        {
+          "title": "Tool wear monitoring using an online, automatic and low cost system based on local texture",
+          "url": "https://arxiv.org/abs/2402.05977"
+        },
+        {
+          "title": "Cricut",
+          "url": "https://en.wikipedia.org/wiki/Cricut"
+        }
+      ]
+    },
+    {
+      "key": "r12implementation_0",
+      "query": "site:github.com Linzaer Ultra-Light-Fast-Generic-Face-Detector-1MB Pytorch",
+      "status": "fulfilled",
+      "source_links": [
+        {
+          "title": "GitHub - Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB: 💎1MB lightweight face detection model (1MB轻量级人脸检测模型) · GitHub",
+          "url": "https://github.com/Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB"
+        },
+        {
+          "title": "GitHub - Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB: 💎1MB lightweight face detection model (1MB轻量级人脸检测模型) · GitHub",
+          "url": "https://github.com/linzaer/ultra-light-fast-generic-face-detector-1mb"
+        },
+        {
+          "title": "Ultra-Light-Fast-Generic-Face-Detector-1MB/MNN/python/README.md at master · Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB · GitHub",
+          "url": "https://github.com/Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB/blob/master/MNN/python/README.md"
+        },
+        {
+          "title": "Ultra-Light-Fast-Generic-Face-Detector-1MB/train.py at master · Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB · GitHub",
+          "url": "https://github.com/Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB/blob/master/train.py"
+        },
+        {
+          "title": "Ultra-Light-Fast-Generic-Face-Detector-1MB/models/pretrained/version-RFB-640.pth at master · Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB · GitHub",
+          "url": "https://github.com/Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB/blob/master/models/pretrained/version-RFB-640.pth"
+        },
+        {
+          "title": "Ultra-Light-Fast-Generic-Face-Detector-1MB/caffe/ultra_face_opencvdnn_inference.py at master · Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB · GitHub",
+          "url": "https://github.com/Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB/blob/master/caffe/ultra_face_opencvdnn_inference.py"
+        },
+        {
+          "title": "Ultra-Light-Fast-Generic-Face-Detector-1MB/README_CN.md at master · Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB · GitHub",
+          "url": "https://github.com/Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB/blob/master/README_CN.md"
+        },
+        {
+          "title": "Ultra-Light-Fast-Generic-Face-Detector-1MB/MNN/README.md at master · Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB · GitHub",
+          "url": "https://github.com/Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB/blob/master/MNN/README.md"
+        },
+        {
+          "title": "Ultra-Light-Fast-Generic-Face-Detector-1MB/ncnn/README.md at master · Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB · GitHub",
+          "url": "https://github.com/Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB/blob/master/ncnn/README.md"
+        },
+        {
+          "title": "Ultra-Light-Fast-Generic-Face-Detector-1MB/run_video_face_detect_onnx.py at master · Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB · GitHub",
+          "url": "https://github.com/Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB/blob/master/run_video_face_detect_onnx.py"
+        },
+        {
+          "title": "GitHub - ainrichman/Peppa-Facial-Landmark-PyTorch: Facial Landmark Detection based on PyTorch · GitHub",
+          "url": "https://github.com/ainrichman/Peppa-Facial-Landmark-PyTorch"
+        },
+        {
+          "title": "Ultra-Light-Fast-Generic-Face-Detector-1MB/README.md at master · Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB · GitHub",
+          "url": "https://github.com/Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB/blob/master/README.md"
+        }
+      ]
+    },
+    {
+      "key": "r12implementation_1",
+      "query": "site:mindee.github.io doctr export ONNX models",
+      "status": "fulfilled",
+      "source_links": [
+        {
+          "title": "doctr.models - docTR documentation",
+          "url": "https://mindee.github.io/doctr/modules/models.html"
+        },
+        {
+          "title": "doctr.models.utils.pytorch - docTR documentation",
+          "url": "https://mindee.github.io/doctr/latest/_modules/doctr/models/utils/pytorch.html"
+        },
+        {
+          "title": "Preparing your model for inference - docTR documentation",
+          "url": "https://mindee.github.io/doctr/v0.7.0/using_doctr/using_model_export.html"
+        },
+        {
+          "title": "Share your model with the community - docTR documentation",
+          "url": "https://mindee.github.io/doctr/latest/using_doctr/sharing_models.html"
+        },
+        {
+          "title": "Quickstart - docTR documentation",
+          "url": "https://mindee.github.io/doctr/latest/getting_started/quickstart.html"
+        },
+        {
+          "title": "Integrate contributions into your pipeline - docTR documentation",
+          "url": "https://mindee.github.io/doctr/using_doctr/using_contrib_modules.html"
+        },
+        {
+          "title": "Share your model with the community - docTR documentation",
+          "url": "https://mindee.github.io/doctr/v0.12.0/using_doctr/sharing_models.html"
+        },
+        {
+          "title": "doctr.models.table_structure.tablecenternet.pytorch - docTR documentation",
+          "url": "https://mindee.github.io/doctr/latest/_modules/doctr/models/table_structure/tablecenternet/pytorch.html"
+        },
+        {
+          "title": "doctr.models.detection.fast.pytorch - docTR documentation",
+          "url": "https://mindee.github.io/doctr/latest/_modules/doctr/models/detection/fast/pytorch.html"
+        },
+        {
+          "title": "doctr.io - docTR documentation",
+          "url": "https://mindee.github.io/doctr/latest/modules/io.html"
+        },
+        {
+          "title": "Choosing the right model - docTR documentation",
+          "url": "https://mindee.github.io/doctr/using_doctr/using_models.html"
+        },
+        {
+          "title": "doctr.io - docTR documentation",
+          "url": "https://mindee.github.io/doctr/modules/io.html"
+        }
+      ]
+    },
+    {
+      "key": "r12implementation_2",
+      "query": "site:github.com pytorch executorch xnnpack convolution model export",
+      "status": "fulfilled",
+      "source_links": [
+        {
+          "title": "executorch/docs/source/getting-started.md at main · pytorch/executorch · GitHub",
+          "url": "https://github.com/pytorch/executorch/blob/main/docs/source/getting-started.md"
+        },
+        {
+          "title": "executorch/examples/models/efficient_sam/README.md at main · pytorch/executorch · GitHub",
+          "url": "https://github.com/pytorch/executorch/blob/main/examples/models/efficient_sam/README.md"
+        },
+        {
+          "title": "GitHub - pytorch/executorch: On-device AI across mobile, embedded and edge for PyTorch · GitHub",
+          "url": "https://github.com/pytorch/executorch"
+        },
+        {
+          "title": "executorch/docs/source/backends/xnnpack/xnnpack-overview.md at main · pytorch/executorch · GitHub",
+          "url": "https://github.com/pytorch/executorch/blob/main/docs/source/backends/xnnpack/xnnpack-overview.md"
+        },
+        {
+          "title": "executorch/docs/source/llm/export-custom-llm.md at main · pytorch/executorch · GitHub",
+          "url": "https://github.com/pytorch/executorch/blob/main/docs/source/llm/export-custom-llm.md"
+        },
+        {
+          "title": "executorch/README.md at main · pytorch/executorch · GitHub",
+          "url": "https://github.com/pytorch/executorch/blob/main/README.md"
+        },
+        {
+          "title": "executorch/docs/source/llm/export-llm.md at main · pytorch/executorch · GitHub",
+          "url": "https://github.com/pytorch/executorch/blob/main/docs/source/llm/export-llm.md"
+        },
+        {
+          "title": "executorch/examples/xnnpack/README.md at main · pytorch/executorch · GitHub",
+          "url": "https://github.com/pytorch/executorch/blob/main/examples/xnnpack/README.md"
+        },
+        {
+          "title": "executorch/docs/source/tutorials_source/export-to-executorch-tutorial.py at main · pytorch/executorch · GitHub",
+          "url": "https://github.com/pytorch/executorch/blob/main/docs/source/tutorials_source/export-to-executorch-tutorial.py"
+        },
+        {
+          "title": "executorch/examples/models/__init__.py at main · pytorch/executorch · GitHub",
+          "url": "https://github.com/pytorch/executorch/blob/main/examples/models/__init__.py"
+        },
+        {
+          "title": "executorch/examples/xnnpack/aot_compiler.py at main · pytorch/executorch · GitHub",
+          "url": "https://github.com/pytorch/executorch/blob/main/examples/xnnpack/aot_compiler.py"
+        },
+        {
+          "title": "executorch/extension/llm/export/config/llm_config.py at main · pytorch/executorch · GitHub",
+          "url": "https://github.com/pytorch/executorch/blob/main/extension/llm/export/config/llm_config.py"
+        }
+      ]
+    },
+    {
+      "key": "r12implementation_3",
+      "query": "site:brother-usa.com ScanNCut score cardstock box",
+      "status": "fulfilled",
+      "source_links": [
+        {
+          "title": "Disney ScanNCut DX SDX330D Wireless Cutting Machine | Brother",
+          "url": "https://www.brother-usa.com/p/cutting-machines/SDX330D"
+        },
+        {
+          "title": "Holiday Home Decor | Brother Crafts",
+          "url": "https://www.brother-usa.com/blogs/brother-crafts/2019/12/12/holiday-home-decor-by-satin-ice"
+        },
+        {
+          "title": "SHADOW BOX CONTINUED",
+          "url": "https://www.brother-usa.com/-/media/brother/projects/project-files/2017/12/21/20/29/mixedmedia-shadowbox.pdf"
+        },
+        {
+          "title": "How To Use ScanNCutCanvas and ScanNCut to Make Heart Boxes | Brother Crafts",
+          "url": "https://www.brother-usa.com/blogs/brother-crafts/using-scanncutcanvas-and-scanncut-to-make-heart-boxes"
+        },
+        {
+          "title": "A comp",
+          "url": "https://www.brother-usa.com/-/media/brother/projects/project-files/2017/12/21/20/30/seasonal-christmasbox.pdf"
+        },
+        {
+          "title": "Disney ScanNCut DX SDX230DI Cutting Machine - Built-In Scanner | Brother",
+          "url": "https://www.brother-usa.com/p/cutting-machines/SDX230DI"
+        },
+        {
+          "title": "SDX225 | ScanNCut SDX225 mini plotter de corte | Brother México",
+          "url": "https://uatmexico.brother-usa.com/products/sdx225"
+        },
+        {
+          "title": "ScanNCut CM650WX Wireless Cutting Machine - Built-In Scanner | Brother",
+          "url": "https://www.brother-usa.com/p/cutting-machines/CM650WX"
+        },
+        {
+          "title": "ScanNCut CM250 Electronic Cutting Machine - Built-In Scanner | Brother",
+          "url": "https://www.brother-usa.com/p/cutting-machines/CM250"
+        },
+        {
+          "title": "CADXSTCASEB ScanNCut DX Blue Storage Case | Brother",
+          "url": "https://www.brother-usa.com/p/storage-solutions/CADXSTCASEB"
+        },
+        {
+          "title": "How to make holiday gift bags | Brother",
+          "url": "https://www.brother-usa.com/blogs/brother-crafts/may-flaum-holiday-gift-bags"
+        },
+        {
+          "title": "Crafting Made Easy: Brother International Corporation Introduces ScanNCut DX",
+          "url": "https://www.brother-usa.com/-/media/files/corporate/press-releases/brother-usa-introduces-scanncut-dx-sdx85-electronic-cutting-machine---sept-2020.pdf?srsltid=AfmBOoqVJjNGkSvk5wbKFldOWOBnVkL-KNLYrt_ZRBozaX-Ws3ZeRP3X"
+        },
+        {
+          "title": "CADXSTCASEG ScanNCut DX Gray Storage Case | Brother",
+          "url": "https://www.brother-usa.com/p/storage-solutions/CADXSTCASEG"
+        },
+        {
+          "title": "Disney ScanNCut DX SDX230DIRBBNDL Rotary Blade Bundle | Brother",
+          "url": "https://www.brother-usa.com/p/cutting-machines/SDX230DIRBBNDL"
+        },
+        {
+          "title": "ScanNCut DX SDX85",
+          "url": "https://www.brother-usa.com/blogs/brother-crafts/-/media/xblog/scanncut/wp-content/uploads/2020/11/pdf-1.pdf"
+        },
+        {
+          "title": "CADXMCASEB ScanNCut DX Mat Case for 12\" x 12\" Mats | Brother",
+          "url": "https://www.brother-usa.com/p/storage-solutions/CADXMCASEB"
+        }
+      ]
+    },
+    {
+      "key": "r12rules_0",
+      "query": "\"ExecuTorch Hackathon\" \"October 17\" rules",
+      "status": "fulfilled",
+      "source_links": [
+        {
+          "title": "ExecuTorch Hackathon · Luma",
+          "url": "https://luma.com/executorch-hackathon"
+        },
+        {
+          "title": "ExecuTorch Hackathon — Hackathons USA",
+          "url": "https://ushackathons.com/events/executorch-hackathon"
+        },
+        {
+          "title": "ExecuTorch Hackathon | Hashtag Web3",
+          "url": "https://hashtagweb3.com/executorch"
+        },
+        {
+          "title": "ExecuTorch Hackathon · Arclight",
+          "url": "https://arclight.events/event/executorch-hackathon-co2ejy"
+        },
+        {
+          "title": "Open Source AI Week 2026 — October 16–25",
+          "url": "https://opensourceaiweek.com/the-hackathon/"
+        },
+        {
+          "title": "Developer Events Page",
+          "url": "https://developer.arm.com/events"
+        },
+        {
+          "title": "Arm Create",
+          "url": "https://developer.arm.com/arm-create"
+        },
+        {
+          "title": "PyTorch, San Francisco, CA (2026)",
+          "url": "https://www.hardware1000.com/US/San-Francisco/1620822758218702/PyTorch"
+        },
+        {
+          "title": "Aaishika S Bhattacharya — Developer Relations & AI",
+          "url": "https://www.aaishika.com/"
+        },
+        {
+          "title": "ExecuTorch Hackathon | San Francisco AI Events",
+          "url": "https://aievents.now/san-francisco/events/executorch-hackathon-2026-10-17"
+        },
+        {
+          "title": "Arm Developer",
+          "url": "https://developer.arm.com/"
+        },
+        {
+          "title": "Open Intelligence Foundati @open_intel_fdn - Twitter Profile | TwStalker",
+          "url": "https://sotwe.twstalker.com/open_intel_fdn"
+        }
+      ]
+    },
+    {
+      "key": "r12rules_1",
+      "query": "\"ExecuTorch Hackathon\" \"prepare\" 2026",
+      "status": "fulfilled",
+      "source_links": [
+        {
+          "title": "ExecuTorch with Meta & Qualcomm @ The Web Data Loft · Luma",
+          "url": "https://luma.com/meta-qualcomm-hackathon"
+        },
+        {
+          "title": "yousunlotif | Hackathon Competitor Profile",
+          "url": "https://lablab.ai/u/%40yousunlotif"
+        },
+        {
+          "title": "PyTorch, San Francisco, CA (2026)",
+          "url": "https://www.hardware1000.com/US/San-Francisco/1620822758218702/PyTorch"
+        },
+        {
+          "title": "Linux Foundation Newsletter: July 2026",
+          "url": "https://www.linuxfoundation.org/blog/linux-foundation-newsletter-july-2026"
+        },
+        {
+          "title": "ExecuTorch with Meta & Qualcomm @ The Web Data Loft at 625 2nd St, San Francisco on 27th June, 2026",
+          "url": "https://happeningnext.com/event/executorch-with-meta-andamp-qualcomm-the-web-data-loft-eid1ef0l0s9ta3a"
+        },
+        {
+          "title": "Jackson (Jack) Kays - Microsoft | LinkedIn",
+          "url": "https://www.linkedin.com/in/jackson-kays"
+        },
+        {
+          "title": "Opportunities for Creators - by Adetokunbo Abiola",
+          "url": "https://adetokunbocreators.substack.com/p/opportunities-for-creators-2b7"
+        },
+        {
+          "title": "Johny Vu - Hello Boba | LinkedIn",
+          "url": "https://www.linkedin.com/in/johny-vu1"
+        },
+        {
+          "title": "Pranav Gadi - Northern Trust | LinkedIn",
+          "url": "https://www.linkedin.com/in/pranav-gadi"
+        },
+        {
+          "title": "Nikhil Kumar Alamasety - CALSTATELA college of ECST | LinkedIn",
+          "url": "https://www.linkedin.com/in/nikhil-kumar-alamasety-5b53282a5"
+        },
+        {
+          "title": "Twyns | Your Private AI Brain, Supercharged by ARM | Devpost",
+          "url": "https://devpost.com/software/twynai"
+        },
+        {
+          "title": "Arm-Unified Task Orchestrator (A.U.T.O.) | Devpost",
+          "url": "https://devpost.com/software/arm-unified-task-orchestrator-a-u-t-o"
+        }
+      ]
+    },
+    {
+      "key": "r12rules_2",
+      "query": "\"ExecuTorch Hackathon\" hardware build rules 2026",
+      "status": "fulfilled",
+      "source_links": [
+        {
+          "title": "Arm + ExecuTorch: Edge AI Challenge: Build intelligent experiences at the edge. Sponsored by Arm, Meta and SFSU - Devpost",
+          "url": "https://arm-executorch.devpost.com/rules"
+        },
+        {
+          "title": "ExecuTorch Hackathon – PyTorch",
+          "url": "https://pytorch.org/event/executorch-hackathon/"
+        },
+        {
+          "title": "Building the Future of On-Device AI at the ExecuTorch Hackathon – PyTorch",
+          "url": "https://pytorch.org/blog/building-the-future-of-on-device-ai-at-the-executorch-hackathon/"
+        },
+        {
+          "title": "Arm + ExecuTorch: Edge AI Challenge: Build intelligent experiences at the edge. Sponsored by Arm, Meta and SFSU - Devpost",
+          "url": "https://arm-executorch.devpost.com/"
+        },
+        {
+          "title": "Devpost",
+          "url": "https://arm-executorch.devpost.com/resources"
+        },
+        {
+          "title": "Arm Create",
+          "url": "https://developer.arm.com/arm-create"
+        },
+        {
+          "title": "ExecuTorch Hackathon — Hackathons USA",
+          "url": "https://ushackathons.com/events/executorch-hackathon"
+        },
+        {
+          "title": "ExecuTorch Hackathon · Luma",
+          "url": "https://luma.com/executorch-hackathon"
+        },
+        {
+          "title": "Open Source AI Week 2026 — October 16–25",
+          "url": "https://opensourceaiweek.com/the-hackathon/"
+        },
+        {
+          "title": "ExecuTorch with Meta & Qualcomm @ The Web Data Loft · Luma",
+          "url": "https://luma.com/meta-qualcomm-hackathon"
+        },
+        {
+          "title": "IQOO-2026-Hackathon/docs/JOURNEY.md at main · JEN-chad/IQOO-2026-Hackathon · GitHub",
+          "url": "https://github.com/JEN-chad/IQOO-2026-Hackathon/blob/main/docs/JOURNEY.md"
+        },
+        {
+          "title": "Qualcomm x Meta ExecuTorch Hackathon — Dates & Prizes",
+          "url": "https://www.hackathonradar.com/database/hackathon/qualcomm-x-meta-executorch-hackathon-2026"
+        },
+        {
+          "title": "Arm+Meta hackathon @ SFSU Oct 17-18 2026",
+          "url": "https://www.reddit.com/r/hackathon/comments/1wpimej/armmeta_hackathon_sfsu_oct_1718_2026/"
+        },
+        {
+          "title": "Arm+Meta hackathon @ SFSU Oct 17-18 2026",
+          "url": "https://www.reddit.com/r/ambitionarena7/comments/1wpzjkm/armmeta_hackathon_sfsu_oct_1718_2026/"
+        },
+        {
+          "title": "James Nicholson's CV",
+          "url": "https://nicholsonjf.com/assets/docs/James_Nicholson_Resume.pdf"
+        },
+        {
+          "title": "Nandana Sheri",
+          "url": "https://nandana.dev/NandanaSheri.pdf"
+        }
+      ]
+    },
+    {
+      "key": "r12rules_3",
+      "query": "\"VENTUNO\" \"hackathon\" \"before\"",
+      "status": "fulfilled",
+      "source_links": [
+        {
+          "title": "Arduino | LinkedIn",
+          "url": "https://chatgpt-windows.top/?_=%2Fcompany%2Farduino%23V%2BvZjkupYTvi72WktN5ueFr7xJAW8CF5"
+        },
+        {
+          "title": "Juan Andres Gomez Ortiz - KeplerKoord S.L. | LinkedIn",
+          "url": "https://es.linkedin.com/in/juan-andres-gomez-ortiz-0658021b6"
+        },
+        {
+          "title": "Tom Dever - Arduino | LinkedIn",
+          "url": "https://www.linkedin.com/in/tom-dever"
+        },
+        {
+          "title": "Aditya Ugale - Bengaluru, Karnataka, India | Professional Profile | LinkedIn",
+          "url": "https://in.linkedin.com/in/aditya-ugale-1b0430312"
+        },
+        {
+          "title": "Sajeel Purewal 🇨🇦 � @Sajeel_Purewal - Twitter Profile | Instalker",
+          "url": "https://www.instalker.org/Sajeel_Purewal"
+        },
+        {
+          "title": "Mayank Chadha - Northeastern University | LinkedIn",
+          "url": "https://www.linkedin.com/in/mayankchadha28"
+        },
+        {
+          "title": "Hardik Chadda - Agra, Uttar Pradesh, India | Professional Profile | LinkedIn",
+          "url": "https://in.linkedin.com/in/hardik-chadda"
+        },
+        {
+          "title": "Haley (Seohyun) Kim님 - 퀄컴 | LinkedIn",
+          "url": "https://kr.linkedin.com/in/seohyun--kim"
+        },
+        {
+          "title": "Adeoye Emmanuel - Ogbomosho, Oyo State, Nigeria | Professional Profile | LinkedIn",
+          "url": "https://ng.linkedin.com/in/adeoye-emmanuel-b51480412"
+        },
+        {
+          "title": "Neel Patel - Moorcheh.ai by Edge AI Innovations | LinkedIn",
+          "url": "https://ca.linkedin.com/in/neelbuilds"
+        },
+        {
+          "title": "The Robot Beat — Wednesday, August 26, 2026",
+          "url": "https://betabriefing.ai/channels/the-robot-beat/briefings/2026-08-26/"
+        },
+        {
+          "title": "Manu S Pillai - Qualcomm | LinkedIn",
+          "url": "https://www.linkedin.com/in/manupillai308"
+        }
+      ]
+    },
+    {
+      "key": "r12reed_0",
+      "query": "automatic reed scraping acoustic feedback optimization robot clarinet",
+      "status": "fulfilled",
+      "source_links": [
+        {
+          "title": "Bakla: An automated bass clarinet by Godfried-Willem Raes",
+          "url": "https://www.logosfoundation.org/instrum_gwr/bakla/bakla.html"
+        },
+        {
+          "title": "How localized nonlinear losses condition the acoustical design of a self-sustained oscillator: The clarinet and its register hole - ScienceDirect",
+          "url": "https://doi.org/10.1016/j.ymssp.2026.114360"
+        },
+        {
+          "title": "Klar: An automated alto clarinet by Godfried-Willem Raes",
+          "url": "https://www.logosfoundation.org/instrum_gwr/klar.html"
+        },
+        {
+          "title": "NICTA-UNSW Robot Clarinet",
+          "url": "https://phys.unsw.edu.au/jw/clarinetrobot.html"
+        },
+        {
+          "title": "Ekla: An automated antique high D-clarinet by Godfried-Willem Raes",
+          "url": "https://logosfoundation.org/instrum_gwr/ekla/ekla.html"
+        },
+        {
+          "title": "How localized nonlinear losses condition the acoustical design of a self-sustained oscillator: the clarinet and its register hole",
+          "url": "https://arxiv.org/abs/2601.01981"
+        },
+        {
+          "title": "(PDF) Scraping technique for clarinet reeds derived from a static bending simulation",
+          "url": "https://www.researchgate.net/publication/280086852_Scraping_technique_for_clarinet_reeds_derived_from_a_static_bending_simulation"
+        },
+        {
+          "title": "Development of Waseda Flutist Robot WF-4RIV: Implementation of auditory feedback system - Waseda University",
+          "url": "https://waseda.elsevierpure.com/en/publications/development-of-waseda-flutist-robot-wf-4riv-implementation-of-aud/"
+        },
+        {
+          "title": "How Localized Nonlinear Losses Condition The Acoustical Design of A Self-Sustained Oscillator: The Clarinet and Its Register Hole | PDF | Clarinet | Nonlinear System",
+          "url": "https://www.scribd.com/document/1068029640/2601-01981v1"
+        },
+        {
+          "title": "How localized nonlinear losses condition the acoustical design of a self-sustained oscillator: The clarinet and its register hole - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0888327026005170"
+        },
+        {
+          "title": "Microsoft Word - ClarinetRobot_ISMA2010_after reviews&Joe.doc",
+          "url": "https://www.phys.unsw.edu.au/jw/reprints/clarinetcartography.pdf"
+        },
+        {
+          "title": "How localized nonlinear losses condition the acoustical design of a self-sustained oscillator: the clarinet and its register hole | alphaXiv",
+          "url": "https://www.alphaxiv.org/abs/2601.01981"
+        },
+        {
+          "title": "NICTA-UNSW Robot Clarinet",
+          "url": "https://www.phys.unsw.edu.au/jw/clarinetrobot.html"
+        },
+        {
+          "title": "Biologically-Inspired Control Architecture for Musical Performance Robots - Jorge Solis, Kenichiro Ozawa, Maasaki Takeuchi, Takafumi Kusano, Shimpei Ishikawa, Klaus Petersen, Atsuo Takanishi, 2014",
+          "url": "https://journals.sagepub.com/doi/10.5772/59232"
+        },
+        {
+          "title": "Expression control in automated musical instruments",
+          "url": "https://www.logosfoundation.org/g_texts/expression-control.pdf"
+        },
+        {
+          "title": "Volume 31, Number 3, June 2004",
+          "url": "https://clarinet.insightful.design/wp-content/uploads/2022/10/VOL31N3-JUNE2004.pdf"
+        },
+        {
+          "title": "Dancing the Robots: in per- and retrospective.",
+          "url": "https://www.logosfoundation.org/g_texts/iii-article/iii-article.pdf"
+        },
+        {
+          "title": "click for updatesThe effect of blowing p",
+          "url": "https://www.phys.unsw.edu.au/jw/reprints/LiArticulationRobot.pdf"
+        },
+        {
+          "title": "The logical clarinet: numerical optimization of the geometry of woodwind instruments",
+          "url": "https://arxiv.org/abs/1209.3637"
+        },
+        {
+          "title": "Acoustics Australia",
+          "url": "https://acoustics.asn.au/journal/Vol40No3.pdf"
+        },
+        {
+          "title": "How do clarinet players adjust the resonances of their vocal tracts for different playing effects",
+          "url": "https://arxiv.org/abs/physics/0505195"
+        },
+        {
+          "title": "Interaction of reed and acoustic resonator in clarinetlike systems",
+          "url": "https://arxiv.org/abs/0810.2870"
+        },
+        {
+          "title": "Reed clipper",
+          "url": "https://en.wikipedia.org/wiki/Reed_clipper"
+        },
+        {
+          "title": "Audio feedback",
+          "url": "https://en.wikipedia.org/wiki/Audio_feedback"
+        },
+        {
+          "title": "Clarinet",
+          "url": "https://en.wikipedia.org/wiki/Clarinet"
+        },
+        {
+          "title": "Wind instrument",
+          "url": "https://en.wikipedia.org/wiki/Wind_instrument"
+        },
+        {
+          "title": "Feedback suppressor",
+          "url": "https://en.wikipedia.org/wiki/Feedback_suppressor"
+        }
+      ]
+    },
+    {
+      "key": "r12reed_1",
+      "query": "clarinet artificial mouth simple construction pressure lip force reed experiments",
+      "status": "fulfilled",
+      "source_links": [
+        {
+          "title": "The clarinet: how blowing pressure, lip force, lip position and reed \"hardness\" affect pitch, sound level, and spectrum - PubMed",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23967954/"
+        },
+        {
+          "title": "人工吹鳴されるクラリネットのマウスピース内圧力、リード開口、及びリード開口における空気流速 | CiNii Research",
+          "url": "https://cir.nii.ac.jp/crid/2050025942043340032"
+        },
+        {
+          "title": "Pressure in the mouthpiece, reed opening, and air-flow speed at the reed opening of a clarinet artificially blown",
+          "url": "https://www.jstage.jst.go.jp/article/ast1980/14/6/14_6_417/_article/-char/ja/"
+        },
+        {
+          "title": "Response of an artificially blown clarinet to different blowing pressure profiles.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/24437788/"
+        },
+        {
+          "title": "Integrating piezoresistive sensors on the embouchure analysis of the lower lip in single reed instrumentalists: implementation of the lip pressure appliance (LPA).",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31687182/"
+        },
+        {
+          "title": "Saturation mechanism in clarinet-like instruments, the effect of the localised non-linear losses - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0003682X0400101X"
+        },
+        {
+          "title": "The clarinet: How blowing pressure, lip force, lip position and reed “hardness” affect pitch, sound level, and spectrum | CiNii Research",
+          "url": "https://cir.nii.ac.jp/crid/1360574093737632640"
+        },
+        {
+          "title": "The effects of air and lip-pressure variations on the motion of a clarinet reed within an artificial embouchure, NC DOCKS (North Carolina Digital Online Collection of Knowledge and Scholarship)",
+          "url": "https://libres.uncg.edu/ir/listing.aspx?id=26098"
+        },
+        {
+          "title": "Integrating piezoresistive sensors on the embouchure analysis of the lower lip in single reed instrumentalists: implementation of the lip pressure appliance (LPA) - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6820570/"
+        },
+        {
+          "title": "NICTA-UNSW Robot Clarinet",
+          "url": "https://phys.unsw.edu.au/jw/clarinetrobot.html"
+        },
+        {
+          "title": "NICTA-UNSW Robot Clarinet",
+          "url": "https://www.phys.unsw.edu.au/jw/clarinetrobot.html"
+        },
+        {
+          "title": "Reed Flow Impact on Clarinet Intonation | PDF | Equalization (Audio) | Clarinet",
+          "url": "https://www.scribd.com/document/481798041/DALMONT-J-P-Influence-of-the-reed-flow-on-the-intonation-of-the-clarinet"
+        },
+        {
+          "title": "THE PLAYER–WIND INSTRUMENT INTERACTION",
+          "url": "https://www.animations2.physics.unsw.edu.au/jw/reprints/SMACinteraction.pdf"
+        },
+        {
+          "title": "Response of an artificially blown clarinet to different blowing pressure profiles",
+          "url": "https://arxiv.org/abs/1310.8045"
+        },
+        {
+          "title": "The effect of blowing pressure, lip force and tonguing on",
+          "url": "https://www.animations2.physics.unsw.edu.au/jw/reprints/LiArticulationRobot.pdf"
+        },
+        {
+          "title": "untitled",
+          "url": "https://newt.phys.unsw.edu.au/jw/reprints/PlayingParameters.pdf"
+        },
+        {
+          "title": "The apparatus was found to be critically dependant on the shape and material of the artificial lip. After some experimentation, good results were achieved with a cast plastic sheet material with a Shore A hardness of 20, clipped into a metal channel attached to the manipulator:",
+          "url": "https://repository.londonmet.ac.uk/7273/1/426598.pdf"
+        },
+        {
+          "title": "The mechanism producing initial transients on the clarinet",
+          "url": "https://files01.core.ac.uk/download/pdf/523538616.pdf"
+        },
+        {
+          "title": "Prediction of the dynamic oscillation threshold in a clarinet model with a linearly increasing blowing pressure",
+          "url": "https://arxiv.org/abs/1207.4636"
+        },
+        {
+          "title": "Clarinet",
+          "url": "https://en.wikipedia.org/wiki/Clarinet"
+        },
+        {
+          "title": "Reed not making noise?",
+          "url": "https://www.reddit.com/r/Clarinet/comments/1tl8xk3/reed_not_making_noise/"
+        },
+        {
+          "title": "How do clarinet players adjust the resonances of their vocal tracts for different playing effects",
+          "url": "https://arxiv.org/abs/physics/0505195"
+        },
+        {
+          "title": "how do you make sound",
+          "url": "https://www.reddit.com/r/Clarinet/comments/d2off4"
+        },
+        {
+          "title": "Analytical Determination of the Attack Transient in a Clarinet With Time-Varying Blowing Pressure",
+          "url": "https://arxiv.org/abs/1510.04793"
+        },
+        {
+          "title": "Slap tongue",
+          "url": "https://www.reddit.com/r/Clarinet/comments/wfvnmm"
+        },
+        {
+          "title": "What could I do better?",
+          "url": "https://www.reddit.com/r/Clarinet/comments/18983f7"
+        }
+      ]
+    },
+    {
+      "key": "r12reed_2",
+      "query": "reed adjustment machine acoustic measurement closed loop",
+      "status": "fulfilled",
+      "source_links": [
+        {
+          "title": "1-877-742-TEST (8378)Mode",
+          "url": "https://assets.tequipment.net/assets/1/26/Documents/C-322_manual.pdf"
+        },
+        {
+          "title": "Blowing pressure stabilization method for the artificial excitation of reed instruments (L).",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36859143/"
+        },
+        {
+          "title": "Operating Instructions",
+          "url": "https://calright.com/wp-content/uploads/2018/04/8944.pdf"
+        },
+        {
+          "title": "Reed Mapper",
+          "url": "https://reedmapper.com/"
+        },
+        {
+          "title": "Time relationship between reed motion and acoustic pressure in the saxophone mouthpiece - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0022460X25006406"
+        },
+        {
+          "title": "Nonlinear characteristics of single-reed instruments: quasistatic volume flow and reed opening measurements.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/14587622/"
+        },
+        {
+          "title": "2003 Dalmont Al Jasa NonlinearCharacteristicsOfSingleReedInstruments | PDF | Fluid Dynamics | Flow Measurement",
+          "url": "https://www.scribd.com/document/1038473712/2003-Dalmont-Al-Jasa-NonlinearCharacteristicsOfSingleReedInstruments"
+        },
+        {
+          "title": "REED R5825 Loop Calibrator",
+          "url": "https://www.reedinstruments.com/product/reed-r5825-loop-calibrator"
+        },
+        {
+          "title": "REED R5820 Loop Calibrator",
+          "url": "https://www.reedinstruments.com/product/reed-instruments-r5820-loop-calibrator?ksearch_click=Aseese+electricity+supply"
+        },
+        {
+          "title": "(PDF) Nonlinear characteristics of single-reed instruments: Quasistatic volume flow and reed opening measurements",
+          "url": "https://www.researchgate.net/publication/9032203_Nonlinear_characteristics_of_single-reed_instruments_Quasistatic_volume_flow_and_reed_opening_measurements"
+        },
+        {
+          "title": "Methods for Measuring the Acoustic",
+          "url": "https://citeseerx.ist.psu.edu/document?doi=1e0cfe39c89a35fa3836f70b82213a659dae27de&repid=rep1&type=pdf"
+        },
+        {
+          "title": "Blowing pressure stabilization method for the artificial excitation of reed instruments (L)",
+          "url": "https://openalex.org/W4319299207"
+        },
+        {
+          "title": "The Reed Wizard - The best reed balancing tool available! - RJ Music Group",
+          "url": "https://www.rjmusicgroup.com/reed-wizard.html"
+        },
+        {
+          "title": "What is Fast VTA adjustment? - Reed tonearms",
+          "url": "https://www.reed.lt/4376/research/what-is-fast-vta-adjustment/"
+        },
+        {
+          "title": "Acoustic Admittance of Air-Driven Reed Generators",
+          "url": "https://phys.unsw.edu.au/music/people/publications/Fletcheretal1982b.pdf"
+        },
+        {
+          "title": "Nonlinear characteristics of single-reed instruments: Quasistatic volume flow and reed opening measurements",
+          "url": "https://openalex.org/W1991374848"
+        },
+        {
+          "title": "Real-time non-intrusive reed valve",
+          "url": "https://radar.brookes.ac.uk/radar/file/1a4e1e9f-d810-4b31-b6d6-e01e76d6e4d7/1/Collins_1994_E15.pdf"
+        },
+        {
+          "title": "Applied Acoustics 30 (1990) 85-115",
+          "url": "https://openresearch-repository.anu.edu.au/bitstreams/de45697f-e886-4651-a314-1dd5c64ed2a8/download"
+        },
+        {
+          "title": "Audio analyzer",
+          "url": "https://en.wikipedia.org/wiki/Audio_analyzer"
+        },
+        {
+          "title": "Reed receiver",
+          "url": "https://en.wikipedia.org/wiki/Reed_receiver"
+        },
+        {
+          "title": "Simulation of Single Reed Instruments Oscillations Based on Modal Decomposition of Bore and Reed Dynamics",
+          "url": "https://arxiv.org/abs/0705.2803"
+        },
+        {
+          "title": "PID-like active control strategy for electroacoustic resonators to design tunable single-degree-of-freedom sound absorbers",
+          "url": "https://arxiv.org/abs/2108.00765"
+        },
+        {
+          "title": "Wind instrument",
+          "url": "https://en.wikipedia.org/wiki/Wind_instrument"
+        },
+        {
+          "title": "Smaart",
+          "url": "https://en.wikipedia.org/wiki/Smaart"
+        },
+        {
+          "title": "Quasi-static non-linear characteristics of double-reed instruments",
+          "url": "https://arxiv.org/abs/physics/0607011"
+        },
+        {
+          "title": "Linear-response reflection coefficient of the recorder air-jet amplifier",
+          "url": "https://arxiv.org/abs/1502.02170"
+        },
+        {
+          "title": "Thiele/Small parameters",
+          "url": "https://en.wikipedia.org/wiki/Thiele/Small_parameters"
+        },
+        {
+          "title": "Reed pipe",
+          "url": "https://en.wikipedia.org/wiki/Reed_pipe"
+        }
+      ]
+    },
+    {
+      "key": "r12reed_3",
+      "query": "reed making machine artificial intelligence tuning",
+      "status": "fulfilled",
+      "source_links": [
+        {
+          "title": "The Structural Design and Analysis of the Multi Nozzle Relay Air-Jet Inserting System by Profile Reed Guiding for 3D Weaving Machine | Bentham Science",
+          "url": "https://www.eurekaselect.com/public/article/144895"
+        },
+        {
+          "title": "(PDF) AI-Driven Performance Tuning in DevOps: Adaptive Scaling and Resource Allocation",
+          "url": "https://www.researchgate.net/publication/388637183_AI-Driven_Performance_Tuning_in_DevOps_Adaptive_Scaling_and_Resource_Allocation"
+        },
+        {
+          "title": "arundoMAX for all Oboe Instruments - Reeds 'n Stuff",
+          "url": "https://www.reedsnstuff.com/en/Oboe/Reed-Making-Machines/arundoMAX/arundoMAX.html"
+        },
+        {
+          "title": "CN122389452A – A reed harvester header dynamic optimization and efficient operation parameter calculation method | Patsnap Eureka",
+          "url": "https://eureka.patsnap.com/patent/CN122389452A"
+        },
+        {
+          "title": "arundoMAX for all Bassoon Instruments - Reeds 'n Stuff",
+          "url": "https://www.reedsnstuff.com/en/Bassoon/Reed-Making-Machines/arundoMAX.html"
+        },
+        {
+          "title": "New DISR Guidance on Artificial intelligence-related R&D activities | Swanson Reed",
+          "url": "https://www.swansonreed.com.au/new-disr-guidance-on-artificial-intelligence-related-rd-activities/"
+        },
+        {
+          "title": "CN121519243A – Reed wire hooking and reeding system and dynamic control method thereof | Patsnap Eureka",
+          "url": "https://eureka.patsnap.com/patent/CN121519243A"
+        },
+        {
+          "title": "Reed Making Machine Operation Guide | PDF | Screw | Nature",
+          "url": "https://www.scribd.com/document/475004922/KGe-Profiler-Manual"
+        },
+        {
+          "title": "Support - Reeds 'n Stuff",
+          "url": "https://www.reedsnstuff.com/en/Bassoon/Reed-Making-Machines/Tip-Profiling/Support/"
+        },
+        {
+          "title": "CN121519243A - A reed hook wire threading system and its dynamic control method - Google Patents",
+          "url": "https://patents.google.com/patent/CN121519243A/en"
+        },
+        {
+          "title": "基于遗传算法的芦苇笋采收机模糊PID控制策略研究",
+          "url": "https://qikan.cmes.org/yyyqd/CN/10.11832/j.issn.1000-4858.2023.01.012"
+        },
+        {
+          "title": "Ke Xun Ge Oboe Profiler - Howarth of London",
+          "url": "https://www.howarthlondon.com/insight/ke-xun-ge-oboe-profiler/"
+        },
+        {
+          "title": "16.ReedCallahan_YuhaoBai_MLTuning",
+          "url": "https://cs-people.bu.edu/mathan/classes/CS591-Spring2019/student_slides/16.ReedCallahan_YuhaoBai_MLTuning.pdf"
+        },
+        {
+          "title": "The Endless Tuning. An Artificial Intelligence Design To Avoid Human Replacement and Trace Back Responsibilities",
+          "url": "https://arxiv.org/abs/2507.14909"
+        },
+        {
+          "title": "Modelling of Reed Valves with Neural Networks based on FSI Data",
+          "url": "https://www10.cs.fau.de/publications/theses/2023/Master_BhagatBhagyashree.pdf"
+        },
+        {
+          "title": "Artificial Intelligence as an addition to the",
+          "url": "https://repository.nwu.ac.za/server/api/core/bitstreams/a2be85b5-b243-49f6-bb58-48f2453472d3/content"
+        },
+        {
+          "title": "Optuna",
+          "url": "https://en.wikipedia.org/wiki/Optuna"
+        },
+        {
+          "title": "超参数优化",
+          "url": "https://zh.wikipedia.org/wiki/%E8%B6%85%E5%8F%82%E6%95%B0%E4%BC%98%E5%8C%96"
+        },
+        {
+          "title": "Crystal filter tuning using machine learning.",
+          "url": "https://shura.shu.ac.uk/3145/2/10701103.pdf"
+        },
+        {
+          "title": "Biotechnology",
+          "url": "https://s3-euw1-ap-pe-df-pch-content-store-p.s3.eu-west-1.amazonaws.com/9781315364582/d1d2ddfe-e86e-414b-a87a-54d33a2557d3/preview.pdf?AWSAccessKeyId=ASIAQFVOSJ57ZWJ6WHSI&Expires=1770066259&Signature=2iQkm5qeHfiMiGHSzW%2BtrVoVq2c%3D&response-content-disposition=attachment%3B+filename%3D%2210.1201_9781315364582_previewpdf.pdf%22&x-amz-security-token=IQoJb3JpZ2luX2VjECMaCXVzLWVhc3QtMSJIMEYCIQDNVtBE2%2B41BC5WiVCD1Epu9DpGCEAoT8gZhmWNl4gO8wIhANZxqhmSJC%2BnFTgn8c4NC2KRXLg68KYPwz44%2Fz5dhRzwKpYECOv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQBBoMMDEyMTc3MjY0NTExIgw3Cf8maoE9F0H3B9Qq6gMvjjCMpZYfFi7PtpGhIKYB%2Bkkw6%2FesYL5CqIw9kMh3tVJxgrGNXLWmYcLk0lTzb1GPvrb8Nni1%2FfNpvl4JjfX8tdEAcMJVh8Tllv88CF0p7DjJ%2BX%2BullkMlwgTvh2N9lDxYfR%2BElbiyW30oC2MfgfhUuW%2B%2BrcuyCJUmLGAPU6v6vud8ecvfLQb40NwmyHowkc8P%2FfG8scYoYaSMnp082JnhY%2FSHMzYoiAcjJzHvSR%2BZd9GACtB0JRl9oGsFT%2BjnAslMe3t1EfntZC8tDqOpc4pMyTiE%2BSTUiudqg8FrOIqEaBMvdaJtx3C9VpCffUVAzLeJeYp%2BtqPq0MSKTNTXd1PGKMMjlzN8cDO3A%2Bax1HkNHqbD%2BL5C4zfg6QNbKgAHTosC%2FEObUrEzmse5p7j1ayWNdjRBZGkptBKbWXBAYNU78OnCa2n%2FD1cJ8nyfdnivNSOY6nfToaO7GvpZAC3Wj%2B%2FZ1%2BAhTe2riz3nAuTKfq%2B54KMdyBEpvac6159rzhVaOo9KZEL6X%2BtarP9afP1c2xbS%2Fc5IU5B%2BStqt2J%2BBNEYw%2Buc94Ae8Jptu1Y82WIJKjaOrhmq0CBy1xWxFj7A8atxY2hWHj0DIrP0bb7D1OT2lG3sEesOBgvAIbioQpBpkglNNLp3hTLYcyVAMNrOg8wGOqQBQoN6V3lLq7P%2BXIiHhS5%2BSlKNbD5dTPFyZcVkGX02MbzSOl7lPim683C14GuMyIJjJ0ifT1N%2BZF1hrmSncjSNuDj28OxViIre8JmFurvE6zMdHAu8gPKpMDTAPX%2FRTaj8OXrKWRvId0NRwz6dI1NCVj13pU6ILbuynxrzeQdZFzooVsarWw9s8Afx5yVyUlNaWkSr3fomjqZGpC%2F22HPU4MfDvf4%3D"
+        },
+        {
+          "title": "Artificial Intelligence in Open Radio Access Network",
+          "url": "https://arxiv.org/abs/2104.09445"
+        },
+        {
+          "title": "Artificial Intelligence-Driven Customized Manufacturing Factory: Key Technologies, Applications, and Challenges",
+          "url": "https://arxiv.org/abs/2108.03383"
+        }
+      ]
+    }
+  ]
+}

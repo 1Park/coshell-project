@@ -1,0 +1,85 @@
+{
+  "queries": [
+    "\"hand-over-hand\" \"macrame\" \"assistive\"",
+    "\"one handed\" \"macrame\" board",
+    "\"robotic\" \"knot tying\" \"assistance\" human"
+  ],
+  "sources": [
+    {
+      "title": "Slipknot-gauged mechanical transmission and robotic operation | Nature",
+      "url": "https://www.nature.com/articles/s41586-025-09673-w"
+    },
+    {
+      "title": "Virtual Fixture Assistance for Needle Passing and Knot Tying",
+      "url": "https://zihanchen.com/assets/papers/IROS16CHEN.pdf"
+    },
+    {
+      "title": "TUM Technische Universität MünchenForschungs- und Lehreinheit Informatik VI: Robotics and",
+      "url": "https://archive.air.in.tum.de/Main/Publications/Mayer2008c.pdf"
+    },
+    {
+      "title": "An Instrumentation System with Force Feedback, Automatic",
+      "url": "https://citeseerx.ist.psu.edu/document?doi=149e5ee8c778cc12c32596ecbde51bd741076aba&repid=rep1&type=pdf"
+    },
+    {
+      "title": "GMS | GMS Current Topics in Computer and Robot Assisted Surgery | The capability of haptic feedback as additional sensory quality for robotic heart surgery",
+      "url": "https://www.egms.de/static/en/journals/curac/2006-1/curac000012.shtml"
+    },
+    {
+      "title": "KUNIHOLM, JONATHAN FAIRBANK. Automated K",
+      "url": "https://repository.lib.ncsu.edu/server/api/core/bitstreams/12c00532-1f30-44a1-91e9-82fe3068c561/content"
+    },
+    {
+      "title": "2011 IEEElRSJ International Conference on",
+      "url": "https://zenodo.org/records/1273750/files/article.pdf"
+    },
+    {
+      "title": "Understand Hand-Eye Coordination of Surgical Robots for a Safer Operation - CUHK in Touch",
+      "url": "https://cuhkintouch.cpr.cuhk.edu.hk/2021/08/understand-hand-eye-coordination-of-surgical-robots-for-a-safer-operation/"
+    },
+    {
+      "title": "Suturing and tying knots assisted by a surgical robot system in laryngeal MIS | Robotica | Cambridge Core",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/EE772DE28FCE77BF60B3A6A27364FBCC/S0263574709990622a.pdf/suturing_and_tying_knots_assisted_by_a_surgical_robot_system_in_laryngeal_mis.pdf"
+    },
+    {
+      "title": "Effects of Visual Force Feedback on Robot-Assisted Surgical Task Performance - PMC",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2674617/"
+    },
+    {
+      "title": "SutureBot: Robotic Suturing Systems",
+      "url": "https://www.emergentmind.com/topics/suturebot"
+    },
+    {
+      "title": "Virtual fixture assistance for needle passing and knot tying - Johns Hopkins University",
+      "url": "https://pure.johnshopkins.edu/en/publications/virtual-fixture-assistance-for-needle-passing-and-knot-tying/"
+    },
+    {
+      "title": "Minimal motions: analysis of human motion tracking in machine sensing for filament construction in architecture | Construction Robotics | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s41693-026-00221-0"
+    },
+    {
+      "title": "Methods for haptic feedback in teleoperated robot-assisted surgery - PMC",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1317565/"
+    },
+    {
+      "title": "Autonomy in Surgical Robotics | Annual Reviews",
+      "url": "https://doi.org/10.1146/annurev-control-062420-090543"
+    },
+    {
+      "title": "Videos – CIRL",
+      "url": "https://cirl.lcsr.jhu.edu/research/hmm/resources/"
+    },
+    {
+      "title": "Microsoft Word - IEEE Conference Paper- Final Version-2016.04.25.docx",
+      "url": "https://ira.lib.polyu.edu.hk/bitstream/10397/106557/1/Lu_Dynamic_Trajectory_Planning.pdf"
+    },
+    {
+      "title": "Trajectory Planning of Knot-Tying Manipulation in Surgery | Scientific.Net",
+      "url": "https://www.scientific.net/AMM.190-191.752"
+    },
+    {
+      "title": "Uncertainty-aware Self-supervised Learning for Cross-domain Technical Skill Assessment in Robot-assisted Surgery",
+      "url": "https://arxiv.org/abs/2304.14589"
+    }
+  ]
+}

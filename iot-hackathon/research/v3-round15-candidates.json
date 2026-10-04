@@ -1,0 +1,43 @@
+{
+  "stage": "v3_round15",
+  "items": [
+    {
+      "id": "N086",
+      "name": "PunchPartner — 손으로 바꾼 같은 오르골 종이 악보에 AI가 음을 더하는 공동 작곡기",
+      "status": "OPEN",
+      "stage": "v3_round15",
+      "parent_id": "N047",
+      "duplicate_check": "N047/R08/N042/N046/N070 대조. 템포 추종 반주·음색 조정·그림 소거가 아닌, 실제 재편집한 악보를 재인식해 고정 음 사이를 생성하고 동일 종이에 천공하는 흐름. 외부 자동 천공기·AI 오르골·Grain as Note와 대조 필요.",
+      "reason": "G02/G06/G07/G09/G10/G13/G14 OPEN. 자동 천공과 AI 음악 생성 자체는 선행이 있다. 시판 펀치 전체를 누르는 구조로 금형 제작을 제외했고, 실제 악보 재교환과 위치 제약 선율 생성으로 범위를 고정. 공개 구형 모델을 즉시 배포 가능하다고 가정하지 않고 독립 학습 경로 확인 중.",
+      "card": "research/N086_PUNCH_PARTNER.md",
+      "sources": [
+        "https://jshel.co/blog/music-box-hole-punch",
+        "https://arxiv.org/abs/1709.06404",
+        "https://musicboxmelodies.com/ai/",
+        "https://eccv-art-26.github.io/pieces/grain-as-note-a-bio-tangible-interface-for-interspecies-co-c/"
+      ]
+    },
+    {
+      "id": "N087",
+      "name": "FaultCounterexample — 사용자의 고장 설명에 반례가 되는 실제 회로를 구성하는 실습대",
+      "status": "REJECTED",
+      "stage": "v3_round15",
+      "duplicate_check": "N053/F02/R16/N018 대조. 회로 전사·재시험·진단·힘 교육 대신 설명을 듣고 반례 측정 조건을 실제로 구성하는 학습 흐름을 검토.",
+      "reason": "G06/G13 FAIL. CircuTutor·BEETLE II 등은 실제 하드웨어와 동일하지 않지만, 자연어 설명·오개념 진단·적응 문제라는 핵심 교육 흐름은 공개되어 있다. 제한된 저전압 회로/고장 집합으로 줄이면 회로해석과 측정 선택은 규칙으로 해결되고 AI가 자연어 메뉴 선택으로 축소된다. 설명을 현물로 옮기는 것 이상의 새 실습 과제를 확보하지 못함. 실제 같은 하드웨어가 존재한다고 단정하지 않음.",
+      "sources": [
+        "https://arxiv.org/abs/2609.08254",
+        "https://doi.org/10.1007/s40593-014-0017-9",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC6310412/"
+      ]
+    },
+    {
+      "id": "N088",
+      "name": "ReachLayout — 사용자의 도달 패턴을 보고 실제 게임 버튼 배치를 모터로 바꾸는 컨트롤러",
+      "status": "REJECTED",
+      "stage": "v3_round15",
+      "duplicate_check": "R28/N057/N060/N073/N085 대조. 제스처 명령·햅틱 다이얼·이젤·보치아·떨림 보상과 달리 입력 버튼의 실제 위치를 바꾸는 안.",
+      "reason": "G02/G06/G09/G13 FAIL. 처음 도달 범위를 측정해 버튼을 손으로 배치하는 강한 대안에 비해 반복 재배치의 이득이 불명확하며 학습한 운동 습관을 깨뜨릴 수 있다. 실제 피로/통증을 도달 궤적만으로 추정해서는 안 된다. 여러 버튼의 독립 이동 기구가 핵심 사용자 이득보다 커짐. 외부 검색을 했으나 동일 제품을 확인했다고 주장하지 않고 내부 게이트에서 제외.",
+      "sources": []
+    }
+  ]
+}

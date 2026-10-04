@@ -1,0 +1,1223 @@
+{
+  "stage": "v3_round15",
+  "note": "Returned link metadata, including duplicates and failed/unrelated opens; not a count of read papers or ideas. Direct GitHub/PyPI HTTP calls and package installs additional.",
+  "calls": [
+    {
+      "cache": "r15punch",
+      "available": true,
+      "results": [
+        {
+          "title": "The Music Box | The Bonus Inside Harmony Quest",
+          "url": "https://harmonics.games/how-it-works"
+        },
+        {
+          "title": "Compose Your Melody | Harmony Quest Music Box",
+          "url": "https://harmonics.games/create"
+        },
+        {
+          "title": "Hao's Home",
+          "url": "https://highhaoru.github.io/"
+        },
+        {
+          "title": "Use Musicboxmelodies from your AI assistant | Musicboxmelodies.com",
+          "url": "https://musicboxmelodies.com/ai/"
+        },
+        {
+          "title": "(PDF) The Music Box Operad: Random Generation of Musical Phrases from Patterns",
+          "url": "https://www.researchgate.net/publication/380145730_The_music_box_operad_Random_generation_of_musical_phrases_from_patterns"
+        },
+        {
+          "title": "Innovation Awards 2026 Proto Hardware – MIDI.org",
+          "url": "https://midi.org/innovation-awards-2026-proto-hardware"
+        },
+        {
+          "title": "“A Digital Music Box Ensemble” by Takuma Takahashi, Shugo Hirao – ISEA Symposium Archives",
+          "url": "https://www.isea-symposium-archives.org/art-events/a-digital-music-box-ensemble-by-takuma-takahashi-shugo-hirao/"
+        },
+        {
+          "title": "Karlheinz Essl Jr.",
+          "url": "https://en.wikipedia.org/wiki/Karlheinz_Essl_Jr."
+        },
+        {
+          "title": "Rébecca Kleinberger | Publications",
+          "url": "https://rebeccakleinberger.com/pubs/"
+        },
+        {
+          "title": "(PDF) MineMixMusics: Exploring co-creative learning processes in postdigital music education",
+          "url": "https://www.researchgate.net/publication/395992850_MineMixMusics_Exploring_co-creative_learning_processes_in_postdigital_music_education"
+        },
+        {
+          "title": "Discovering and Steering Interpretable Concepts in… — Plain-Language Explanation | Gist.Science",
+          "url": "https://gist.science/paper/2505.18186"
+        },
+        {
+          "title": "Musicbox Workshop — Unity Lab | BuildMidas",
+          "url": "https://buildmidas.com/unity-lab/musicbox-workshop/"
+        },
+        {
+          "title": "Under review as a conference paper at ICLR 2026",
+          "url": "https://openreview.net/pdf/206e54b9d0f64a04a294cb87d968f81cc04ac862.pdf"
+        },
+        {
+          "title": "Aalto  University,  P.O.  BOX  11000,  00076  AALTO",
+          "url": "https://aaltodoc.aalto.fi/bitstreams/fa7a6472-0e8c-4cd2-ac91-ac9ab38b8347/download"
+        },
+        {
+          "title": "ISEA_catalogue_p1",
+          "url": "https://www.isea-symposium-archives.org/wp-content/uploads/2019/03/ISEA2016_Catalogue.pdf"
+        },
+        {
+          "title": "Curriculum Vitae March 2026",
+          "url": "https://oddnoise.com/gallery/SMM_Full_CV.pdf"
+        },
+        {
+          "title": "A rhythm-aware serious game for social interaction | Multimedia Tools and Applications | Springer Nature Link",
+          "url": "https://link.springer.com/article/10.1007/s11042-022-13372-3"
+        },
+        {
+          "title": "ISEA2016_proceedings_S.pdf",
+          "url": "https://classicarchive.isea-international.org/docs/2016/proceedings/ISEA2016_proceedings.pdf"
+        },
+        {
+          "title": "In ScoreCard, the piece is the program,",
+          "url": "https://ijc8.me/static/scorecard.pdf"
+        },
+        {
+          "title": "Milton Mermikides",
+          "url": "https://en.wikipedia.org/wiki/Milton_Mermikides"
+        },
+        {
+          "title": "Index of music articles",
+          "url": "https://en.wikipedia.org/wiki/Index_of_music_articles"
+        },
+        {
+          "title": "This hole punching machine (more details in the comment)",
+          "url": "https://www.reddit.com/r/whatisthisthing/comments/1hs2q1y"
+        },
+        {
+          "title": "Sound recording and reproduction",
+          "url": "https://en.wikipedia.org/wiki/Sound_recording_and_reproduction"
+        },
+        {
+          "title": "Music",
+          "url": "https://en.wikipedia.org/wiki/Music"
+        }
+      ]
+    },
+    {
+      "cache": "r15punch2",
+      "available": true,
+      "results": [
+        {
+          "title": "Make music with the help of an Arduino-powered hole puncher | Arduino Blog",
+          "url": "https://blog.arduino.cc/2019/11/25/play-tunes-on-an-arduino-powered-hole-punching-music-box/"
+        },
+        {
+          "title": "Punch, Feed, Play - Punchcard Music Box",
+          "url": "https://www.matrixsynth.com/2026/05/punch-feed-play-punchcard-music-box.html"
+        },
+        {
+          "title": "Wee Noise Makers Punch, Feed, Play: Lochstreifen & Kurbel Klang - Bonedo",
+          "url": "https://www.bonedo.de/artikel/wee-noise-makers-punch-feed-play-lochkarten-kurbel-sound/"
+        },
+        {
+          "title": "Make a Music Box Punch Machine with Arduino",
+          "url": "https://www.positioniseverything.net/make-a-music-box-punch-machine-with-arduino/"
+        },
+        {
+          "title": "Music Box Hole Punch — josh sheldon",
+          "url": "https://jshel.co/blog/music-box-hole-punch"
+        },
+        {
+          "title": "Automatic music box hole puncher(with Arduinio MEGA) - YouTube",
+          "url": "https://www.youtube.com/watch?v=kghcc5qlQiM"
+        },
+        {
+          "title": "Punch, Feed, Play: a Digital Music Box",
+          "url": "https://musicboxmaniacs.com/forum/posts/punch-feed-play-a-digital-music-box_373/"
+        },
+        {
+          "title": "Arduino Music Box Punch Machine Guide | PDF",
+          "url": "https://www.scribd.com/document/974718520/Making-Music-Box-Punch-Machine-With-Arduino"
+        },
+        {
+          "title": "A punch strip laser cutter, \"Mr. Christmas\" disks, and more!",
+          "url": "https://musicboxmaniacs.com/forum/posts/a-punch-strip-laser-cutter-mr-christmas-disks-and-more_268/"
+        },
+        {
+          "title": "This Arduino Music Box Uses Handmade Punch Cards to Encode Each Tune - Hackster.io",
+          "url": "https://www.hackster.io/news/this-arduino-music-box-uses-handmade-punch-cards-to-encode-each-tune-5195627dad20"
+        },
+        {
+          "title": "turn of a metal disc.",
+          "url": "https://www.mbsgb.org.uk/TMB/V27_B6.pdf"
+        },
+        {
+          "title": "Sparkle on a Midi Music Box",
+          "url": "https://www.reddit.com/r/arduino/comments/ut0lmc"
+        },
+        {
+          "title": "Artificial intelligence (AI) learning tools in K-12 education: A scoping review",
+          "url": "https://api.repository.cam.ac.uk/server/api/core/bitstreams/1e8b2331-2319-4aa5-b6e0-f5997be315c7/content"
+        },
+        {
+          "title": "Proceedings of the International Conference on New Interfaces for Musical Expression",
+          "url": "https://www.nime.org/proceedings/2014/nime2014_2.pdf"
+        },
+        {
+          "title": "(PDF) Touch, Sound, and Space: Exploring Immersive Music Interaction through AI-Generated Environments",
+          "url": "https://www.researchgate.net/publication/396522527_Touch_Sound_and_Space_Exploring_Immersive_Music_Interaction_through_AI-Generated_Environments"
+        },
+        {
+          "title": "ISEA_catalogue_p1",
+          "url": "https://www.isea-archives.org/docs/2016/catalogue/ISEA2016_catalogue.pdf"
+        },
+        {
+          "title": "Alternative Controller [Maker Update #76] •Maker Project Lab",
+          "url": "https://www.makerprojectlab.com/alternative-controller-maker-update-76/"
+        },
+        {
+          "title": "AI",
+          "url": "https://static1.squarespace.com/static/617525cfe98f935746643739/t/6836f1b28142c76aed6d4d0a/1748431291074/Press%2Brelease%2BAI%2B%26%2BMusic%2BPowered%2Bby%2BS%2BT%2BARTS%2BSonar%2BMay%2B28%2B2025_280525_3.pdf"
+        },
+        {
+          "title": "Found Music Boxes through an Unusual Source",
+          "url": "https://www.reddit.com/r/Musicbox/comments/1ws0a4r/found_music_boxes_through_an_unusual_source/"
+        },
+        {
+          "title": "an intsrnational nagazino of mochanical nrusic",
+          "url": "https://mbsgb.org.uk/TMB/V9_B8.pdf"
+        },
+        {
+          "title": "Here is my shitty music box robot that runs with MIDI commands",
+          "url": "https://www.reddit.com/r/shittyrobots/comments/t5bqqy"
+        }
+      ]
+    },
+    {
+      "cache": "r15punch3",
+      "available": true,
+      "results": [
+        {
+          "title": "music box | Lavina Li Portfolio",
+          "url": "https://www.llconservation.com/music-box"
+        },
+        {
+          "title": "Grain as Note: A Bio-Tangible Interface for Interspecies Co-Composition via Wu Xing Sonification — Xia Liu, Hongbin Lin",
+          "url": "https://eccv-art-26.github.io/pieces/grain-as-note-a-bio-tangible-interface-for-interspecies-co-c/"
+        },
+        {
+          "title": "Document // NITETIME GOPHER",
+          "url": "https://gopher.nitetime.net/music/organ/2026-09-27-bosa-nova-party-robot-midi-process.txt?type=0"
+        },
+        {
+          "title": "nonomino website",
+          "url": "https://nonomino.net/"
+        },
+        {
+          "title": "‎Can't Get (feat. Killer Musiq, Miano & Killa Punch) – Song by Chocco, King P & Robot Boii – Apple Music",
+          "url": "https://music.apple.com/za/song/1840494786"
+        },
+        {
+          "title": "Co-policy: Responsive Human-Robot Co-Creation for Musical Performances | alphaXiv",
+          "url": "https://www.alphaxiv.org/abs/2606.19914"
+        },
+        {
+          "title": "Meaningful Interactions in Human-AI Musicking | Proceedings of the 20th International Audio Mostly Conference",
+          "url": "https://doi.org/10.1145/3771594.3771600"
+        },
+        {
+          "title": "Tuning the Transformer: Context-Aware Masking for Controlled Music Generation in MIDI :: PyData NYC 2024 :: pretalx",
+          "url": "https://pydata.org/nyc2024/schedule/talk/J7XX9B/"
+        },
+        {
+          "title": "Towards Human-Robot Co-Creative Collaboration",
+          "url": "https://hrilab.tufts.edu/publications/luetal24icsr.pdf"
+        },
+        {
+          "title": "Human-AI Musicking: A Framework for Designing AI for Music Co-creativity · AIMC 2023",
+          "url": "https://aimc2023.pubpub.org/pub/zd46ltn3/release/1"
+        },
+        {
+          "title": "Pubblicazione | SALVATORE GAGLIO | Università degli Studi di Palermo",
+          "url": "https://www.unipa.it/persone/docenti/g/salvatore.gaglio/en/?idPubblicazione=236243&pagina=pubblicazione"
+        },
+        {
+          "title": "works list — elizabeth jigalin",
+          "url": "https://www.elizabethjigalin.net/works-list"
+        },
+        {
+          "title": "Robot Carnival Deprive Original Production Cel 1987 Evil Robot Punch Scene | SoulofTokyo",
+          "url": "https://www.souloftokyo.com/product-page/robot-carnival-deprive-original-production-cel-1987-evil-robot-punch-scene"
+        },
+        {
+          "title": "A Comprehensive Experimental Investigation of Hydraulically Supported Robot Assisted Incremental Sheet Forming of Al6061 Sheets",
+          "url": "https://ejbrambley.warwick.ac.uk/files/singh%2Bkumar%2Bbrambley%2Bsingh%2Bgangaraju-2026.pdf"
+        },
+        {
+          "title": "Co-Creative Spaces: The machine as a collaborator",
+          "url": "https://nime.org/proceedings/2023/nime2023_35.pdf"
+        },
+        {
+          "title": "Jess+: AI and Robotics with Inclusive Music-Making",
+          "url": "https://hanbnrd.gitlab.io/assets/resources/vear2024-2.pdf"
+        },
+        {
+          "title": "Lookin",
+          "url": "https://dspace.sunyconnect.suny.edu/bitstreams/a35628f2-6e1c-4ab0-b593-28cd036091b2/download"
+        },
+        {
+          "title": "COSMIC: A Conversational Interface for Human-AI Music Co-Creation",
+          "url": "https://webspace.eecs.qmul.ac.uk/s.e.dixon/pub/2021/ZhangXiaLevyDixon-COSMIC-NIME2021.pdf"
+        },
+        {
+          "title": "SoundScape: A Human-AI Co-Creation System Making Your Memories Heard",
+          "url": "https://arxiv.org/abs/2410.08136"
+        },
+        {
+          "title": "AI Song Contest: Human-AI Co-Creation in Songwriting",
+          "url": "https://arxiv.org/abs/2010.05388"
+        },
+        {
+          "title": "Real-Time Interactive Music Generation via Data-Free Streaming Consistency Distillation",
+          "url": "https://arxiv.org/abs/2606.24307"
+        },
+        {
+          "title": "Graph-based Polyphonic Multitrack Music Generation",
+          "url": "https://arxiv.org/abs/2307.14928"
+        },
+        {
+          "title": "Music sequencer",
+          "url": "https://en.wikipedia.org/wiki/Music_sequencer"
+        },
+        {
+          "title": "Dancing on My Own",
+          "url": "https://en.wikipedia.org/wiki/Dancing_on_My_Own"
+        },
+        {
+          "title": "Björk videography",
+          "url": "https://en.wikipedia.org/wiki/Bj%C3%B6rk_videography"
+        },
+        {
+          "title": "Astro Bot",
+          "url": "https://en.wikipedia.org/wiki/Astro_Bot"
+        },
+        {
+          "title": "Turntablism",
+          "url": "https://en.wikipedia.org/wiki/Turntablism"
+        },
+        {
+          "title": "Part of Me (Katy Perry song)",
+          "url": "https://en.wikipedia.org/wiki/Part_of_Me_%28Katy_Perry_song%29"
+        }
+      ]
+    },
+    {
+      "cache": "r15punchmodel",
+      "available": true,
+      "results": [
+        {
+          "title": "GitHub - Ghadjeres/Anticipation-RNN: Code of the Anticipation-RNN paper by Hadjeres and Nielsen · GitHub",
+          "url": "https://github.com/Ghadjeres/Anticipation-RNN"
+        },
+        {
+          "title": "magenta/magenta/models/melody_rnn/README.md at main · magenta/magenta · GitHub",
+          "url": "https://github.com/magenta/magenta/blob/main/magenta/models/melody_rnn/README.md?plain=1"
+        },
+        {
+          "title": "Forever Frequencies",
+          "url": "https://macmillan.studio/forever-frequencies"
+        },
+        {
+          "title": "Interactive Music Generation with Positional Constraints using Anticipation-RNNs",
+          "url": "https://arxiv.org/abs/1709.06404"
+        },
+        {
+          "title": "Anticipation-RNN: enforcing unary constraints in sequence generation, with application to interactive music generation — Lacuna",
+          "url": "https://lacuna.tiptreesystems.com/work/anticipation-rnn-enforcing-unary-constraints-in-sequence-generation-with/wrk_0ef4ed2631843a1923ebec4973628f1a"
+        },
+        {
+          "title": "PyTorch HubFor Researchers – PyTorch",
+          "url": "https://pytorch.org/hub/?trk=public_post-text"
+        },
+        {
+          "title": "Stanford CRFM",
+          "url": "https://crfm.stanford.edu/2023/06/16/anticipatory-music-transformer.html"
+        },
+        {
+          "title": "GitHub - kazuto1011/deeplab-pytorch: PyTorch re-implementation of DeepLab v2 on COCO-Stuff / PASCAL VOC datasets · GitHub",
+          "url": "https://gitblind.noratr.app/kazuto1011/deeplab-pytorch"
+        },
+        {
+          "title": "raga_melody_rnn.py · GitHub",
+          "url": "https://gist.github.com/pratvs/4a196ec55112398b9e53260d1039f303"
+        },
+        {
+          "title": "base · stanford-crfm/music-small-100k at 9ef69a4",
+          "url": "https://huggingface.co/stanford-crfm/music-small-100k/commit/9ef69a43384af6bf49d837c0de00b3807694affa"
+        },
+        {
+          "title": "GitHub - linmcneil/pop-melody-gen: Chord-conditioned pop lead-melody generation with LSTM / Transformer | 用弦和条件的 LSTM / Transformer 生成流行主旋律：数据流水线、对比实验、可运行 demo 与预训练模型 · GitHub",
+          "url": "https://vpn.luca-server.com/px/aHR0cHM6Ly9naXRodWIuY29tL2xpbm1jbmVpbC9wb3AtbWVsb2R5LWdlbg"
+        },
+        {
+          "title": "Anticipation-RNN: enforcing unary constraints in sequence generation, with application to interactive music generation",
+          "url": "https://d-nb.info/1174743484/34"
+        },
+        {
+          "title": "GitHub - ronggong/deepBach-code-explain: An explanation of deepBach Keras implementation · GitHub",
+          "url": "https://github.com/ronggong/deepBach-code-explain"
+        },
+        {
+          "title": "Neural Arpeggiator · GitHub",
+          "url": "https://gist.github.com/harunpehlivan/e556ee093b90de1257181384461dd8c4"
+        },
+        {
+          "title": "Microsoft Word - ICAROB2021_program(new)",
+          "url": "https://alife-robotics.co.jp/members2021/icarob/data/abstract.pdf"
+        },
+        {
+          "title": "Published as a conference paper at ICLR 2026",
+          "url": "https://openreview.net/pdf?id=FXm5U16vxD"
+        },
+        {
+          "title": "The checklist follows the references. Pl",
+          "url": "https://papers.neurips.cc/paper_files/paper/2022/file/f13ceb1b94145aad0e54186373cc86d7-Supplemental-Conference.pdf"
+        },
+        {
+          "title": "991013222956803412",
+          "url": "https://repository.hkust.edu.hk/ir/bitstream/1783.1-140796/1/991013222956803412.pdf"
+        },
+        {
+          "title": "Deep Learning",
+          "url": "https://isip.piconepress.com/courses/temple/ece_4822/resources/books/Deep-Learning-with-PyTorch.pdf"
+        },
+        {
+          "title": "MelodyGLM: Multi-task Pre-training for Symbolic Melody Generation",
+          "url": "https://arxiv.org/abs/2309.10738"
+        },
+        {
+          "title": "CGMH: Constrained Sentence Generation by Metropolis-Hastings Sampling",
+          "url": "https://arxiv.org/abs/1811.10996"
+        },
+        {
+          "title": "[D] Self-Promotion Thread",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1w4xaes/d_selfpromotion_thread/"
+        },
+        {
+          "title": "[P] Implementation of DeepLabv3+ in PyTorch",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/kj3epq"
+        },
+        {
+          "title": "Hierarchical Recurrent Neural Networks for Conditional Melody Generation with Long-term Structure",
+          "url": "https://arxiv.org/abs/2102.09794"
+        },
+        {
+          "title": "Benchmarking 🤗/Transformers on both PyTorch and TensorFlow",
+          "url": "https://www.reddit.com/r/deeplearning/comments/dk4g7d"
+        },
+        {
+          "title": "[Removed]",
+          "url": "https://www.reddit.com/r/aiwars/comments/1ln5px6/removed/"
+        },
+        {
+          "title": "[P] Built GPT-2, Llama 3, and DeepSeek from scratch in PyTorch - open source code + book",
+          "url": "https://www.reddit.com/r/learnmachinelearning/comments/1sqlf90/p_built_gpt2_llama_3_and_deepseek_from_scratch_in/"
+        },
+        {
+          "title": "Building HarmonAI: AI Powered melody generator using RNN & LSTM!",
+          "url": "https://www.reddit.com/r/u_0xatharvamaskar/comments/1cv0x9m"
+        }
+      ]
+    },
+    {
+      "cache": "r15punchproof",
+      "available": true,
+      "results": [
+        {
+          "title": "Music Box Hole Punch — josh sheldon",
+          "url": "https://jshel.co/blog/music-box-hole-punch"
+        },
+        {
+          "title": "Make music with the help of an Arduino-powered hole puncher | Arduino Blog",
+          "url": "https://blog.arduino.cc/2019/11/25/play-tunes-on-an-arduino-powered-hole-punching-music-box/"
+        },
+        {
+          "title": "GitHub - Ghadjeres/Anticipation-RNN: Code of the Anticipation-RNN paper by Hadjeres and Nielsen · GitHub",
+          "url": "https://github.com/Ghadjeres/Anticipation-RNN"
+        }
+      ]
+    },
+    {
+      "cache": "r15arnnsource",
+      "available": true,
+      "results": []
+    },
+    {
+      "cache": "r15punchmechanic",
+      "available": true,
+      "results": [
+        {
+          "title": "Make a Music Box Punch Machine with Arduino",
+          "url": "https://www.positioniseverything.net/make-a-music-box-punch-machine-with-arduino/"
+        },
+        {
+          "title": "Design of an adaptive identification method for faulty operating states of power system relay protection devices - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/pii/S2590123025036229"
+        },
+        {
+          "title": "15 Tones DIY Hand Cranked Music Box Movement with Hole Puncher & 30 Paper Tape",
+          "url": "https://musicboxmaniacs.com/store/products/52"
+        },
+        {
+          "title": "Humber Institute of Technology",
+          "url": "https://humber.ca/makingaccessiblemedia/modules/05/transcript/03%20-%20Hardware.pdf"
+        },
+        {
+          "title": "Music Box Paper-Punching Machine Settles The Score | Hackaday",
+          "url": "https://hackaday.com/2019/11/15/music-box-paper-punching-machine-settles-the-score/"
+        },
+        {
+          "title": "A fault identification method using LSTM for a closed-loop distribution system protective relay - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0142061522009218"
+        },
+        {
+          "title": "Data Mining and Neural Networks Based Self-Adaptive Protection Strategies for Distribution Systems with DGs and FCLs | MDPI",
+          "url": "https://www.mdpi.com/1996-1073/11/2/426"
+        },
+        {
+          "title": "Fault mitigation in an interconnected network using artificial intelligence technique",
+          "url": "https://wjaets.com/sites/default/files/fulltext_pdf/WJAETS-2025-0975.pdf"
+        },
+        {
+          "title": "Journal of Electrotechnology, Electrical Engineering and Management (2024)",
+          "url": "https://www.clausiuspress.com/assets/default/article/2024/07/04/article_1720102470.pdf"
+        },
+        {
+          "title": "CN121355847A – Power distribution network relay protection artificial intelligence setting method based on reinforcement learning algorithm | Patsnap Eureka",
+          "url": "https://eureka.patsnap.com/patent/CN121355847A"
+        },
+        {
+          "title": "Relay protection system of transmission line based on AI - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8026085/"
+        },
+        {
+          "title": "Abaodam Diy Music Box Hole Puncher Note Paper Strip Punch for Crafting Durable Music Tape Hole Maker Accessory for Musical Creation",
+          "url": "https://musicboxmaniacs.com/store/products/4295"
+        },
+        {
+          "title": "DIY MUSIC ARANGEMENT 30 NOTE PROGRAMMABLE MUSIC BOX manufacturers and suppliers in China",
+          "url": "https://www.musical-movement.net/products/DIY-MUSIC-ARANGEMENT-30-NOTE-PROGRAMMABLE-MUSIC-BOX-2573666.html"
+        },
+        {
+          "title": "A punch strip laser cutter, \"Mr. Christmas\" disks, and more!",
+          "url": "https://musicboxmaniacs.com/forum/posts/a-punch-strip-laser-cutter-mr-christmas-disks-and-more_268/"
+        },
+        {
+          "title": "Adaptive Protection Scheme AI Group30 | PDF | Support Vector Machine | Artificial Intelligence",
+          "url": "https://www.scribd.com/document/1049119548/Adaptive-Protection-Scheme-AI-Group30"
+        },
+        {
+          "title": "Protection Relay Training Courses",
+          "url": "https://creditosocial2023.patos.pb.gov.br/libweb/Nuqkhe/2OK053/protection_relay__training__courses.pdf"
+        },
+        {
+          "title": "IAES International Journal of Artificial Intelligence (IJ-AI)",
+          "url": "https://ijai.iaescore.com/index.php/IJAI/article/download/20263/12864"
+        },
+        {
+          "title": "Music box",
+          "url": "https://en.wikipedia.org/wiki/Music_box"
+        },
+        {
+          "title": "Keypunch",
+          "url": "https://en.wikipedia.org/wiki/Keypunch"
+        },
+        {
+          "title": "Hole punch",
+          "url": "https://en.wikipedia.org/wiki/Hole_punch"
+        },
+        {
+          "title": "Punch press",
+          "url": "https://en.wikipedia.org/wiki/Punch_press"
+        },
+        {
+          "title": "Punched tape",
+          "url": "https://en.wikipedia.org/wiki/Punched_tape"
+        },
+        {
+          "title": "Punching machine",
+          "url": "https://en.wikipedia.org/wiki/Punching_machine"
+        }
+      ]
+    },
+    {
+      "cache": "r15punchlicense",
+      "available": true,
+      "results": [
+        {
+          "title": "Sand filled Bookshelf Speaker Box - Pinshape",
+          "url": "https://pinshape.com/items/53357-sand-filled-bookshelf-speaker-box"
+        },
+        {
+          "title": "🎵 Build Your Own Music Box – Modern & Classic!・Free STL File for 3D printing・Cults",
+          "url": "https://cults3d.com/en/3d-model/game/build-your-own-music-box-modern-classic"
+        },
+        {
+          "title": "(PDF) Touch, Sound, and Space: Exploring Immersive Music Interaction through AI-Generated Environments",
+          "url": "https://www.researchgate.net/publication/396522527_Touch_Sound_and_Space_Exploring_Immersive_Music_Interaction_through_AI-Generated_Environments"
+        },
+        {
+          "title": "Anticipation-RNN: enforcing unary constraints in sequence generation, with application to interactive music generation",
+          "url": "https://d-nb.info/1174743484/34"
+        },
+        {
+          "title": "GitHub - sony/DiffRoll: PyTorch implementation of DiffRoll, a diffusion-based generative automatic music transcription (AMT) model · GitHub",
+          "url": "https://github.com/sony/DiffRoll"
+        },
+        {
+          "title": "Model optimization and performance evaluation of hand cranked music box base structure manufactured via 3D printing - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8645455/"
+        },
+        {
+          "title": "Princess Jewelry Music Box + Customizable Insert - 3D Printer File",
+          "url": "https://3dgo.app/models/makerworld/1259412"
+        },
+        {
+          "title": "GitHub - SonyCSLParis/music-inpainting-ts: A collection of web interfaces for AI-assisted interactive music creation · GitHub",
+          "url": "https://github.com/SonyCSLParis/music-inpainting-ts"
+        },
+        {
+          "title": "Music Box Comb - WiP !! (incl. OpenSCAD source) — STL Grátis | 3DFinder",
+          "url": "https://3dfinder.io/model/printables/1782825-music-box-comb-wip-incl-openscad-source"
+        },
+        {
+          "title": "Capitol Hill Music Box - Moody Graham",
+          "url": "https://moodygraham.com/project/capitol-hill-music-box"
+        },
+        {
+          "title": "GitHub - frothywater/melody-pretrain: MelodyGLM: Multi-task Pre-training for Symbolic Melody Generation · GitHub",
+          "url": "https://github.com/frothywater/melody-pretrain"
+        },
+        {
+          "title": "Arduino Music Box Punch Machine Guide | PDF",
+          "url": "https://www.scribd.com/document/974718520/Making-Music-Box-Punch-Machine-With-Arduino"
+        },
+        {
+          "title": "Touch, Sound, and Space: Exploring Immersive Music Interaction through AI-Generated Environments",
+          "url": "https://lijieyao.com/assets/pdf/Touch_Sound_and_Space_Exploring_Immersive_Music_Interaction_through_AI-Generated_Environments.pdf"
+        },
+        {
+          "title": "Interactive Music Generation with Positional Constraints using Anticipation-RNNs",
+          "url": "https://arxiv.org/abs/1709.06404"
+        },
+        {
+          "title": "In presenting this thesis in partial fulfillment of the requirements for an advanced",
+          "url": "https://porterglines.com/assets/Glines_Porter_MS.pdf"
+        },
+        {
+          "title": "COMPUTER SCIENCE AND ENGINEERI",
+          "url": "https://www.mahlernet.se/files/mahlernet_v4.pdf"
+        },
+        {
+          "title": "CMSY10",
+          "url": "https://cs.stanford.edu/people/asaxena/papers/ashesh_jain_phdthesis_cornell_2016.pdf"
+        },
+        {
+          "title": "AI Creative Resources - Spring 2023 Class",
+          "url": "https://creative.media.mit.edu/musicai_notes.pdf"
+        },
+        {
+          "title": "MelodyGLM: Multi-task Pre-training for Symbolic Melody Generation",
+          "url": "https://arxiv.org/abs/2309.10738"
+        },
+        {
+          "title": "Does a GitHub repository's MIT license also apply to pretrained model weights if no separate license is provided?",
+          "url": "https://www.reddit.com/r/COPYRIGHT/comments/1uqk7q5/does_a_github_repositorys_mit_license_also_apply/"
+        },
+        {
+          "title": "EnCodec",
+          "url": "https://en.wikipedia.org/wiki/EnCodec"
+        },
+        {
+          "title": "citeturn385search20 [wordlim: 200] Crawled: 4 months ago; EnCodec is implemented in Python using PyTorch and is released under the MIT License.Pre-trained model weights are available on Hugging Face and through Torch Hub. ... * EnCodec on GitHub",
+          "url": "https://github.com/facebookresearch/encodec"
+        }
+      ]
+    },
+    {
+      "cache": "r15punchdata",
+      "available": true,
+      "results": [
+        {
+          "title": "[1709.06404] Interactive Music Generation with Positional Constraints using Anticipation-RNNs",
+          "url": "https://arxiv.org/abs/1709.06404"
+        },
+        {
+          "title": "List of Works Found in the music21 Corpus — music21 Documentation",
+          "url": "https://www.music21.org/music21docs/about/referenceCorpus.html"
+        },
+        {
+          "title": "music21/LICENSE at master · cuthbertLab/music21 · GitHub",
+          "url": "https://github.com/cuthbertLab/music21/blob/master/LICENSE"
+        }
+      ]
+    },
+    {
+      "cache": "r15punchfinal",
+      "available": true,
+      "results": [
+        {
+          "title": "(PDF) Touch, Sound, and Space: Exploring Immersive Music Interaction through AI-Generated Environments",
+          "url": "https://www.researchgate.net/publication/396522527_Touch_Sound_and_Space_Exploring_Immersive_Music_Interaction_through_AI-Generated_Environments"
+        },
+        {
+          "title": "UTUVO Experimental | Sound, image, and interaction",
+          "url": "https://utuvo.app/experimental/"
+        },
+        {
+          "title": "Programmable Music Box - BeagleBoard",
+          "url": "https://www.beagleboard.org/projects/programmable-music-box"
+        },
+        {
+          "title": "The Hands That Fix It, A Stubborn Song, A Small Box - No Cars Music",
+          "url": "https://www.nocarsmusic.com/the-hands-that-fix-it-a-stubborn-song-a-small-box/"
+        },
+        {
+          "title": "FR3149719B1 – Musical device configured for driving at least one card and method of using said musical device | Patsnap Eureka",
+          "url": "https://eureka.patsnap.com/patent/FR3149719B1"
+        },
+        {
+          "title": "2026 Summer Program - MicroBit Lab",
+          "url": "https://fairfaxcollegiate.com/cmsdocument/1049"
+        },
+        {
+          "title": "P h D T h e s i s | L M U M u n i c h | B e a t R o s s m y | 2 0 2 2",
+          "url": "https://www.mmi.ifi.lmu.de/pubdb/publications/pub/rossmy2021dissertation/rossmy2021dissertation.pdf"
+        },
+        {
+          "title": "US8912419B2 - Synchronized multiple device audio playback and interaction - Google Patents",
+          "url": "https://patents.google.com/patent/US8912419B2/en"
+        },
+        {
+          "title": "Servos Do The Plucking In This MIDI Music Box | Hackaday",
+          "url": "https://hackaday.com/2018/03/23/servos-do-the-plucking-in-this-midi-music-box/"
+        },
+        {
+          "title": "MIDI Music Box - mitxela.com",
+          "url": "https://mitxela.com/projects/musicbox"
+        },
+        {
+          "title": "The Dorset County Museum Barrel Organ",
+          "url": "https://mbsgb.org.uk/TMB/V27_B7.pdf"
+        },
+        {
+          "title": "Rébecca Kleinberger | Publications",
+          "url": "https://rebeccakleinberger.com/pubs/"
+        },
+        {
+          "title": "Sherol Chen, PhD (Last Update: Nov 2024) - Technology",
+          "url": "https://sites.google.com/view/sherol/technology"
+        },
+        {
+          "title": "(PDF) The Music Box Operad: Random Generation of Musical Phrases from Patterns",
+          "url": "https://www.researchgate.net/publication/380145730_The_music_box_operad_Random_generation_of_musical_phrases_from_patterns"
+        },
+        {
+          "title": "THEATRES^ CIRCUSES",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/The_Billboard_1908-04-11-_Vol_20_Iss_15_%28IA_sim_billboard_1908-04-11_20_15%29.pdf"
+        },
+        {
+          "title": "The Jack-in-the-Box – Carie Juettner",
+          "url": "https://cariejuettner.com/2014/01/23/the-jack-in-the-box/"
+        },
+        {
+          "title": "MR. WM. T. SCHONING",
+          "url": "https://www.worldradiohistory.com/Archive-Radio-Journal/40s/Radio-%26-Television-Journal-1946-07.pdf"
+        },
+        {
+          "title": "Mechanized Voices and Machinic Bodies: The Music Box in US Popular Media",
+          "url": "https://libraetd.lib.virginia.edu/downloads/v118rf182?filename=Gunst_Stephanie_Mechanized_Voices_and_Machinic_Bodies.pdf"
+        }
+      ]
+    },
+    {
+      "cache": "r15otherseeds",
+      "available": true,
+      "results": [
+        {
+          "title": "Learning with Robotics Curriculum and Learning",
+          "url": "https://edurob.eu/resources/LearningWithRoboticsCurriculumAndLearningScenariosV1.pdf"
+        },
+        {
+          "title": "(PDF) Accessible Human-Robot Interaction for Telepresence Robots: A Case Study",
+          "url": "https://www.researchgate.net/publication/276087500_Accessible_Human-Robot_Interaction_for_Telepresence_Robots_A_Case_Study"
+        },
+        {
+          "title": "The Adaptive Architectural Layout: How the Control of a",
+          "url": "https://cas-bridge.xethub.hf.co/xet-bridge-us/69417bb991171752887f7213/b457eea2007765aad212b226461770a68cf95db613761285d06f63193cf7e21c?Expires=1781013253&Key-Pair-Id=K1LYXO563TGWFU&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9jYXMtYnJpZGdlLnhldGh1Yi5oZi5jby94ZXQtYnJpZGdlLXVzLzY5NDE3YmI5OTExNzE3NTI4ODdmNzIxMy9iNDU3ZWVhMjAwNzc2NWFhZDIxMmIyMjY0NjE3NzBhNjhjZjk1ZGI2MTM3NjEyODVkMDZmNjMxOTNjZjdlMjFjKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc4MTAxMzI1M319fV19&Signature=MEUCIDhN3t9kEq7IqClkzXw7WdqOtgpusN7GIn5r0cb~ELKFAiEAgz5BGijjTVhH0i0MCveu0vXSa1Pdi1-9EUHpVYqbqJQ_&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=cas%2F20260609%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260609T125413Z&X-Amz-Expires=3600&X-Amz-Signature=6fe5d9fc015d61288014cdcb58fba99d796ff1761ecb602a73c057d7e7cf20db&X-Amz-SignedHeaders=host&X-Xet-Cas-Uid=public&response-content-disposition=attachment%3B+filename%2A%3DUTF-8%27%272401.14078.pdf%3B+filename%3D%222401.14078.pdf%22%3B&response-content-type=application%2Fpdf"
+        },
+        {
+          "title": "Optimization of Fault-Insertion Test and",
+          "url": "https://dukespace.lib.duke.edu/server/api/core/bitstreams/041ba8db-b984-4fd7-b3ea-8436afc682df/content"
+        },
+        {
+          "title": "Factory Automation",
+          "url": "https://media.festo.com/media/114813_documentation.pdf"
+        },
+        {
+          "title": "Commanding an assistive robotic arm in activities of daily...",
+          "url": "https://reference-global.com/article/10.2478/ijhp-2025-0014?tab=article"
+        },
+        {
+          "title": "Effect of button layout on the exploration and learning of robot operation using an unfamiliar controller | PLOS One",
+          "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0272782"
+        },
+        {
+          "title": "Sequencing Coding Concept Activities – Perkins School for the Blind",
+          "url": "https://www.perkins.org/resource/sequencing-coding-concept-activities/"
+        },
+        {
+          "title": "FUZZY-LOGIC BASED ROBOTIC NAVIGATION",
+          "url": "https://studentrepo.iium.edu.my/bitstreams/70e69176-86a9-4a88-bb17-74386000b806/download"
+        },
+        {
+          "title": "Human-centered design and early evaluation of an interface for mobile-manipulator-mediated pediatric occupational therapy - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11958963/"
+        },
+        {
+          "title": "Products",
+          "url": "https://www.istus.com/products/fanucrockwell-connected-smart-manufacturing-system-csm"
+        },
+        {
+          "title": "AUTOMOTIVE TRAINING RESOURCES",
+          "url": "https://www.pertindustrials.com/_files/ugd/b08cf4_bfc6c542fbf549ce9845389598080766.pdf?index=true"
+        },
+        {
+          "title": "(PDF) Development and Evaluation of an Automated Repositioning Bed for Enhanced Patient and Caregiver Support",
+          "url": "https://www.researchgate.net/publication/402334920_Development_and_Evaluation_of_an_Automated_Repositioning_Bed_for_Enhanced_Patient_and_Caregiver_Support"
+        },
+        {
+          "title": "How to Design Ergonomic Remote Controls for Telerobotics Platforms",
+          "url": "https://eureka.patsnap.com/report-how-to-design-ergonomic-remote-controls-for-telerobotics-platforms"
+        },
+        {
+          "title": "Human-Centered Collaborative Robotic Workcell Facilitating Shared Autonomy for Disability-Inclusive Manufacturing",
+          "url": "https://www.mdpi.com/2079-9292/15/2/461/xml"
+        },
+        {
+          "title": "Human-Centered Collaborative Robotic Workcell Facilitating Shared Autonomy for Disability-Inclusive Manufacturing",
+          "url": "https://www.mdpi.com/2079-9292/15/2/461"
+        },
+        {
+          "title": "Accessible teleoperation of tendon-driven continuum robot with an intuitive game controller interface - Nicola Perugini, Matteo Russo, 2026",
+          "url": "https://journals.sagepub.com/doi/10.1177/17298806261419575"
+        },
+        {
+          "title": "General Vehicle Fault Setting and Maintenance Training Equipment | Engineering Teaching Apparatus Manufacturer",
+          "url": "https://www.coalitioneducation.com/General-Vehicle-Fault-Setting-and-Maintenance-Training-Equipment-p6842786.html"
+        }
+      ]
+    },
+    {
+      "cache": "r15fault",
+      "available": true,
+      "results": [
+        {
+          "title": "CircuTutor: Transforming Static Circuit Problems into Intelligent and Dynamic Tutoring",
+          "url": "https://arxiv.org/abs/2609.08254"
+        },
+        {
+          "title": "An intelligent tutoring system for circuit analysis | IEEE Journals & Magazine | IEEE Xplore",
+          "url": "https://ieeexplore.ieee.org/document/1629217/"
+        },
+        {
+          "title": "BEETLE II: Deep Natural Language Understanding and Automatic Feedback Generation for Intelligent Tutoring in Basic Electricity and Electronics - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/pii/S1560429226003550"
+        },
+        {
+          "title": "A Tool-Augmented Agentic AI Pipeline for Reliable Circuit-Analysis Tutoring with Local Language Models",
+          "url": "https://www.mdpi.com/2073-431X/15/10/647"
+        },
+        {
+          "title": "LNCS 4053 - Intelligent Tutoring Systems",
+          "url": "https://www.stat.cmu.edu/~brian/nynke/726-2021/project%20HCI%20Prereqs%20%28Elaine%2C%20Smeet%20%26%20Zhou%29/articles/2006_Book_IntelligentTutoringSystems.pdf"
+        },
+        {
+          "title": "ElectronixTutor: an intelligent tutoring system with multiple learning resources for electronics - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6310412/"
+        },
+        {
+          "title": "2.2. Intelligent Tutoring Systems                                                                 27",
+          "url": "https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-719.pdf"
+        },
+        {
+          "title": "WEB-BASED ETUTOR FOR LEARNING ELECTRICAL CIRCUIT ANALYSIS",
+          "url": "https://www.um.edu.mt/library/oar/bitstream/123456789/30246/1/SYMP%2014%202017%20all%2014FEB.pdf"
+        },
+        {
+          "title": "Evaluating Generative AI as a Real-Time Troubleshooting Assistant in Practical Electronics Training",
+          "url": "https://www.mdpi.com/2504-2289/10/9/310"
+        },
+        {
+          "title": "Intelligent tutoring with natural language",
+          "url": "https://citeseerx.ist.psu.edu/document?doi=2a8402d6211fef45f438c65dc72be77fad963d95&repid=rep1&type=pdf"
+        },
+        {
+          "title": "CircuTutor: Transforming Static Circuit Problems into Intelligent and Dynamic Tutoring | Paperlayer",
+          "url": "https://paperlayer.ai/abs/2609.08254v1"
+        },
+        {
+          "title": "AITEE -- Agentic Tutor for Electrical Engineering",
+          "url": "https://arxiv.org/abs/2505.21582"
+        },
+        {
+          "title": "Evaluating Generative AI as a Real-Time Troubleshooting Assistant in Practical Electronics Training[v1] | Preprints.org",
+          "url": "https://www.preprints.org/manuscript/202606.1898"
+        },
+        {
+          "title": "Session 2793",
+          "url": "https://peer.asee.org/interactive-multimedia-intelligent-tutoring-system-imits-a-progress-report.pdf"
+        },
+        {
+          "title": "Paper ID #49625",
+          "url": "https://peer.asee.org/55058.pdf"
+        },
+        {
+          "title": "CN122618855A – A virtual-real integrated photoelectric fire control system maintenance training and fault injection system | Patsnap Eureka",
+          "url": "https://eureka.patsnap.com/patent/CN122618855A"
+        },
+        {
+          "title": "[Literature Review] Chat Debugging: An Exploratory Study of Human-AI Collaboration to Debug Analog Circuits",
+          "url": "https://www.themoonlight.io/en/review/chat-debugging-an-exploratory-study-of-human-ai-collaboration-to-debug-analog-circuits"
+        },
+        {
+          "title": "(PDF) Agentic AI-Based Intelligent Conversational Tutor for Electronics Engineering Education A Multi-Agent Architecture with Pedagogical Reasoning, Circuit Simulation Integration, and Socratic Dialogue",
+          "url": "https://www.researchgate.net/publication/405692154_Agentic_AI-Based_Intelligent_Conversational_Tutor_for_Electronics_Engineering_Education_A_Multi-Agent_Architecture_with_Pedagogical_Reasoning_Circuit_Simulation_Integration_and_Socratic_Dialogue"
+        },
+        {
+          "title": "Design and Formative Evaluation of a Gamified Circuit Fault Diagnosis Simulator for Undergraduate Electrical Engineering",
+          "url": "https://eurekamag.com/research/110/457/110457098.php"
+        },
+        {
+          "title": "Sichuang Fan",
+          "url": "https://sichuangfan.com/en/projects/wandan-idea-incubator"
+        },
+        {
+          "title": "Intelligent tutoring system",
+          "url": "https://en.wikipedia.org/wiki/Intelligent_tutoring_system"
+        }
+      ]
+    },
+    {
+      "cache": "r15gravipaint",
+      "available": true,
+      "results": [
+        {
+          "title": "FluidLab: A Differentiable Environment for Benchmarking Complex Fluid Manipulation",
+          "url": "https://arxiv.org/abs/2303.02346"
+        },
+        {
+          "title": "FluidLab",
+          "url": "https://fluidlab2023.github.io/index.html"
+        },
+        {
+          "title": "Learning to write with the fluid rope trick - Soft Matter (RSC Publishing)",
+          "url": "https://pubs.rsc.org/en/content/articlehtml/2023/sm/d3sm00177f"
+        },
+        {
+          "title": "4.1 We encounter various manipulation tasks involving uids in everyday life. Left: real-world scenarios including making latte art, making ice creams and designing air ventilation systems. Right: simulation tasks in FluidLab involving latte art, ice-creams and indoor air circulation. 58",
+          "url": "https://www.ri.cmu.edu/app/uploads/2024/11/xianz1_phd_ri_2024-1.pdf"
+        },
+        {
+          "title": "The Pourtrait | Devpost",
+          "url": "https://devpost.com/software/the-pourtrait"
+        },
+        {
+          "title": "Learning to write with the fluid rope trick",
+          "url": "https://arxiv.org/abs/2302.05853"
+        },
+        {
+          "title": "fluidlab/README.md at main · thepacket/fluidlab · GitHub",
+          "url": "https://github.com/thepacket/fluidlab/blob/main/README.md"
+        },
+        {
+          "title": "GitHub - titusss/AI-Robot-Painter-KUKA: Load any image or let an AI generate one and paint it on canvas with a KUKA industrial robot · GitHub",
+          "url": "https://github.com/titusss/AI-Robot-Painter-KUKA"
+        },
+        {
+          "title": "Studio I_Anatomy of a Machine: Spill _ FLOWPRESS - IAAC BLOG",
+          "url": "https://blog.iaac.net/studio-_-flowpress-creating-patterns-with-parameters/"
+        },
+        {
+          "title": "Some fluid mechanical aspects of artistic painting | Phys. Rev. Fluids",
+          "url": "https://journals.aps.org/prfluids/abstract/10.1103/PhysRevFluids.4.110507"
+        },
+        {
+          "title": "Techniques Applied to Autonomous Liquid Pouring: A Scoping Review",
+          "url": "https://www.mdpi.com/2297-8747/31/1/30"
+        },
+        {
+          "title": "IMPASTO: Integrating Model-Based Planning with Learned Dynamics Models for Robotic Oil Painting Reproduction",
+          "url": "https://impasto-robopainting.github.io/"
+        },
+        {
+          "title": "U.S. Patent Application for PAINTING ROBOT Patent Application (Application #20260115930 issued April 30, 2026) - Justia Patents Search",
+          "url": "https://patents.justia.com/patent/20260115930"
+        },
+        {
+          "title": "Learning robot differential movements using a new educational robotics simulation tool - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9939860/"
+        },
+        {
+          "title": "Technology | FluidLab",
+          "url": "https://fluidlab.bio/technology/"
+        },
+        {
+          "title": "Paper ID #28248",
+          "url": "https://peer.asee.org/design-of-instructional-tools-to-facilitate-understanding-of-fluid-viscous-dampers-in-a-vibration-and-controls-class-and-course-assessment.pdf"
+        },
+        {
+          "title": "Some fluid mechanical aspects of artistic painting",
+          "url": "https://arxiv.org/abs/1912.03229"
+        },
+        {
+          "title": "Robot Gaining Accurate Pouring Skills through Self-Supervised Learning and Generalization",
+          "url": "https://arxiv.org/abs/2011.10150"
+        },
+        {
+          "title": "SIMULATION OF MAGN",
+          "url": "https://api.drum.lib.umd.edu/server/api/core/bitstreams/7b15b33b-61c5-45bc-8463-be7bca2d9e1a/content"
+        },
+        {
+          "title": "Visual Closed-Loop Control for Pouring Liquids",
+          "url": "https://rse-lab.cs.washington.edu/papers/closed-loop-pouring-icra-17.pdf"
+        },
+        {
+          "title": "Acrylic painting techniques",
+          "url": "https://en.wikipedia.org/wiki/Acrylic_painting_techniques"
+        },
+        {
+          "title": "EDavid (robot)",
+          "url": "https://en.wikipedia.org/wiki/EDavid_%28robot%29"
+        },
+        {
+          "title": "Rebelle (software)",
+          "url": "https://en.wikipedia.org/wiki/Rebelle_%28software%29"
+        },
+        {
+          "title": "Paint robot",
+          "url": "https://en.wikipedia.org/wiki/Paint_robot"
+        },
+        {
+          "title": "Pouring",
+          "url": "https://en.wikipedia.org/wiki/Pouring"
+        },
+        {
+          "title": "Pindar Van Arman",
+          "url": "https://en.wikipedia.org/wiki/Pindar_Van_Arman"
+        },
+        {
+          "title": "A fundamental misunderstanding of fluid stickiness?",
+          "url": "https://www.reddit.com/r/Houdini/comments/1c7gjli"
+        }
+      ]
+    },
+    {
+      "cache": "r15punchcompare",
+      "available": true,
+      "results": [
+        {
+          "title": "Use Musicboxmelodies from your AI assistant | Musicboxmelodies.com",
+          "url": "https://musicboxmelodies.com/ai/"
+        },
+        {
+          "title": "Grain as Note: A Bio-Tangible Interface for Interspecies Co-Composition via Wu Xing Sonification — Xia Liu, Hongbin Lin",
+          "url": "https://eccv-art-26.github.io/pieces/grain-as-note-a-bio-tangible-interface-for-interspecies-co-c/"
+        },
+        {
+          "title": "Forever Frequencies",
+          "url": "https://macmillan.studio/forever-frequencies"
+        }
+      ]
+    },
+    {
+      "cache": "r15unmet",
+      "available": true,
+      "results": [
+        {
+          "title": "What's a sensor or device that you really wish existed, but doesn't?",
+          "url": "https://www.reddit.com/r/homeassistant/comments/1leg420/whats_a_sensor_or_device_that_you_really_wish/"
+        },
+        {
+          "title": "thanks for the autocrafting, mojang!",
+          "url": "https://www.reddit.com/r/Minecraft/comments/txnbkx"
+        },
+        {
+          "title": "What sensors do you wish existed? Junior EE designing a low-power Home Assistant sensor node",
+          "url": "https://www.reddit.com/r/homeassistant/comments/1q7rcmp/what_sensors_do_you_wish_existed_junior_ee/"
+        },
+        {
+          "title": "The Hall of “the digital version is wayyyy better than the board game” Games",
+          "url": "https://www.reddit.com/r/boardgames/comments/1nipebj/the_hall_of_the_digital_version_is_wayyyy_better/"
+        },
+        {
+          "title": "Would you like it if Minecraft became more \"automatic\"?",
+          "url": "https://www.reddit.com/r/Minecraft/comments/17bwxq5"
+        },
+        {
+          "title": "Hey there, stop trying to convince me to abandon my new hobby for yours",
+          "url": "https://www.reddit.com/r/BitchEatingCrafters/comments/1pz0lxn/hey_there_stop_trying_to_convince_me_to_abandon/"
+        },
+        {
+          "title": "What board games do you enjoy more in their digital version than the physical one?",
+          "url": "https://www.reddit.com/r/boardgames/comments/1gr7dgs/what_board_games_do_you_enjoy_more_in_their/"
+        },
+        {
+          "title": "You rub the proverbial lamp, and a board game genie pops out. What 3 wishes do you make?",
+          "url": "https://www.reddit.com/r/boardgames/comments/x2qy0u"
+        },
+        {
+          "title": "Which board games actually play better as video games?",
+          "url": "https://www.reddit.com/r/boardgames/comments/1700mbx"
+        },
+        {
+          "title": "Are there any board games that you prefer digitally?",
+          "url": "https://www.reddit.com/r/boardgames/comments/1qb0qy8/are_there_any_board_games_that_you_prefer/"
+        },
+        {
+          "title": "Crafting a bee-themed postcard",
+          "url": "https://www.reddit.com/r/oddlysatisfying/comments/128koj5"
+        },
+        {
+          "title": "Steam - Digital Board Games",
+          "url": "https://www.reddit.com/r/boardgames/comments/1fybl3k/steam_digital_board_games/"
+        },
+        {
+          "title": "[RELEASE] HomeSeer HSM200 Multi-Sensor - Page 4 - Custom Apps and Drivers - Hubitat",
+          "url": "https://community.hubitat.com/t/release-homeseer-hsm200-multi-sensor/39899?page=4"
+        },
+        {
+          "title": "Door sensor shows closed before door is fully closed. How can I adjust? - Home - Wyze Forum",
+          "url": "https://forums.wyze.com/t/door-sensor-shows-closed-before-door-is-fully-closed-how-can-i-adjust/283101"
+        },
+        {
+          "title": "Do you have hobby -related regrets? | Audiokarma Home Audio Stereo Discussion Forums",
+          "url": "https://audiokarma.org/forums/threads/do-you-have-hobby-related-regrets.1046739/"
+        },
+        {
+          "title": "Topic of the Week: Three Boardgame Wishes For You - Boardgames - tekeli.li forums, including unofficial SU&SD discussion",
+          "url": "https://discussion.tekeli.li/t/topic-of-the-week-three-boardgame-wishes-for-you/6704"
+        },
+        {
+          "title": "Meross Wireless Temperature Smart Sensor (Hub Included) $13.43 + Free Shipping w/ Prime or $25+ orders - 2023-03-02",
+          "url": "https://slickdeals.net/f/16486111-meross-wireless-temperature-smart-sensor-hub-included-13-43-free-shipping-w-prime-or-25-orders"
+        },
+        {
+          "title": "Shower humidity sensor - Hardware - Home Assistant Community",
+          "url": "https://community.home-assistant.io/t/shower-humidity-sensor/364151"
+        },
+        {
+          "title": "Sensors - Wyze Forum",
+          "url": "https://forums.wyze.com/c/sensors/51?page=16"
+        },
+        {
+          "title": "Tool Regrets! - FineWoodworking",
+          "url": "https://www.finewoodworking.com/forum/tool-regrets"
+        },
+        {
+          "title": "Motion Sensor false positives - Sensors - Wyze Forum",
+          "url": "https://forums.wyze.com/t/motion-sensor-false-positives/178362"
+        },
+        {
+          "title": "keep discarding on the wrong pile, wish for confirm or undo - Board Game Arena",
+          "url": "https://forum.boardgamearena.com/viewtopic.php?p=267681"
+        },
+        {
+          "title": "‎Open sensor notification | Ring Community",
+          "url": "https://community.ring.com/t/open-sensor-notification/10416/121"
+        },
+        {
+          "title": "Contact sensor at right angle - Cameras - Wyze Forum",
+          "url": "https://forums.wyze.com/t/contact-sensor-at-right-angle/37351"
+        },
+        {
+          "title": "UC Berkeley",
+          "url": "https://escholarship.org/content/qt8jv7t4d9/qt8jv7t4d9.pdf"
+        },
+        {
+          "title": "AUTO-RADIO NUMBER",
+          "url": "https://electronicsandbooks.com/edt/manual/Magazine/R/Radio%20Craft%20US/1930s/Radio-Craft-1934-07%20c20131207%20%5B68%5D.pdf"
+        },
+        {
+          "title": "OVER 125 ILLUSTRATIONS",
+          "url": "https://electronicsandbooks.com/edt/manual/Magazine/R/Radio%20Electronics%20US/40s/1941-06%20Radio%20Craft.pdf"
+        },
+        {
+          "title": "Page 6 / New Atari User",
+          "url": "https://datassette.s3.us-west-004.backblazeb2.com/revistas/page_6_n.44_jun90.pdf"
+        },
+        {
+          "title": "Home Trading",
+          "url": "https://newspapers.swco.ttu.edu/server/api/core/bitstreams/a19bd1c2-8ace-4049-9afc-1a5a314f1399/content"
+        }
+      ]
+    },
+    {
+      "cache": "r15needsdetail",
+      "available": true,
+      "results": [
+        {
+          "title": "What's a sensor or device that you really wish existed, but doesn't? : r/homeassistant",
+          "url": "https://www.reddit.com/r/homeassistant/comments/1leg420/whats_a_sensor_or_device_that_you_really_wish/"
+        },
+        {
+          "title": "What sensors do you wish existed? Junior EE designing a low-power Home Assistant sensor node : r/homeassistant",
+          "url": "https://www.reddit.com/r/homeassistant/comments/1q7rcmp/what_sensors_do_you_wish_existed_junior_ee/"
+        }
+      ]
+    },
+    {
+      "cache": "r15executorch",
+      "available": true,
+      "results": [
+        {
+          "title": "Getting Started with ExecuTorch — ExecuTorch 1.5 documentation",
+          "url": "https://docs.pytorch.org/executorch/stable/getting-started.html"
+        },
+        {
+          "title": "docs.pytorch.org",
+          "url": "https://docs.pytorch.org/executorch/stable/backends-xnnpack.html"
+        }
+      ]
+    },
+    {
+      "cache": "r15etruntime",
+      "available": true,
+      "results": [
+        {
+          "title": "Getting Started with ExecuTorch — ExecuTorch 1.5 documentation",
+          "url": "https://docs.pytorch.org/executorch/stable/getting-started.html"
+        },
+        {
+          "title": "Getting Started with ExecuTorch — ExecuTorch 1.5 documentation",
+          "url": "https://docs.pytorch.org/executorch/stable/getting-started.html"
+        },
+        {
+          "title": "docs.pytorch.org",
+          "url": "https://docs.pytorch.org/executorch/stable/backends-xnnpack.html"
+        }
+      ]
+    },
+    {
+      "cache": "r15etrequirements",
+      "available": true,
+      "results": [
+        {
+          "title": "Getting Started with ExecuTorch — ExecuTorch 1.5 documentation",
+          "url": "https://docs.pytorch.org/executorch/stable/getting-started.html"
+        }
+      ]
+    }
+  ]
+}

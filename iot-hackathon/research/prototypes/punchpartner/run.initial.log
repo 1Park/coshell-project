@@ -1,0 +1,93 @@
+parsed 50 windows 65
+parsed 150 windows 223
+parsed 200 windows 281
+parsed 350 windows 521
+parsed 400 windows 600
+windows {'train': 450, 'val': 85, 'test': 50}
+epoch 5 val nll 1.4912
+epoch 10 val nll 1.2402
+epoch 15 val nll 1.1551
+epoch 20 val nll 1.1535
+epoch 25 val nll 1.1354
+epoch 30 val nll 1.1439
+epoch 35 val nll 1.1289
+epoch 40 val nll 1.1461
+{
+  "scope": "Offline symbolic infilling only; no physical punch, listening study, or VENTUNO/ExecuTorch runtime test.",
+  "torch_version": "2.14.1",
+  "training_device": "mps",
+  "seed": 86,
+  "preprocessing_counts": {
+    "files_seen": 433,
+    "nonmonophonic_or_off_grid": 74,
+    "nonmajor_or_no_key_parts": 194,
+    "files_with_windows": 158,
+    "files_without_windows": 7
+  },
+  "windows_by_partition": {
+    "train": 450,
+    "val": 85,
+    "test": 50
+  },
+  "params": 71120,
+  "epochs": 40,
+  "best_validation_nll": 1.1229313611984253,
+  "transformer": {
+    "masked_nll": 0.9990634918212891,
+    "masked_accuracy": 0.677916360968452,
+    "masked_onset_pitch_accuracy": 0.12383177570093458,
+    "masked_cells": 1363,
+    "masked_true_onsets": 428
+  },
+  "order2_phase_markov_bridge": {
+    "masked_nll": 1.2565916451457244,
+    "masked_accuracy": 0.6698459280997799,
+    "masked_onset_pitch_accuracy": 0.26635514018691586,
+    "masked_cells": 1363,
+    "masked_true_onsets": 428
+  },
+  "trace_initial_tokens": [
+    10,
+    16,
+    16,
+    16,
+    9,
+    16,
+    10,
+    11,
+    12,
+    16,
+    11,
+    16,
+    16,
+    16,
+    10,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    10,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16
+  ],
+  "original_holes_preserved": true,
+  "export_status": "torch_export_succeeded_not_executorch",
+  "wall_seconds": 27.632699728012085,
+  "limits": [
+    "Historical score infilling is not preference, musical quality, or co-creation value.",
+    "Music21 supplies 433 Bach corpus files; filtered windows are not 433 independent compositions.",
+    "Only major-key monophonic eighth-grid diatonic windows; chromatic windows omitted, not rounded.",
+    "Physical music-box range and minimum repeat distance must be calibrated on actual kit.",
+    "Export to Torch IR is not ExecuTorch execution or NPU acceleration."
+  ]
+}

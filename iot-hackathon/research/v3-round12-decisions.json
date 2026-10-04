@@ -1,0 +1,33 @@
+[
+  {
+    "id": "N073",
+    "name": "SoloBoccia — 목표 위치를 지정하면 경사로를 조정해 공을 보내는 독립 보치아 보조",
+    "status": "REJECTED",
+    "stage": "v3_round12",
+    "duplicate_check": "N034/N055/N018/R28 대조. 바람으로 새 배를 조종하는 경기·줄넘기·공예 힘 지도·일반 제스처 입력과 다르며, 경사로 조작 보조인 없이 공을 보내는 접근성 과제.",
+    "reason": "G07/G13 FAIL: BCI-enabled Boccia 연구가 경사로 회전·높이·공 방출과 독립 플레이를 실제로 구현했고, 저기술 자가 조작 경사로도 공개됐다. 목표 지정/학습 제어 추가가 사용자의 새 작업을 충분히 만들지 못한다. 로봇 보치아 강화학습 연구는 시뮬레이션이라는 증거 수준을 구별한다.",
+    "sources": [
+      "https://www.sciexplor.com/ec/articles/ec.2026.0020",
+      "https://www.lboro.ac.uk/schools/design-creative-arts/inclusive-sports-product-design/previous-winners/bocca-1/",
+      "https://sigarra.up.pt/feup/en/pub_geral.pub_view?pi_pub_base_id=464726"
+    ]
+  },
+  {
+    "id": "N074",
+    "name": "FoldMemory — 여러 실물 인쇄 조각의 의미를 입체 면에 배치해 기념 상자로 재단·접선 가공",
+    "status": "OPEN",
+    "stage": "v3_round12",
+    "parent_id": "N072",
+    "duplicate_check": "N072 직접 변형. 한 장의 그림 보존/기존 상자 blank 배치에서, 복수 티켓·엽서의 의미 영역과 입체 면 관계(목적지와 날짜가 함께, 그림은 접히지 않게)를 만족하는 분할 전개도로 변경. N046의 소거 게임과는 보존할 실물 결과를 제조하는 작업이 다름.",
+    "reason": "G02/G06/G07/G09/G13 OPEN: 복수 원문의 의미 영역을 입체 면에 맞추는 변형과 구현 경로를 카드로 구체화. 그러나 기존 상자에 원본 조각을 그대로 붙이는 대안 대비 시간·실수·완성 결과의 이득이 아직 분명하지 않다. 단순 보존 영역 지정을 AI로 치환한 정도라면 제외한다. 모델의 실제 인쇄물 성능/ExecuTorch 내보내기는 실행 전.",
+    "sources": [
+      "https://www.brother-usa.com/blogs/brother-crafts/using-scanncutcanvas-and-scanncut-to-make-heart-boxes",
+      "https://www.eastmancuts.com/products/visionpro/",
+      "https://github.com/AntonFlorey/PolyZamboni",
+      "https://github.com/Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB",
+      "https://mindee.github.io/doctr/modules/models.html",
+      "https://github.com/pytorch/executorch/blob/main/docs/source/getting-started.md"
+    ],
+    "card": "research/N074_FOLD_MEMORY.md"
+  }
+]

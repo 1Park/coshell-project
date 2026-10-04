@@ -1,0 +1,108 @@
+[
+  {
+    "id": "N074",
+    "name": "FoldMemory — 여러 실물 인쇄 조각의 의미를 입체 면에 배치해 기념 상자로 재단·접선 가공",
+    "status": "REJECTED",
+    "stage": "v3_round12",
+    "parent_id": "N072",
+    "duplicate_check": "N072 직접 변형. 한 장의 그림 보존/기존 상자 blank 배치에서, 복수 티켓·엽서의 의미 영역과 입체 면 관계(목적지와 날짜가 함께, 그림은 접히지 않게)를 만족하는 분할 전개도로 변경. N046의 소거 게임과는 보존할 실물 결과를 제조하는 작업이 다름.",
+    "reason": "G02/G06/G13 FAIL: 합성 기하 코드로 닫히는 상자 분할·탭 배치를 확인했지만, 기존 상자에 원문 조각을 붙이는 대안보다 실제 수고나 결과가 나아지는 작업을 확보하지 못했다. 보존 관계 추가가 AI를 필요하게 만드는 인위적 복잡도로 남아 제외. 이전 카드/기하 코드/OPEN 이력은 보존.",
+    "sources": [
+      "https://www.brother-usa.com/blogs/brother-crafts/using-scanncutcanvas-and-scanncut-to-make-heart-boxes",
+      "https://www.eastmancuts.com/products/visionpro/",
+      "https://github.com/AntonFlorey/PolyZamboni",
+      "https://github.com/Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB",
+      "https://mindee.github.io/doctr/modules/models.html",
+      "https://github.com/pytorch/executorch/blob/main/docs/source/getting-started.md"
+    ],
+    "card": "research/N074_FOLD_MEMORY.md",
+    "history": [
+      {
+        "stage": "before_round13_geometry_probe",
+        "status": "OPEN",
+        "reason": "G02/G06/G07/G09/G13 OPEN: 복수 원문의 의미 영역을 입체 면에 맞추는 변형과 구현 경로를 카드로 구체화. 그러나 기존 상자에 원본 조각을 그대로 붙이는 대안 대비 시간·실수·완성 결과의 이득이 아직 분명하지 않다. 단순 보존 영역 지정을 AI로 치환한 정도라면 제외한다. 모델의 실제 인쇄물 성능/ExecuTorch 내보내기는 실행 전."
+      },
+      {
+        "stage": "before_round14_value_decision",
+        "status": "OPEN",
+        "reason": "G02/G06/G07/G09/G13 OPEN: 복수 원문의 의미 영역을 입체 면에 맞추는 변형과 구현 경로를 카드로 구체화. 그러나 기존 상자에 원본 조각을 그대로 붙이는 대안 대비 시간·실수·완성 결과의 이득이 아직 분명하지 않다. 단순 보존 영역 지정을 AI로 치환한 정도라면 제외한다. 모델의 실제 인쇄물 성능/ExecuTorch 내보내기는 실행 전. 13차 합성 기하 코드에서 두 카드의 세 면씩 분할·탭 배치·닫힌 모서리 대응을 확인했으나 실제 절단/AI/가치 검증은 아니므로 OPEN 유지."
+      }
+    ],
+    "artifacts": [
+      "research/prototypes/foldmemory/geometry_probe.py",
+      "research/prototypes/foldmemory/geometry_report.json",
+      "research/prototypes/foldmemory/layout.svg"
+    ]
+  },
+  {
+    "id": "N082",
+    "name": "GraviPaint — 보존할 무늬와 채울 영역을 지정하면 실제 유동화 캔버스를 기울이는 보조대",
+    "status": "OPEN",
+    "stage": "v3_round13",
+    "duplicate_check": "N026/N040/N060/N034 대조. 숨은 종이 수분 추정이나 화가의 다음 의도 추정 대신 사용자가 고른 무늬의 변형과 실제 물감 전면을 관측해 전역 경사를 조절. N034와 학습 동역학 제어는 공유하므로 실제 예술 작업/점성 도막이라는 차이가 충분한지도 G14에서 검토.",
+    "reason": "G06/G08/G09/G13 OPEN: 작은 2축 경사대와 실제 유동화 작업으로 범위를 잡음. 단순 색 덩어리 중심 추적이 아니라 보존 영역의 변형과 빈 영역의 충전을 함께 다룬다. 다만 같은 관측을 쓰는 온라인 선형 유동 모델보다 학습 모델이 나을 조건, 숨은 도막 두께에 대한 관측 충분성, 데이터 수집·교체 시간을 더 확인해야 함. 실제 물감을 제어한 실험은 없음.",
+    "card": "research/N082_GRAVI_PAINT.md",
+    "sources": [
+      "https://acrylicpouring.com/diagonal-pour/",
+      "https://digitalcommons.calpoly.edu/theses/2205/",
+      "https://devpost.com/software/the-pourtrait",
+      "https://www.pratt.edu/news/building-bridges-at-the-seoul-biennale/",
+      "https://arxiv.org/abs/1901.06028",
+      "https://goldenartistcolors.com/resources/color-pouring-mediums-gloss-and-matte"
+    ]
+  },
+  {
+    "id": "N083",
+    "name": "BubbleRoute — 이미 붙인 필름의 기포를 읽고 롤러 경로로 가장자리까지 밀어내는 장치",
+    "status": "REJECTED",
+    "stage": "v3_round14",
+    "duplicate_check": "N009/N024/N029 대조. 박리·초기 테이프 걸기·위딩 대신 이미 접착된 필름의 기포 복구를 목표로 함.",
+    "reason": "G08/G09/G13 FAIL: 보이는 기포와 접착 결함·먼지를 구별하고, 이미 붙은 막 아래에서 실제로 배출 가능한 경로를 확보해야 한다. 일반 롤러 압착이 가능한 상태만 시연하면 단순 압착/초기 부착이라는 강한 대안을 넘기 어렵다. 제조사의 자동 비전 정렬·롤러 부착은 예방 흐름의 선행이며 정확히 같은 사후 기포 복구 구현으로 단정하지 않음.",
+    "sources": [
+      "https://www.hangmotech.com/",
+      "https://kaisiai.com/"
+    ]
+  },
+  {
+    "id": "N084",
+    "name": "ReelDuel — 당김과 놓기 습관을 학습해 페인트 동작을 하는 힘 피드백 상대",
+    "status": "REJECTED",
+    "stage": "v3_round14",
+    "duplicate_check": "N001/N018/N034/N077/F10 대조. 운반 협조·힘 지도·제작물 조종·가상 잠금 훈련과 달리 인간의 시간적 힘 패턴을 상대하는 경기 구상.",
+    "reason": "G02/G06/G13 FAIL: 단순 줄다리기는 모터 힘/반응 속도가 지배하고, 출력·에너지·행동 제한을 추가한 안도 고정 타이밍/무작위 힘 변화보다 학습이 필요한 전략을 충분히 만들지 못했다. 숨은 목표를 사전에 정해도 물리 신호에 나타나지 않으면 모델이 알 수 없다. The Tight Game은 인간 간 힘 보정 선행이며 학습 AI 상대를 이미 구현한 것으로 오인하지 않음.",
+    "sources": [
+      "https://shunichikasahara.com/portfolio/the-tight-game/",
+      "https://www.microsoft.com/en-us/research/publication/haptic-battle-pong-high-degree-freedom-haptics-multiplayer-gaming-environment-2/?lang=zh-cn"
+    ]
+  },
+  {
+    "id": "N085",
+    "name": "StillPaper — 도구를 잡아당기지 않고 실제 종이를 움직여 떨림 흔적을 줄이는 작업대",
+    "status": "REJECTED",
+    "stage": "v3_round14",
+    "parent_id": "N060",
+    "duplicate_check": "N060/N071/N018 대조. 화가의 다음 작업 영역/형태를 추측하거나 펜에 힘을 가하는 대신, 짧은 도구 운동을 예측해 종이의 상대 위치를 보상. 기존 이동 이젤의 위치 변경과 같은 역할이라고 세지 않지만, 일반 떨림 보상 장치의 작동 대상만 바꾼 것인지 G07/G13 재검토 필요.",
+    "reason": "G06/G09/G11/G13 FAIL: UCI hw_dataset 40개 기록을 5회 파일 분할해 작은 MLP를 실제 학습/평가했다. 선형 AR 대비 평균 정규화 RMSE 감소 2.16%, 기록별 상대 감소 중앙값 0.78%로 현재 안의 AI 추가 이득이 작다. 고속 위치 측정·종이 구동·마찰·자발 운동 보존의 직렬 부담은 남는다. 필터 신호 예측 결과를 실제 필기 개선/의료 효능으로 바꾸어 주장하지 않음.",
+    "card": "research/N085_STILL_PAPER.md",
+    "sources": [
+      "https://pubmed.ncbi.nlm.nih.gov/36170410/",
+      "https://archive.ics.uci.edu/dataset/395/parkinson%2B",
+      "https://publications.ri.cmu.edu/active-tremor-compensation-in-handheld-instrument-for-microsurgery",
+      "https://doi.org/10.1016/j.ijhcs.2026.103862"
+    ],
+    "history": [
+      {
+        "stage": "before_round14_offline_probe",
+        "status": "OPEN",
+        "reason": "G06/G07/G08/G09/G11/G13 OPEN: 실제 종이와 도구 사이 상대 운동을 보상하는 2축 지그로 범위를 잡음. 신호 예측 연구와 공개 좌표/시간 데이터 경로를 확보했으나 실제 모델/기구 성능·자발 운동 보존·사용자 이점은 아직 미검증. 지연 보상에 학습이 필요한지 선형 예측/적응 주파수 모델과 비교할 예정이며 의료 효능을 주장하지 않음."
+      }
+    ],
+    "evidence_level": "offline_recorded_data_forecast_not_hardware_or_clinical_test",
+    "artifacts": [
+      "research/prototypes/stillpaper/README.md",
+      "research/prototypes/stillpaper/forecast_probe.py",
+      "research/prototypes/stillpaper/forecast_report.json",
+      "research/prototypes/stillpaper/cross_validation_summary.json"
+    ]
+  }
+]

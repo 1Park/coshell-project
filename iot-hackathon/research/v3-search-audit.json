@@ -1,0 +1,1780 @@
+{
+  "date": "2026-10-04",
+  "scope": "v3 검색 메타데이터. 반환된 모든 결과가 근거나 정독 자료는 아님. 초기 4-query 탐색은 아래 별도 필드에만 기록.",
+  "initial_queries": [
+    "cooperative manual carrying furniture haptic handles intention force sensors assistance",
+    "automatic hose reel tension machine learning adaptive cable slack robot",
+    "machine vibration scheduling coordination multiple machines transmitted vibration controller",
+    "motorized acoustic panels feedback microphone automatic room acoustics control"
+  ],
+  "queries": [
+    {
+      "query": "\"human human\" \"carrying\" \"haptic\" intention",
+      "status": "fulfilled",
+      "results": [
+        {
+          "title": "Cognitive Interaction in Motion ‒ BioRob ‐ EPFL",
+          "url": "https://www.epfl.ch/labs/biorob/research/humanoid/cogimon/"
+        },
+        {
+          "title": "Human Intention Detection as a Multiclass Classification Problem: Application in Physical Human–Robot Interaction While Walking | IEEE Journals & Magazine | IEEE Xplore",
+          "url": "https://ieeexplore.ieee.org/document/8429081/"
+        },
+        {
+          "title": "Human Intention Detection as a Multiclass Classification Problem: Application in Physical Human–Robot Interaction While Walking | OrthoScience | OrthoArchives",
+          "url": "https://orthoarchives.com/en/orthoscience/article/human-intention-detection-as-a-multiclass-classification-problem-application-in-oarc-a0011971212"
+        },
+        {
+          "title": "Human-Human, Human-Robot and Robot-Robot Interaction While Walking: Data Analysis, Modelling and Control | EPFL Graph Search",
+          "url": "https://graphsearch.epfl.ch/en/publication/268527"
+        },
+        {
+          "title": "Trends in Haptic Communication of Human-Human Dyads: Toward Natural Human-Robot Co-manipulation - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7925623/"
+        },
+        {
+          "title": "Dealing with instability in bimanual and collaborative tasks.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/26736535/"
+        },
+        {
+          "title": "Human–human and human–robot co–manipulation: A biomechanical analysis of a joint carrying task - German Sport University Cologne",
+          "url": "https://fis.dshs-koeln.de/en/publications/humanhuman-and-humanrobot-comanipulation-a-biomechanical-analysis/"
+        },
+        {
+          "title": "Human–human and human–robot co–manipulation: A biomechanical analysis of a joint carrying task - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0921889026000333"
+        },
+        {
+          "title": "(PDF) Collaborative Human-Humanoid Carrying Using Vision and Haptic Sensing",
+          "url": "https://www.researchgate.net/publication/281886117_Collaborative_Human-Humanoid_Carrying_Using_Vision_and_Haptic_Sensing"
+        },
+        {
+          "title": "Data-Driven Modelling of Human-Human Co-Manipulation Using Force and Muscle Surface Electromyogram Activities",
+          "url": "https://www.mdpi.com/2079-9292/10/13/1509"
+        },
+        {
+          "title": "Trends in Haptic Communication of Human-Human Dyads: Toward Natural Human-Robot Co-manipulation",
+          "url": "https://www.frontiersin.org/journals/neurorobotics/articles/10.3389/fnbot.2021.626074/pdf"
+        },
+        {
+          "title": "Human–human and human–robot co–manipulation: A biomechanical analysis of a joint carrying task - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0921889026000333"
+        },
+        {
+          "title": "Walking paths during collaborative carriages do not follow the simple rules observed in the locomotion of single walking subjects - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9481648/"
+        },
+        {
+          "title": "Haptic Communication in Human-Human and Human-Robot Co-Manipulation",
+          "url": "https://aabl.cs.tufts.edu/papers/roman2025_kat.pdf"
+        },
+        {
+          "title": "# Guidance for Human-Human Cooperation",
+          "url": "https://usiena-air.unisi.it/retrieve/e0feeaaa-03c0-44d2-e053-6605fe0a8db0/phd_unisi_569207_2.pdf"
+        },
+        {
+          "title": "lirmm-00857659, version 1 - 3 Sep 2013 | Human-Humanoid Joint Haptic Table Carrying Task with Height Stabilization using Vision Agravante1 Cherubini1 Bussy1,2 Kheddar1,2 Don Joven , Andrea , Antoine and Abderrahmane Abstract— In this paper, a first step is taken towards using grasped an object on opposite ends and are moving it vision in human-humanoid haptic joint actions. Haptic joint together. This task has two important aspects: actions are characterized by physical interaction throughout 1) both robot and human are doing jointly the same task, the execution of a common goal. Because of this, most of the 2) a haptic interaction exists. focus is on the use of force/torque-based control. However, force/torque information is not rich enough for some tasks. A haptic interaction is said to exist since forces applied by Here, a particular case is shown: height stabilization during one agent (either human or robot) are felt by the other (indi- table carrying. To achieve this, a visual servoing controller rectly through the object). These two conditions characterize is used to generate a reference trajectory for the impedance “human-robot haptic joint actions”. In this research area, the controller. The control law design is fully described along main goal is to regulate the interaction forces for safety and with important considerations for the vision algorithm and a framework to make pose estimation robust during the table make the robot proactive in helping the human [2], [3]. Since carrying task of the humanoid robot. We then demonstrate all physical interaction is the focus, most works in this field use this by an experiment where a human and the HRP-2 humanoid data from force/torque sensors only to do the task. jointly transport a beam using combined force and vision data Recent advances on human-humanoid haptic joint actions to adjust the interaction impedance while at the same time are presented in [4], [5], where the HRP-2 carries a ta- keeping the inclination of the beam horizontal. Index Terms— Physical Human-Robot Interaction, Human ble/beam with a human. This was done by first studying and humanoid skills/cognition/interaction. human-human dyads to try and understand how they coop- erate for such a task [4]. These observations were exploited I. INTRODUCTION to achieve a proactive behavior, using impedance control [6], which can enable the robot to be either leader or follower Humanoid robotics focuses on the design of robots directly in the task [5]. Both works: [4], [5] are achieved using only inspired by human capabilities. This design gives many haptic information. To build on these results, we propose the advantages when working together with humans in perform- additional use of visual information during the task. ing tasks. Because of this, humanoids are ideal research Vision brings a lot of new information that cannot be platforms for physical Human-Robot Interaction (pHRI). obtained from force/torque sensors. For example, informa- Typically, humans have extensive experience in physically tion about object motion and human gestures/pose may be collaborating with each other. Humanoid robots simplify acquired. However, the integration of such information into such interactions, since they possess a human-like range human-robot haptic joint actions is not straightforward. The of motion and sensing capabilities. These can be used to main issues are: what information would be helpful? how create suitable behaviors, reducing the need for the human can this information be reliably obtained in the context of the cooperator to learn how to interact with the robot. Although task and platform? and how/where should this information this goal is clear, many challenges are still present in the be used? Since the priority should still be interaction force various research areas. The particular focus of this work is regulation, the last issue is particularly important and implies in the integration of visual servoing in pHRI, specifically in the need for combining vision with force data. human-humanoid collaborative tasks. In this paper, a first step to incorporating vision is pre- Early work on human-humanoid collaboration was done sented using a particular case of “human-humanoid haptic in the Humanoid Robotics Project (HRP), where the HRP-2P joint action”: carrying the table/beam together while keeping humanoid cooperates with a human for a panel transportation it horizontal. In fact, in [4], [5] the height at which the HRP- task [1]. Here, vision was used to recognize the panel to be 2 holds the table is kept constant, with no regard for how grasped. However, this is different from the topic of this the human holds the table at the other end. However, it is paper. Grasping the panel is an interaction of the robot and desirable to keep the table horizontal to avoid any objects the panel only. It does not physically involve the human. on top from sliding. The other aim is that the robot should The focus of the work here is on using visual information be the one to adjust to the human when s/he is leading the during the carrying task where both human and robot already task. The strategy here is using vision to observe the table’s 1CNRS-UM2 LIRMM UMR 5506, Interactive Digital inclination and then visually servoing the height in order Human group, 161 Rue Ada, 34392 Montpellier, France to correct this. This is done while regulating the interaction {firstnames.lastname}@lirmm.fr. forces by using impedance control. 2CNRS-AIST, JRL (Joint Robotics Laboratory), UMI 3218/CRT, Intelli- Another interesting thing about the height control task gent Systems Research Institute, AIST Central 2, Umezono 1-1-1, Tsukuba, 305-8568, Japan. is that it is observable by both vision and force/torque",
+          "url": "https://citeseerx.ist.psu.edu/document?doi=c61df092e34e14681386a8a1c1c4b29ac03152bb&repid=rep1&type=pdf"
+        },
+        {
+          "title": "Human-Humanoid Collaborative Carrying",
+          "url": "https://scispace.com/pdf/human-humanoid-collaborative-carrying-5a9pk5ugng.pdf"
+        }
+      ]
+    },
+    {
+      "query": "\"hose reel\" \"adaptive\" tension",
+      "status": "fulfilled",
+      "results": [
+        {
+          "title": "Adaptive predefined-time control of PMSM drive system for suppressing hose whipping in aerial refueling - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/pii/S1270963826018377"
+        },
+        {
+          "title": "CN209265240U - An Adaptive Control System of Hose Reel with Hydraulic Grab - Google Patents",
+          "url": "https://patents.google.com/patent/CN209265240U/en"
+        },
+        {
+          "title": "Retractable Garden Hose Reel 1/2in 130ft | Giraffe Tools",
+          "url": "https://giraffetools.com/products/retractable-garden-hose-reel-1-2in-130ft"
+        },
+        {
+          "title": "High-pressure cleaning machine with anti-winding hose storage structure | 특허 | 디지털집현전",
+          "url": "https://k-knowledge.kr/srch/read.jsp?id=285715158"
+        },
+        {
+          "title": "Retractable Garden Hose Reel with Automatic - Giraffe Tools",
+          "url": "https://giraffetools.com/products/retractable-garden-hose-reel"
+        },
+        {
+          "title": "Retractable Hose Reel 115ft 5/8in High-Flow Wall Mount | GarageForm",
+          "url": "https://garage-form.com/products/giraffe-tools-retractable-hose-reel-115ft-5-8in"
+        },
+        {
+          "title": "Retractable Hose Reel 90ft 5/8in High-Flow Wall Mount | GarageForm",
+          "url": "https://garage-form.com/products/giraffe-tools-retractable-hose-reel-90ft-5-8in"
+        },
+        {
+          "title": "Giraffe Retractable Garden Hose Reel 5/8 - 90 FT Wall Mount",
+          "url": "https://giraffetools.com/products/retractable-garden-hose-reel-5-8in-90ft"
+        },
+        {
+          "title": "Retractable Garden Hose Reel 1/2in 155ft | Giraffe Tools",
+          "url": "https://giraffetools.com/products/retractable-garden-hose-reel-1-2in-155ft"
+        },
+        {
+          "title": "Retractable Hose Reel 130ft 1/2in Wall Mount Auto-Rewind | GarageForm",
+          "url": "https://garage-form.com/products/giraffe-tools-retractable-hose-reel-130ft"
+        },
+        {
+          "title": "Retractable Hose Reel 100ft 1/2in Wall Mount Auto-Rewind | GarageForm",
+          "url": "https://garage-form.com/products/giraffe-tools-retractable-hose-reel-100ft"
+        },
+        {
+          "title": "Retractable Hose Reel 155ft Wall Mount Auto-Rewind | GarageForm",
+          "url": "https://garage-form.com/products/giraffe-tools-retractable-hose-reel-155ft"
+        },
+        {
+          "title": "An Adaptive Neuro-Fuzzy Controller for Vibration Suppression of",
+          "url": "https://lurepository.lakeheadu.ca/bitstream/handle/2453/5027/GennoA2022m-1a.pdf?isAllowed=y&sequence=1"
+        },
+        {
+          "title": "Astec Peterson Blower Trucks & Trailers",
+          "url": "https://astecindustries.com/wp-content/uploads/astec-peterson-blower-trucks-trailers-brochure.pdf"
+        },
+        {
+          "title": "Chri",
+          "url": "https://www.growertalks.com/utility/PDF.aspx?id=20232&pagename=viewarticle.aspx&pub=GT"
+        },
+        {
+          "title": "AGRO2011",
+          "url": "https://www.agroengineering.org/jae/article/download/1429/1100"
+        },
+        {
+          "title": "REEL / UNREEL FOR DRIP IRRIGATION HOSE",
+          "url": "https://cdn.tilmor.com/documents/3183/Terrateck-Catalog_2025_EN.pdf"
+        },
+        {
+          "title": "Superre",
+          "url": "https://ikrorwxhnirqml5p.ldycdn.com/Air%2Bhose%2Breel-aidqjBprKqoRmiSjkolrolrj.pdf"
+        }
+      ]
+    },
+    {
+      "query": "\"irrigation\" \"automatic\" \"valve\" \"mapping\" sensors",
+      "status": "fulfilled",
+      "results": [
+        {
+          "title": "IQ4 Product Development Update - July 2021 | Rain Bird",
+          "url": "https://www.rainbird.com/professionals/iq4-product-development-update-july-2021"
+        },
+        {
+          "title": "<tr><th>",
+          "url": "https://static.messe-essen-digitalmedia.de/uploads/E501/pdf/company/fluid-systems-and-automation-gmbh-d5e24-info-en.pdf"
+        },
+        {
+          "title": "PROJECT MANUAL",
+          "url": "https://www.starrcorporation.com/project-plans/Current_Projects/CSI_Leroy_Craig_Jerome_Center/3_Leroy_Craig_CSI_Specifications_Volume_3.pdf"
+        },
+        {
+          "title": "Home - wiseconn.com",
+          "url": "https://wiseconn.com/en/"
+        },
+        {
+          "title": "Xylem Vue Agriculture | Xylem Argentina",
+          "url": "https://prod.xylem.com/es-ar/brand/xylem-vue/platform/agriculture/"
+        },
+        {
+          "title": "The output contract | Smart Irrigation",
+          "url": "https://altmenorg.github.io/HAsmartirrigation/usage-output-contract.html"
+        },
+        {
+          "title": "Xylem Vue Agriculture | Xylem Australia",
+          "url": "https://www.xylem.com/en-au/brand/vue/platform/agriculture/"
+        },
+        {
+          "title": "Xylem Vue Agriculture | Xylem Netherlands",
+          "url": "https://www.xylem.com/nl-nl/brand/xylem-vue/platform/agriculture/"
+        },
+        {
+          "title": "Xylem Vue Agriculture | Xylem România",
+          "url": "https://prod.xylem.com/ro-ro/brand/xylem-vue/platform/agriculture/"
+        },
+        {
+          "title": "Controller Cross-Reference Guide",
+          "url": "https://www.rainbird.com/media/17124"
+        },
+        {
+          "title": "Automatic Irrigation Scheduling on a Hedgerow Olive Orchard Using an Algorithm of Water Balance Readjusted with Soil Moisture Sensors - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7249181/"
+        },
+        {
+          "title": "Comparison of irrigation automation algorithms for drip-irrigated apple trees - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0168169916302563"
+        },
+        {
+          "title": "HydraNet Solutions | AI-Powered Smart Water Asset Intelligence",
+          "url": "https://www.hydranetsolutions.com/"
+        },
+        {
+          "title": "Irrigation station map turnover record - Anvilfield",
+          "url": "https://anvilfield.com/blog/landscaping-irrigation-controller-station-map-rain-sensor-valve-box-tag-and-as-built-zone-photo-record-before-owner-turnover/"
+        },
+        {
+          "title": "WO2020047593A1 - Automatic irrigation system with 3d soil moisture mapping tool - Google Patents",
+          "url": "https://patents.google.com/patent/WO2020047593A1/en"
+        },
+        {
+          "title": "e-ISSN: 2582-5208",
+          "url": "https://www.irjmets.com/uploadedfiles/paper/issue_7_july_2022/28058/final/fin_irjmets1657648099.pdf"
+        },
+        {
+          "title": "BERMAD Solutions",
+          "url": "https://catalog.bermad.com/BERMAD%20Assets/Irrigation/-%20IR%20Marketing/IR%20Library/1.IR%20system%20environment%20%28Markets%29/Mechanized%20IR/Brochures/IR_Mechanized-Irrigation_Brochure_Separated_English.pdf"
+        },
+        {
+          "title": "What features do you wish your sprinkler controller had?",
+          "url": "https://www.reddit.com/r/Irrigation/comments/1t09zim/what_features_do_you_wish_your_sprinkler/"
+        }
+      ]
+    },
+    {
+      "query": "\"granular\" \"hopper\" \"machine learning\" \"clog\" vibration",
+      "status": "fulfilled",
+      "results": [
+        {
+          "title": "Cornerstones are the key stones: using interpretable machine learning to probe the clogging process in 2D granular hoppers - Soft Matter (RSC Publishing) DOI:10.1039/D5SM00367A",
+          "url": "https://pubs.rsc.org/en/content/articlehtml/2025/sm/d5sm00367a"
+        },
+        {
+          "title": "INTERPLAY BETWEEN STRUCTURE AND DYNAMICS IN GRANULAR MATERIALS ANDTWISTED STRINGSJesse HanlanA DISSERTATIONPhysics and AstronomyPresented to the Faculties of the University of PennsylvaniaPartial Fulfillment of the Requirements for theDegree of Doctor of Philosophy2024Supervisor of DissertationDouglas J. Durian, Mary Amanda Wood Professor of Physics and AstronomyGraduate Group ChairpersonRavi K. Sheth, Professor of PhysicsDissertation CommitteePaulo E. Arratia, Professor of Mechanical Engineering and Applied Mechanics",
+          "url": "https://repository.upenn.edu/server/api/core/bitstreams/ce53de24-f941-4015-9237-78852c03f95d/content"
+        },
+        {
+          "title": "Predicting a clog: characterizing 2D granular hopper flows using machine learning methods - 73rd Annual Meeting of the APS Division of Fluid Dynamics",
+          "url": "https://meetings-archive.aps.org/dfd/2020/h14/9/"
+        },
+        {
+          "title": "What makes a clog: characterizing 2D granular hopper flows using machine learning methods - APS March Meeting 2021",
+          "url": "https://meetings-archive.aps.org/mar/2021/x05/4/"
+        },
+        {
+          "title": "Dryad | Data: Cornerstones are the key stones: Using interpretable machine learning to probe the clogging process in 2D granular hoppers",
+          "url": "https://datadryad.org/dataset/doi%3A10.5061/dryad.cvdncjtb5"
+        },
+        {
+          "title": "(PDF) Cornerstones are the key stones: using interpretable machine learning to probe the clogging process in 2D granular hoppers",
+          "url": "https://www.researchgate.net/publication/393745556_Cornerstones_are_the_key_stones_using_interpretable_machine_learning_to_probe_the_clogging_process_in_2D_granular_hoppers"
+        },
+        {
+          "title": "Machine Learning in Nonlinear Physics and Mechanics I - APS March Meeting 2021",
+          "url": "https://meetings-archive.aps.org/mar/2021/x05"
+        },
+        {
+          "title": "Predicting a clog: finding signatures of clog formation in hopper flow using machine learning methods - APS March Meeting 2022",
+          "url": "https://meetings-archive.aps.org/mar/2022/m09/10/"
+        },
+        {
+          "title": "73rd Annual Meeting of the APS Division of Fluid Dynamics",
+          "url": "https://torroja.dmt.upm.es/congresos/APS2020/all_DFD20.pdf"
+        },
+        {
+          "title": "Cornerstones are the key stones: using interpretable machine learning to probe the clogging process in 2D granular hoppers",
+          "url": "https://pubs.rsc.org/de-at/content/articlepdf/2025/sm/d5sm00367a"
+        },
+        {
+          "title": "APS -73rd Annual Meeting of the APS Division of Fluid Dynamics - Session Index DFD20",
+          "url": "https://meetings.aps.org/Meeting/DFD20/Session/H14"
+        },
+        {
+          "title": "Cornerstones are the key stones: using interpretable machine learning to probe the clogging process in 2D granular hoppers - Soft Matter (RSC Publishing) DOI:10.1039/D5SM00367A",
+          "url": "https://pubs.rsc.org/en/content/articlehtml/2025/sm/d5sm00367a?page=search"
+        },
+        {
+          "title": "Cornerstones are the Key Stones: Using Interpretable Machine Learning to Probe the Clogging Process in 2D Granular Hoppers | Request PDF",
+          "url": "https://www.researchgate.net/publication/382080763_Cornerstones_are_the_Key_Stones_Using_Interpretable_Machine_Learning_to_Probe_the_Clogging_Process_in_2D_Granular_Hoppers"
+        },
+        {
+          "title": "Search Results | NLM Dataset Catalog",
+          "url": "https://datasetcatalog.nlm.nih.gov/searchResults?filters=agent%3AD.%252C%2520Liu&page=1&size=10&sort=rel"
+        }
+      ]
+    },
+    {
+      "query": "\"soldering\" \"fume extraction\" \"adaptive\" cooling",
+      "status": "fulfilled",
+      "results": [
+        {
+          "title": "www.thermaltronics.com",
+          "url": "https://www.adoptsmt.com/wp-content/uploads/2023/04/20230420_thermaltronics_en.pdf"
+        },
+        {
+          "title": "Fume Extraction for Electronics and Industrial Applications | PURE-AIR",
+          "url": "https://www.pure-airtech.com/product-category/electronics-producing-fume-extractor/"
+        },
+        {
+          "title": "PURE-AIR Solder Fume Extractor for Flexible Industrial Air Protection",
+          "url": "https://www.pure-airtech.com/product/hand-automated-soldering-fume-extractor/"
+        },
+        {
+          "title": "TMT-R80",
+          "url": "https://www.thermaltronics.com/downloads/TMT-R8000S_Datasheet_English.pdf"
+        },
+        {
+          "title": "MOBILE FUMEKART EXTRACTION SYSTEM - Solder Connection",
+          "url": "https://www.solderconnection.com/product/bofa-mobile-fumekart-extraction-system/"
+        },
+        {
+          "title": "Clean Air, Safe Workspaces | PURE-AIR Wave & Reflow soldering fume extractor",
+          "url": "https://www.pure-airtech.com/product/wave-reflow-soldering-fume-extractor/"
+        },
+        {
+          "title": "Pace ARM-EVAC 250 Fume Extractor – Karp Medical",
+          "url": "https://karpmedical.com/products/pace-arm-evac-250-fume-extractor"
+        },
+        {
+          "title": "CN121551745A – Integrated intelligent electric soldering iron smoke treatment equipment | Patsnap Eureka",
+          "url": "https://eureka.patsnap.com/patent/CN121551745A"
+        },
+        {
+          "title": "Electronic Products",
+          "url": "https://nebula.wsimg.com/9986066119ba014a3e789882cd6f1f83?AccessKeyId=566BD8E34B7EC1CB5AFE&alloworigin=1&disposition=0"
+        },
+        {
+          "title": "INTRODUCTION & CONTENTS",
+          "url": "https://okay.com.au/download/catalogues/Okay-Catalogue_Product-Guide-2020-Web-Ready.pdf"
+        },
+        {
+          "title": "Demo Room - Quick",
+          "url": "https://quick-global.eu/demo-room/"
+        },
+        {
+          "title": "SOP-ToolBox-Welding and Soldering Equipment Manufacturing",
+          "url": "https://pages.fhyzics.net/sop-toolbox-welding-and-soldering-equipment-manufacturing"
+        },
+        {
+          "title": "Buy Metcal BVX101 Portable Fume Extraction System Part Number BVX101 Online Datasheet and Stock",
+          "url": "https://www.mymectronic.com/part-detail/METCAL/BVX101"
+        },
+        {
+          "title": "CN122231392B – An on-line vapor phase soldering apparatus with vapor phase liquid recycling | Patsnap Eureka",
+          "url": "https://eureka.patsnap.com/patent/CN122231392B"
+        },
+        {
+          "title": "Thermaltronics inline soldering robot | Michael Guild",
+          "url": "https://www.linkedin.com/posts/michael-guild-96193b2b_thermaltronics-inline-soldering-robot-activity-7000399378481831936-xT5f"
+        },
+        {
+          "title": "Soldering Techniques | Tutorials on Electronics | Next Electronics",
+          "url": "https://test.next.gr/tutorials/soldering-techniques/soldering-techniques-tutorial"
+        },
+        {
+          "title": "TMT-R9900",
+          "url": "https://www.thermaltronics.com/downloads/TMT-R9900S_Datasheet_English.pdf"
+        }
+      ]
+    },
+    {
+      "query": "\"clamp\" \"adhesive\" \"force control\" curing",
+      "status": "fulfilled",
+      "results": [
+        {
+          "title": "Anchorage resistance of CFRP strips externally bonded to various cementitious substrates",
+          "url": "https://bais.p.lodz.pl/sites/bais/files/2022-03/CE%204.pdf"
+        },
+        {
+          "title": "Examination of film and paste adhesive behaviour under cryogenic conditions using a thick adherend s",
+          "url": "https://www.tandfonline.com/doi/pdf/10.1080/00218464.2025.2600613"
+        },
+        {
+          "title": "U.S. Patent for Apparatus for controlling assembly force Patent (Patent # 5,234,530 issued August 10, 1993) - Justia Patents Search",
+          "url": "https://patents.justia.com/patent/5234530"
+        },
+        {
+          "title": "Besi Update for Samsung",
+          "url": "https://thor.inemi.org/webdownload/2022/Projects/Packaging/Dec2022_Packaging-Besi.pdf"
+        },
+        {
+          "title": "CN121431894A – Micro gripper for atomic force microscope probe replacement and control method | Patsnap Eureka",
+          "url": "https://eureka.patsnap.com/patent/CN121431894A"
+        },
+        {
+          "title": "Design and Evaluation of an Underactuated Rigid–Flexible Coupled End-Effector for Non-Destructive Apple Harvesting",
+          "url": "https://www.mdpi.com/2077-0472/16/2/178"
+        },
+        {
+          "title": "CN117429068A - A method and system for bonding carbon fiber to car bodies - Google Patents",
+          "url": "https://patents.google.com/patent/CN117429068A/en"
+        },
+        {
+          "title": "Design and Evaluation of an Underactuated Rigid–Flexible Coupled End-Effector for Non-Destructive Apple Harvesting",
+          "url": "https://doi.org/10.3390/agriculture16020178"
+        },
+        {
+          "title": "502-M2-MS-04",
+          "url": "https://www.forcecontrol.com/wp-content/uploads/simple-file-list/Service-Manuals/02-MSDr-Manual.pdf"
+        },
+        {
+          "title": "University of Pavia",
+          "url": "https://iris.unipv.it/retrieve/bae84471-8761-4967-b2b0-5eb6eeab46c9/PhD_Thesis_YevheniyDmytriyev%20%281%29.pdf"
+        },
+        {
+          "title": "CN121058956B - Automatic installation equipment and method for electronic cigarette keys - Google Patents",
+          "url": "https://patents.google.com/patent/CN121058956B/en"
+        },
+        {
+          "title": "CAL02_Operating_Instructions_2024.indd",
+          "url": "https://eu-assets.contentstack.com/v3/assets/bltbc4004bca00989b0/blt44a4da3b980cf705/65a804a78ff368040ae9307b/Oet_Calibrator-CAL02_Operating_Instructions_EN.pdf"
+        },
+        {
+          "title": "CN223511276U – Clamp | Patsnap Eureka",
+          "url": "https://eureka.patsnap.com/patent/CN223511276U"
+        },
+        {
+          "title": "Fixtures and workpiece clamping systems in machining - ScienceDirect",
+          "url": "https://doi.org/10.1016/j.cirp.2025.04.096"
+        },
+        {
+          "title": "CN121431218A – Performance detection system for hot-melt double-sided tape for lithium battery module | Patsnap Eureka",
+          "url": "https://eureka.patsnap.com/patent/CN121431218A"
+        },
+        {
+          "title": "Stiff skin, soft core: soft backings enhance the conformability and friction of fibre-reinforced adhesives - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9993060/"
+        },
+        {
+          "title": "Response Analysis of PLC Optical Splitters Under Force Cyclic Loading",
+          "url": "https://www.mdpi.com/2072-666X/16/4/449"
+        },
+        {
+          "title": "LABORATORY PRESSES",
+          "url": "https://rosmount.com/laboratory-presses"
+        }
+      ]
+    },
+    {
+      "query": "\"peeling\" \"adhesive\" \"robot\" \"learning\"",
+      "status": "fulfilled",
+      "results": [
+        {
+          "title": "Robotic Manipulation Planning for Automatic Peeling of Glass Substrate Based on Online Learning Model Predictive Path Integral | MDPI",
+          "url": "https://www.mdpi.com/1424-8220/22/3/1292"
+        },
+        {
+          "title": "Robotic Manipulation Planning for Automatic Peeling of Glass Substrate Based on Online Learning Model Predictive Path Integral - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8839166/"
+        },
+        {
+          "title": "Learning from biological attachment devices: applications of bioinspired reversible adhesive methods in robotics | ENGINEERING Mechanical Engineering | Springer Nature Link",
+          "url": "https://link.springer.com/article/10.1007/s11465-022-0699-x"
+        },
+        {
+          "title": "A Bagworm-Inspired Robot That Acquires Its Exterior from External Environments - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12024940/"
+        },
+        {
+          "title": "Gecko Toe Pad-Inspired Robotic Gripper with Rapidly and Precisely Tunable Adhesion - ScienceDirect",
+          "url": "https://www.sciencedirect.com/org/science/article/pii/S2639527424000273"
+        },
+        {
+          "title": "Robotic Manipulation Planning for",
+          "url": "https://pdfs.semanticscholar.org/ff22/a50f641da3b0e85fd3b1f12c6c26ab33d4db.pdf"
+        },
+        {
+          "title": "(PDF) Towards Autonomous Tape Handling for Robotic Wound Redressing",
+          "url": "https://www.researchgate.net/publication/396291769_Towards_Autonomous_Tape_Handling_for_Robotic_Wound_Redressing"
+        },
+        {
+          "title": "EP4215317A1 - Sticker affixing system, method to be executed by sticker affixing system, and program to be executed by sticker affixing system - Google Patents",
+          "url": "https://patents.google.com/patent/EP4215317A1/en"
+        },
+        {
+          "title": "Switchable adhesion of phase-transition eutectogels with integrated machine learning-enhanced intelligent adhesion sensing | Nature Communications",
+          "url": "https://www.nature.com/articles/s41467-026-74275-7"
+        },
+        {
+          "title": "SummerGeckoRob | Biomimetics and Dextrous Manipulation Lab",
+          "url": "https://bdml.stanford.edu/pmwiki/pmwiki.php/Main/SummerGeckoRob"
+        },
+        {
+          "title": "(PDF) Robotic Manipulation Planning for Automatic Peeling of Glass Substrate Based on Online Learning Model Predictive Path Integral",
+          "url": "https://www.researchgate.net/publication/358523696_Robotic_Manipulation_Planning_for_Automatic_Peeling_of_Glass_Substrate_Based_on_Online_Learning_Model_Predictive_Path_Integral"
+        },
+        {
+          "title": "A hierarchical approach to imitation learning for manipulation tasks requiring time varying forces - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0736584526000888"
+        },
+        {
+          "title": "Review of advancements in wall climbing robot techniques - ScienceDirect",
+          "url": "https://doi.org/10.1016/j.fraope.2024.100148"
+        },
+        {
+          "title": "Robotic Manipulation Planning for Automat",
+          "url": "https://mdpi-res.com/d_attachment/sensors/sensors-22-01292/article_deploy/sensors-22-01292.pdf"
+        },
+        {
+          "title": "Rajendran *et al.,*                                                                                                   Vol 7 | Issue 1",
+          "url": "https://www.irjms.com/wp-content/uploads/2026/01/Manuscript_IRJMS_08082_WS.pdf"
+        },
+        {
+          "title": "IOP Publishing — *Bioinspir. Biomim. 15* (2020) 056018 — S Wang *et al*",
+          "url": "https://www.dylanwainwright.com/uploads/2/6/4/8/2648240/wang_2020_bioinspir._biomim_remora_detachment.pdf"
+        },
+        {
+          "title": "ARTICLE IN PRESS",
+          "url": "https://www.nature.com/articles/s41467-026-74275-7_reference.pdf"
+        },
+        {
+          "title": "Delft University of Technology",
+          "url": "https://pure.tudelft.nl/ws/portalfiles/portal/158117948/dissertation.pdf"
+        }
+      ]
+    },
+    {
+      "query": "\"power\" \"appliances\" \"safe interruption\" machine learning",
+      "status": "fulfilled",
+      "results": [
+        {
+          "title": "Automatic Cut & Strip Machine: Multistrip 9480 | PDF | Packaging And Labeling | Electrical Conductor",
+          "url": "https://www.scribd.com/document/653436252/MS-9480-MR-EN-A4-V0200"
+        },
+        {
+          "title": "US9229515B2 - Cloud management method of electronic devices - Google Patents",
+          "url": "https://patents.google.com/patent/US9229515B2/en"
+        },
+        {
+          "title": "Schneider Acti9 MCB 2 Pole 40A C Curve 10K - ElectricBasket",
+          "url": "https://electricbasket.in/shop/product/industrial/switch-gear-control-gear/circut-breaker/schneider-acti-9-mcb-2-pole-40a-c-curve-10k/"
+        },
+        {
+          "title": "Power supply",
+          "url": "https://en.wikipedia.org/wiki/Power_supply"
+        },
+        {
+          "title": "Enhancing smart grid resilience and prosumer profitability using a novel Hunter–Prey optimization-based inter-microgrid energy trading strategy - Thangaraj Yuvaraj, Muthukaruppan Ramesh Babu, Vasudevan Kuppan, Mohit Bajaj, Olena Rubanenko, 2026",
+          "url": "https://journals.sagepub.com/doi/abs/10.1177/01445987251411065"
+        },
+        {
+          "title": "Schneider Acti9 MCB 1 Pole 40A C Curve 10K - ElectricBasket",
+          "url": "https://electricbasket.in/shop/product/industrial/switch-gear-control-gear/circut-breaker/schneider-acti-9-mcb-1-pole-40a-c-curve-10k/"
+        },
+        {
+          "title": "EP3602732A1 - Method for operating an electrical system having a plurality of electrical loads, power supply unit, and electrically operated system - Google Patents",
+          "url": "https://patents.google.com/patent/EP3602732A1/en"
+        },
+        {
+          "title": "Current Protectors Explained: Overload Detection, Trip Logic and Load Coordination | Jidian Technology",
+          "url": "https://jidian-tech.com.cn/blog/current-protection/current-protector-engineering-guide.html"
+        },
+        {
+          "title": "MKX2AW11202C00MD00 WIMA | IC-Direct",
+          "url": "https://ic-direct.com/product/wima/mkx2aw11202c00md00"
+        },
+        {
+          "title": "PFAS in Passive Electronic Components",
+          "url": "https://www.zvei.org/fileadmin/user_upload/Themen/Nachhaltigkeit_Umwelt/PFAS-Factsheets_2026/_11_ZVEI-PFAS-Factsheet-PFAS_in_passive_electrical_components_EN_2026.pdf"
+        },
+        {
+          "title": "Intelligent Home Energy Management System Based on Genetic Algorithm for Hybrid PV-Battery Operation Under On/Off-Grid Conditions | IEEE Journals & Magazine | IEEE Xplore",
+          "url": "https://xplorestaging.ieee.org/document/11275630/"
+        }
+      ]
+    },
+    {
+      "query": "\"canopy\" \"water pooling\" \"automatic\" drainage",
+      "status": "fulfilled",
+      "results": [
+        {
+          "title": "US9714521B1 - Self-draining canopy - Google Patents",
+          "url": "https://patents.google.com/patent/US9714521B1/en"
+        },
+        {
+          "title": "Outsunny 13' x 10' Retractable Garden Pergola with Automatic Roll-Up Curtains, UV50+ Canopy, Aluminum Frame — Dark Gray | Aosom EU",
+          "url": "https://aosom.eu/en-ee/products/13-x-10-4-x-3-m-retractable-garden-pergola-with-4-automatic-roll-up-curtains-uv50-canopy-aluminum-frame-integrated"
+        },
+        {
+          "title": "POPUP-SHADE 13'X13' Instant Canopy with Wheel-Bag – AiHomeCamera",
+          "url": "https://www.aihomecamera.com/products/popup-shade-13x13-instant-canopy-with-wheel-bag"
+        },
+        {
+          "title": "IdealHouse 12x12 FT Pop Up Gazebo with Automatic Eaves and Central Lock Heavy Duty Water Resistant Oxford Canopy Easy Fold Portable Shelter for Patio Garden Camping Events in the Gazebos department at Lowes.com",
+          "url": "https://www.lowes.com/pd/Idealhouse-12x12-FT-Pop-Up-Gazebo-with-Automatic-Eaves-and-Central-Lock-Heavy-Duty-Water-Resistant-Oxford-Canopy-Easy-Fold-Portable-Shelter-for-Patio-Garden-Camping-Events/8972011"
+        },
+        {
+          "title": "How to Keep Water From Pooling on a Canopy – F&J Outdoors",
+          "url": "https://fj-outdoors.com/blogs/guide/how-to-keep-water-from-pooling-on-a-canopy"
+        },
+        {
+          "title": "CAREFREE ECLIPSE AWNINGS",
+          "url": "https://suncoastcaravanservice.com.au/wp-content/uploads/2020/02/CTC-2020-Catalogue.pdf"
+        },
+        {
+          "title": "Covered Outdoor 11'x13' Patio Gazebo with LED Lights & Bluetooth Speaker Instruction Manual",
+          "url": "https://manuals.plus/asin/B0D5W64KJL"
+        },
+        {
+          "title": "CAREFREE AWNINGS",
+          "url": "https://manuals.plus/m/258730f9e69a6f3335ceee649a4e132e61a458e9031d1f447a185e393021542d.pdf"
+        },
+        {
+          "title": "WO2008152400A2 - Covering system - Google Patents",
+          "url": "https://patents.google.com/patent/WO2008152400A2/en"
+        },
+        {
+          "title": "Premium Waterproof Retractable Pergola Cover: Smart Weather Protection for Outdoor Living",
+          "url": "https://www.airfunoutdoor.com/application/waterproof-retractable-pergola-cover"
+        },
+        {
+          "title": "PowerPoint Presentation",
+          "url": "https://apolloblinds.com.au/wp-content/uploads/2017/10/Product-Catalogue.pdf"
+        },
+        {
+          "title": "CAREFREE AWNING — SECTION 1",
+          "url": "https://www.takalvans.com.au/media/82709/coast_rv_catalogue_2023_compressed.pdf"
+        },
+        {
+          "title": "CAREFREE ECLIPSE AWNINGS",
+          "url": "https://device.report/m/258730f9e69a6f3335ceee649a4e132e61a458e9031d1f447a185e393021542d.pdf"
+        },
+        {
+          "title": "RUYICZB 20x10FT Motorized Retractable Patio Awning with LED Light - Instruction Manual",
+          "url": "https://manuals.plus/asin/B0D8BK6V81"
+        },
+        {
+          "title": "Climate-Adaptive Pergolas – Pergolas in the UK",
+          "url": "https://alssen.co.uk/climate-adaptive-pergolas/"
+        },
+        {
+          "title": "Retractable Pergola Singapore: Motorized Outdoor Roofing Solutions - Smart Awning",
+          "url": "https://www.smart-awning.com/retractable-pergola-singapore/"
+        },
+        {
+          "title": "US20100252212A1 - Covering System - Google Patents",
+          "url": "https://patents.google.com/patent/US20100252212A1/en"
+        },
+        {
+          "title": "WinnipegTHE CITY OF WINNIPEGDESIGN, BUILD, FINANCE, (OPERATE) MAINTAIN THE CITY OF",
+          "url": "https://legacy.winnipeg.ca/finance/findata/matmgt/documents/2014/201-2014_B/201-2014B_PA_Schedule_18_-_Technical_Requirements.pdf"
+        }
+      ]
+    },
+    {
+      "query": "\"awning\" \"drainage\" \"people\" sensor automatic",
+      "status": "fulfilled",
+      "results": [
+        {
+          "title": "SkyShade Awnings with Integrated LED - Motorized",
+          "url": "https://skypergola.ae/products/skyshade-led-sonnenmarkise-motorisiert"
+        },
+        {
+          "title": "CN101239613A - Car with car door waterproof awning - Google Patents",
+          "url": "https://patents.google.com/patent/CN101239613A/en"
+        },
+        {
+          "title": "Operating and",
+          "url": "https://media.warema.com/dokumente/entwicklung_sonnenschutz/664395/warema_2048234_alhb_en_v6.pdf"
+        },
+        {
+          "title": "Product guide cover/banner with a lakeside camping",
+          "url": "https://www.hillviewawnings.co.uk/wp-content/uploads/2023/02/TPG_MCaccessories_2022-EN.pdf"
+        },
+        {
+          "title": "Retractable Awning with Motor, Lights | Rust & Fade Resistant | PERGOLUX",
+          "url": "https://pergolux.co.uk/products/awning"
+        },
+        {
+          "title": "US6971433B2 - Automatic retractable awning - Google Patents",
+          "url": "https://patents.google.com/patent/US6971433B2/en"
+        },
+        {
+          "title": "CN121291646A – Automatic awning system of riding vehicle and control method of automatic awning system | Patsnap Eureka",
+          "url": "https://eureka.patsnap.com/patent/CN121291646A"
+        },
+        {
+          "title": "Louvre Roofs & Louvred Awnings George | Custom Blinds®",
+          "url": "https://customblinds.co.za/awnings/louvred-awnings-george/"
+        },
+        {
+          "title": "A graphic banner/poster",
+          "url": "https://rk-smia.no/wp-content/uploads/2025/05/cat22hq_en_fr_compressed.pdf"
+        },
+        {
+          "title": "SmartSun WiFi Home Automation Motorized Awning User Manual",
+          "url": "https://manuals.plus/m/5370fc0106af7b60292dd442aa91ec3b1d5b207ec1de977b807ebdf15097068d"
+        },
+        {
+          "title": "SmartSun Motorized Semicofre Awning User Manual and Installation Guide",
+          "url": "https://manuals.plus/m/696bf703e09205c68937329bcadd47dc47f332f4db327cf0579c711eb5ea5d97"
+        },
+        {
+          "title": "Rain sensor technology for awnings: automatic protection explained",
+          "url": "https://www.infinityawnings.co.uk/post/what-is-rain-sensor-technology"
+        },
+        {
+          "title": "Why Harol stands for quality and sustainability",
+          "url": "https://www.harol.com/en/landing-page/belgian-quality/"
+        },
+        {
+          "title": "Awnings in Wind & Rain — Weather Guide | AwningTown",
+          "url": "https://www.awningtown.com/awning-wind-rain-guide.php"
+        },
+        {
+          "title": "Wind Sensors for Awnings: Benefits, Protection & Buying Guide",
+          "url": "https://ththeater.com/why-wind-sensors-matter-for-awnings/"
+        },
+        {
+          "title": "CASSETTE AWNING 360",
+          "url": "https://www.kadeco.de/fileadmin/Download/Broschueren/Aussen/01_Terrassenmarkisen/KADECO_Terrassenmarkisen_Brosch_EN_Ansicht_230703.pdf"
+        },
+        {
+          "title": "127027_PlazaViva_mit VertiTex II_MA_DE-GB-FR-NL_weinor_v8_2021-03-03_PRINT.pdf",
+          "url": "https://www.kvalitetsmarkiser.dk/wp-content/uploads/2022/01/Plaza-Viva-montagevejledning.pdf"
+        },
+        {
+          "title": "Zonneschermen",
+          "url": "https://www.weinor.com/dateien/Produkte/Plaza_Viva/120996_WGA_PlazaViva_DE-GB-FR-NL_v4-2_weinor2020-03-24_DLC.pdf"
+        }
+      ]
+    },
+    {
+      "query": "\"tent\" \"guyline\" \"automatic\" tension",
+      "status": "fulfilled",
+      "results": [
+        {
+          "title": "Camping Guy Line Knots – Jackson Raila: Straight To The Point",
+          "url": "https://jacksonraila.wordpress.com/2020/09/08/camping-guy-line-knots/"
+        },
+        {
+          "title": "Buy Aluminium Wind Rope Buckle, Self-Locking Tent Guyline Tensioner for Camping (Small) | Kogan.com",
+          "url": "https://www.kogan.com/au/buy/connecttriad-aluminium-wind-rope-buckle-self-locking-tent-guyline-tensioner-for-camping-small-sp25184b-s-ctfhy-my23616/"
+        },
+        {
+          "title": "How to Pitch a Tent – Site Prep, Staking, and Guyline Tension | Camp Hero",
+          "url": "https://camphero.app/guides/how-to-pitch-a-tent"
+        },
+        {
+          "title": "What Knot System/Guyline Tensioner Do You Use For Your Tarp?",
+          "url": "https://www.hammockforums.net/forum/showthread.php/161611-What-Knot-System-Guyline-Tensioner-Do-You-Use-For-Your-Tarp"
+        },
+        {
+          "title": "What Knot System/Guyline Tensioner Do You Use For Your Tarp?",
+          "url": "https://www.hammockforums.net/forum/showthread.php/161611-What-Knot-System-Guyline-Tensioner-Do-You-Use-For-Your-Tarp?p=2048218&s=aa5ee80c4964de68ab991b5c318adc31&viewfull=1"
+        },
+        {
+          "title": "Are these trash or is there a trick?",
+          "url": "https://www.reddit.com/r/CampingGear/comments/1nl3zz4/are_these_trash_or_is_there_a_trick/"
+        },
+        {
+          "title": "MYOG Guyline Tensioners - Backpacking Light",
+          "url": "https://backpackinglight.com/forums/topic/19526/"
+        },
+        {
+          "title": "Insulated Tent Guyline Tightener With Permanent Aluminum Building Secure Fastening Everyone Weather Camping",
+          "url": "https://www.lazada.com.my/videodetail/?video_id=8000082774939"
+        },
+        {
+          "title": "Insulated Tent Guyline Tightener With Permanent Aluminum Building Secure Fastening Everyone Weather Camping Multicolor | Fruugo IE",
+          "url": "https://www.fruugo.ie/insulated-tent-guyline-tightener-with-permanent-aluminum-building-secure-fastening-everyone-weather-camping-multicolor/p-442776665-929639003"
+        },
+        {
+          "title": "What Knot System/Guyline Tensioner Do You Use For Your Tarp?",
+          "url": "https://www.hammockforums.net/forum/showthread.php/161611-What-Knot-System-Guyline-Tensioner-Do-You-Use-For-Your-Tarp?s=950418515edc782fb13aef2b06ee4f1f"
+        },
+        {
+          "title": "Aluminium Tent Rope Tensioner Heavy Duty Adjustable Cord Tightener",
+          "url": "https://ee.voghion.com/aluminium-tent-rope-tensioner-heavy-duty-cord-tightener/dp/44477986?cid=2683"
+        },
+        {
+          "title": "MEC HUMMINGBIRD 2 INSTRUCTION Pdf Download | ManualsLib",
+          "url": "https://www.manualslib.com/manual/1352423/Mec-Hummingbird-2.html"
+        },
+        {
+          "title": "Aluminum Alloy Tent Rope Tensioner Anti-slip Cord Tightener Tool",
+          "url": "https://dk.voghion.com/aluminum-alloy-tent-rope-tensioner-anti-slip-cord-tightener/dp/41483290?cid=2683"
+        },
+        {
+          "title": "Is this the Ultimate** UL Guyline Knot?",
+          "url": "https://www.reddit.com/r/Ultralight/comments/qtvdb9"
+        },
+        {
+          "title": "Replace your stock guy lines",
+          "url": "https://www.reddit.com/r/Ultralight/comments/1pzrjs1/replace_your_stock_guy_lines/"
+        },
+        {
+          "title": "Best knot for guy lines?",
+          "url": "https://www.reddit.com/r/camping/comments/1e043n9"
+        },
+        {
+          "title": "r/Ultralight - \"The Weekly\" - Week of January 05, 2026",
+          "url": "https://www.reddit.com/r/Ultralight/comments/1q4ew4d/rultralight_the_weekly_week_of_january_05_2026/"
+        },
+        {
+          "title": "Layout 1",
+          "url": "https://www.mountain.rescue.org.uk/wp-content/uploads/2010/07/MRMagJuly2010.pdf"
+        }
+      ]
+    },
+    {
+      "query": "\"printer\" \"scale\" \"vibration\" \"pause\" weighing",
+      "status": "fulfilled",
+      "results": [
+        {
+          "title": "SUPMETERBST106-M10[EB] Weighing ControllerFor: 1-16 Materials Ration Batching Scale",
+          "url": "https://flextronicbg.com/wp-content/uploads/2018/10/BST106-M10EB.pdf"
+        },
+        {
+          "title": "T",
+          "url": "https://loadcellsys.com/wp-content/uploads/2022/07/FURation-Fillingweigher-4-Scale-Weighing-Controller-ManualV2.1-B5.pdf"
+        },
+        {
+          "title": "SUPMETERBST106-M10[GH] Weighing ControllerFor: Increment Ration Packing Scale [4-scale]",
+          "url": "https://flextronicbg.com/wp-content/uploads/2021/11/BST106-M10GH.pdf"
+        },
+        {
+          "title": "INSTRUCTION MANUAL",
+          "url": "https://acousticresearch.com.au/files/VX-54WB_Instruction_Manual_40650.pdf"
+        },
+        {
+          "title": "INSTRUCTION MANUAL",
+          "url": "https://acousticresearch.com.au/files/VX-54WH%2BInstruction%2BManual%2B40670.pdf"
+        },
+        {
+          "title": "CA1110767A - Computing scale system - Google Patents",
+          "url": "https://patents.google.com/patent/CA1110767A/en"
+        },
+        {
+          "title": "D1000 Pro HS",
+          "url": "https://device.report/m/791de4ca3d12a0100aed1509efac73275864374e29857bbe46dbda79004c90f6.pdf"
+        },
+        {
+          "title": "VFD Ration Batching Digital Weight Indicator Anti - Vibration Digital Filtering Algorithm",
+          "url": "https://www.weighingindicatorcontroller.com/sale-10942033-vfd-ration-batching-digital-weight-indicator-anti-vibration-digital-filtering-algorithm.html"
+        },
+        {
+          "title": "Rice Lake Programmable Controller Manual | PDF | Usb | Electrical Connector",
+          "url": "https://www.scribd.com/document/951689662/Rice-Lake-920i"
+        },
+        {
+          "title": "BST106-H18[E] Weighing Controller Manual for Ration Batching Scale V8.4 - Studocu",
+          "url": "https://www.studocu.com/row/document/renmin-university-of-china/spatial-data-analysis/bst106-h18e-weighing-controller-manual-for-ration-batching-scale-v84/160065548"
+        },
+        {
+          "title": "Maguire Weigh Scale Blender User Manual | Manualzz",
+          "url": "https://manualzz.com/doc/8147935/maguire-weigh-scale-blender-user-manual"
+        },
+        {
+          "title": "MAGUIRE PRODUCTS INC. Weigh Scale Blender - Flipbook by 55749 | FlipHTML5",
+          "url": "https://fliphtml5.com/equo/usjo/MAGUIRE_PRODUCTS_INC._Weigh_Scale_Blender/"
+        },
+        {
+          "title": "RICE LAKE CB-3 Automated Concrete Batching System User Manual",
+          "url": "https://manuals.plus/m/d0c8c88dba35e667b6052010ba5408f1ebe4b859c64f75c5a105cf3234e06ec8"
+        },
+        {
+          "title": "CLS-920i Installation Manual",
+          "url": "https://manualzilla.com/doc/6011443/cls-920i-installation-manual"
+        },
+        {
+          "title": "920i Technical Manual | PDF | Usb | Input/Output",
+          "url": "https://www.scribd.com/document/633065855/920i-Technical-Manual"
+        },
+        {
+          "title": "Multiweigh Multihead Scale OEM ODM 14 Head Multihead Weigher Packaging Machine - Multihead Weigher and Combination Weigher",
+          "url": "https://zonpack.en.made-in-china.com/product/NRKpxsyUbGhz/China-Multiweigh-Multihead-Scale-OEM-ODM-14-Head-Multihead-Weigher-Packaging-Machine.html?bannerSource=4&fromBanner=synthesis"
+        },
+        {
+          "title": "Barcode Reader ZEBRA MP6000 - User manual and instructions",
+          "url": "https://www.notice-facile.com/en/manual/765522/zebra%2Bmp6000"
+        }
+      ]
+    },
+    {
+      "query": "\"accelerometer\" \"mounting\" \"self\" \"diagnosis\" coupling",
+      "status": "fulfilled",
+      "results": [
+        {
+          "title": "31-9392",
+          "url": "https://forum.appliancepartspros.com/uploads/short-url/i2nAF7nxm4bOXN0IfPsfNwuXK8q.pdf"
+        },
+        {
+          "title": "A Novel Accelerometer Mounting Method for Sensing Performance Improvement in Acoustic Measurements From the Knee - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8208483/"
+        },
+        {
+          "title": "API 670 Machinery Protection Systems Standard",
+          "url": "https://studylib.net/doc/25874894/api-std-670-5th-2014"
+        },
+        {
+          "title": "Detection of faulty accelerometer mounting from response measurements | Request PDF",
+          "url": "https://www.researchgate.net/publication/339905092_Detection_of_faulty_accelerometer_mounting_from_response_measurements"
+        },
+        {
+          "title": "Machine Monitoring and Diagnosis using Vibration",
+          "url": "https://dspace.library.uvic.ca/server/api/core/bitstreams/fb179fcb-4512-419f-82d8-9c29d696780b/content"
+        },
+        {
+          "title": "Dual Tri-Axial Accelerometer Self-Validation for Machine Diagnosis",
+          "url": "https://eureka.patsnap.com/triz-case/dual-accelerometer-self-validation-diagnosis"
+        },
+        {
+          "title": "US12560923B2 – Automated self-precision validation accelerometer and system for machine diagnosis | Patsnap Eureka",
+          "url": "https://eureka.patsnap.com/patent/US12560923B2"
+        },
+        {
+          "title": "U.S. Patent for In-situ testing of a MEMS accelerometer in a disc storage system Patent (Patent # 6,629,448 issued October 7, 2003) - Justia Patents Search",
+          "url": "https://patents.justia.com/patent/6629448"
+        },
+        {
+          "title": "Machinery Malfuntion Diagnosis and Corretion | PDF | Turbine | Machine (Mechanical)",
+          "url": "https://www.scribd.com/document/275193981/Machinery-Malfuntion-Diagnosis-and-Corretion"
+        },
+        {
+          "title": "| ORCA – Online Research @  |  |",
+          "url": "https://orca.cardiff.ac.uk/140873/1/Ji%20Z%20-%20Self-validating%20high-g%20....pdf"
+        },
+        {
+          "title": "Accelometer",
+          "url": "https://learnbenchindia.com/finalyearprojectdatasheets/finalyearprojectdatasheets/Accelometer.pdf"
+        },
+        {
+          "title": "New products from Fluke",
+          "url": "https://assetcloud.roccommerce.net/files/_smcelectric/2/5/9/fluke_networks_10051000_catalog.pdf"
+        },
+        {
+          "title": "S. Ravikumar",
+          "url": "https://pdfs.semanticscholar.org/010e/077ef68fd4e56eef3fff325ba505d3fa5c4d.pdf"
+        },
+        {
+          "title": "JPH09505137A - Accelerometer malfunction detection device - Google Patents",
+          "url": "https://patents.google.com/patent/JPH09505137A/en"
+        },
+        {
+          "title": "Online error compensation of moving-base rotating accelerometer gravity gradiometer | Request PDF",
+          "url": "https://www.researchgate.net/publication/334186639_Online_error_compensation_of_moving-base_rotating_accelerometer_gravity_gradiometer"
+        },
+        {
+          "title": "EP0715722B1 - An apparatus for detecting the malfunctioning of an accelerometer - Google Patents",
+          "url": "https://patents.google.com/patent/EP0715722B1/en"
+        },
+        {
+          "title": "Vibration Analysis for Machine Monitoring and Diagnosis: A Systematic Review - Mohd Ghazali - 2021 - Shock and Vibration - Wiley Online Library",
+          "url": "https://onlinelibrary.wiley.com/doi/10.1155/2021/9469318"
+        },
+        {
+          "title": "Prof. C. Sujatha. - Vibration and Acoustics - Measurement and Signal Analysis. 1-McGraw-Hill Education (2010) | PDF | Acoustics | Noise",
+          "url": "https://ru.scribd.com/document/727319057/Prof-C-Sujatha-Vibration-and-Acoustics-Measurement-and-Signal-Analysis-1-McGraw-Hill-Education-2010"
+        }
+      ]
+    },
+    {
+      "query": "\"sensor mounting\" \"machine learning\" quality",
+      "status": "fulfilled",
+      "results": [
+        {
+          "title": "A Hybrid Fault Diagnosis Approach Using FEM Optimized Sensor Positioning and Machine Learning",
+          "url": "https://doi.org/10.3390/PR10101919"
+        },
+        {
+          "title": "पेटेंट कार्ाालर्",
+          "url": "https://ipindia.gov.in/writereaddata/Portal/IPOJournal/1_4908_1/Part-1.pdf"
+        },
+        {
+          "title": "A Hybrid Fault Diagnosis Approach Using FEM Optimized Sensor Positioning and Machine Learning",
+          "url": "https://scholarworks.bwise.kr/kumoh/bitstream/2020.sw.kumoh/21414/1/A%20Hybrid%20Fault%20Diagnosis%20Approach%20Using%20FEM%20Optimized%20Sensor%20Positioning%20and%20Machine%20Learning.pdf"
+        },
+        {
+          "title": "AQUAIR: A High-Resolution Indoor Environmental Quality Dataset for Smart Aquaculture Monitoring",
+          "url": "https://arxiv.org/abs/2509.24069"
+        },
+        {
+          "title": "Artificial Intelligence based tool wear and defect prediction for special purpose milling machinery using low-cost acceleration sensor retrofits",
+          "url": "https://arxiv.org/abs/2202.03068"
+        },
+        {
+          "title": "Remaining Machining Tool Life Prediction Using Machine Learning",
+          "url": "https://duepublico2.uni-due.de/servlets/MCRFileNodeServlet/duepublico_derivate_00080950/Diss_Krupp.pdf"
+        },
+        {
+          "title": "Airborne acoustic emission-based intelligent wear detection for spatiotemporal data in CNC drill bits using CEEMDAN and ConvLSTM - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0924424725009768"
+        },
+        {
+          "title": "Predictive Maintenance with IoT and Machine Learning: Complete Architecture Guide - IoT Digital Twin PLM",
+          "url": "https://iotdigitaltwinplm.com/predictive-maintenance-iot-machine-learning-architecture-guide/"
+        },
+        {
+          "title": "EUR",
+          "url": "https://data.epo.org/publication-server/rest/v1.2/publication-dates/2024-08-14/patents/EP4414222NWA1/document.pdf"
+        },
+        {
+          "title": "A Hybrid Fault Diagnosis Approach Using FEM Optimized Sensor Positioning and Machine Learning",
+          "url": "https://agris.fao.org/search/en/providers/122413/records/687a817b48a340fdfa07a2b1"
+        },
+        {
+          "title": "EP4414222A1 - Computer-implemented method for training of a machine learning model in vehicle accident event assessment - Google Patents",
+          "url": "https://patents.google.com/patent/EP4414222A1/en"
+        },
+        {
+          "title": "Rahul Kalakuntla - Modular Sensor Mounting Platform",
+          "url": "https://www.rahulkalakuntla.com/projects/modular-sensor-mounting-platform"
+        },
+        {
+          "title": "A Hybrid Fault Diagnosis Approach Using FEM Optimized Sensor Positioning and Machine Learning",
+          "url": "https://agris.fao.org/search/ar/records/687a817b48a340fdfa07a2b1"
+        },
+        {
+          "title": "Real-time quality classification of robot self-piercing rivet processes in CFRP-steel joints using machine learning - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/pii/S1526612525009442"
+        },
+        {
+          "title": "(PDF) A Hybrid Fault Diagnosis Approach Using FEM Optimized Sensor Positioning and Machine Learning",
+          "url": "https://www.researchgate.net/publication/364023325_A_Hybrid_Fault_Diagnosis_Approach_Using_FEM_Optimized_Sensor_Positioning_and_Machine_Learning"
+        },
+        {
+          "title": "Selection and Placement of Sensors for Electric Motors: A Review and Preliminary Investigation",
+          "url": "https://www.mdpi.com/1996-1073/18/13/3484"
+        },
+        {
+          "title": "A Hybrid Fault Diagnosis Approach Using FEM Optimized Sensor Positioning and Machine Learning",
+          "url": "https://agris.fao.org/search/ru/records/687a817b48a340fdfa07a2b1"
+        },
+        {
+          "title": "Tool Condition Monitoring for High-Performance Machining Systems—A Review - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8950983/"
+        },
+        {
+          "title": "Automatic Odometry-Less OpenDRIVE Generation From Sparse Point Clouds",
+          "url": "https://arxiv.org/abs/2405.07544"
+        },
+        {
+          "title": "Welding inspection",
+          "url": "https://en.wikipedia.org/wiki/Welding_inspection"
+        },
+        {
+          "title": "High performance positioning system",
+          "url": "https://en.wikipedia.org/wiki/High_performance_positioning_system"
+        },
+        {
+          "title": "Balancing machine",
+          "url": "https://en.wikipedia.org/wiki/Balancing_machine"
+        }
+      ]
+    },
+    {
+      "query": "\"automatic\" \"sensor\" \"mounting force\" vibration",
+      "status": "fulfilled",
+      "results": [
+        {
+          "title": "Sensor handbook for automatic test, monitoring, diagnostic, and control systems applications to military vehicles and machinery",
+          "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nbsspecialpublication615.pdf"
+        },
+        {
+          "title": "Special Publication: Sensor Automatic | PDF | Sensor | Reliability Engineering",
+          "url": "https://www.scribd.com/document/640175227/Untitled"
+        },
+        {
+          "title": "Optimize Vibration Sensor Mounting for High-Frequency Accuracy",
+          "url": "https://eureka.patsnap.com/report-optimize-vibration-sensor-mounting-for-high-frequency-accuracy"
+        },
+        {
+          "title": "US10422667B2 - Three point mount for a vibration sensing apparatus - Google Patents",
+          "url": "https://patents.google.com/patent/US10422667B2/en"
+        },
+        {
+          "title": "Automatic Calibration for an Open-source Magnetic Tactile Sensor",
+          "url": "https://arxiv.org/abs/2405.18582"
+        },
+        {
+          "title": "CN120933208B – A dust removal point glue assembly and die bonding equipment | Patsnap Eureka",
+          "url": "https://eureka.patsnap.com/patent/CN120933208B"
+        },
+        {
+          "title": "AR-900 Impact™ Series Automatic Vehicle Restraint",
+          "url": "https://www.speedtechequipment.com/wp-content/uploads/2018/08/IMPACT_Series_-_AR-9000.pdf"
+        },
+        {
+          "title": "AUTOMATIC VEHICLE RESTRAINT",
+          "url": "https://www.speedtechequipment.com/wp-content/uploads/2025/09/Model-AR-10K-%E2%80%93-SMART-HOOK%C2%AE-%E2%80%93-Vehicle-Restraint-%E2%80%93-Literature.pdf"
+        },
+        {
+          "title": "AUTOMATIC VEHICLE RE",
+          "url": "https://nordockinc.com/wp-content/uploads/2020/04/S-H_AR-20K_Lit_2.pdf"
+        },
+        {
+          "title": "JP3634959B2 - Nozzle device - Google Patents",
+          "url": "https://patents.google.com/patent/JP3634959B2/en"
+        },
+        {
+          "title": "CN112512292B - Optical placement detection to compensate for throat play to reduce surface mount force - Google Patents",
+          "url": "https://patents.google.com/patent/CN112512292B/en"
+        },
+        {
+          "title": "Mitsubishi Electric RV-5AS-D Standard Specifications | Manualzz",
+          "url": "https://manualzz.com/doc/66980459/mitsubishi-electric-rv-5as-d-standard-specifications"
+        },
+        {
+          "title": "1μm Grating Resolution Automatic Mounting Machine with Class 10 Cleanliness Level and 1410*1450*2200mm Footprint from China Factory",
+          "url": "https://www.ecer.com/corp/details-uuuf913-p1k81dd-large-format-optical-mounting-machine-1%CE%BCm-accuracy-and-cleanroom-grade-assembly.html"
+        },
+        {
+          "title": "Prediction of Pressing Quality for Press‐Fit Assembly Based on Press‐Fit Curve and Maximum Press‐Mounting Force - You - 2015 - International Journal of Aerospace Engineering - Wiley Online Library",
+          "url": "https://onlinelibrary.wiley.com/doi/abs/10.1155/2015/823019"
+        },
+        {
+          "title": "1μm Grating Resolution Automatic Mounting Machine with Class 10 Cleanliness Level and 1410*1450*2200mm Footprint from China Factory",
+          "url": "https://www.ecer.com/corp/details-uuuf913-p1k81dd-1%CE%BCm-grating-resolution-automatic-mounting-machine-with-class-10-cleanliness-level-and-1410-1450-2200mm-footprint.html"
+        },
+        {
+          "title": "AN-HPD-ASSEMBLY Assembly instructions for the HybridPACK™ Drive | Automotive High Power documentation",
+          "url": "https://documentation.infineon.com/atv-high-power/docs/tat1701333118938"
+        },
+        {
+          "title": "Mitsubishi Collaborative Robot Manual | PDF | Specification (Technical Standard) | Switch",
+          "url": "https://www.scribd.com/document/856073882/bfp-a3727n"
+        }
+      ]
+    },
+    {
+      "query": "\"physical watermarking\" sensors actuator replay attacks",
+      "status": "fulfilled",
+      "results": [
+        {
+          "title": "A practical physical watermarking approach to detect replay attacks in a CPS - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0959152422001093"
+        },
+        {
+          "title": "Optimal Finite-time Watermark Signal Design for Replay Attack Detection using Zonotopes - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S2405896322005298"
+        },
+        {
+          "title": "A cost-effective dynamic physical watermarking strategy for replay attack detection in cyber-physical systems - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0925231226000524"
+        },
+        {
+          "title": "Optimal periodic watermarking schedule for replay attack detection in cyber–physical systems - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0005109819305618"
+        },
+        {
+          "title": "A practical physical watermarking approach to detect replay attacks in a CPS - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0959152422001093"
+        },
+        {
+          "title": "Physical watermarking for replay attack detection in continuous-time systems - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0947358021000704"
+        },
+        {
+          "title": "Trade-off analysis in replay attack detection with safe and suspicious sensor measurements - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/pii/S000510982600172X"
+        },
+        {
+          "title": "A cost-effective dynamic physical watermarking strategy for replay attack detection in cyber-physical systems - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0925231226000524"
+        },
+        {
+          "title": "Physical Watermarking for Securing Cyber Physical",
+          "url": "https://www.osti.gov/servlets/purl/1406349"
+        },
+        {
+          "title": "A practical physical watermarking approach to detect replay attacks in a CPS",
+          "url": "https://pure.strath.ac.uk/ws/portalfiles/portal/137506600/Ahmed_etal_JPC_2022_A_practical_physical_watermarking_approach_to_detect_replay_attacks.pdf"
+        },
+        {
+          "title": "A practical physical watermarking approach to detect replay attacks in a CPS",
+          "url": "https://strathprints.strath.ac.uk/81324/1/Ahmed_etal_JPC_2022_A_practical_physical_watermarking_approach_to_detect_replay_attacks.pdf"
+        },
+        {
+          "title": "Deterministic Event-Based Physical Watermarks Against Replay Attacks in Cyber-Physical Systems",
+          "url": "https://eurekamag.com/research/105/977/105977109.php"
+        },
+        {
+          "title": "A practical physical watermarking approach to detect replay attacks in a CPS - Strathprints",
+          "url": "https://strathprints.strath.ac.uk/81324/"
+        },
+        {
+          "title": "Optimal finite-time watermark signal design for replay attack detection using zonotopes",
+          "url": "https://upcommons.upc.edu/entities/publication/648b39a7-c7f5-4777-a907-2fa96c6a0a64"
+        },
+        {
+          "title": "US11659001B2 - Non-intrusive replay attack detection system - Google Patents",
+          "url": "https://patents.google.com/patent/US11659001B2/en"
+        },
+        {
+          "title": "Physical Watermarking for Replay Attack Detection in Continuous-time Systems",
+          "url": "https://arxiv.org/abs/2103.00790"
+        },
+        {
+          "title": "An Online Approach to Physical Watermark Design",
+          "url": "https://arxiv.org/abs/1911.01868"
+        },
+        {
+          "title": "An On-line Design of Physical Watermarks",
+          "url": "https://arxiv.org/abs/1809.05299"
+        },
+        {
+          "title": "Sequential Detection of Deception Attacks in Networked Control Systems with Watermarking",
+          "url": "https://arxiv.org/abs/1803.00170"
+        },
+        {
+          "title": "Hardware watermarking",
+          "url": "https://en.wikipedia.org/wiki/Hardware_watermarking"
+        },
+        {
+          "title": "Digital watermarking",
+          "url": "https://en.wikipedia.org/wiki/Digital_watermarking"
+        },
+        {
+          "title": "Steganography",
+          "url": "https://en.wikipedia.org/wiki/Steganography"
+        }
+      ]
+    },
+    {
+      "query": "\"IoT\" \"unexplored\" \"physical\" \"shared\" devices",
+      "status": "fulfilled",
+      "results": [
+        {
+          "title": "UniPreCIS : A data pre-processing solution for collocated services on shared IoT",
+          "url": "https://arxiv.org/abs/2208.01394"
+        },
+        {
+          "title": "Weather Synchronization in Digital Twin Environments for Shared VR Experience Using Commercial Metaverse Platforms",
+          "url": "https://arxiv.org/abs/2606.09834"
+        },
+        {
+          "title": "Towards utilizing internet of things (IoT) devices for understanding individual occupants' energy usage of personal and shared appliances in office buildings - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S2352710219310137"
+        },
+        {
+          "title": "UniPreCIS : A data pre-processing solution for collocated services on shared IoT",
+          "url": "https://www.emergentmind.com/papers/2208.01394"
+        },
+        {
+          "title": "Internet of Tangible Things (IoTT): Challenges and Opportunities for Tangible Interaction with IoT",
+          "url": "https://doi.org/10.3390/INFORMATICS5010007"
+        },
+        {
+          "title": "UniPreCIS : A data pre-processing solution for collocated services on shared IoT | DeepAI",
+          "url": "https://deepai.org/publication/uniprecis-a-data-pre-processing-solution-for-collocated-services-on-shared-iot"
+        },
+        {
+          "title": "MetaGadget: IoT Framework for Event-Triggered Integration of User-Developed Devices into Commercial Metaverse Platforms",
+          "url": "https://www.researchgate.net/publication/386352090_MetaGadget_IoT_Framework_for_Event-Triggered_Integration_of_User-Developed_Devices_into_Commercial_Metaverse_Platforms"
+        },
+        {
+          "title": "Currently, only the *Meituan* shared bicycle uses special physical structures to automatically disconnect devices when they are disassembled.",
+          "url": "https://www.jianjunchen.com/p/iot-rental.USESEC24.pdf"
+        },
+        {
+          "title": "Smart Home Beyond the Home:",
+          "url": "https://par.nsf.gov/servlets/purl/10173418"
+        },
+        {
+          "title": "U.S. Patent for Exploring an unexplored domain by parallel reinforcement Patent (Patent # 12,340,283 issued June 24, 2025) - Justia Patents Search",
+          "url": "https://patents.justia.com/patent/12340283"
+        },
+        {
+          "title": "Joint optimization of UAV-WPT and mixed task offloading strategies with shared mode in SAG-PIoT: A MAD4PG approach - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S2542660523002937"
+        },
+        {
+          "title": "Understanding User Privacy Concerns of Shared Smart TVs",
+          "url": "https://knowledge.uchicago.edu/record/16415/files/Understanding-User-Privacy-Concerns-of-Shared-Smart-TVs.pdf"
+        },
+        {
+          "title": "Cloud-based federated identity for the Internet of Things | Annals of Telecommunications | Springer Nature Link",
+          "url": "https://link.springer.com/article/10.1007/s12243-018-0641-8"
+        },
+        {
+          "title": "Internet of Tangible Things (IoTT): Challenges and Opportunities for Tangible Interaction with IoT",
+          "url": "https://www.mdpi.com/2227-9709/5/1/7"
+        },
+        {
+          "title": "CN112840319B - Exploring unexplored domains via parallel reinforcement - Google Patents",
+          "url": "https://patents.google.com/patent/CN112840319B/en"
+        },
+        {
+          "title": "Oringano: Shared Ring-Based Gestures for Controlling Internet of Things Devices in a Smart Home",
+          "url": "https://www.mdpi.com/1424-8220/26/17/5605"
+        },
+        {
+          "title": "Autonomous Cyber-Physical Systems Enabling Smart Positive Energy Districts",
+          "url": "https://osuva.uwasa.fi/server/api/core/bitstreams/ad50ceda-3b49-46e2-9b79-25d807e3e734/content"
+        },
+        {
+          "title": "For an IPD to be successful, open communication and knowledge sharing between parties must occur. To foster collaboration, many tools and techniques have been developed and used for construction projects. These include the Last Planner System (LPS), Building Information Modeling (BIM), Internet-of-Things, and many more. Previous research have mainly focused on using LPS and BIM for IPD projects. Reda and Khallaf (2019) proposed a framework for LPS adoption in Egypt. Fischer et al. (2014) proposed a framework based on integration of the product, process, and organization. Ilozor and Kelly (2012) studied the interactions between BIM and IPD and their combined effect on the design and construction processes. Ma et al. (2017) proposed a collaboration platform for IPD participants to motivate the use of this method by reducing the need for constant physical presence. However, there are unexplored technologies that can support IPDs such as the Internet-of-Things (IoT). According to Hickethier et al. (2013), information is not equally distributed among all participants and that some participants will have more information than others. Although increasing the information available to everyone is aimed at increasing the efficiency, it can also backfire from information overload. This reinforces the need for a unified framework to collect and share knowledge among participants across all disciplines/teams to increase project success. Robinson et al. (2010) explored the issue of governance and knowledge management in public-private partnership (PPP) projects and made several important observations and recommendations that would translate well to the IPD environment. This paper builds on some of these by proposing a framework for knowledge management in IPD projects that leverages the emerging IoT technology. The next section introduces IoT and the tools available for construction projects.",
+          "url": "https://www.citcglobal.com/_files/ugd/0d72f4_b0614c84436d45ae9d5a0fc154b66789.pdf"
+        },
+        {
+          "title": "Friendly Fire: Cross-App Interactions in IoT Pla",
+          "url": "https://michelepasqua.github.io/publications/pdfs/TOPS21.pdf"
+        }
+      ]
+    },
+    {
+      "query": "\"craft\" \"sensor\" \"actuator\" \"challenge\" repair",
+      "status": "fulfilled",
+      "results": [
+        {
+          "title": "Control Systems, Robotics, and Automation",
+          "url": "https://www.eolss.net/ebooklib/ebookcontents/E6-43-ThemeContents.pdf"
+        },
+        {
+          "title": "CONTROL SYSTEMS, ROBOTICS AND AUTOMATION – Vol. XVI - Adaptive and Neural Approaches to Fault-tolerant",
+          "url": "https://www.eolss.net/sample-chapters/c18/E6-43-31-14.pdf"
+        },
+        {
+          "title": "LA ANTARA YAN KE",
+          "url": "https://patentimages.storage.googleapis.com/c5/95/9b/2689ab3af2e079/US9896162.pdf"
+        },
+        {
+          "title": "Fault Diagnosis and Fault-Tolerant Control",
+          "url": "https://www.eolss.net/ebooklib/ebookcontents/E6-43/E6-43-V16-themecontents.PDF"
+        },
+        {
+          "title": "Delft University of Technology",
+          "url": "https://research.tudelft.nl/files/86400246/binnenwerk.pdf"
+        },
+        {
+          "title": "Delft University of Technology",
+          "url": "https://research.tudelft.nl/files/7746045/dissertation.pdf"
+        },
+        {
+          "title": "Have you ever worked on a particular machine for days, changing spare parts, doing all the checks, yet the same fault keeps coming back? | Onomen Godwin",
+          "url": "https://www.linkedin.com/posts/onomen-godwin-023a78244_maintenanceexcellence-assetperformance-activity-7391799564472766464-6imk"
+        },
+        {
+          "title": "Aerospace product development challenges | Bluefruit",
+          "url": "https://bluefruit.co.uk/embedded/aerospace-product-development-challenges/"
+        },
+        {
+          "title": "Charlene Walters - General Electric | LinkedIn",
+          "url": "https://www.linkedin.com/in/charlene-walters-59679aa1"
+        },
+        {
+          "title": "WO2019002619A1 - SYSTEM FOR THE NON-DESTRUCTIVE STATE MONITORING OF FIBER-REINFORCED CONSTRUCTIONS, SUCH AS FIBER-REINFORCED HOLLOW BODIES - Google Patents",
+          "url": "https://patents.google.com/patent/WO2019002619A1/en"
+        },
+        {
+          "title": "WO2025236015A1 – Craft-centric 3D printer and scanner | Patsnap Eureka",
+          "url": "https://eureka.patsnap.com/patent/WO2025236015A1"
+        },
+        {
+          "title": "Industrial Maintenance Training | PLC Fault Labs - PLC Simulator",
+          "url": "https://www.plcsimulationsoftware.com/industrial-maintenance-training-software"
+        },
+        {
+          "title": "FATHOM5 CORP - Affordable AI Sensor System May Help Predict Equipment Failures Before They Happen Award | SBIR.org",
+          "url": "https://sbir.org/awards/dod-N68335-22-C-0322-1"
+        },
+        {
+          "title": "ACTUATION 2015: Modular Electro Mechanical Actuators for ACARE 2020 Aircraft and Helicopters | FP7 | CORDIS | Europäische Kommission",
+          "url": "https://cordis.europa.eu/project/id/284915/reporting/de"
+        },
+        {
+          "title": "Swavlamban Compendium V4.docx 2 1 - Compressed | PDF | Ammunition | Unmanned Aerial Vehicle",
+          "url": "https://www.scribd.com/document/1004612326/Swavlamban-Compendium-v4-Docx-2-1-compressed"
+        },
+        {
+          "title": "WO2016040702A1 - System for controlling marine craft with steerable drives - Google Patents",
+          "url": "https://patents.google.com/patent/WO2016040702A1/en"
+        },
+        {
+          "title": "Biomedical applications of stimuli-responsive “smart” interpenetrating polymer network hydrogels - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10882133/"
+        },
+        {
+          "title": "Multiple sensor fault diagnosis for safe navigation of autonomous surface vessels - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0967066125004344"
+        }
+      ]
+    },
+    {
+      "query": "\"blind\" \"physical\" \"coordination\" \"haptic\" cooking",
+      "status": "fulfilled",
+      "results": [
+        {
+          "title": "Becoming a foodie in virtual environments: simulating and enhancing the eating experience with wearable electronics for the next-generation VR/AR | Materials Horizons | The Royal Society of Chemistry",
+          "url": "https://doi.org/10.1039/D5MH00488H?urlappend=%3Futm_source%3Dresearchgate.net%26utm_medium%3Darticle"
+        },
+        {
+          "title": "(PDF) Becoming a foodie in virtual environments: simulating and enhancing the eating experience with wearable electronics for the next-generation VR/AR",
+          "url": "https://www.researchgate.net/publication/392229024_Becoming_a_foodie_in_virtual_environments_simulating_and_enhancing_the_eating_experience_with_wearable_electronics_for_the_next-generation_VRAR"
+        },
+        {
+          "title": "Seeing with the Hands: A Sensory Substitution That Supports Manual Interactions | Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems",
+          "url": "https://doi.org/10.1145/3706598.3713419"
+        },
+        {
+          "title": "Microsoft Word - W81XWH-14-1-0617_AnnualTechProgReport_Year1_v3d_AcceptedAllChanges.docx",
+          "url": "https://3dvar.com/Froehlich2015HandSight.pdf"
+        },
+        {
+          "title": "Multipurpose Spatiomotor Capture System for Haptic and Visual Training and Testing in the Blind and Sighted - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8966903/"
+        },
+        {
+          "title": "ED092496.tif.pdf",
+          "url": "https://files.eric.ed.gov/fulltext/ED092496.pdf"
+        },
+        {
+          "title": "Lecture Notes in Computer Science",
+          "url": "https://www.nzdr.ru/data/media/biblio/kolxoz/Cs/CsLn/H/Haptic%20and%20Audio%20Interaction%20Design%2C%201%20conf.%2C%20HAID%202006%28LNCS4129%2C%20Springer%2C%202006%29%28ISBN%203540375953%29%28176s%29.pdf"
+        },
+        {
+          "title": "Real-time sensory substitution to enable players who are blind to play video games using whole body gestures - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S187595211300013X"
+        },
+        {
+          "title": "Audio-Haptic Drawing Training for Spatial Cognition",
+          "url": "https://eureka.patsnap.com/triz-case/audio-haptic-drawing-training"
+        },
+        {
+          "title": "Projects | Yuhang Zhao",
+          "url": "https://www.yuhangz.com/projects/"
+        },
+        {
+          "title": "Figural component in geometrical reasoning: the case of a blind solver",
+          "url": "https://univda.iris.cineca.it/retrieve/e722f81e-da89-4340-bc64-f46758ba84b3/Miragliotta_TWG24_final.pdf"
+        },
+        {
+          "title": "Visual experience and the haptic horizontal-vertical illusion",
+          "url": "https://citeseerx.ist.psu.edu/document?doi=bfe9e1313b5f6a02e36d3b4a56fb2872fcb34a09&repid=rep1&type=pdf"
+        },
+        {
+          "title": "WO2022020344A1 - Augmented reality hand guidance application for people with visual impairments - Google Patents",
+          "url": "https://patents.glgoo.top/patent/WO2022020344A1/en"
+        },
+        {
+          "title": "Mediating haptic exploratory strategies in children who have visual impairment and intellectual disabilities - McLinden - 2012 - Journal of Intellectual Disability Research - Wiley Online Library",
+          "url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2788.2011.01430.x"
+        },
+        {
+          "title": "“Why are there so many steps?”: Improving Access to Blind",
+          "url": "https://cil.csit.carleton.ca/b/wp-content/uploads/2023/09/3615663.pdf"
+        },
+        {
+          "title": "PERCEPTUAL, COGNITIVE, AND ENVIRONMENTAL FACTORS - Electronic Travel AIDS: New Directions for Research - NCBI Bookshelf",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK218032/"
+        },
+        {
+          "title": "Haptic Touch and Hand Ability | IntechOpen",
+          "url": "https://www.intechopen.com/chapters/9902"
+        },
+        {
+          "title": "Frontiers | You got to coordinate, stably: 3D bimanual guidance with haptic and auditory cues",
+          "url": "https://www.frontiersin.org/journals/virtual-reality/articles/10.3389/frvir.2026.1757963/full"
+        },
+        {
+          "title": "John-Ross Rizzo",
+          "url": "https://en.wikipedia.org/wiki/John-Ross_Rizzo"
+        }
+      ]
+    },
+    {
+      "query": "\"temporary\" \"infrastructure\" \"sensor\" \"commissioning\" challenge",
+      "status": "fulfilled",
+      "results": [
+        {
+          "title": "Implementation Guide: Strain-Powered Mesh Sensing Network for Autonomous Infrastructure Self-Monitoring - Unpatentable.org | We Invent the Future.",
+          "url": "https://unpatentable.org/innovation/implementation-guide-strain-powered-mesh-sensing-network-for-autonomous-infrastructure-self-monitoring/"
+        },
+        {
+          "title": "Vanguard Wireless HART Gas Detector for Temporary Worksite Monitoring UAE - S W M E CONTROL SYSTEMS TRADING L.L.C",
+          "url": "https://swme.ae/blog/vanguard-wireless-hart-gas-detector/"
+        },
+        {
+          "title": "PowerPoint Presentation",
+          "url": "https://indico.cern.ch/event/1168778/attachments/2464624/4227403/_2022_06_17-TV-DetSeminar.pdf"
+        },
+        {
+          "title": "(PDF) Development of an extended commissioning program for temporary 220 kV cable connections",
+          "url": "https://www.researchgate.net/publication/383987633_Development_of_an_Extended_Commissioning_Program_for_Temporary_220_kV_Cable_Connections"
+        },
+        {
+          "title": "Commercial Construction IoT Software for Workforce, RFID, UWB, BLE & Edge Device Management",
+          "url": "https://commconai.com/construction-iot-software/"
+        },
+        {
+          "title": "Bringing versatility and",
+          "url": "https://shop.sherriff.com.au/medias/SCHTBURQR4HHE00E2L00DataSheet.pdf?context=bWFzdGVyfHJvb3R8OTczOTk0NHxhcHBsaWNhdGlvbi9wZGZ8YURJMUwyaGlNUzh4TURjM09EUTJNRFU0TmpBeE5DOVRRMGhVUWxWU1VWSTBTRWhGTURCRk1rd3dNRVJoZEdGVGFHVmxkQzV3WkdZfGRkMjc4YTJjM2NlODk5NDZhNWYwZmE3ZDY2ZjllMTFjMzAyNTFlN2FmOTkyNzQ5ZDZlNmUzZGI0OWQzYjQwMjg"
+        },
+        {
+          "title": "Data Center Wireless Before and After Build | Clover IQ",
+          "url": "https://www.cloveriq.com/blog/data-center-pre-post-construction-connectivity"
+        },
+        {
+          "title": "T",
+          "url": "https://sid.siemens.com/api/khub/documents/a9moRufg239bnSrPiuAmLg/content"
+        },
+        {
+          "title": "Transient Electronics for Temporary Structural Health Monitoring.",
+          "url": "https://eureka.patsnap.com/report-transient-electronics-for-temporary-structural-health-monitoring"
+        },
+        {
+          "title": "Vibration Measurement during the Expansion of Railway",
+          "url": "https://www.sigicom.com/customer-cases/vibration-measurement-during-the-expansion-of-railway/"
+        },
+        {
+          "title": "Smart Infrastructure Fails When the Contract Ends | BSMA Enterprises",
+          "url": "https://bsmaenterprises.com/blog-1/f/smart-infrastructure-fails-when-the-contract-ends"
+        },
+        {
+          "title": "RDG400KN Room thermostats with KNX communications",
+          "url": "https://smns.ru/upload/iblock/936/936f9ae1ae9984bf94cda6b0efd7767d.pdf"
+        },
+        {
+          "title": "Data Center Commissioning — ASHRAE 1.6 Guide",
+          "url": "https://www.irecruit.co/insights/ashrae-guideline-1-6-data-center-owners-scope-commissioning"
+        },
+        {
+          "title": "Metro Geotechnical Monitoring Hong Kong | GEOOE",
+          "url": "https://geooe.com/hk/applications/metro/"
+        },
+        {
+          "title": "Camera & Sensor Commissioning Checklist Guide | FortSense",
+          "url": "https://fortsense.net/blog/camera-and-sensor-commissioning-checklist"
+        },
+        {
+          "title": "Airside Perception-SLAM Commissioning Playbook | Industry Research",
+          "url": "https://kvynlim.github.io/industry-research/70-operations-domains/deployment-playbooks/airside-perception-slam-commissioning"
+        },
+        {
+          "title": "EHRM Infrastructure Upgrades",
+          "url": "https://imlive.s3.amazonaws.com/Federal%20Government/ID285288145224866775601152617307904167241/Attachment%202%20-%20VANCHCS%20McClellan%20EHRM%20Specs%20Final.pdf"
+        },
+        {
+          "title": "RDD810KN…",
+          "url": "https://marcomplet.cz/docs/siemens_RDD810_KN_kl_en.pdf"
+        }
+      ]
+    },
+    {
+      "query": "\"ultrasonic\" \"crosstalk\" \"reinforcement learning\" sensors scheduling",
+      "status": "fulfilled",
+      "results": [
+        {
+          "title": "Design and Optimization of 3‑D Printed Ferroelectric PVDF Micro‑Scaled Ultrasonic Transducer Arrays for High‑Resolution Intracavitary Imaging — FREEDERIA",
+          "url": "https://freederia.com/design-and-optimization-of-3-d-printed-ferroelectric-pvdf-micro-scaled-ultrasonic-transducer-arrays-for-high-resolution-intracavitary-imaging/"
+        },
+        {
+          "title": "Artificial Intelligence-Driven Mixed-Signal SI/PI Optimization in Ultrasonic Sensor Arrays: A 58kHz Bandpass Filter Design Approach",
+          "url": "https://eurekamag.com/research/110/184/110184879.php"
+        },
+        {
+          "title": "A System to Reduce the Effects of Crosstalk in Ultrasonic Sensor Data Using Neural Networks",
+          "url": "https://www.jackknott.com/finalyearproject.pdf"
+        },
+        {
+          "title": "한국과학기술원 도서관",
+          "url": "https://library.kaist.ac.kr/search/detail/view.do?bibCtrlNo=69739&flag=dissertation"
+        },
+        {
+          "title": "Field AI & Perception",
+          "url": "https://sites.google.com/view/postech-hero/research-areas/field-ai-perception"
+        },
+        {
+          "title": "Lima et al.: Sensorial Testbed for High-Voltage Tower...",
+          "url": "https://www.mobility-compass.eu/?detail-publ=https%3A%2F%2Fwww.mobility-compass.eu%2Fwork%2F10.1007978-3-031-21062-4_29&person=https%3A%2F%2Fwww.mobility-compass.eu%2Fperson%2F0000-0001-7902-1207&view=detail"
+        },
+        {
+          "title": "AI-Driven Innovations in Micromachined Ultrasonic Transducers: From Smart Design to Intelligent Systems | MDPI",
+          "url": "https://www.mdpi.com/3042-5999/2/3/11"
+        },
+        {
+          "title": "Ultrasonic Through-Metal Communication Based on Deep-Learning-Assisted Echo Cancellation - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11014081/"
+        },
+        {
+          "title": "Emilio José Bueno | ScienceDirect",
+          "url": "https://www.sciencedirect.com/author/7004344768/emilio-jose-bueno"
+        },
+        {
+          "title": "2026 Graduate School Admission Guide | PDF | Postgraduate Education | University And College Admission",
+          "url": "https://fr.scribd.com/document/906126498/2026-Spring-Admission-Brochure-Eng"
+        },
+        {
+          "title": "U.S. Patent Application for BROADBAND RAY TRACING-BASED ULTRASONIC SENSOR SIMULATION FOR SIMULATION ENVIRONMENTS AND APPLICATIONS Patent Application (Application #20260111626 issued April 23, 2026) - Justia Patents Search",
+          "url": "https://patents.justia.com/patent/20260111626"
+        },
+        {
+          "title": "Ultrasonic Through-Metal Communication Based on Deep-Learning-Assisted Echo Cancellation",
+          "url": "https://doi.org/10.3390/s24072141"
+        },
+        {
+          "title": "Ultrasonic Through-Metal Communication Based on Deep-Learning-Assisted Echo Cancellation",
+          "url": "https://www.mdpi.com/1424-8220/24/7/2141"
+        },
+        {
+          "title": "WAYNE ASHDOWN",
+          "url": "https://www.columbiagreene.edu/wp-content/uploads/2025/05/CV_Dr.-Jonathan-Ashdown.pdf"
+        }
+      ]
+    },
+    {
+      "query": "\"robot\" \"snag\" \"garment\" \"dressing\" detection",
+      "status": "fulfilled",
+      "results": [
+        {
+          "title": "Frontiers | A Quantitative Analysis of Dressing Dynamics for Robotic Dressing Assistance",
+          "url": "https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2017.00013/full"
+        },
+        {
+          "title": "Frontiers | A Quantitative Analysis of Dressing Dynamics for Robotic Dressing Assistance",
+          "url": "https://doi.org/10.3389%2Ffrobt.2017.00013"
+        },
+        {
+          "title": "(PDF) An assistive robot to support dressing - strategies for planning and error handling",
+          "url": "https://www.researchgate.net/publication/305910514_An_assistive_robot_to_support_dressing_-_strategies_for_planning_and_error_handling"
+        },
+        {
+          "title": "(PDF) An assistive robot to support dressing - strategies for planning and error handling (2016) | Greg Chance | 40 Citations",
+          "url": "https://scispace.com/papers/an-assistive-robot-to-support-dressing-strategies-for-31kw2c9li5"
+        },
+        {
+          "title": "(PDF) Hybrid Control Strategies for Safe and Adaptive Robot-Assisted Dressing",
+          "url": "https://www.researchgate.net/publication/391706926_Hybrid_Control_Strategies_for_Safe_and_Adaptive_Robot-Assisted_Dressing"
+        },
+        {
+          "title": "A Quantitative Analysis of Dressing Dynamics for Robotic Dressing Assistance",
+          "url": "https://upcommons.upc.edu/server/api/core/bitstreams/cd443ec9-b6e4-4781-834e-652384f8a608/content"
+        },
+        {
+          "title": "eprints@whiterose.ac.uk",
+          "url": "https://eprints.whiterose.ac.uk/id/eprint/233774/1/Springer_Lecture_Notes_in_Computer_Science_SEAA2025-1.pdf"
+        },
+        {
+          "title": "",
+          "url": "https://uwe-repository.worktribe.com/preview/909507/biorob2016paperGIC.pdf"
+        },
+        {
+          "title": "A Quantitative Analysis of Dressing Dynamics for Robotic Dressing Assistance",
+          "url": "https://public-pages-files-2025.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2017.00013/pdf"
+        },
+        {
+          "title": "Force-Modulated Visual Policy for Robot-Assisted",
+          "url": "https://openreview.net/pdf/bc9a183ac21bc07266fa632a12a3b22b34a94a9d.pdf"
+        },
+        {
+          "title": "(PDF) A Quantitative Analysis of Dressing Dynamics for Robotic Dressing Assistance",
+          "url": "https://www.researchgate.net/publication/316972407_A_Quantitative_Analysis_of_Dressing_Dynamics_for_Robotic_Dressing_Assistance"
+        },
+        {
+          "title": "Yasmin Rafiq's research works | The Graduate Center, CUNY and other places",
+          "url": "https://www.researchgate.net/scientific-contributions/Yasmin-Rafiq-2036526280"
+        },
+        {
+          "title": "[Papierüberprüfung] Hybrid Control Strategies for Safe and Adaptive Robot-Assisted Dressing",
+          "url": "https://www.themoonlight.io/de/review/hybrid-control-strategies-for-safe-and-adaptive-robot-assisted-dressing"
+        },
+        {
+          "title": "(PDF) Symbolic Runtime Verification and Adaptive Decision-Making for Robot-Assisted Dressing",
+          "url": "https://www.researchgate.net/publication/391020238_Symbolic_Runtime_Verification_and_Adaptive_Decision-Making_for_Robot-Assisted_Dressing"
+        },
+        {
+          "title": "Symbolic Runtime Verification and Adaptive Decision-Making for Robot-Assisted Dressing - White Rose Research Online",
+          "url": "https://eprints.whiterose.ac.uk/id/eprint/233774/"
+        },
+        {
+          "title": "Force-Constrained Visual Policy: Safe Robot-Assisted Dressing via Multi-Modal Sensing — Lacuna",
+          "url": "https://lacuna.tiptreesystems.com/work/force-constrained-visual-policy-safe-robot-assisted-dressing-via-multi-modal/wrk_fa3d03304909f9011800f63eaed6d74e"
+        },
+        {
+          "title": "An Assistive Robot to Support Dressing – Strategies for Planning",
+          "url": "https://uwe-repository.worktribe.com/OutputFile/909507"
+        },
+        {
+          "title": "Symbolic Runtime Verification and Adaptive Decision-Making for Robot-Assisted Dressing",
+          "url": "https://arxiv.org/abs/2504.15666"
+        },
+        {
+          "title": "Robots That Feel: How Force Feedback Solves the Dressing Challenge | Deep Paper",
+          "url": "https://deep-paper.org/en/paper/2509.12741/"
+        }
+      ]
+    },
+    {
+      "query": "\"tactile\" \"remote\" \"craft\" \"teaching\" force",
+      "status": "fulfilled",
+      "results": [
+        {
+          "title": "D7.4 Exploitation Plan and Activities",
+          "url": "https://www.craeft.eu/wp-content/uploads/2026/03/D7.4_M36_v04.pdf"
+        },
+        {
+          "title": "Pupil Remote Learning Policy",
+          "url": "https://www.stmichaelscatholicprimaryschool.co.uk/attachments/download.asp?file=112&type=pdf"
+        },
+        {
+          "title": "Experiences and outcomes of craft skill learning with a 360° virtual learning environment and a head-mounted display - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7452434/"
+        },
+        {
+          "title": "Objectives",
+          "url": "https://www.craeft.eu/craeftobjectives/"
+        },
+        {
+          "title": "A Roadmap for Craft Understanding, Education, Training, and Preservation",
+          "url": "https://www.mdpi.com/2571-9408/6/7/280"
+        },
+        {
+          "title": "Frontiers | Children’s continued usage intention in virtual reality-based pottery courses: a study on the collaborative mechanism of cognitive engagement and affective arousal",
+          "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1683244/full"
+        },
+        {
+          "title": "Frontiers | A gut microbiome tactile teaching tool and guided-inquiry activity promotes student learning",
+          "url": "https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2022.966289/full"
+        },
+        {
+          "title": "STEM BUILD: An Online Community To Decrease Barriers to Implementation of Inclusive Tactile Teaching Tools - ScienceDirect",
+          "url": "https://www.sciencedirect.com/org/science/article/pii/S193578772000074X"
+        },
+        {
+          "title": "A gut microbiome tactile teaching tool and guided-inquiry activity promotes student learning - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9813521/"
+        },
+        {
+          "title": "Trade-marks Journal Vol. 65 No. 3323",
+          "url": "https://publications.gc.ca/collections/collection_2018/isde-ised/RG42-2-65-3323-eng.pdf"
+        },
+        {
+          "title": "tvcg-3010088-pp.pdf",
+          "url": "https://repositorio.inesctec.pt/server/api/core/bitstreams/4dfb6a10-4867-4321-acfe-237302efcf20/content"
+        },
+        {
+          "title": "1",
+          "url": "https://www.surgeons.org/-/media/Project/RACS/surgeons-org/files/amc/webamc_accreditation_2007.pdf?hash=4EB146F83D217ACADE196612C45F9A53&rev=9479c824dbb4418c828299ad5a5fddb8"
+        },
+        {
+          "title": "A gut microbiome tactile teaching tool and guided-inquiry activity promotes student learning",
+          "url": "https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2022.966289/pdf"
+        },
+        {
+          "title": "CRYSTAL CREATIONS Trademark of IP International Holdings Pty Ltd - Serial Number 97163679 - Furm",
+          "url": "https://furm.com/trademarks/crystal-creations-97163679"
+        },
+        {
+          "title": "A Roadmap for Craft Understanding, Education, Training, and Preservation",
+          "url": "https://doi.org/10.3390%2Fheritage6070280"
+        },
+        {
+          "title": "CN121187451A – Digital display system and method for non-perpetual cultural heritage | Patsnap Eureka",
+          "url": "https://eureka.patsnap.com/patent/CN121187451A"
+        },
+        {
+          "title": "tele-operation - an overview | ScienceDirect Topics",
+          "url": "https://www.sciencedirect.com/topics/computer-science/tele-operation"
+        }
+      ]
+    },
+    {
+      "query": "\"vibration sensor\" \"mounting\" \"US20250076101\"",
+      "status": "fulfilled",
+      "results": [
+        {
+          "title": "US20250076101A1 - Automatic calibration of vibration sensor based on mounting method - Google Patents",
+          "url": "https://patents.google.com/patent/US20250076101A1/en"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+[
+  {
+    "id": "N037",
+    "name": "HoldAtWill — 수제 제본 중 종이 넘김과 실 당김을 구분하는 자동 클램프",
+    "status": "REJECTED",
+    "stage": "v3_round5",
+    "duplicate_check": "N008(접착 중 힘 유지), N018(공예 힘 지도), F08(그립 적응) 대조. 사람의 작업 단계에 맞춘 해제/유지로 틀었음.",
+    "reason": "G02/G06/G13 FAIL: 기존 제본 프레임·임시 무게·발 페달 클램프보다 절약할 작업이 분명하지 않음. 넘김 의도를 AI로 예측하면서 오해제 위험을 추가하는 비용을 정당화하지 못함.",
+    "sources": [
+      "https://www.schmedt.com/ww2000/pdf/e-general%20catalogue_v12.0_ebook.pdf",
+      "https://www.cxdinternational.com/content/files/PDFs/CXDCatVol2-2019.pdf"
+    ]
+  },
+  {
+    "id": "N038",
+    "name": "KnotKeeper — 한 손으로 매듭 공예를 할 때 놓는 실의 장력을 대신 이어받는 받침",
+    "status": "OPEN",
+    "stage": "v3_round5",
+    "parent_id": "N037",
+    "duplicate_check": "N037/N035/N018 대조. 제본 전체 추종이나 실 엉킴 해소 대신 한 손에서 놓인 실의 지지 인계라는 과제. 단순 공예 코치와 구별.",
+    "reason": "압력 감지 클램프 4개와 손/실 인식으로 놓이는 실을 고정하고 새로 잡은 실을 해제하는 흐름. G06/G07/G08/G13 OPEN: 손을 놓기 전 인계 관측, 버튼·고정 매듭판보다 나은 동작, 실제 보조기 선행 조사 필요. 고정 순서의 매듭이면 상태 머신이 충분하므로 제외해야 함.",
+    "sources": []
+  },
+  {
+    "id": "N039",
+    "name": "Unknit — 낡은 편물을 실 장력에 맞춰 되감아 재료 회수",
+    "status": "REJECTED",
+    "stage": "v3_round5",
+    "duplicate_check": "N002/N019/N020/R14 대조. 완성 편물 해체와 재료 회수라는 새 작업이나 이송 적응의 인접 변형.",
+    "reason": "G07/G13 FAIL: 자동 풀기·되감기 공개 구현을 확인. 장력 감지·인장/이완·양방향 구동 선행 특허도 있음. 복잡한 의복까지 확장하면 봉제선 처리와 실 절단이 새 병목이며 AI만 더하는 변형은 부족.",
+    "sources": [
+      "https://labs.cs.queensu.ca/istudio/wp-content/uploads/sites/12/2025/02/Its-Being-Unmade.pdf",
+      "https://patents.google.com/patent/CN1348515A/en"
+    ]
+  }
+]

@@ -1,0 +1,129 @@
+[
+  {
+    "id": "N074",
+    "name": "FoldMemory — 여러 실물 인쇄 조각의 의미를 입체 면에 배치해 기념 상자로 재단·접선 가공",
+    "status": "OPEN",
+    "stage": "v3_round12",
+    "parent_id": "N072",
+    "duplicate_check": "N072 직접 변형. 한 장의 그림 보존/기존 상자 blank 배치에서, 복수 티켓·엽서의 의미 영역과 입체 면 관계(목적지와 날짜가 함께, 그림은 접히지 않게)를 만족하는 분할 전개도로 변경. N046의 소거 게임과는 보존할 실물 결과를 제조하는 작업이 다름.",
+    "reason": "G02/G06/G07/G09/G13 OPEN: 복수 원문의 의미 영역을 입체 면에 맞추는 변형과 구현 경로를 카드로 구체화. 그러나 기존 상자에 원본 조각을 그대로 붙이는 대안 대비 시간·실수·완성 결과의 이득이 아직 분명하지 않다. 단순 보존 영역 지정을 AI로 치환한 정도라면 제외한다. 모델의 실제 인쇄물 성능/ExecuTorch 내보내기는 실행 전. 13차 합성 기하 코드에서 두 카드의 세 면씩 분할·탭 배치·닫힌 모서리 대응을 확인했으나 실제 절단/AI/가치 검증은 아니므로 OPEN 유지.",
+    "sources": [
+      "https://www.brother-usa.com/blogs/brother-crafts/using-scanncutcanvas-and-scanncut-to-make-heart-boxes",
+      "https://www.eastmancuts.com/products/visionpro/",
+      "https://github.com/AntonFlorey/PolyZamboni",
+      "https://github.com/Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB",
+      "https://mindee.github.io/doctr/modules/models.html",
+      "https://github.com/pytorch/executorch/blob/main/docs/source/getting-started.md"
+    ],
+    "card": "research/N074_FOLD_MEMORY.md",
+    "history": [
+      {
+        "stage": "before_round13_geometry_probe",
+        "status": "OPEN",
+        "reason": "G02/G06/G07/G09/G13 OPEN: 복수 원문의 의미 영역을 입체 면에 맞추는 변형과 구현 경로를 카드로 구체화. 그러나 기존 상자에 원본 조각을 그대로 붙이는 대안 대비 시간·실수·완성 결과의 이득이 아직 분명하지 않다. 단순 보존 영역 지정을 AI로 치환한 정도라면 제외한다. 모델의 실제 인쇄물 성능/ExecuTorch 내보내기는 실행 전."
+      }
+    ],
+    "artifacts": [
+      "research/prototypes/foldmemory/geometry_probe.py",
+      "research/prototypes/foldmemory/geometry_report.json",
+      "research/prototypes/foldmemory/layout.svg"
+    ]
+  },
+  {
+    "id": "N075",
+    "name": "ScentCoach — 냄새 찾기 행동을 읽고 보상·다음 냄새를 자동 선택하는 반려견 훈련기",
+    "status": "REJECTED",
+    "stage": "v3_round13",
+    "duplicate_check": "R28/N056 대조. 일반 제스처 입력이나 잔여 사료 회수와 다르지만 동물 행동 분류에 보상을 연결하는 기존 외부 흐름을 먼저 조사함.",
+    "reason": "G07/G13 FAIL: 실제 자동 냄새 탐지 훈련 장치가 독립 조작·샘플 전환·보상을 구현했고, ML 행동 인식 보상 장치도 공개됐다. 현재 구상의 적응 난도 추가만으로 새로운 훈련 과제를 만들지 못했다. Top Tier K9의 개발 중 홍보를 완성 제품 실측으로 취급하지 않음.",
+    "sources": [
+      "https://researchcommons.waikato.ac.nz/bitstreams/2e880b25-e022-4a87-b98d-1a63f67de507/download",
+      "https://arxiv.org/abs/2101.02380"
+    ]
+  },
+  {
+    "id": "N076",
+    "name": "BubbleKeeper — 실제 비눗방울을 관찰하며 담그기와 바람을 바꾸는 적응 버블 장치",
+    "status": "REJECTED",
+    "stage": "v3_round13",
+    "duplicate_check": "N034/N026 대조. 배의 운동이나 수채화 습도 대신 막 형성과 방울 발생을 제어하지만, 단순 자동 송풍 장치를 넘는 사용 결과가 필요한 후보.",
+    "reason": "G02/G06/G13 FAIL: 서보로 막대를 담그고 팬으로 부는 공개 장치가 있으며, 방울 수/크기 목표를 붙여도 속도·담금 주기 교정이라는 강한 비교군 대비 학습이 필요한 작업을 구체화하지 못했다. 정확히 같은 학습 제어 제품이 있다는 주장은 아님.",
+    "sources": [
+      "https://learn.adafruit.com/make-it-bubble/use",
+      "https://andieandmike.org/bubblecam/"
+    ]
+  },
+  {
+    "id": "N077",
+    "name": "LockTutor — 손의 힘에 맞춰 핀 저항을 바꾸는 햅틱 자물쇠 연습기",
+    "status": "REJECTED",
+    "stage": "v3_round13",
+    "duplicate_check": "N018/N071/R28 대조. 공예 힘 재현·협동 드로잉·일반 제스처가 아닌 양손 잠금 기구 조작이지만 햅틱 훈련 선행과 대조.",
+    "reason": "G07 FAIL: Stanford CHARM 2026 Group 4가 실제 모터 저항·핀 위치·과도 조작·클릭 피드백을 갖는 lock-picking simulator를 구현했다. 사용자별 난도 조정만 추가하는 안은 같은 핵심 연습 흐름이다.",
+    "sources": [
+      "https://charm.stanford.edu/ME327/2026-Group4"
+    ]
+  },
+  {
+    "id": "N078",
+    "name": "FlightCoach — 종이비행기 형상과 실제 발사 결과를 학습하는 제작·시험 장치",
+    "status": "REJECTED",
+    "stage": "v3_round13",
+    "duplicate_check": "N034 직접 대조. 사용자 제작물의 운동을 시험한다는 공통점이 크며 배를 비행기로 바꾸는 것만으로 독립 통과시키지 않음.",
+    "reason": "G07/G14 FAIL: 종이비행기 제작·로봇 발사·비행 기록·군집 모델·목표 비행에 대한 역설계를 실제 구현한 연구가 있다. 발사 각도만 자동 조정하도록 줄여도 새 사용자 과제가 약하고 N034와 포트폴리오 차이가 부족하다.",
+    "sources": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC10015042/"
+    ]
+  },
+  {
+    "id": "N079",
+    "name": "CrokiPartner — 실제 판 상태를 보고 샷을 계획·발사하는 크로키놀 상대",
+    "status": "REJECTED",
+    "stage": "v3_round13",
+    "duplicate_check": "R11/N073 대조. 카메라 심판을 넘어 실제 샷을 수행하지만 기존 물리 보드게임 로봇·보치아 보조와 대조.",
+    "reason": "G07 FAIL: Crokibot 9900의 실제 판 상태 평가·샷 계획·발사 구현이 공개됐다. 지역 게임이나 다른 보드에 AI 상대를 붙이는 것만으로 새 안으로 세지 않음.",
+    "sources": [
+      "https://www.enggeomb.ca/pdf/Keystone/22Winter.pdf"
+    ]
+  },
+  {
+    "id": "N080",
+    "name": "PaperCasting — 손그림을 관절 부품으로 나눠 실물 종이 인형으로 재단",
+    "status": "REJECTED",
+    "stage": "v3_round13",
+    "parent_id": "N074",
+    "duplicate_check": "N074/N072의 의미 보존 재단에서 인형 부품 제작으로 변형. N049/N061은 완성 인형을 구동하는 안이므로 동일한 구현이라고 혼동하지 않음.",
+    "reason": "G06/G07/G13 FAIL: 단일 유기체 그림을 부품으로 자동 구조화하고 cardboard puppetry에 적용한 연구와 자동 종이 커터를 이용한 인형 제작이 공개됐다. 연구가 완전 자동 힌지 위치 생성까지 했다는 주장은 하지 않는다. 현재 차이는 그 힌지/실물 절단 통합에 남으며, 제한된 인형 범위에서 수동 관절 지정 대비 새 사용자 이득을 확보하지 못했다.",
+    "sources": [
+      "https://perso.telecom-paristech.fr/parakkat/PDF/cag19.pdf",
+      "https://tais.ca/paper-cutter-demo/"
+    ]
+  },
+  {
+    "id": "N081",
+    "name": "TasteMirror — 눈가림 시음 응답을 학습해 다음 음료 배합을 실제 주입하는 장치",
+    "status": "REJECTED",
+    "stage": "v3_round13",
+    "duplicate_check": "N048/N056 대조. 고형물 분배·사료 회수와 달리 시음 선호의 반복 학습과 액체 배합이며 기존 목록의 직접 복제는 아님.",
+    "reason": "G07/G13 FAIL: 취향을 학습해 음료를 조정한다는 MIXO의 공개 개발 방향과 겹친다. 해당 페이지는 출시 대기 상태이므로 완성 제품 성능으로 표현하지 않는다. TasteBud는 실제 다중 펌프 맛 전달의 근거이지 개인 선호 학습까지 구현한 증거는 아니다. 눈가림 선택을 넣는 것만으로 기존 개인화 음료 제조와 충분히 다른 작업이 되지 않음.",
+    "sources": [
+      "https://drinkmixo.com/",
+      "https://www.frontiersin.org/journals/computer-science/articles/10.3389/fcomp.2023.1128229/full"
+    ]
+  },
+  {
+    "id": "N082",
+    "name": "GraviPaint — 보존할 무늬와 채울 영역을 지정하면 실제 유동화 캔버스를 기울이는 보조대",
+    "status": "OPEN",
+    "stage": "v3_round13",
+    "duplicate_check": "N026/N040/N060/N034 대조. 숨은 종이 수분 추정이나 화가의 다음 의도 추정 대신 사용자가 고른 무늬의 변형과 실제 물감 전면을 관측해 전역 경사를 조절. N034와 학습 동역학 제어는 공유하므로 실제 예술 작업/점성 도막이라는 차이가 충분한지도 G14에서 검토.",
+    "reason": "G06/G08/G09/G13 OPEN: 작은 2축 경사대와 실제 유동화 작업으로 범위를 잡음. 단순 색 덩어리 중심 추적이 아니라 보존 영역의 변형과 빈 영역의 충전을 함께 다룬다. 다만 같은 관측을 쓰는 온라인 선형 유동 모델보다 학습 모델이 나을 조건, 숨은 도막 두께에 대한 관측 충분성, 데이터 수집·교체 시간을 더 확인해야 함. 실제 물감을 제어한 실험은 없음.",
+    "card": "research/N082_GRAVI_PAINT.md",
+    "sources": [
+      "https://acrylicpouring.com/diagonal-pour/",
+      "https://digitalcommons.calpoly.edu/theses/2205/",
+      "https://devpost.com/software/the-pourtrait",
+      "https://www.pratt.edu/news/building-bridges-at-the-seoul-biennale/"
+    ]
+  }
+]

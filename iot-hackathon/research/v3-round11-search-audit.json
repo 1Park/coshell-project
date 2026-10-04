@@ -1,0 +1,1148 @@
+{
+  "note": "반환 링크 메타데이터이며 모두 정독·검증한 문헌 목록은 아니다. 채택 근거는 각 후보에 연결했다. 로컬 Python 검사에서는 torch/torchaudio/executorch/numpy/scipy가 설치되어 있지 않았고, 이 단계에서 설치나 실행 실험을 수행하지 않았다.",
+  "calls": [
+    {
+      "key": "r11start_0",
+      "query": "automatic woodwind reed adjustment robot scraping acoustic feedback",
+      "status": "fulfilled",
+      "source_links": [
+        {
+          "title": "Automatic tip profiler",
+          "url": "https://reedmachines.com/products/configure/33.02.921.00-bptp-automatic-tip-profiler"
+        },
+        {
+          "title": "Tip profiler",
+          "url": "https://reedmachines.com/products/configure/13.01.911.00-batp-tip-profiler"
+        },
+        {
+          "title": "Automatic tip profiler",
+          "url": "https://reedmachines.com/products/configure/13.01.921.00-batp-automatic-tip-profiler"
+        },
+        {
+          "title": "Autosax",
+          "url": "https://www.logosfoundation.org/instrum_gwr/autosax.html"
+        },
+        {
+          "title": "Tip profiler",
+          "url": "https://staging.reedmachines.com/products/configure/13.01.911.00-batp-tip-profiler"
+        },
+        {
+          "title": "Automatic tip profiler",
+          "url": "https://staging.reedmachines.com/products/configure/33.01.921.00-bptp-automatic-tip-profiler"
+        },
+        {
+          "title": "Profiler",
+          "url": "https://staging.reedmachines.com/products/configure/23.01.911.00-obp-profiler"
+        },
+        {
+          "title": "Tip profiler",
+          "url": "https://reedmachines.com/products/configure/13.02.911.00-batp-tip-profiler"
+        },
+        {
+          "title": "Automatic profiler",
+          "url": "https://staging.reedmachines.com/products/configure/23.01.921.00-obp-automatic-profiler"
+        },
+        {
+          "title": "For bassoon - Automatic Unit - Bucher profiling machines",
+          "url": "https://www.oboenrohr.ch/tip-profiling-machine-bassoon/automat"
+        },
+        {
+          "title": "The Cube Reed Machines oboe reed scraping machine | EG-REEDS",
+          "url": "https://eg-reeds.com/shop/reed-making-machines/reed-machines/reed-machines-profiler-the-cube/"
+        },
+        {
+          "title": "Coupling of Limit Switch Sensors and Stepper Motors with Acoustic Feedback for Positioning of a Cartesian Robot End Effector in the Study of Musical Instruments",
+          "url": "https://www.mdpi.com/1424-8220/25/6/1709"
+        },
+        {
+          "title": "Post-digital sax - a digitally controlled acoustic single-reed woodwind instrument",
+          "url": "https://nime.pubpub.org/pub/q8f786b3/download/pdf"
+        },
+        {
+          "title": "Semi-Automatic Flute Robot and Its Acoustic Sensing",
+          "url": "https://arxiv.org/abs/2603.14180"
+        },
+        {
+          "title": "Towards Open Source Hardware Robotic Woodwind:",
+          "url": "https://kyle-fogarty.github.io/assets/papers/ICMCRobotFlute.pdf"
+        },
+        {
+          "title": "Roadie Tuner",
+          "url": "https://en.wikipedia.org/wiki/Roadie_Tuner"
+        },
+        {
+          "title": "ICAROB2025",
+          "url": "https://alife-robotics.co.jp/members2025/icarob/data/html/data/OS/OS7/OS7-1.pdf"
+        },
+        {
+          "title": "Expression control in automated musical instruments",
+          "url": "https://www.logosfoundation.eu/g_texts/expression-control.pdf"
+        },
+        {
+          "title": "Reed clipper",
+          "url": "https://en.wikipedia.org/wiki/Reed_clipper"
+        }
+      ]
+    },
+    {
+      "key": "r11start_1",
+      "query": "AI haptic drawing co creation force feedback pen",
+      "status": "fulfilled",
+      "source_links": [
+        {
+          "title": "SensciLab - Vision",
+          "url": "https://senscilab.com/pages/application/application"
+        },
+        {
+          "title": "CHARM LAB ME327/2026-Group 8",
+          "url": "https://charm.stanford.edu/ME327/2026-Group8"
+        },
+        {
+          "title": "How SPARSH Works",
+          "url": "https://www.teamsparsh.in/how-it-works"
+        },
+        {
+          "title": "Pen Meets Desk: Above-surface Drawing with Encountered-type Haptics Using an Extendable Pen",
+          "url": "https://www.jstage.jst.go.jp/article/ipsjjip/34/0/34_29/_article/-char/en"
+        },
+        {
+          "title": "Perception, Display, and Fabrication Group",
+          "url": "https://www.pdf.inf.usi.ch/projects/SurfaceStylusCoOpt/index.html"
+        },
+        {
+          "title": "Grain — Feel What You Draw",
+          "url": "https://feelgrain.com/"
+        },
+        {
+          "title": "US20250208712A1 - Enhanced interaction with a computing agent through a haptic device - Google Patents",
+          "url": "https://patents.google.com/patent/US20250208712A1/en"
+        },
+        {
+          "title": "Demonstration of Visuo-Haptic Redirection in Above-Surface Drawing with an Extendable Pen",
+          "url": "https://doi.org/10.1109/VRW70859.2026.00387"
+        },
+        {
+          "title": "Archie | Devpost",
+          "url": "https://devpost.com/software/archie-o5vzx7"
+        },
+        {
+          "title": "CHARM LAB ME327/2023-Group 4",
+          "url": "https://charm.stanford.edu/ME327/2023-Group4"
+        },
+        {
+          "title": "PAL: A Framework for Physically Assisted Learning Through Design and Exploration With a Haptic Robot Buddy - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8497750/"
+        },
+        {
+          "title": "Adobe Research » Fabrication-in-the-Loop Co-Optimization of Surfaces and Styli for Drawing Haptics",
+          "url": "https://research.adobe.com/publication/fabrication-in-the-loop-co-optimization-of-surfaces-and-styli-for-drawing-haptics/"
+        },
+        {
+          "title": "Investigating Force Feedback in Mid-air",
+          "url": "https://midl.tamu.edu/data/papers/jcise2019_3Dsketch.pdf"
+        },
+        {
+          "title": "object interaction. Our research investigates both high-definition haptic and auditory feedback for generating more realistic feedback for surface-pen interaction. Our aim is to simulate the rich multi-sensory feedback that is fundamental to drive and master our interaction with objects. Indeed, other than being possibly engaging, studies in neuroscience have shown that the multi-modal feedback expected from an action (e.g., in this case hand writing behavior with a specific pen over a specific type of texture) is critical to the sense of agency of the produced output of the action (e.g., the drawing) in the writer [39], drives our actions (e.g., amount of pressure while writing) and supports cognitive processes related to the action (e.g., learning to write or mastering the creation of drawing made possible by the drawing tools and surfaces [5, 12]).",
+          "url": "https://discovery.ucl.ac.uk/1509625/1/RealPen-Final_26_July2016.pdf"
+        },
+        {
+          "title": "Dynamic Drawing Guidance via Electromagnetic Haptic Feedback",
+          "url": "https://arxiv.org/abs/1906.11753"
+        },
+        {
+          "title": "C O M P U T E R - S U P P O RT E D M O V E M E N T G U I D A N C E :",
+          "url": "https://tuprints.ulb.tu-darmstadt.de/bitstreams/c25b3d2f-e8d3-43b9-af16-a65c74ace5ca/download"
+        },
+        {
+          "title": "VRSketchPen: Unconstrained Haptic Assistance for Sketching in",
+          "url": "https://martinweigel.com/research/vrsketchpen/2020-VRSketchPen.pdf"
+        },
+        {
+          "title": "Force Attraction Pen: A Haptic Pen with Variable",
+          "url": "https://lukemitchell.co/documents/force-attraction-pen.pdf"
+        },
+        {
+          "title": "Microsoft pen protocol",
+          "url": "https://en.wikipedia.org/wiki/Microsoft_pen_protocol"
+        },
+        {
+          "title": "Haptic feedback when writing?",
+          "url": "https://www.reddit.com/r/note_a1/comments/1rwg3n1/haptic_feedback_when_writing/"
+        },
+        {
+          "title": "RealPen: Providing Realism in Handwriting Tasks on Touch Surfaces using Auditory-Tactile Feedback",
+          "url": "https://arxiv.org/abs/1803.02307"
+        },
+        {
+          "title": "HaptiStylus: A Novel Stylus Capable of Displaying Movement and Rotational Torque Effects",
+          "url": "https://arxiv.org/abs/2104.01088"
+        },
+        {
+          "title": "Prop-Based Haptic Interaction with Co-location and Immersion: an Automotive Application",
+          "url": "https://arxiv.org/abs/cs/0601025"
+        },
+        {
+          "title": "Haptic technology",
+          "url": "https://en.wikipedia.org/wiki/Haptic_technology"
+        },
+        {
+          "title": "AVP & Pencil: Why haptic feedback is crucial for spacial design",
+          "url": "https://www.reddit.com/r/VisionPro/comments/1cfxyt6"
+        },
+        {
+          "title": "XP-PEN",
+          "url": "https://en.wikipedia.org/wiki/XP-PEN"
+        },
+        {
+          "title": "Force Touch",
+          "url": "https://en.wikipedia.org/wiki/Force_Touch"
+        },
+        {
+          "title": "Graphics tablet",
+          "url": "https://en.wikipedia.org/wiki/Graphics_tablet"
+        }
+      ]
+    },
+    {
+      "key": "r11start_2",
+      "query": "small business manual tasks difficult automate physical handling repair",
+      "status": "fulfilled",
+      "source_links": [
+        {
+          "title": "Managing hazardous manual tasks | WorkSafe.qld.gov.au",
+          "url": "https://www.worksafe.qld.gov.au/safety-and-prevention/hazards/hazardous-manual-tasks/what-are-hazardous-manual-tasks/managing-hazardous-manual-tasks"
+        },
+        {
+          "title": "3 Ways to Automate a Manual Handling Risk Assessment | Pilla",
+          "url": "https://yourpilla.com/blog/manual-handling-risk-assessment"
+        },
+        {
+          "title": "1. **Manual handling**",
+          "url": "https://content-v2.api.worksafe.vic.gov.au/sites/default/files/2018-06/ISBN-12-ways-to-make-small-business-safer-handbook-for-workplaces-2010-10_3.pdf"
+        },
+        {
+          "title": "How to Reduce Manual Processes in a Growing Company (Without Breaking What's Working) | Bootstrap Built",
+          "url": "https://bootstrapbuilt.com/blog/reduce-manual-processes-small-business"
+        },
+        {
+          "title": "7 Manual Tasks Costing Service Businesses 10+ Hours Per Week (And How to Automate Them) | Opus Labs",
+          "url": "https://www.opuslabs.io/blog/7-manual-tasks-costing-service-businesses-10-hours-per-week"
+        },
+        {
+          "title": "The SME Automation Checklist: 20 Tasks To Automate | ZOPPLY",
+          "url": "https://zopply.com/automation-strategy/sme-automation-checklist/"
+        },
+        {
+          "title": "Manual tasks | SafeWork NSW",
+          "url": "https://www.safework.nsw.gov.au/roadmap/vision-chapter-one/more-to-be-done?a=48020"
+        },
+        {
+          "title": "7 Tasks Small Business Owners Should Stop Doing Manually | smedigital.ai",
+          "url": "https://www.smedigital.ai/blog/tasks-stop-doing-manually"
+        },
+        {
+          "title": "Agriculture - Manual handling - HSE",
+          "url": "https://www.hse.gov.uk/agriculture/topics/manual-handling.htm"
+        },
+        {
+          "title": "The 7 Manual Tasks Every Small Business Should Automate First | Accelerate Outcome — accelerateoutcome",
+          "url": "https://www.accelerateoutcome.com/guides/7-manual-tasks-to-automate/"
+        },
+        {
+          "title": "Hazardous manual tasks | SafeWork NSW",
+          "url": "https://www.safework.nsw.gov.au/hazards-a-z/hazardous-manual-tasks"
+        },
+        {
+          "title": "Small Business Automation: 25 Tasks You Should Stop Doing Manually in 2026 · Foundrly",
+          "url": "https://getfoundrly.com/blog/small-business-automation-tasks"
+        },
+        {
+          "title": "Construction physical ill health risks: Manual handling - HSE",
+          "url": "https://www.hse.gov.uk/construction/healthrisks/physical-ill-health-risks/manual-handling.htm"
+        },
+        {
+          "title": "Managing hazardous manual tasks",
+          "url": "https://published.collections.slsa.sa.gov.au/e-books/zi22122989.pdf"
+        },
+        {
+          "title": "Guidance on the Management",
+          "url": "https://www.hsa.ie/eng/Publications_and_Forms/Publications/Retail/Management_Manual_Handling.pdf"
+        },
+        {
+          "title": "Model Code of Practice Hazardous manual tasks",
+          "url": "https://www.safeworkaustralia.gov.au/system/files/documents/1705/mcop-hazardous-manual-tasks-v2.pdf"
+        },
+        {
+          "title": "Material handling",
+          "url": "https://en.wikipedia.org/wiki/Material_handling"
+        },
+        {
+          "title": "Ergonomics for manual material handling",
+          "url": "https://en.wikipedia.org/wiki/Ergonomics_for_manual_material_handling"
+        },
+        {
+          "title": "Automated Misconfiguration Repair of Configurable Cyber-Physical Systems with Search: an Industrial Case Study on Elevator Dispatching Algorithms",
+          "url": "https://arxiv.org/abs/2301.01487"
+        },
+        {
+          "title": "Reducing Mental Workload through On-Demand Human Assistance for Physical Action Failures in LLM-based Multi-Robot Coordination",
+          "url": "https://arxiv.org/abs/2603.28156"
+        },
+        {
+          "title": "DOCUMENT RESUME",
+          "url": "https://files.eric.ed.gov/fulltext/ED313819.pdf"
+        },
+        {
+          "title": "Automated Workers Ergonomic Risk Assessment in Manual Material Handling using sEMG Wearable Sensors and Machine Learning",
+          "url": "https://arxiv.org/abs/2109.15036"
+        },
+        {
+          "title": "Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware",
+          "url": "https://arxiv.org/abs/2304.13705"
+        },
+        {
+          "title": "Manual handling of loads",
+          "url": "https://en.wikipedia.org/wiki/Manual_handling_of_loads"
+        },
+        {
+          "title": "Manual labour",
+          "url": "https://en.wikipedia.org/wiki/Manual_labour"
+        }
+      ]
+    },
+    {
+      "key": "r11start_3",
+      "query": "site:remap.org.uk/solutions \"problem\" \"automatic\"",
+      "status": "fulfilled",
+      "source_links": [
+        {
+          "title": "Solutions - REMAP",
+          "url": "https://remap.org.uk/solutions/?_solutions=strap"
+        },
+        {
+          "title": "Solutions - REMAP",
+          "url": "https://remap.org.uk/solutions/?_solutions=braking-equipment"
+        }
+      ]
+    },
+    {
+      "key": "r11fold_0",
+      "query": "AI recycled cardboard boxes cutting preserve printed artwork packaging",
+      "status": "fulfilled",
+      "source_links": [
+        {
+          "title": "AI Cardboard Box Packaging Design Generator | Pacdora",
+          "url": "https://www.pacdora.com/tools/ai-cardboard-box-packaging-design"
+        },
+        {
+          "title": "Custom Recyclable Cardboard Box – Free Shipping",
+          "url": "https://customboxeslab.com/recyclable-cardboard-box/"
+        },
+        {
+          "title": "Custom Archival Boxes - Preserve & Protect Your Valuables",
+          "url": "https://customboxeslane.com/custom-archival-boxes"
+        },
+        {
+          "title": "P1 - Voidless",
+          "url": "https://www.voidless-packaging.com/en/p-system/p1-system/"
+        },
+        {
+          "title": "P2 - Voidless",
+          "url": "https://www.voidless-packaging.com/en/p-system/p2-system/"
+        },
+        {
+          "title": "Custom Recycled Paper Box | Free Shipping | Bexo Packaging",
+          "url": "https://bexopackaging.com/recycled-paper-box/"
+        },
+        {
+          "title": "CARD BOARD BOXES",
+          "url": "https://www.eurpack.it/wp-content/uploads/2025/12/BS_Eurpack_23_ENG__compressed.pdf"
+        },
+        {
+          "title": "CustomTear Away Boxes | Convenient & Eye-Catching Packaging",
+          "url": "https://cardboarddisplayboxes.com/tear-away-boxes/"
+        },
+        {
+          "title": "Sustainable Recycled Paper Boxes for Custom Packaging",
+          "url": "https://vexapackaging.com/product/recycled-paper-box/"
+        },
+        {
+          "title": "Cardboard Gable Boxes | Custom Packaging by PackTist",
+          "url": "https://packtist.com/products/cardboard-gable-boxes"
+        },
+        {
+          "title": "Biodegradable Packaging Boxes | Discount Box Printing",
+          "url": "https://discountboxprinting.com/biodegradable-packaging-boxes"
+        },
+        {
+          "title": "Digital Die Cutting for Packaging | CMYK Engineering",
+          "url": "https://cmykengineering.com/applications/packaging"
+        },
+        {
+          "title": "Custom eCommerce Box & Packaging Solutions | Box Genie",
+          "url": "https://www.boxgenie.com/pages/ecommerce-packaging-solutions"
+        },
+        {
+          "title": "Presentation - 10 April 2025 - The corrugated cardboard active packaging production system – Presentation by International Paper",
+          "url": "https://food.ec.europa.eu/document/download/2926c183-6500-4676-8cef-24251a2df80b_en?filename=fw_eu-platform_20250410_sub-ai_pres04.pdf"
+        },
+        {
+          "title": "Industrial Box 600x400x220",
+          "url": "https://sustainablepack.fi/wp-content/uploads/sites/10/2025/02/Sustainable-Pack-Katalog-ENG.pdf"
+        },
+        {
+          "title": "Echo Cartons - The Complete Beginner's Guide to Corrugated Packaging - Brochure copy",
+          "url": "https://www.echocartons.com.au/wp-content/uploads/2024/09/Sustainable-Packaging_EchoCartons_Download.pdf"
+        },
+        {
+          "title": "Folding carton",
+          "url": "https://en.wikipedia.org/wiki/Folding_carton"
+        },
+        {
+          "title": "AI-Powered Innovations in Natural Fiber Packaging for Sustainability",
+          "url": "https://www.tandfonline.com/doi/pdf/10.1080/15440478.2026.2640280"
+        },
+        {
+          "title": "• **Cutting and Shaping:** Once printed and coated, the folding carton (duplex) paper undergoes precise cutting and shaping to meet specific client requirements. This step is tailored to create packaging solutions in a variety of shapes and sizes, from standard boxes to intricate custom designs. State-of-the-art cutting equipment is used to ensure accuracy and consistency across all products. This stage is critical in transforming the folding carton (duplex) paper into functional and aesthetically pleasing packaging, capable of accommodating a wide range of products and applications; and",
+          "url": "https://cma.gov.sa/en/Market/Prospectuses/Documents/ucic_en.pdf"
+        },
+        {
+          "title": "Closed-loop box reuse",
+          "url": "https://en.wikipedia.org/wiki/Closed-loop_box_reuse"
+        },
+        {
+          "title": "I found a way to resuse these boxes",
+          "url": "https://www.reddit.com/r/EtsySellers/comments/1g7nnpl"
+        },
+        {
+          "title": "Corrugated box design",
+          "url": "https://en.wikipedia.org/wiki/Corrugated_box_design"
+        },
+        {
+          "title": "Cardboard",
+          "url": "https://en.wikipedia.org/wiki/Cardboard"
+        },
+        {
+          "title": "AI-assisted design of chemically recyclable polymers for food packaging",
+          "url": "https://arxiv.org/abs/2511.04704"
+        },
+        {
+          "title": "Monami Ohno",
+          "url": "https://en.wikipedia.org/wiki/Monami_Ohno"
+        }
+      ]
+    },
+    {
+      "key": "r11fold_1",
+      "query": "fussy cutting machine camera artificial intelligence printed fabric",
+      "status": "fulfilled",
+      "source_links": [
+        {
+          "title": "visionPRO Software - Eastman Software - Eastman Machine Company",
+          "url": "https://www.eastmancuts.com/products/visionpro/"
+        },
+        {
+          "title": "AI aided Cutting solution IRIS - INTERgrup",
+          "url": "https://www.intergrup.gr/en/%CE%BF%CE%BB%CE%BF%CE%BA%CE%BB%CE%B7%CF%81%CF%89%CE%BC%CE%AD%CE%BD%CE%B7-%CE%BB%CF%8D%CF%83%CE%B7-iris/"
+        },
+        {
+          "title": "Printing Clothing and Home Textile Vision Positioning Laser Cutter",
+          "url": "https://www.jhxlaser.com/products/Home-Textile-Visual-Positioning-Laser-Cutter.html"
+        },
+        {
+          "title": "Vista 0906 | Automatisa",
+          "url": "https://automatisa.com.br/en/maquinas/vista-0906-en/"
+        },
+        {
+          "title": "Camera System Cutting Machine, Precision Vision Cutting for Textiles",
+          "url": "https://www.zxtcutter.com/products/camera-system-cutting-machine.html"
+        },
+        {
+          "title": "Automatic Contour Recognition Printed Fabric Cutting Machine Manufacturer - Kingbeck CNC",
+          "url": "https://www.kingbeckcnc.com/product/automatic-floor-carpet-oscillating-knife-cutter-with-ccd-camera/"
+        },
+        {
+          "title": "Vision Laser Cutting Machine for Printed Fabric - RedShift Laser",
+          "url": "https://redshiftlaser.com/vision-laser-cutter/"
+        },
+        {
+          "title": "Sublimation Sportswear Laser Cutting Machine | Vision CO2 Cutter",
+          "url": "https://redshiftlaser.com/laser-solution-sublimation-sportswear/"
+        },
+        {
+          "title": "Lace Laser Cutting Machine with HD Vision System | RedShift",
+          "url": "https://redshiftlaser.com/lace-laser-cutter/"
+        },
+        {
+          "title": "visionPRO for Printed Shapes and Patterns - Eastman Machine",
+          "url": "https://www.eastmancuts.com/news/visionpro-printed-shapes-patterns/"
+        },
+        {
+          "title": "Vision Laser Cutter | Contour Cutting for Printed Fabrics | Conveyor Table | RedShift",
+          "url": "https://redshiftlaser.com/laser-machines/vision-laser-cutter/"
+        },
+        {
+          "title": "High-Speed Vision Laser Cutting System for Sublimation - Sublistar",
+          "url": "https://www.subli-star.com/other-product/lasercut-p-series-overhead-panoramic-vision-laser-cutting-machine/"
+        },
+        {
+          "title": "WORKING PRINCIPLE FOR FABRICS OR PANELS",
+          "url": "https://fkgroup.com/wp-content/uploads/2025/03/catalogo-fkgroup-2025-ENG-ES-web.pdf"
+        },
+        {
+          "title": "CATALOGUE",
+          "url": "https://fkgroup.com/wp-content/uploads/2025/03/catalogo-fkgroup-2025-ENG-FRA-web.pdf"
+        },
+        {
+          "title": "WORKING PRINCIPLE FOR FABRICS OR PANELS",
+          "url": "https://fkgroup.com/wp-content/uploads/2025/03/catalogo-fkgroup-2025-ENG-ITA-web.pdf"
+        },
+        {
+          "title": "Special Issue 2: ITMA, 2023",
+          "url": "https://jtatm.textiles.ncsu.edu/index.php/JTATM/article/download/20742/9709/75948"
+        },
+        {
+          "title": "AUTO SHARPING MACHINE SERIES",
+          "url": "https://www.sewingmachine.co.za/wp-content/themes/squaredeal/download.php?file=dison-catalogue-2021.pdf"
+        },
+        {
+          "title": "AI Visual Inspection for Garment Production",
+          "url": "https://arxiv.org/abs/2608.21426"
+        },
+        {
+          "title": "Printed Fabric Cutting Solutions",
+          "url": "https://evolutiondigital.es/wp-content/uploads/2020/02/GENERAL.pdf"
+        },
+        {
+          "title": "Deep Imitation Learning of Sequential Fabric Smoothing From an Algorithmic Supervisor",
+          "url": "https://arxiv.org/abs/1910.04854"
+        },
+        {
+          "title": "Laser cutting bridge",
+          "url": "https://en.wikipedia.org/wiki/Laser_cutting_bridge"
+        },
+        {
+          "title": "Artificial Intelligence in the Creative Industries: A Review",
+          "url": "https://arxiv.org/abs/2007.12391"
+        },
+        {
+          "title": "Application of Fuzzy Logic in Design of Smart Washing Machine",
+          "url": "https://arxiv.org/abs/1701.01654"
+        }
+      ]
+    },
+    {
+      "key": "r11fold_2",
+      "query": "recycled packaging cardboard box resize machine vision",
+      "status": "fulfilled",
+      "source_links": [
+        {
+          "title": "CR Series Robotic Loading System for Flow Pack | IMA Group",
+          "url": "https://imagroup.com/machines/cr-series/"
+        },
+        {
+          "title": "KOBRA FLEXPACK | Kobra Elcoman",
+          "url": "https://www.kobra.com/en-US/products/industrial-line/kobra-flexpack"
+        },
+        {
+          "title": "Full article: Cardboard packaging minimization: Autonomous box selection by RGB-depth vision system and complementary deep learning classification",
+          "url": "https://www.tandfonline.com/doi/full/10.1080/10739149.2024.2379054"
+        },
+        {
+          "title": "Recycle Sorting Robotic Arm With Computer Vision | Andrew Bernas",
+          "url": "https://www.andrewbernas.com/docs/projects/robots/recycle-sorting-robot"
+        },
+        {
+          "title": "High Speed Universal Robotic Box Cutter (HS-UBC) | MHM Automation",
+          "url": "https://mhmautomation.com/product/high-speed-universal-box-cutter"
+        },
+        {
+          "title": "Paper protective packaging machine - DecisionTower™ with FillPak Trident™ - Ranpak",
+          "url": "https://www.directindustry.com/prod/ranpak/product-18639-2831203.html"
+        },
+        {
+          "title": "Case Erector – Inmes Makina",
+          "url": "https://inmesmakine.com/case-erector/"
+        },
+        {
+          "title": "KOBRA FLEXPACK | Kobra Elcoman",
+          "url": "https://www.kobra.com/en-/Product/Detail/403"
+        },
+        {
+          "title": "Vision guided multi-robot system for flowpack candy packaging - Making.com",
+          "url": "https://making.com/equipment/vision-guided-multi-robot-system-for-flowpack-candy-packaging"
+        },
+        {
+          "title": "P1 - Voidless",
+          "url": "https://www.voidless-packaging.com/en/p-system/p1-system/"
+        },
+        {
+          "title": "Wenzhou Rongda Packaging Equipment Co., Ltd.",
+          "url": "https://www.rongdapackage.com/p923.html"
+        },
+        {
+          "title": "KOBRA FLEXPACK",
+          "url": "https://www.kobra-machines.com/kobra-flexpack"
+        },
+        {
+          "title": "CARD BOARD RECYCLING",
+          "url": "https://www.intimus.com/fileadmin/media/Downloads/PRODUCT-CATALOGUE-2024-digital_EN.pdf"
+        },
+        {
+          "title": "YOUR SOLUTI",
+          "url": "https://www.projecta.fi/wp-content/uploads/2019/07/PAQTEQ-C-250.pdf"
+        },
+        {
+          "title": "“Our new packaging machine ‘reads’ the height of the products in the box and then cuts down the boxes to the optimal size. This has multiple advantages: it saves us 30,000 kg of cardboard each year, 75% of our shipments are now free from (plastic) filling material, and we achieved a 20% reduction of transportation of useless air, saving us 58,000kg CO₂ on a yearly basis.”",
+          "url": "https://medeco.org/-/media/Project/MedecoORG/Files/2021-csr-report-mediq.pdf"
+        },
+        {
+          "title": "Industrial Box 600x400x150",
+          "url": "https://sustainablepack.fr/wp-content/uploads/sites/11/2025/02/Sustainable-Pack-Katalog-ENG.pdf"
+        },
+        {
+          "title": "Industrial Box 600x400x150",
+          "url": "https://sustainablepack.fi/wp-content/uploads/sites/10/2025/02/Sustainable-Pack-Katalog-ENG.pdf"
+        },
+        {
+          "title": "Industrial Box 600x400x150",
+          "url": "https://sustainablepack.cz/wp-content/uploads/sites/8/2025/02/Sustainable-Pack-Katalog-ENG.pdf"
+        },
+        {
+          "title": "Machine cuts used boxes into packing material for shipping.",
+          "url": "https://www.reddit.com/r/specializedtools/comments/udc015"
+        },
+        {
+          "title": "This right-sized packaging system creates the perfect parcel using 3D scanning technology",
+          "url": "https://www.reddit.com/r/interestingasfuck/comments/1f77xn3"
+        },
+        {
+          "title": "Case erector",
+          "url": "https://en.wikipedia.org/wiki/Case_erector"
+        },
+        {
+          "title": "Inferring 3D Articulated Models for Box Packaging Robot",
+          "url": "https://arxiv.org/abs/1106.4632"
+        },
+        {
+          "title": "Precision scanning required for custom packaging",
+          "url": "https://www.reddit.com/r/Damnthatsinteresting/comments/vtxsgy/precision_scanning_required_for_custom_packaging/"
+        },
+        {
+          "title": "Cardboard box",
+          "url": "https://en.wikipedia.org/wiki/Cardboard_box"
+        }
+      ]
+    },
+    {
+      "key": "r11fold_3",
+      "query": "robot cardboard reuse cutting crease detection boxes",
+      "status": "fulfilled",
+      "source_links": [
+        {
+          "title": "BoxMania | Portfolio",
+          "url": "https://www.kaustubhdk.com/boxmania"
+        },
+        {
+          "title": "AI Depalletizing Solution | High-Precision Unloading for mixed boxes with 3D Vision & AI",
+          "url": "https://www.cmesrobotics.ai/en/solution/depalletizing"
+        },
+        {
+          "title": "IROS 2026: Viam to Showcase Box-Opening Robot - Rockingrobots",
+          "url": "https://www.rockingrobots.com/iros-2026-viam-to-showcase-box-opening-robot/"
+        },
+        {
+          "title": "AI Depalletizing Solution | High-Precision Unloading for mixed boxes with 3D Vision & AI",
+          "url": "https://cmesrobotics.ai/en/solution/depalletizing"
+        },
+        {
+          "title": "DE202025002977U1 – Device for cutting and creasing cardboard boxes | Patsnap Eureka",
+          "url": "https://eureka.patsnap.com/patent/DE202025002977U1"
+        },
+        {
+          "title": "Project | Laser Cut Cardboard Robot Construction Kit | Hackaday.io",
+          "url": "https://hackaday.io/project/157209/logs"
+        },
+        {
+          "title": "02 Laser-Cut Press-Fit Construction Kit",
+          "url": "https://fab.cba.mit.edu/classes/863.10/people/brian.mayton/02.html"
+        },
+        {
+          "title": "U.S. Patent Application for DEVICE AND METHOD FOR PROCESSING CONTINUOUS CARDBOARD WEB Patent Application (Application #20260285634 issued September 24, 2026) - Justia Patents Search",
+          "url": "https://patents.justia.com/patent/20260285634"
+        },
+        {
+          "title": "Viam Unveils BoxBot, a Box-Opening Robot Trained on 125 Demos | FairsOnline",
+          "url": "https://www.fairsonline.org/viam-unveils-boxbot-box-opening-robot-trained-125-demos"
+        },
+        {
+          "title": "Magic-Packaging™ – Factorylux",
+          "url": "https://factorylux.com/pages/magic-packaging"
+        },
+        {
+          "title": "Automated Unpacking System – Goldfuss Automation",
+          "url": "https://www.goldfuss-automation.com/en/products-pharma-packaging/feeding-systems/unpacking-system"
+        },
+        {
+          "title": "(PDF) DIE-VIS: An Automated Visual Inspection System for Cardboard Box Manufacturing",
+          "url": "https://www.researchgate.net/publication/391986592_DIE-VIS_An_Automated_Visual_Inspection_System_for_Cardboard_Box_Manufacturing"
+        },
+        {
+          "title": "Instructables.com - The Glueless, Poseable Cardboard Robot.",
+          "url": "https://content.instructables.com/ORIG/FIC/QQCW/FYYNDSF5/FICQQCWFYYNDSF5.pdf"
+        },
+        {
+          "title": "Cardboard Robots",
+          "url": "https://creativitylab.lighthousecharter.org/wp-content/uploads/2018/08/LCL-Cardboard-Robot.pdf"
+        },
+        {
+          "title": "Cardboard Box Depalletizing Robot Using Two-Surface Suction and Elastic Joint Mechanisms: Mechanism Proposal and Verification",
+          "url": "https://www.jstage.jst.go.jp/article/jrobomech/31/3/31_474/_pdf"
+        },
+        {
+          "title": "7.2.3. Cardboard packaging by the designed robot arms",
+          "url": "https://meiji.repo.nii.ac.jp/record/14810/files/Thai-phuong_2017_suri.pdf"
+        },
+        {
+          "title": "Closed-loop box reuse",
+          "url": "https://en.wikipedia.org/wiki/Closed-loop_box_reuse"
+        },
+        {
+          "title": "Cardboard box",
+          "url": "https://en.wikipedia.org/wiki/Cardboard_box"
+        },
+        {
+          "title": "Inferring 3D Articulated Models for Box Packaging Robot",
+          "url": "https://arxiv.org/abs/1106.4632"
+        },
+        {
+          "title": "KittingBot: A Mobile Manipulation Robot for Collaborative Kitting in Automotive Logistics",
+          "url": "https://arxiv.org/abs/1809.05380"
+        },
+        {
+          "title": "RoboNinja: Learning an Adaptive Cutting Policy for Multi-Material Objects",
+          "url": "https://arxiv.org/abs/2302.11553"
+        },
+        {
+          "title": "Corrugated fiberboard",
+          "url": "https://en.wikipedia.org/wiki/Corrugated_fiberboard"
+        },
+        {
+          "title": "Eco-friendly cardboard robot",
+          "url": "https://www.reddit.com/r/upcycling/comments/18hxl5p"
+        }
+      ]
+    },
+    {
+      "key": "r11foldb_0",
+      "query": "semantic layout upcycling printed paper boxes papercraft cutting AI",
+      "status": "fulfilled",
+      "source_links": [
+        {
+          "title": "Ultimate Papercraft 3D - Features",
+          "url": "https://www.papercraft3d.com/upc/features.aspx"
+        },
+        {
+          "title": "Laser Cut Functional Papercraft: The Laser Cut Takeout Box Free Vector Download - 3axis.co",
+          "url": "https://3axis.co/laser-cut-functional-papercraft-the-laser-cut-takeout-box/e1g5kpdo/"
+        },
+        {
+          "title": "Upcycled Paper Crafts: Step-by-Step Guide for Beginners | Handmadelytics",
+          "url": "https://handmadelytics.com/paper-crafts/upcycled-paper-crafts"
+        },
+        {
+          "title": "Free AI Dieline Generator | Packify",
+          "url": "https://www.packify.ai/tools/dieline-generator"
+        },
+        {
+          "title": "Paper Cut — soft handcrafted paper-cut layered illustration with a white sticker outline — upsa",
+          "url": "https://upsa.app/en/models/paper-cut"
+        },
+        {
+          "title": "Free AI Crafting Generator Online | Design Patterns, SVGs, and Templates",
+          "url": "https://www.myaiart.io/features/ai-crafting-generator/"
+        },
+        {
+          "title": "Free Paper Cutout Effect Generator | Create Paper Art with AI",
+          "url": "https://www.pixelcut.ai/create/paper-cutout-effect-generator"
+        },
+        {
+          "title": "PaperBox - Boxes",
+          "url": "https://boxes.hackerspace-bamberg.de/PaperBox"
+        },
+        {
+          "title": "FoldForge | Devpost",
+          "url": "https://devpost.com/software/foldforge-exrnl7"
+        },
+        {
+          "title": "AI Papercut Generator for Layered Art | Omnilyra",
+          "url": "https://www.omnilyra.com/image/ai-papercut-generator/"
+        },
+        {
+          "title": "Free AI Papercut Generator Online | Create Layered Paper Cut Art",
+          "url": "https://www.myaiart.io/features/ai-papercut-generator/"
+        },
+        {
+          "title": "Papercraft to Cricut: converting the files properly",
+          "url": "https://www.papercraft-3d.com/en/papercraft-to-cricut/"
+        },
+        {
+          "title": "Inferring Semantic Layout for Hierarchical Text-to-Image Synthesis",
+          "url": "https://arxiv.org/abs/1801.05091"
+        },
+        {
+          "title": "Paper model",
+          "url": "https://en.wikipedia.org/wiki/Paper_model"
+        },
+        {
+          "title": "Layout 1",
+          "url": "https://packagingreview.eu/wp-content/uploads/2025/12/PACKAGING-REVIEW_4_2025.pdf"
+        },
+        {
+          "title": "Semantic Image Synthesis with Spatially-Adaptive Normalization",
+          "url": "https://arxiv.org/abs/1903.07291"
+        },
+        {
+          "title": "Papercraft Design And Art With Paper",
+          "url": "https://www.api.motion.ac.in/71580582/iguaranteep/rshiverv/kembarkg/papercraft%2Bdesign%2Band%2Bart%2Bwith%2Bpaper.pdf"
+        }
+      ]
+    },
+    {
+      "key": "r11foldb_1",
+      "query": "cardboard reuse existing graphics box net optimization",
+      "status": "fulfilled",
+      "source_links": [
+        {
+          "title": "A LifeCycle Analysis and Economic Cost Analysis of Corrugated Cardboard Box Reuse and Recycling in the United States | MDPI",
+          "url": "https://www.mdpi.com/2079-9276/12/2/22"
+        },
+        {
+          "title": "Closed-loop box reuse",
+          "url": "https://wiki.arcsnet.dev/content/wikipedia_en_all_maxi_2026-02/Closed-loop_box_reuse"
+        },
+        {
+          "title": "Geometric Optimization and Efficiency Analysis • Sequence • Lenny.com",
+          "url": "https://www.lenny.com/sequence/geometric-optimization-efficiency-303200"
+        },
+        {
+          "title": "How to Reuse Cardboard Boxes for Moving and Storage",
+          "url": "https://blog.storageremovalboxes.co.uk/reuse-cardboard-boxes"
+        },
+        {
+          "title": "(PDF) A LifeCycle Analysis and Economic Cost Analysis of Corrugated Cardboard Box Reuse and Recycling in the United States",
+          "url": "https://www.researchgate.net/publication/368226958_A_LifeCycle_Analysis_and_Economic_Cost_Analysis_of_Corrugated_Cardboard_Box_Reuse_and_Recycling_in_the_United_States"
+        },
+        {
+          "title": "A LifeCycle Analysis and Economic Cost Analysis of Corrugated Cardboard Box Reuse and Recycling in the United States | MDPI",
+          "url": "https://doi.org/10.3390/resources12020022"
+        },
+        {
+          "title": "\"Box packaging waste reduction by largest area first fit algorithm and \" by Jimmy Kwon and Sungmin Kwon",
+          "url": "https://repository.rit.edu/japr/vol16/iss1/1/"
+        },
+        {
+          "title": "The Environmental Math of Reuse vs Recycling for Corrugated Boxes · Boxes Chicago",
+          "url": "https://www.boxeschicagoil.com/blog/environmental-math-reuse-vs-recycling"
+        },
+        {
+          "title": "Optimizing the Life Cycle of Last-mile Packaging",
+          "url": "https://ctl.mit.edu/sites/ctl.mit.edu/files/theses/Optimizing%20the%20Life%20Cycle%20of%20Last-mile%20Packaging.pdf"
+        },
+        {
+          "title": "New Cardboard Carbon Footprint: Why Reuse Beats Recycling · USA Boxes Recycle",
+          "url": "https://www.usaboxesrecycle.com/blog/the-hidden-carbon-cost-of-new-cardboard"
+        },
+        {
+          "title": "Full article: Cardboard packaging minimization: Autonomous box selection by RGB-depth vision system and complementary deep learning classification",
+          "url": "https://www.tandfonline.com/doi/full/10.1080/10739149.2024.2379054"
+        },
+        {
+          "title": "Cardboard Box Reuse - Sustainable Solution for Cardboard Waste – Sadlers",
+          "url": "https://sadlers.co.uk/pages/cardboard-box-reuse"
+        },
+        {
+          "title": "Can I Reuse My Cardboard Display Stands? - PopDisplay",
+          "url": "https://popdisplay.me/can-i-reuse-my-cardboard-display-stands/"
+        },
+        {
+          "title": "3.3.1 REUSE OF CARDBOARD BOXES",
+          "url": "https://www.universalcorp.com/wp-content/uploads/2025/08/Deltafina-Sustainability-Report-FY23-English.pdf"
+        },
+        {
+          "title": "• Reuse of incoming material turnover boxes to increase the recycling rate of cardboard boxes.",
+          "url": "https://www.castlenet.com.tw/userfile/upload/file/2023%E6%B0%B8%E7%BA%8C%E5%A0%B1%E5%91%8A%E6%9B%B8_%E5%87%B1%E7%A2%A9_20241111_EN.pdf"
+        },
+        {
+          "title": "Closed-loop box reuse",
+          "url": "https://en.wikipedia.org/wiki/Closed-loop_box_reuse"
+        },
+        {
+          "title": "Welcome to the Reuseabox community Media and commu",
+          "url": "https://www.reuseabox.co.uk/wp-content/uploads/2024/12/Media-and-Comms-Pack.pdf"
+        },
+        {
+          "title": "b10063006_C088391197_46_2",
+          "url": "https://digicoll.lib.berkeley.edu/record/284750/files/991056723509706532_C088391197_46_2.pdf"
+        },
+        {
+          "title": "Packaging waste",
+          "url": "https://en.wikipedia.org/wiki/Packaging_waste"
+        },
+        {
+          "title": "Cardboard box",
+          "url": "https://en.wikipedia.org/wiki/Cardboard_box"
+        },
+        {
+          "title": "Cardboard",
+          "url": "https://en.wikipedia.org/wiki/Cardboard"
+        },
+        {
+          "title": "Inference of Recyclable Objects with Convolutional Neural Networks",
+          "url": "https://arxiv.org/abs/2104.00868"
+        },
+        {
+          "title": "Pizza box",
+          "url": "https://en.wikipedia.org/wiki/Pizza_box"
+        },
+        {
+          "title": "Attend Refine Repeat: Active Box Proposal Generation via In-Out Localization",
+          "url": "https://arxiv.org/abs/1606.04446"
+        },
+        {
+          "title": "Green box (container)",
+          "url": "https://en.wikipedia.org/wiki/Green_box_%28container%29"
+        }
+      ]
+    },
+    {
+      "key": "r11foldb_2",
+      "query": "site:brother-usa.com ScanNCut background scan box paper craft",
+      "status": "fulfilled",
+      "source_links": [
+        {
+          "title": "How To Use ScanNCutCanvas and ScanNCut to Make Heart Boxes | Brother Crafts",
+          "url": "https://www.brother-usa.com/blogs/brother-crafts/using-scanncutcanvas-and-scanncut-to-make-heart-boxes"
+        },
+        {
+          "title": "blog.scanncut.com/?p=8617&preview_id=861",
+          "url": "https://www.brother-usa.com/blogs/brother-crafts/-/media/XBlog/scanncut/wp-content/uploads/2021/02/PDF.pdf"
+        },
+        {
+          "title": "Craft 3D Paper Creations Sure to Delight | Brother Crafts",
+          "url": "https://www.brother-usa.com/blogs/brother-crafts/craft-3d-paper-creations-sure-to-delight"
+        },
+        {
+          "title": "5. Scan in background to locate exact placement of the material on the mat",
+          "url": "https://www.brother-usa.com/blogs/brother-crafts/-/media/xblog/scanncut/wp-content/uploads/2020/11/pdf-1.pdf"
+        },
+        {
+          "title": "How to make holiday gift bags | Brother",
+          "url": "https://www.brother-usa.com/blogs/brother-crafts/may-flaum-holiday-gift-bags"
+        },
+        {
+          "title": "Using Freezer Paper with the ScanNCut | Brother Crafts",
+          "url": "https://www.brother-usa.com/blogs/brother-crafts/using-freezer-paper-with-the-scanncut"
+        },
+        {
+          "title": "How to make an advent calendar with ScanNCut | Brother",
+          "url": "https://www.brother-usa.com/blogs/brother-crafts/advent-calendar"
+        },
+        {
+          "title": "Mixed Media Shadow Box",
+          "url": "https://www.brother-usa.com/-/media/brother/projects/project-files/2017/12/21/20/29/mixedmedia-shadowbox.pdf"
+        },
+        {
+          "title": "How to create a watercolor card with ScanNCut DX | Brother",
+          "url": "https://www.brother-usa.com/blogs/brother-crafts/custom-watercolor-card"
+        },
+        {
+          "title": "DIY paper flowers with ScanNCut",
+          "url": "https://www.brother-usa.com/blogs/brother-crafts/diy-paper-flowers"
+        },
+        {
+          "title": "DIY Disney cruise sign with ScanNCut",
+          "url": "https://www.brother-usa.com/blogs/brother-crafts/disney-cruise-ship-sign"
+        },
+        {
+          "title": "How To Craft A Tissue Paper Garland | Brother Crafts",
+          "url": "https://www.brother-usa.com/blogs/brother-crafts/tissue-paper-garland"
+        },
+        {
+          "title": "DIY cookie jar recipe label with ScanNCut | Brother",
+          "url": "https://www.brother-usa.com/blogs/brother-crafts/diy-cookie-jar"
+        },
+        {
+          "title": "DIY haunted house with your ScanNCut | Brother",
+          "url": "https://www.brother-usa.com/blogs/brother-crafts/diy-haunted-house-wall-decor"
+        },
+        {
+          "title": "Crafting Made Easy: Brother International Corporation Introduces ScanNCut DX",
+          "url": "https://www.brother-usa.com/-/media/files/corporate/press-releases/brother-usa-introduces-scanncut-dx-sdx85-electronic-cutting-machine---sept-2020.pdf?srsltid=AfmBOoqVJjNGkSvk5wbKFldOWOBnVkL-KNLYrt_ZRBozaX-Ws3ZeRP3X"
+        },
+        {
+          "title": "How To Create the Wow Display for the CHA show with ScanNCut | Brother Crafts",
+          "url": "https://www.brother-usa.com/blogs/brother-crafts/creating-the-wow-display-for-the-cha-show-with-scanncut"
+        }
+      ]
+    },
+    {
+      "key": "r11foldb_3",
+      "query": "\"upcycling\" \"paper\" \"computer vision\"",
+      "status": "fulfilled",
+      "source_links": [
+        {
+          "title": "Computer Vision-Based Aluminum Scrap Grade Classification and Detection for Upcycling | Journal of Sustainable Metallurgy | Springer Nature Link",
+          "url": "https://doi.org/10.1007/s40831-025-01172-6"
+        },
+        {
+          "title": "This CVPR paper is the Open Access version, provided by the Computer Vision Foundation.",
+          "url": "https://www.openaccess.thecvf.com/content/CVPR2025/papers/Ravishankar_Scaling_Properties_of_Diffusion_Models_For_Perceptual_Tasks_CVPR_2025_paper.pdf"
+        },
+        {
+          "title": "Integrating fiber modification and computer-vision evaluation to improve soybean meal for 3D food printing - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0963996925024718"
+        },
+        {
+          "title": "QuiltCraft: A Computer Vision Framework for Sustainable Upcycling Waste Textiles into Artistic Quilts | Request PDF",
+          "url": "https://www.researchgate.net/publication/400943678_QuiltCraft_A_Computer_Vision_Framework_for_Sustainable_Upcycling_Waste_Textiles_into_Artistic_Quilts"
+        },
+        {
+          "title": "[2604.13508] Enhancing Mixture-of-Experts Specialization via Cluster-Aware Upcycling",
+          "url": "https://toehanger.shop/?_=%2Fabs%2F2604.13508%23KGzYqmHwYljVikqzZcqJdSc%3D"
+        },
+        {
+          "title": "CLIP-UP: A Simple and Efficient Mixture-of-Experts CLIP Training Recipe with Sparse Upcycling - Apple Machine Learning Research",
+          "url": "https://machinelearning.apple.com/research/clip-up"
+        },
+        {
+          "title": "FEATURE | The MagPi",
+          "url": "https://www.mclibre.org/descargar/docs/revistas/the-magpi/the-magpi-139-en-202403.pdf"
+        },
+        {
+          "title": "Automating metal waste recovery in the construction lifecycle: vision-based deployment-oriented decision framework - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0926580526005285"
+        },
+        {
+          "title": "UpCycling: Semi-supervised 3D Object Detection without Sharing Raw-level Unlabeled Scenes - Seoul National University",
+          "url": "https://snu.elsevierpure.com/en/publications/upcycling-semi-supervised-3d-object-detection-without-sharing-raw/"
+        },
+        {
+          "title": "WasteWise: A Machine Learning-Driven E-Waste Segregation | IJCRT Vol. 14, Issue 4",
+          "url": "https://ijcrt.org/viewpaperforall.php?paper=IJCRT26A4138"
+        },
+        {
+          "title": "GitHub - AnanyaCP/EcoSort: EcoSort is an intelligent waste identification and municipal segregation web application powered by Google Gemini 3.6 Flash Multi-Modal Vision AI. Designed in strict alignment with India's Solid Waste Management (SWM) Rules 2026, EcoSort helps users classify household waste into 4 official municipal streams, learn proper disposal steps, and transfo · GitHub",
+          "url": "https://github.com/AnanyaCP/EcoSort"
+        },
+        {
+          "title": "WasteWise: A Machine Learning-Driven E-Waste Segregation | IJCRT Vol. 14, Issue 4",
+          "url": "https://www.ijcrt.org/viewpaperforall.php?paper=IJCRT26A4138"
+        },
+        {
+          "title": "Computer Vision-Based Aluminum Scrap Grade Classification and Detection for Upcycling — Lacuna",
+          "url": "https://lacuna.tiptreesystems.com/work/computer-vision-based-aluminum-scrap-grade-classification-and-detection-for/wrk_367c7fc6a7dee5dc8c6d59e58ecde3d7"
+        },
+        {
+          "title": "Upcycling Model… (2023-03-13T00:00:00.000000Z) - Papersgraph",
+          "url": "https://papersgraph.com/research-papers/upcycling-models-under-domain-and-category-shift"
+        },
+        {
+          "title": "Project Summary                                                                                                          Control Number: 2423-1501",
+          "url": "https://www.energy.gov/sites/default/files/2021-07/2423-1501_North_Carolina_State_University_Topic_Area_1_Ch_SummaryAbstract.pdf"
+        }
+      ]
+    },
+    {
+      "key": "r11proof_1",
+      "query": "ExecuTorch CPU ASR; tabletop speech screens",
+      "status": "fulfilled",
+      "source_links": [
+        {
+          "title": "Desk Divider Sizes: Height, Width & Fixings | Panelscreens",
+          "url": "https://panelscreens.co.uk/blog/desk-divider-sizes/"
+        },
+        {
+          "title": "Desk screen Fokus | acoustic felt | Heka – Heka Office Interior",
+          "url": "https://heka-interior.com/products/heka-namizna-pregrada-fokus"
+        },
+        {
+          "title": "Solo Screen — Workspace",
+          "url": "https://www.workspace.com.au/product/solo-screen"
+        },
+        {
+          "title": "MITTZON acoustic screen for desk, Gunnared beige, 491/4x283/8\" - IKEA",
+          "url": "https://www.ikea.com/us/en/p/mittzon-acoustic-screen-for-desk-gunnared-beige-40528212/"
+        },
+        {
+          "title": "Desk Screen System",
+          "url": "https://feltvibe.com/uploads/desk-division-pet-felt-panel.pdf"
+        },
+        {
+          "title": "Acoustic Screens, Partitions & Room Dividers | Acoustic Index",
+          "url": "https://acousticindex.com/en/acoustics/partition-screens"
+        },
+        {
+          "title": "MUTE Lite acoustic desk screen 1600 × 650 mm – desk-mounted, grey (Savio 09) – ErgoFinland",
+          "url": "https://ergofinland.com/products/mute-lite-acoustic-desk-screen-1600-650-mm-desk-mounted-grey-savio-09"
+        },
+        {
+          "title": "Sonic Acoustic Push-On Side Desk Screen 650x350mm Black | OfficeMax NZ",
+          "url": "https://www.officemax.co.nz/Furniture/Screens-Partitions/Desktop-Screens/Sonic-Acoustic-Push-On-Side-Desk-Screen-650x350mm-Black-12172178"
+        },
+        {
+          "title": "Sonic Acoustic Push-On Side Desk Screen 650x350mm Light Grey | OfficeMax NZ",
+          "url": "https://www.officemax.co.nz/Furniture/Screens-Partitions/Desktop-Screens/Sonic-Acoustic-Push-On-Side-Desk-Screen-650x350mm-Light-Grey-12172165"
+        },
+        {
+          "title": "Sonic Acoustic Push-On Side Desk Screen 750x350mm Blue | OfficeMax NZ",
+          "url": "https://www.officemax.co.nz/Furniture/Screens-Partitions/Desktop-Screens/Sonic-Acoustic-Push-On-Side-Desk-Screen-750x350mm-Blue-12172175"
+        },
+        {
+          "title": "Table screen – EFG Tab S",
+          "url": "https://www.efg.se/en/product/tab-s-table-screen/"
+        },
+        {
+          "title": "Shelter | Clamp-On Acoustic Desk Privacy Panel | Loftwall",
+          "url": "https://loftwall.com/products/shelter"
+        },
+        {
+          "title": "Air 400mm Acoustic Desktop Desk Divider Screen | Deskwell Office Furniture",
+          "url": "https://deskwell.co.uk/air-400mm-high-acoustic-desktop-desk-divider-screen"
+        },
+        {
+          "title": "Architectural",
+          "url": "https://feltvibe.com/uploads/AAS-guide-dusuk.pdf"
+        },
+        {
+          "title": "Similarly, wall panels can be added for absorption to reduce speech travelling across the space particularly when the ceiling height exceeds 4m) and also in conference rooms to aide clear speech and comfort. Where there is limited space, free-standing acoustic screens or furniture can be used and panels can be hung vertically from the ceiling. This has the added benefit of breaking up the open plan space or separating equipment areas and breakout or informal meeting spaces, etc. Again, there are an unlimited range of design options for acoustic screens and panels and they can also be screen printed for visual impact or designed to blend in.",
+          "url": "https://www.ecophon.com/globalassets/media/pdf-and-documents/in/psychoacoustics-guidance-document-small.pdf/"
+        },
+        {
+          "title": "TABLE TOP ACOUSTIC DIVIDERS",
+          "url": "https://rocada.com/wp-content/uploads/2026/04/ROCADA-Tarifa-2026-ENG-noprices.pdf"
+        },
+        {
+          "title": "Room dividers and acoustic screens",
+          "url": "https://www.ikea.com/ph/en/files/pdf/4d/04/4d04060f/2026-ph-office_buying_guide.pdf"
+        },
+        {
+          "title": "The most distracting speech in offices",
+          "url": "https://www.specifiedby.com/acoustics-at-work/screen-4-2/acoustics-at-work_Screen-4.2_Brochures_Screens-brochure.pdf"
+        },
+        {
+          "title": "Synesthesia: Detecting Screen Content via Remote Acoustic Side Channels",
+          "url": "https://arxiv.org/abs/1809.02629"
+        },
+        {
+          "title": "Acoustic solution for a shared office",
+          "url": "https://www.reddit.com/r/Acoustics/comments/r1fxj9"
+        },
+        {
+          "title": "Removing Speech, Keeping Activities: A Privacy Firewall for Acoustic Sensing in Assisted Living",
+          "url": "https://arxiv.org/abs/2609.02376"
+        }
+      ]
+    }
+  ]
+}

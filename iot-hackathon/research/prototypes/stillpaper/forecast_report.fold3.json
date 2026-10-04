@@ -1,0 +1,639 @@
+{
+  "evidence_level": "offline_recorded_data_forecast_only_no_hardware_no_clinical_claim",
+  "source": {
+    "url": "https://archive.ics.uci.edu/static/public/395/parkinson%2Bdisease%2Bspiral%2Bdrawings%2Busing%2Bdigitized%2Bgraphics%2Btablet.zip",
+    "sha256": "4181243d64c29382a0035a9bca3ebcf446079b65c70a0b343fe7975372dc92e6",
+    "bytes": 3641631,
+    "license": "CC BY 4.0",
+    "citation": "Isenkul, M., Sakar, B., & PhD., P. (2013). Parkinson Disease Spiral Drawings Using Digitized Graphics Tablet [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5Q01S."
+  },
+  "source_subset": "hw_dataset only; no new_dataset; static spiral Test ID 0 only",
+  "cross_validation_fold": 3,
+  "sampling": {
+    "hz": 100,
+    "resampling": "causal_previous_sample_hold",
+    "filter": "causal order-2 Butterworth highpass 3 Hz",
+    "warmup_seconds": 2,
+    "max_original_gap_ms": 50
+  },
+  "prediction": {
+    "history_ms": 1000.0,
+    "horizon_ms": 40.0,
+    "normalization": "past history RMS with floor=1 native coordinate unit",
+    "target": "future causal-highpass coordinate, not intended handwriting"
+  },
+  "split_counts": {
+    "train": {
+      "windows": 19986,
+      "records": 24
+    },
+    "validation": {
+      "windows": 11830,
+      "records": 8
+    },
+    "test": {
+      "windows": 7404,
+      "records": 8
+    }
+  },
+  "record_audit": [
+    {
+      "record": "C_0006",
+      "split": "train",
+      "static_rows": 2692,
+      "windows": 636
+    },
+    {
+      "record": "C_0007",
+      "split": "train",
+      "static_rows": 2428,
+      "windows": 562
+    },
+    {
+      "record": "C_0004",
+      "split": "train",
+      "static_rows": 3016,
+      "windows": 728
+    },
+    {
+      "record": "C_0002",
+      "split": "validation",
+      "static_rows": 3485,
+      "windows": 860
+    },
+    {
+      "record": "C_0005",
+      "split": "validation",
+      "static_rows": 1974,
+      "windows": 434
+    },
+    {
+      "record": "C_0010",
+      "split": "validation",
+      "static_rows": 5553,
+      "windows": 1442
+    },
+    {
+      "record": "C_0014",
+      "split": "test",
+      "static_rows": 1832,
+      "windows": 360
+    },
+    {
+      "record": "C_0001",
+      "split": "test",
+      "static_rows": 2578,
+      "windows": 604
+    },
+    {
+      "record": "C_0012",
+      "split": "test",
+      "static_rows": 3114,
+      "windows": 754
+    },
+    {
+      "record": "C_0013",
+      "split": "train",
+      "static_rows": 1386,
+      "windows": 270
+    },
+    {
+      "record": "C_0015",
+      "split": "train",
+      "static_rows": 2625,
+      "windows": 618
+    },
+    {
+      "record": "C_0009",
+      "split": "train",
+      "static_rows": 6882,
+      "windows": 1816
+    },
+    {
+      "record": "C_0011",
+      "split": "train",
+      "static_rows": 6082,
+      "windows": 1592
+    },
+    {
+      "record": "C_0008",
+      "split": "train",
+      "static_rows": 5590,
+      "windows": 1452
+    },
+    {
+      "record": "C_0003",
+      "split": "train",
+      "static_rows": 3949,
+      "windows": 1302
+    },
+    {
+      "record": "P_12060001",
+      "split": "train",
+      "static_rows": 872,
+      "windows": 190
+    },
+    {
+      "record": "P_26060002",
+      "split": "train",
+      "static_rows": 3620,
+      "windows": 1184
+    },
+    {
+      "record": "P_26060001",
+      "split": "train",
+      "static_rows": 746,
+      "windows": 148
+    },
+    {
+      "record": "P_02100002",
+      "split": "train",
+      "static_rows": 2645,
+      "windows": 832
+    },
+    {
+      "record": "P_27110001",
+      "split": "train",
+      "static_rows": 3073,
+      "windows": 866
+    },
+    {
+      "record": "P_16100004",
+      "split": "validation",
+      "static_rows": 4083,
+      "windows": 1346
+    },
+    {
+      "record": "P_27110003",
+      "split": "validation",
+      "static_rows": 9390,
+      "windows": 3132
+    },
+    {
+      "record": "P_09100001",
+      "split": "validation",
+      "static_rows": 4136,
+      "windows": 1370
+    },
+    {
+      "record": "P_05060004",
+      "split": "validation",
+      "static_rows": 5278,
+      "windows": 1660
+    },
+    {
+      "record": "P_09100005",
+      "split": "validation",
+      "static_rows": 4744,
+      "windows": 1586
+    },
+    {
+      "record": "P_02100001",
+      "split": "test",
+      "static_rows": 983,
+      "windows": 234
+    },
+    {
+      "record": "P_11120003",
+      "split": "test",
+      "static_rows": 4577,
+      "windows": 1528
+    },
+    {
+      "record": "P_26060003",
+      "split": "test",
+      "static_rows": 2366,
+      "windows": 726
+    },
+    {
+      "record": "P_09100003",
+      "split": "test",
+      "static_rows": 6682,
+      "windows": 2286
+    },
+    {
+      "record": "P_16100003",
+      "split": "test",
+      "static_rows": 2868,
+      "windows": 912
+    },
+    {
+      "record": "P_05060003",
+      "split": "train",
+      "static_rows": 1704,
+      "windows": 492
+    },
+    {
+      "record": "P_30100002",
+      "split": "train",
+      "static_rows": 2824,
+      "windows": 896
+    },
+    {
+      "record": "P_26060006",
+      "split": "train",
+      "static_rows": 2019,
+      "windows": 606
+    },
+    {
+      "record": "P_26060007",
+      "split": "train",
+      "static_rows": 3080,
+      "windows": 982
+    },
+    {
+      "record": "P_30100001",
+      "split": "train",
+      "static_rows": 2327,
+      "windows": 718
+    },
+    {
+      "record": "P_12060002",
+      "split": "train",
+      "static_rows": 2716,
+      "windows": 858
+    },
+    {
+      "record": "P_11120005",
+      "split": "train",
+      "static_rows": 1810,
+      "windows": 532
+    },
+    {
+      "record": "P_23100002",
+      "split": "train",
+      "static_rows": 3240,
+      "windows": 1046
+    },
+    {
+      "record": "P_11120004",
+      "split": "train",
+      "static_rows": 2406,
+      "windows": 742
+    },
+    {
+      "record": "P_23100003",
+      "split": "train",
+      "static_rows": 2884,
+      "windows": 918
+    }
+  ],
+  "model": {
+    "parameters": 8577,
+    "selected_epoch": 33,
+    "validation_mse": 0.20537985861301422,
+    "epochs": 50
+  },
+  "ridge_selected": 1000.0,
+  "ridge_validation_trials": [
+    {
+      "ridge": 0.01,
+      "validation_mse": 0.2148698391501043
+    },
+    {
+      "ridge": 0.1,
+      "validation_mse": 0.21486905085989488
+    },
+    {
+      "ridge": 1.0,
+      "validation_mse": 0.2148611729685333
+    },
+    {
+      "ridge": 10.0,
+      "validation_mse": 0.2147828922476985
+    },
+    {
+      "ridge": 100.0,
+      "validation_mse": 0.21404718486869112
+    },
+    {
+      "ridge": 1000.0,
+      "validation_mse": 0.2096853159985459
+    }
+  ],
+  "scores": {
+    "no_compensation": {
+      "pooled_rmse": 0.6184691786766052,
+      "median_record_rmse": 0.6681901812553406,
+      "per_record": [
+        {
+          "record": "C_0001",
+          "rmse": 0.6883719563484192
+        },
+        {
+          "record": "C_0012",
+          "rmse": 0.648008406162262
+        },
+        {
+          "record": "C_0014",
+          "rmse": 1.0077366828918457
+        },
+        {
+          "record": "P_02100001",
+          "rmse": 1.0325201749801636
+        },
+        {
+          "record": "P_09100003",
+          "rmse": 0.6006008982658386
+        },
+        {
+          "record": "P_11120003",
+          "rmse": 0.39102065563201904
+        },
+        {
+          "record": "P_16100003",
+          "rmse": 0.4717799723148346
+        },
+        {
+          "record": "P_26060003",
+          "rmse": 0.697250485420227
+        }
+      ]
+    },
+    "delayed_copy": {
+      "pooled_rmse": 0.6338950395584106,
+      "median_record_rmse": 0.6803729832172394,
+      "per_record": [
+        {
+          "record": "C_0001",
+          "rmse": 0.6657308340072632
+        },
+        {
+          "record": "C_0012",
+          "rmse": 0.7209587693214417
+        },
+        {
+          "record": "C_0014",
+          "rmse": 0.812289297580719
+        },
+        {
+          "record": "P_02100001",
+          "rmse": 0.7730310559272766
+        },
+        {
+          "record": "P_09100003",
+          "rmse": 0.6315850615501404
+        },
+        {
+          "record": "P_11120003",
+          "rmse": 0.504604160785675
+        },
+        {
+          "record": "P_16100003",
+          "rmse": 0.5604670643806458
+        },
+        {
+          "record": "P_26060003",
+          "rmse": 0.6950151324272156
+        }
+      ]
+    },
+    "constant_velocity": {
+      "pooled_rmse": 2.108386516571045,
+      "median_record_rmse": 2.1645286083221436,
+      "per_record": [
+        {
+          "record": "C_0001",
+          "rmse": 2.417844295501709
+        },
+        {
+          "record": "C_0012",
+          "rmse": 2.399071216583252
+        },
+        {
+          "record": "C_0014",
+          "rmse": 2.7459189891815186
+        },
+        {
+          "record": "P_02100001",
+          "rmse": 1.9936025142669678
+        },
+        {
+          "record": "P_09100003",
+          "rmse": 1.8145761489868164
+        },
+        {
+          "record": "P_11120003",
+          "rmse": 2.0096232891082764
+        },
+        {
+          "record": "P_16100003",
+          "rmse": 2.1943724155426025
+        },
+        {
+          "record": "P_26060003",
+          "rmse": 2.1346848011016846
+        }
+      ]
+    },
+    "ridge_ar": {
+      "pooled_rmse": 0.534990485334752,
+      "median_record_rmse": 0.5792932835226672,
+      "per_record": [
+        {
+          "record": "C_0001",
+          "rmse": 0.5793299162944787
+        },
+        {
+          "record": "C_0012",
+          "rmse": 0.5792566507508555
+        },
+        {
+          "record": "C_0014",
+          "rmse": 0.7963166757657402
+        },
+        {
+          "record": "P_02100001",
+          "rmse": 0.8114932670726882
+        },
+        {
+          "record": "P_09100003",
+          "rmse": 0.5268198396449569
+        },
+        {
+          "record": "P_11120003",
+          "rmse": 0.3889178262880468
+        },
+        {
+          "record": "P_16100003",
+          "rmse": 0.42719779606844166
+        },
+        {
+          "record": "P_26060003",
+          "rmse": 0.5856779834914027
+        }
+      ]
+    },
+    "local_adaptive_harmonic": {
+      "pooled_rmse": 0.7541529349612126,
+      "median_record_rmse": 0.8225994056494588,
+      "per_record": [
+        {
+          "record": "C_0001",
+          "rmse": 0.8362432805103173
+        },
+        {
+          "record": "C_0012",
+          "rmse": 0.8089555307886002
+        },
+        {
+          "record": "C_0014",
+          "rmse": 1.1504448971029235
+        },
+        {
+          "record": "P_02100001",
+          "rmse": 1.059875495153654
+        },
+        {
+          "record": "P_09100003",
+          "rmse": 0.773125285369418
+        },
+        {
+          "record": "P_11120003",
+          "rmse": 0.46827876020120524
+        },
+        {
+          "record": "P_16100003",
+          "rmse": 0.5430535443693203
+        },
+        {
+          "record": "P_26060003",
+          "rmse": 0.898001200755234
+        }
+      ]
+    },
+    "small_mlp": {
+      "pooled_rmse": 0.5265049934387207,
+      "median_record_rmse": 0.577416867017746,
+      "per_record": [
+        {
+          "record": "C_0001",
+          "rmse": 0.5790979862213135
+        },
+        {
+          "record": "C_0012",
+          "rmse": 0.5757357478141785
+        },
+        {
+          "record": "C_0014",
+          "rmse": 0.7661663293838501
+        },
+        {
+          "record": "P_02100001",
+          "rmse": 0.746326208114624
+        },
+        {
+          "record": "P_09100003",
+          "rmse": 0.5206597447395325
+        },
+        {
+          "record": "P_11120003",
+          "rmse": 0.38457462191581726
+        },
+        {
+          "record": "P_16100003",
+          "rmse": 0.42864641547203064
+        },
+        {
+          "record": "P_26060003",
+          "rmse": 0.5809628963470459
+        }
+      ]
+    }
+  },
+  "ideal_sinusoid_delay_examples": [
+    {
+      "frequency_hz": 4,
+      "delay_ms": 10,
+      "residual_amplitude_ratio": 0.2506664671286085
+    },
+    {
+      "frequency_hz": 4,
+      "delay_ms": 20,
+      "residual_amplitude_ratio": 0.4973797743297096
+    },
+    {
+      "frequency_hz": 4,
+      "delay_ms": 30,
+      "residual_amplitude_ratio": 0.7362491053693558
+    },
+    {
+      "frequency_hz": 4,
+      "delay_ms": 40,
+      "residual_amplitude_ratio": 0.9635073482034306
+    },
+    {
+      "frequency_hz": 6,
+      "delay_ms": 10,
+      "residual_amplitude_ratio": 0.3747626291714492
+    },
+    {
+      "frequency_hz": 6,
+      "delay_ms": 20,
+      "residual_amplitude_ratio": 0.7362491053693558
+    },
+    {
+      "frequency_hz": 6,
+      "delay_ms": 30,
+      "residual_amplitude_ratio": 1.0716535899579933
+    },
+    {
+      "frequency_hz": 6,
+      "delay_ms": 40,
+      "residual_amplitude_ratio": 1.3690942118573772
+    },
+    {
+      "frequency_hz": 8,
+      "delay_ms": 10,
+      "residual_amplitude_ratio": 0.4973797743297096
+    },
+    {
+      "frequency_hz": 8,
+      "delay_ms": 20,
+      "residual_amplitude_ratio": 0.9635073482034306
+    },
+    {
+      "frequency_hz": 8,
+      "delay_ms": 30,
+      "residual_amplitude_ratio": 1.3690942118573772
+    },
+    {
+      "frequency_hz": 8,
+      "delay_ms": 40,
+      "residual_amplitude_ratio": 1.6886558510040302
+    },
+    {
+      "frequency_hz": 10,
+      "delay_ms": 10,
+      "residual_amplitude_ratio": 0.6180339887498948
+    },
+    {
+      "frequency_hz": 10,
+      "delay_ms": 20,
+      "residual_amplitude_ratio": 1.1755705045849463
+    },
+    {
+      "frequency_hz": 10,
+      "delay_ms": 30,
+      "residual_amplitude_ratio": 1.618033988749895
+    },
+    {
+      "frequency_hz": 10,
+      "delay_ms": 40,
+      "residual_amplitude_ratio": 1.902113032590307
+    }
+  ],
+  "seconds": 1.9597721099853516,
+  "versions": {
+    "torch": "2.14.1",
+    "numpy": "2.5.3"
+  },
+  "limitations": [
+    "No real paper, motor latency, friction, or actuator evaluated.",
+    "Filtered coordinates are not ground truth involuntary motion.",
+    "40 source files from hw_dataset, not the 77 participants stated for the complete repository.",
+    "Native coordinate units; no verified physical scale in millimetres.",
+    "Sampling cadence differs across source groups; no guarantee of transfer to camera/IMU sensing.",
+    "Single deterministic split and one small neural architecture; no clinical efficacy inference."
+  ]
+}

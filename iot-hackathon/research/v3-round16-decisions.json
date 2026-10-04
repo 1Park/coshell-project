@@ -1,0 +1,99 @@
+{
+  "stage": "v3_round16",
+  "items": [
+    {
+      "id": "N089",
+      "name": "FlowClaim — 공구의 실제 가공 단계에 따라 공유 집진 풍량을 배분",
+      "status": "REJECTED",
+      "stage": "v3_round16",
+      "duplicate_check": "N003/N007/N013/N045 대조. 진동 시점 협의·납땜 흄/냉각·조용한 계측·진공 지지와 달리 여러 공구의 실제 집진 수요와 덕트 풍량을 조정하는 흐름.",
+      "reason": "G07/G13 FAIL. Ecogate가 실제 작업 수요 감지→자동 게이트→압력/속도/체적 측정→전체 풍량/팬 조정 흐름을 제공한다. 전원 on/off만 감지하는 제품이라고 축소하지 않았다. 소리 기반 가공 단계 분류를 붙이는 것만으로 새 사용자 과제를 확보하지 못함.",
+      "sources": [
+        "https://www.ecogate.com/how-it-works",
+        "https://www.ecogate.com/product-page/gates",
+        "https://www.ecogate.com/post/workstation-activity-sensor-solutions"
+      ]
+    },
+    {
+      "id": "N090",
+      "name": "BreathingWindow — 필요한 환기를 유지하면서 소리 종류와 접근을 예측해 여닫는 창구",
+      "status": "REJECTED",
+      "stage": "v3_round16",
+      "duplicate_check": "N004/N007/N030/N031/R27 대조. 실내 음향 패널·공정 흄·층간소음과 달리 실외 소음 사건과 자연 환기의 충돌을 창구 구동으로 조정.",
+      "reason": "G07 FAIL. Fraunhofer Sound Controlled Ventilation이 외부 소리 종류/조기 감지, 실내 소음까지 포함한 자동 창문/환기구를 연구하고 실험실·피험자 검증을 보고했다. 1997년에도 접근 교통 소음과 실내 음악/말을 구별하며 창문을 제어한 프로토타입이 있다. 단순 임계값 제품으로 축소하거나 예측·종류 분류를 새 차별점으로 내세울 수 없음.",
+      "sources": [
+        "https://www.ibp.fraunhofer.de/en/projects-references/sound-controlled-ventilation.html",
+        "https://doi.org/10.1121/1.418917",
+        "https://www.bau.fraunhofer.de/en/fieldsofresearch/comfortandhealth/attentive-windows.html"
+      ]
+    },
+    {
+      "id": "N091",
+      "name": "KnobSeeker — 참고 음색을 듣고 실제 아날로그 페달의 노브를 찾아 맞추는 조정기",
+      "status": "VALID",
+      "stage": "v3_round16",
+      "parent_id": "R08",
+      "duplicate_check": "R08/N042/N047/N057/N086 대조. 물체를 목표 소리대로 연주하거나 곡을 생성하는 대신, 기존 아날로그 신호 경로의 실제 노브를 조절하고 되들으며 다른 연주 구절의 참고 음색에 접근. API 없는 기기의 음색 설정 작업으로 범위를 한정할 때 독립 가치 재검토.",
+      "reason": "G01–G14 설계 PASS. 한 아날로그 페달을 실제 되듣기로 조절하고 원래 연주 장치에 설정을 남기는 작업으로 고정. 다른 구절 비교를 담당하는 공개 AFx-Rep encoder의 실제 로컬 ExecuTorch 실행 성공. 36회/3–5분 탐색 목표와 9–13시간 직렬 제작 추정, 동일 예산 MFCC/스펙트럼/인간 비교. 보드·페달·청취 효과는 미실측.",
+      "sources": [
+        "https://csteinmetz1.github.io/st-ito/",
+        "https://neuraldsp.com/news/neural-dsp-amplifier-modeling-technology",
+        "https://www.addacsystem.com/en/products/standalone/addac-servo-controller",
+        "https://arxiv.org/abs/2505.11315",
+        "https://huggingface.co/csteinmetz1/afx-rep",
+        "https://www.tonemirror.so/tone-match",
+        "https://tonesmatch.com/"
+      ],
+      "card": "research/N091_KNOB_SEEKER.md",
+      "history": [
+        {
+          "status": "OPEN",
+          "reason": "G06/G07/G09/G13/G14 OPEN. ST-ITO는 임의 오디오 이펙트의 스타일 기반 검색, TINA는 실제 노브 구동/출력 수집에 의한 모델링, ADDAC은 시판 외부 노브 구동을 이미 제공. 같은 최종 실물 조정 흐름인지 구별해야 하며 단순 세 제품 연결을 신규성으로 주장하지 않음. 한 페달·세 노브·다른 구절의 참고 음색·실제 오디오 재측정으로 범위 설정 중."
+        }
+      ],
+      "gates": {
+        "G01": "PASS",
+        "G02": "PASS",
+        "G03": "PASS",
+        "G04": "PASS",
+        "G05": "PASS",
+        "G06": "PASS",
+        "G07": "PASS",
+        "G08": "PASS",
+        "G09": "PASS",
+        "G10": "PASS",
+        "G11": "PASS",
+        "G12": "PASS",
+        "G13": "PASS",
+        "G14": "PASS"
+      },
+      "evidence_level": "Design review; real host encoder export/runtime only, no pedal/hardware/listening test"
+    },
+    {
+      "id": "N092",
+      "name": "WeedGate — 접착 필름을 국소적으로 굽히며 필요한 글자를 남기는 자동 위딩",
+      "status": "REJECTED",
+      "stage": "v3_round16",
+      "parent_id": "N029",
+      "duplicate_check": "N029 WeedYield와 직접 대조. 떨어진 글자를 다시 붙이는 사후 복구를 버리고, 지지면 굽힘과 제거 순서로 처음부터 글자를 남기는 흐름을 검토. R07/N072의 천·종이 가공과도 구별.",
+      "reason": "G07/G13 FAIL. Galileo WM75가 벡터 파일 분석·최적 제거 순서·내부/외부 접착 필름 위딩을 이미 공개한다. VeloBlade도 자동 폐기 필름 분리를 제공한다. 국소 지지면 굽힘만으로 사용자가 하는 일이 달라지지 않고, 추가 복구를 얹으면 N029의 미검증 재접착 문제로 돌아감.",
+      "sources": [
+        "https://galileoweedingmachine.com/",
+        "https://www.vivid-online.com/products/veloblade-weeder/"
+      ]
+    },
+    {
+      "id": "N093",
+      "name": "ShareShade — 종이와 화면을 함께 쓰는 두 사람의 작업을 구별해 빛을 배분하는 조명",
+      "status": "REJECTED",
+      "stage": "v3_round16",
+      "duplicate_check": "F09/S2-05/R21/N004 대조. 그림자 게임·카메라 시험·음향 패널이 아닌 공유 책상의 실제 조도와 화면 반사 조정.",
+      "reason": "G07/G13 FAIL. AI Moving Lamp가 종이/태블릿을 시각적으로 구별해 실제 로봇 조명을 이동·점등하고 화면은 피한다. AUR의 협력 조명과 SenseRobot의 책 추종 광원도 선행이다. 두 사용자로 늘리는 것만으로 새로운 핵심 작업이 되지 않으며, 사람별 눈부심까지 약속하면 관찰 위치별 측광/기하가 추가됨. 수동 배치/차광과 비교할 새 효용이 부족함.",
+      "sources": [
+        "https://www.dimademler.com/portfolio/projects-1/",
+        "https://robots.media.mit.edu/portfolio/aur/",
+        "https://www.sensetime.com/en/news/51167432"
+      ]
+    }
+  ]
+}

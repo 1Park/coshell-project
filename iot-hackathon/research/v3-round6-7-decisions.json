@@ -1,0 +1,120 @@
+{
+  "N031": {
+    "status": "REJECTED",
+    "reason": "G08/G11/G13 FAIL: 임시 아래층 측정 후 저가 착용 센서만으로 전달 소음을 예측하는 핵심 경로를 확보하지 못함. 발의 힘 추정과 실제 건물 전달음 사이에 위치·접촉·구조 전달의 변수가 남음. 바닥/벽 진동 CNN 소음 예측 연구는 있으나 그 정확도를 깔창으로 옮길 수 없음. 센서를 바닥 진동으로 바꾸면 기존 연구 및 선형 전달 모델과 차별화도 다시 필요. 같은 연구가 수신부 철거까지 구현했다고 단정하지 않음.",
+    "sources": [
+      "https://pure.uos.ac.kr/en/publications/sound-prediction-based-on-footstep-induced-vibrations-in-concrete/",
+      "https://doi.org/10.1109/JSEN.2019.2896595",
+      "https://pubmed.ncbi.nlm.nih.gov/37348185/",
+      "https://patents.google.com/patent/KR20220013498A/ko"
+    ]
+  },
+  "N034": {
+    "status": "VALID",
+    "name": "WindNegotiator — 내가 조종할 수 있지만 AI는 아직 모르는 배",
+    "reason": "사람이 먼저 같은 팬·경로로 완주한 돛배만 AI에게 도전하게 하는 설계 경기로 수정. 한 배·세 팬·두 게이트로 범위 고정. 관측 운동을 학습해 실제 바람을 제어하며 교정 PID/선형·물리 모델과 비교. 14개 설계 검토 PASS; 하드웨어 성능과 재미 실측 전.",
+    "card": "research/N034_WIND_NEGOTIATOR.md",
+    "evidence_level": "design_review_not_hardware_test",
+    "sources": [
+      "https://www.sailingscience.org/exhibits",
+      "https://www.stevens.edu/news/how-a-self-driving-boat-took-victory-laps-at-the-2025-stevens-gallois-robotics-competition",
+      "https://doi.org/10.1115/1.4044398",
+      "https://arxiv.org/abs/1805.12114"
+    ],
+    "gates": {
+      "G01": "PASS",
+      "G02": "PASS",
+      "G03": "PASS",
+      "G04": "PASS",
+      "G05": "PASS",
+      "G06": "PASS",
+      "G07": "PASS",
+      "G08": "PASS",
+      "G09": "PASS",
+      "G10": "PASS",
+      "G11": "PASS",
+      "G12": "PASS",
+      "G13": "PASS",
+      "G14": "PASS"
+    }
+  },
+  "N038": {
+    "status": "REJECTED",
+    "reason": "G06/G13 FAIL: 한 손 매듭 작업의 지지는 유용하지만, 잡은 실을 풀고 놓은 실을 고정하는 범위에서는 수동 집게/페달·장력 규칙이 강함. AI로 순서나 다음 의도까지 읽게 하면 가려진 실과 선행 인계 판단이 병목. 클램프에 실을 재삽입하는 수고까지 줄이는 구체적인 기구를 확보하지 못해 제외. 동일한 시판 AI 매듭 보조기가 있다는 판정은 아님."
+  },
+  "N040": {
+    "status": "REJECTED",
+    "reason": "G08/G09/G10 FAIL: 종이의 정전용량 수분 측정 원리는 알려져 있지만, 저가 다점 배열의 수분/안료/손 접촉 분리와 국소 바람 효과를 같은 직렬 경로에서 새로 교정해야 함. 계측을 추가했다는 설명만으로 원안의 수분 관측·시연 신뢰성 문제를 해결하지 못함. 공개 국소 습도 제어 도판 특허도 근접 선행이나 실제 제품으로 확인한 것은 아님.",
+    "sources": [
+      "https://www.stcuthbertsmill.com/advice-centre/?id=1027",
+      "https://schaller.pl/en/paper-board/mf-p-htd-paper-moisture-sensor",
+      "https://patents.google.com/patent/CN114312124A/en"
+    ]
+  },
+  "N041": {
+    "status": "REJECTED",
+    "reason": "G02/G06/G10 FAIL: 비가역적 녹음과 열 지연만으로 플레이어의 의미 있는 선택·학습 모델의 역할을 만들지 못함. 열원/접촉별 단순 열 모델을 넘는 이유가 부족하고, 녹은 얼음을 같은 시작 상태로 되돌리는 시간이 경기보다 길어질 수 있음. 새 게임 가치가 확보되지 않은 상태에서 기구 복잡도만 추가하는 안으로 제외.",
+    "sources": []
+  },
+  "N042": {
+    "status": "REJECTED",
+    "reason": "G07 FAIL: Cyther는 인간과 로봇이 같은 실제 현을 타격하거나 감쇠하며, 양쪽이 impulse/filter 역할을 바꿀 수 있도록 이미 구현. 물체를 그릇으로 바꾸거나 생성 리듬 모델을 붙이는 것만으로 새로운 핵심 흐름이 되지 않음. Snar2의 펠트 댐퍼는 자동화하지 않았다고 원문에 명시되어 있어 그 사례를 자동 펠트 제어 근거로 사용하지 않음.",
+    "sources": [
+      "https://nime.org/proceedings/2017/nime2017_paper0061.pdf",
+      "https://www.logosfoundation.org/instrum_gwr/snar2.html",
+      "https://github.com/behzadhaki/GrooveTransformer"
+    ]
+  },
+  "N043": {
+    "status": "REJECTED",
+    "reason": "G08/G09/G13 FAIL: 단순 평판 변형은 수동 온열·평판 압박이라는 강한 대안이 있음. 복잡한 출력물의 바닥만 복구하면서 다른 치수를 보존하려면 숨은 응력·국소 열 전달·변형의 동시 검증이 필요. 해커톤의 한 지그/작은 모델 범위에서 효과를 주장할 경로를 확보하지 못함. 특정 소재의 유리전이 수치나 복구 성공률은 확인 없이 인용하지 않음.",
+    "sources": []
+  },
+  "N044": {
+    "status": "REJECTED",
+    "reason": "G07/G13 FAIL: Root/Sepura 제조사는 싱크 고형물 자동 분리, 음식물 외 물체 감지 후 정지·회수를 이미 설명. 수거 후 확인이라는 핵심 사용 흐름이 근접하며, AI와 자동 분리통을 더하는 차이만으로 추가 효용을 확보하지 못함. 제조사 설명과 사전주문 상태를 확인한 것이며 독립적인 성능 실측/출하 완료 확인은 아님.",
+    "sources": [
+      "https://getmyroot.com/pages/meet-root",
+      "https://sepurahome.com/en-ca/pages/explore-sepura"
+    ]
+  },
+  "N045": {
+    "status": "REJECTED",
+    "reason": "G06/G13 FAIL: piSAVE sense 같은 수동 유량 감지 체크밸브가 노출된 흡착점의 누설을 제한하며 덮인 흡착점의 진공을 유지. 고정 진공 격자·체크밸브라는 강한 대안 대비, 절단 조각을 AI가 미리 예측해 구역을 바꾸는 추가 이득을 확보하지 못함. 정확히 같은 AI 절단 테이블이 있다는 판정은 아님.",
+    "sources": [
+      "https://www.piab.com/globalassets/productimages/pisave-sense-flow-characteristics-eu.pdf",
+      "https://www.piab.com/globalassets/productimages/0128731_datasheet_pisave_sense_multiple_port_fitting_04_60__blue__en-gb.pdf"
+    ]
+  },
+  "N046": {
+    "status": "VALID",
+    "reason": "AI가 정답을 알고 의미 단서를 작은 면적만 실제 소거하고, 인간 팀이 그림을 복구해 단어를 전달하는 경기. UnsTable/PICaSo/iNNk와 핵심 흐름 대조. 소형 CNN·공개 스케치 데이터·기성 XY 키트로 범위 고정. 14개 설계 검토 PASS; 소거 정밀도·모델 성능·재미는 실측 전.",
+    "card": "research/N046_UNWRITE.md",
+    "evidence_level": "design_review_not_hardware_test",
+    "gates": {
+      "G01": "PASS",
+      "G02": "PASS",
+      "G03": "PASS",
+      "G04": "PASS",
+      "G05": "PASS",
+      "G06": "PASS",
+      "G07": "PASS",
+      "G08": "PASS",
+      "G09": "PASS",
+      "G10": "PASS",
+      "G11": "PASS",
+      "G12": "PASS",
+      "G13": "PASS",
+      "G14": "PASS"
+    }
+  },
+  "N053": {
+    "status": "REJECTED",
+    "reason": "G07 FAIL: Jumperless가 스위치 매트릭스로 실제 배선을 바꾸며 전압/전류를 계측하고, 공식 문서에 LLM/MCP 자동화까지 제공. 스케치 인식 경로를 덧붙이는 것만으로 새 사용자 작업을 확보하지 못함.",
+    "sources": [
+      "https://docs.jumperless.org/07.5-automation/",
+      "https://github.com/Architeuthis-Flux/Jumperless",
+      "https://architeuthis-flux.github.io/JumperlessV5/"
+    ]
+  }
+}

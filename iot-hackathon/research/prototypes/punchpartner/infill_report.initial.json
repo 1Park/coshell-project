@@ -1,0 +1,573 @@
+{
+  "scope": "Offline symbolic infilling only; no physical punch, listening study, or VENTUNO/ExecuTorch runtime test.",
+  "torch_version": "2.14.1",
+  "training_device": "mps",
+  "seed": 86,
+  "preprocessing_counts": {
+    "files_seen": 433,
+    "nonmonophonic_or_off_grid": 74,
+    "nonmajor_or_no_key_parts": 194,
+    "files_with_windows": 158,
+    "files_without_windows": 7
+  },
+  "windows_by_partition": {
+    "train": 450,
+    "val": 85,
+    "test": 50
+  },
+  "pieces_by_partition": {
+    "train": [
+      "bwv11.6",
+      "bwv115.6",
+      "bwv116.6",
+      "bwv117.4",
+      "bwv119.9",
+      "bwv127.5",
+      "bwv133.6",
+      "bwv139.6",
+      "bwv144.3",
+      "bwv151.5",
+      "bwv153.9",
+      "bwv154.3",
+      "bwv156.6",
+      "bwv157.5",
+      "bwv159.5",
+      "bwv169.7",
+      "bwv17.7",
+      "bwv174.5",
+      "bwv180.7",
+      "bwv19.7",
+      "bwv190.7",
+      "bwv197.5",
+      "bwv20.11",
+      "bwv20.7",
+      "bwv244.10",
+      "bwv244.17",
+      "bwv244.32",
+      "bwv244.44",
+      "bwv245.22",
+      "bwv245.26",
+      "bwv245.3",
+      "bwv245.40",
+      "bwv248.12",
+      "bwv248.23",
+      "bwv248.33",
+      "bwv248.46",
+      "bwv248.53",
+      "bwv248.59",
+      "bwv248.9",
+      "bwv252",
+      "bwv253",
+      "bwv255",
+      "bwv262",
+      "bwv263",
+      "bwv264",
+      "bwv267",
+      "bwv268",
+      "bwv269",
+      "bwv27.6",
+      "bwv271",
+      "bwv281",
+      "bwv282",
+      "bwv287",
+      "bwv292",
+      "bwv293",
+      "bwv294",
+      "bwv298",
+      "bwv299",
+      "bwv3.6",
+      "bwv302",
+      "bwv303",
+      "bwv306",
+      "bwv307",
+      "bwv317",
+      "bwv318",
+      "bwv32.6",
+      "bwv320",
+      "bwv321",
+      "bwv325",
+      "bwv327",
+      "bwv329",
+      "bwv33.6",
+      "bwv339",
+      "bwv347",
+      "bwv348",
+      "bwv355",
+      "bwv359",
+      "bwv361",
+      "bwv367",
+      "bwv37.6",
+      "bwv370",
+      "bwv373",
+      "bwv375",
+      "bwv376",
+      "bwv378",
+      "bwv379",
+      "bwv385",
+      "bwv388",
+      "bwv39.7",
+      "bwv390",
+      "bwv391",
+      "bwv394",
+      "bwv397",
+      "bwv401",
+      "bwv407",
+      "bwv414",
+      "bwv415",
+      "bwv426",
+      "bwv427",
+      "bwv428",
+      "bwv429",
+      "bwv43.11",
+      "bwv431",
+      "bwv433",
+      "bwv436",
+      "bwv438",
+      "bwv44.7",
+      "bwv46.6",
+      "bwv48.3",
+      "bwv52.6",
+      "bwv55.5",
+      "bwv59.3",
+      "bwv60.5",
+      "bwv64.4",
+      "bwv69.6",
+      "bwv70.7",
+      "bwv79.6",
+      "bwv80.8",
+      "bwv86.6",
+      "bwv9.7",
+      "bwv99.6"
+    ],
+    "val": [
+      "bwv104.6",
+      "bwv124.6",
+      "bwv140.7",
+      "bwv145",
+      "bwv164.6",
+      "bwv165.6",
+      "bwv175.7",
+      "bwv194.12",
+      "bwv290",
+      "bwv296",
+      "bwv304",
+      "bwv326",
+      "bwv340",
+      "bwv346",
+      "bwv349",
+      "bwv368",
+      "bwv400",
+      "bwv402",
+      "bwv411",
+      "bwv45.7",
+      "bwv57.8",
+      "bwv67.7"
+    ],
+    "test": [
+      "bwv13.6",
+      "bwv130.6",
+      "bwv177.4",
+      "bwv194.6",
+      "bwv248.28",
+      "bwv29.8",
+      "bwv308",
+      "bwv322",
+      "bwv365",
+      "bwv371",
+      "bwv377",
+      "bwv409",
+      "bwv65.2",
+      "bwv67.4"
+    ]
+  },
+  "params": 71120,
+  "epochs": 40,
+  "validation_log": [
+    {
+      "epoch": 1,
+      "validation_masked_nll": 1.5660957098007202
+    },
+    {
+      "epoch": 2,
+      "validation_masked_nll": 1.5463861227035522
+    },
+    {
+      "epoch": 3,
+      "validation_masked_nll": 1.5326635837554932
+    },
+    {
+      "epoch": 4,
+      "validation_masked_nll": 1.5095493793487549
+    },
+    {
+      "epoch": 5,
+      "validation_masked_nll": 1.4912008047103882
+    },
+    {
+      "epoch": 6,
+      "validation_masked_nll": 1.4705023765563965
+    },
+    {
+      "epoch": 7,
+      "validation_masked_nll": 1.4544848203659058
+    },
+    {
+      "epoch": 8,
+      "validation_masked_nll": 1.3760974407196045
+    },
+    {
+      "epoch": 9,
+      "validation_masked_nll": 1.2832057476043701
+    },
+    {
+      "epoch": 10,
+      "validation_masked_nll": 1.2402212619781494
+    },
+    {
+      "epoch": 11,
+      "validation_masked_nll": 1.1875656843185425
+    },
+    {
+      "epoch": 12,
+      "validation_masked_nll": 1.1710505485534668
+    },
+    {
+      "epoch": 13,
+      "validation_masked_nll": 1.1753872632980347
+    },
+    {
+      "epoch": 14,
+      "validation_masked_nll": 1.152596354484558
+    },
+    {
+      "epoch": 15,
+      "validation_masked_nll": 1.1550582647323608
+    },
+    {
+      "epoch": 16,
+      "validation_masked_nll": 1.1706795692443848
+    },
+    {
+      "epoch": 17,
+      "validation_masked_nll": 1.1624666452407837
+    },
+    {
+      "epoch": 18,
+      "validation_masked_nll": 1.1535104513168335
+    },
+    {
+      "epoch": 19,
+      "validation_masked_nll": 1.1417020559310913
+    },
+    {
+      "epoch": 20,
+      "validation_masked_nll": 1.1534602642059326
+    },
+    {
+      "epoch": 21,
+      "validation_masked_nll": 1.1389150619506836
+    },
+    {
+      "epoch": 22,
+      "validation_masked_nll": 1.1411257982254028
+    },
+    {
+      "epoch": 23,
+      "validation_masked_nll": 1.1521961688995361
+    },
+    {
+      "epoch": 24,
+      "validation_masked_nll": 1.1478382349014282
+    },
+    {
+      "epoch": 25,
+      "validation_masked_nll": 1.1353724002838135
+    },
+    {
+      "epoch": 26,
+      "validation_masked_nll": 1.139683723449707
+    },
+    {
+      "epoch": 27,
+      "validation_masked_nll": 1.1388988494873047
+    },
+    {
+      "epoch": 28,
+      "validation_masked_nll": 1.1395220756530762
+    },
+    {
+      "epoch": 29,
+      "validation_masked_nll": 1.1414086818695068
+    },
+    {
+      "epoch": 30,
+      "validation_masked_nll": 1.1439173221588135
+    },
+    {
+      "epoch": 31,
+      "validation_masked_nll": 1.1297657489776611
+    },
+    {
+      "epoch": 32,
+      "validation_masked_nll": 1.1415979862213135
+    },
+    {
+      "epoch": 33,
+      "validation_masked_nll": 1.1366711854934692
+    },
+    {
+      "epoch": 34,
+      "validation_masked_nll": 1.134257435798645
+    },
+    {
+      "epoch": 35,
+      "validation_masked_nll": 1.1289310455322266
+    },
+    {
+      "epoch": 36,
+      "validation_masked_nll": 1.1410597562789917
+    },
+    {
+      "epoch": 37,
+      "validation_masked_nll": 1.1355310678482056
+    },
+    {
+      "epoch": 38,
+      "validation_masked_nll": 1.1308153867721558
+    },
+    {
+      "epoch": 39,
+      "validation_masked_nll": 1.1229313611984253
+    },
+    {
+      "epoch": 40,
+      "validation_masked_nll": 1.1461364030838013
+    }
+  ],
+  "best_validation_nll": 1.1229313611984253,
+  "transformer": {
+    "masked_nll": 0.9990634918212891,
+    "masked_accuracy": 0.677916360968452,
+    "masked_onset_pitch_accuracy": 0.12383177570093458,
+    "masked_cells": 1363,
+    "masked_true_onsets": 428
+  },
+  "order2_phase_markov_bridge": {
+    "masked_nll": 1.2565916451457244,
+    "masked_accuracy": 0.6698459280997799,
+    "masked_onset_pitch_accuracy": 0.26635514018691586,
+    "masked_cells": 1363,
+    "masked_true_onsets": 428
+  },
+  "trace_initial_tokens": [
+    10,
+    16,
+    16,
+    16,
+    9,
+    16,
+    10,
+    11,
+    12,
+    16,
+    11,
+    16,
+    16,
+    16,
+    10,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    10,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16
+  ],
+  "trace": [
+    {
+      "turn": 1,
+      "additions": [
+        {
+          "column": 16,
+          "midi": 76
+        },
+        {
+          "column": 20,
+          "midi": 76
+        },
+        {
+          "column": 2,
+          "midi": 76
+        },
+        {
+          "column": 18,
+          "midi": 76
+        }
+      ],
+      "tokens": [
+        10,
+        16,
+        10,
+        16,
+        9,
+        16,
+        10,
+        11,
+        12,
+        16,
+        11,
+        16,
+        16,
+        16,
+        10,
+        16,
+        10,
+        16,
+        10,
+        16,
+        10,
+        16,
+        16,
+        16,
+        10,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16
+      ]
+    },
+    {
+      "turn": 2,
+      "additions": [
+        {
+          "column": 26,
+          "midi": 74
+        },
+        {
+          "column": 22,
+          "midi": 74
+        },
+        {
+          "column": 12,
+          "midi": 74
+        },
+        {
+          "column": 28,
+          "midi": 74
+        }
+      ],
+      "tokens": [
+        10,
+        16,
+        10,
+        16,
+        9,
+        16,
+        10,
+        11,
+        12,
+        16,
+        11,
+        16,
+        9,
+        16,
+        10,
+        16,
+        10,
+        16,
+        10,
+        16,
+        10,
+        16,
+        9,
+        16,
+        10,
+        16,
+        9,
+        16,
+        9,
+        16,
+        16,
+        16
+      ]
+    },
+    {
+      "turn": 3,
+      "additions": [
+        {
+          "column": 30,
+          "midi": 76
+        },
+        {
+          "column": 9,
+          "midi": 74
+        },
+        {
+          "column": 11,
+          "midi": 76
+        },
+        {
+          "column": 27,
+          "midi": 77
+        }
+      ],
+      "tokens": [
+        10,
+        16,
+        10,
+        16,
+        9,
+        16,
+        10,
+        11,
+        12,
+        9,
+        11,
+        10,
+        9,
+        16,
+        10,
+        16,
+        10,
+        16,
+        10,
+        16,
+        10,
+        16,
+        9,
+        16,
+        10,
+        16,
+        9,
+        11,
+        9,
+        16,
+        10,
+        16
+      ]
+    }
+  ],
+  "original_holes_preserved": true,
+  "export_status": "torch_export_succeeded_not_executorch",
+  "wall_seconds": 27.632699728012085,
+  "limits": [
+    "Historical score infilling is not preference, musical quality, or co-creation value.",
+    "Music21 supplies 433 Bach corpus files; filtered windows are not 433 independent compositions.",
+    "Only major-key monophonic eighth-grid diatonic windows; chromatic windows omitted, not rounded.",
+    "Physical music-box range and minimum repeat distance must be calibrated on actual kit.",
+    "Export to Torch IR is not ExecuTorch execution or NPU acceleration."
+  ]
+}

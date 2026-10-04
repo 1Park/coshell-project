@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-05",
+  "scope": "Finish sole open candidate, then stop exploration at user request",
+  "counts": {
+    "REJECTED": 137,
+    "VALID": 4
+  },
+  "item": {
+    "id": "N082",
+    "name": "GraviPaint — 보존할 무늬와 채울 영역을 지정하면 실제 유동화 캔버스를 기울이는 보조대",
+    "status": "REJECTED",
+    "stage": "v3_round13",
+    "duplicate_check": "N026/N040/N060/N034 대조. 숨은 종이 수분 추정이나 화가의 다음 의도 추정 대신 사용자가 고른 무늬의 변형과 실제 물감 전면을 관측해 전역 경사를 조절. N034와 학습 동역학 제어는 공유하므로 실제 예술 작업/점성 도막이라는 차이가 충분한지도 G14에서 검토.",
+    "reason": "최종 설계 심사 제외(G06/G08/G09/G13 통과 근거 부족). 8개 RGB 기준점 이력에서 도막 상태를 구별할 경로와 같은 관측의 온라인 선형/물리 모델 대비 학습 이득을 확보하지 못함. 고정 배합·양으로 줄이면 구현은 쉬워지나 AI 필요성이 약해지고, 깊이 계측/정밀 유체 시뮬레이터를 추가하면 행사 범위를 넘어선다. 물리적으로 불가능하거나 실험에서 실패했다고 주장하지 않음. 사용자 요청에 따라 검토를 종료하고 새 후보를 만들지 않음.",
+    "card": "research/N082_GRAVI_PAINT.md",
+    "sources": [
+      "https://acrylicpouring.com/diagonal-pour/",
+      "https://digitalcommons.calpoly.edu/theses/2205/",
+      "https://devpost.com/software/the-pourtrait",
+      "https://www.pratt.edu/news/building-bridges-at-the-seoul-biennale/",
+      "https://arxiv.org/abs/1901.06028",
+      "https://goldenartistcolors.com/resources/color-pouring-mediums-gloss-and-matte",
+      "https://fluidlab2023.github.io/index.html",
+      "https://doi.org/10.1039/D3SM00177F"
+    ],
+    "history": [
+      {
+        "date": "2026-10-05",
+        "status": "OPEN",
+        "reason": "G06/G08/G09/G13 OPEN: 작은 2축 경사대와 실제 유동화 작업으로 범위를 잡음. 단순 색 덩어리 중심 추적이 아니라 보존 영역의 변형과 빈 영역의 충전을 함께 다룬다. 다만 같은 관측을 쓰는 온라인 선형 유동 모델보다 학습 모델이 나을 조건, 숨은 도막 두께에 대한 관측 충분성, 데이터 수집·교체 시간을 더 확인해야 함. 실제 물감을 제어한 실험은 없음."
+      }
+    ],
+    "final_review_date": "2026-10-05"
+  }
+}

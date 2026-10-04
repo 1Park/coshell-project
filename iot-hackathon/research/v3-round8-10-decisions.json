@@ -1,0 +1,220 @@
+[
+  {
+    "id": "N054",
+    "name": "SeamRain — 재사용 방수 의류의 누수 경로를 능동 분사로 찾는 수선 받침",
+    "status": "REJECTED",
+    "stage": "v3_round8",
+    "duplicate_check": "F07/S2-03/R13 대조. 강도 곡선이나 영상 불량 대신 실제 통과한 물로 누수 경로를 찾는 작업.",
+    "reason": "G06/G13 FAIL: 누수의 유입 위치를 찾기 위해 한 구역씩 실제 물을 가하는 것이 강한 비교군이다. 경로 역추론을 학습 모델로 추가해도 더 적은 시험으로 같은 실제 누수 위치를 찾는 근거가 부족하다. 단순 장비로 좁힐수록 AI가 주변 기능이 된다.",
+    "sources": [],
+    "history": [
+      {
+        "stage": "before_round8_decision",
+        "status": "OPEN",
+        "reason": "G06/G08/G09 OPEN: 물이 번져 나온 위치와 실제 유입 위치를 구분할 능동 분사, 순차 분사와 비교한 학습 이득, 젖은 의류를 지지하는 기구 범위 필요."
+      }
+    ]
+  },
+  {
+    "id": "N055",
+    "name": "RopeRecovery — 사람이 놓친 리듬에 맞춰 다시 진입할 틈을 만드는 자동 줄넘기",
+    "status": "REJECTED",
+    "stage": "v3_round8",
+    "duplicate_check": "N001/N018 대조. 힘 재현이나 운반 동기화 대신 실제 회전 줄과 사람의 재진입 리듬을 조정.",
+    "reason": "G07/G09 FAIL: 인간-로봇 협동 줄 돌리기와 리듬 동조 연구가 이미 있음. 큰 회전 줄의 위상·토크·동기화 지그를 작은 안전한 시연으로 줄이면 원래 사람의 재진입 과제를 보여주기 어려움.",
+    "sources": [
+      "https://www.tandfonline.com/doi/abs/10.1163/156855303321125631",
+      "https://link.springer.com/article/10.1186/1687-4722-2012-12",
+      "https://www.pbs.org/video/creating-a-robotic-double-dutch-machine-kczi0v/"
+    ]
+  },
+  {
+    "id": "N056",
+    "name": "FeedRecall — 먹고 남은 수조 사료만 골라 회수하는 급식 받침",
+    "status": "REJECTED",
+    "stage": "v3_round8",
+    "duplicate_check": "N044/N048과 대조. 사람의 배수 이물질 보존/음식 배분 대신 수조 잔여 사료 회수.",
+    "reason": "G07/G13 FAIL: 미섭취 사료를 찾아 제거하는 자율 수조 청소 연구가 있음. 고정 급식 받침으로 좁히면 일정 시간 뒤 통째로 회수하는 간단한 방식이 강하며, AI로 달라지는 사용자 결과가 부족.",
+    "sources": [
+      "https://arxiv.org/abs/2304.08185",
+      "https://par.nsf.gov/servlets/purl/10169904"
+    ]
+  },
+  {
+    "id": "N057",
+    "name": "LabelLock — 옷의 관리 라벨을 읽어 실제 세탁 다이얼의 선택 범위를 촉각으로 제한",
+    "status": "REJECTED",
+    "stage": "v3_round8",
+    "duplicate_check": "R07/R28/N010 대조. 개인 진동 언어/제스처 리모컨/전력 배분 대신 라벨의 조건과 실제 기계 옵션을 연결하는 물리 조작 보조.",
+    "reason": "G07/G13 FAIL: 삼성 SmartThings가 관리 라벨을 읽어 세탁 코스를 제안하며, ANY는 접근 가능한 햅틱 가전 다이얼을 공개했다. 두 선행이 이 조합 자체를 구현했다는 뜻은 아니나, 현재 제안의 추가 가치는 추천을 노브 저항으로 옮기는 수준이다. 실제 가전 부착·검증 부담에 비해 새로운 작업 가치가 충분히 구체화되지 않았다.",
+    "sources": [
+      "https://patents.google.com/patent/US20080127999A1",
+      "https://www.samsung.com/uk/support/apps-services/how-to-use-the-smartthings-scan-care-labels-and-detergent-features/",
+      "https://www.jamesdysonaward.org/en-US/2026/project/any"
+    ],
+    "history": [
+      {
+        "stage": "before_round8_decision",
+        "status": "OPEN",
+        "reason": "G02/G07/G09/G13 OPEN: 관리 라벨 앱·자동 세탁 설정·햅틱 가전 노브와 핵심 흐름 차이, 실제 다이얼 부착과 직접 시연, 종이 라벨만 읽고 보편적 세탁 안전을 주장하지 않는 범위 필요."
+      }
+    ]
+  },
+  {
+    "id": "N058",
+    "name": "FootTypeGuard — 장착 노루발을 보고 부적합한 재봉 다이얼 선택을 막기",
+    "status": "REJECTED",
+    "stage": "v3_round8",
+    "duplicate_check": "R05/R13/N057 대조. 범용 모터 안전이나 천 결함 검사 대신 장착 공구와 선택된 스티치의 호환 확인.",
+    "reason": "G07 FAIL: HUSQVARNA VIKING 계열 공식 설명서에 카메라·신경망 노루발 인식, 권장 스티치와의 불일치 및 장착 오류 안내가 있음. 경고를 다이얼 저항으로 바꾸는 것만으로 핵심 문제·흐름의 차별화가 부족.",
+    "sources": [
+      "https://svpworldwide.widen.net/content/p38crai6az/pdf/User-Manual_DE3_FR.pdf?u=cko5pg",
+      "https://ultimatesewingcompany.com/wp-content/uploads/2025/10/User-Manual_DE3_EN.pdf"
+    ]
+  },
+  {
+    "id": "N059",
+    "name": "RedactRoll — 택배 라벨의 개인정보를 찾아 실제 표면에 가림 인쇄",
+    "status": "REJECTED",
+    "stage": "v3_round8",
+    "duplicate_check": "N046과 대조. 의미 소거 게임 대신 재사용 포장의 개인정보 제거. 같은 XY 접촉 기구를 사용하는 응용 변형.",
+    "reason": "G02/G06/G13 FAIL: 택배 상자 재사용에서는 라벨 전체를 제거/덮는 간단한 대안이 강함. 기존 운송 바코드를 굳이 보존할 이유가 약함. AI로 영역만 선택해도 잉크 밑 원문의 복구 가능성은 해결되지 않음. 검색에서 나온 AI 블로그의 스마트 파쇄기 주장을 실제 제품 근거로 사용하지 않음.",
+    "sources": [
+      "https://www.mdpi.com/2076-3417/15/9/4923",
+      "https://help.shipstation.com/hc/en-us/articles/360045435152-Why-does-my-label-say-it-s-been-redacted"
+    ]
+  },
+  {
+    "id": "N060",
+    "name": "ReachCanvas — 머리 붓으로 그리는 사람에게 다음 작업 영역을 가져오는 이동 이젤",
+    "status": "REJECTED",
+    "stage": "v3_round8",
+    "duplicate_check": "N018/N037/R28 대조. 힘 지도·고정 클램프·제스처 리모컨 대신 물리 캔버스의 도달 범위를 옮기는 보조.",
+    "reason": "G06/G08/G13 FAIL: REMAP에는 실제 구강화가를 위한 다방향·360도 회전 전동 이젤 사례가 있다. 다음 붓질 의도를 추정하는 기능은 관측 근거가 부족하고, 명시적 스위치를 쓰면 기존 이젤의 핵심 흐름으로 돌아간다.",
+    "sources": [
+      "https://remap.org.uk/solutions/artists-head-harness/",
+      "https://remap.org.uk/solutions/?_solutions=special-switch"
+    ],
+    "history": [
+      {
+        "stage": "before_round8_decision",
+        "status": "OPEN",
+        "reason": "G06/G07/G08/G13 OPEN: 수동 위치 조절 이젤·스위치 이동 대비 학습이 필요한가. 붓이 닿는 중과 이동을 원하는 순간의 의도를 혼동하지 않는 명시적 입력/관측 필요."
+      }
+    ]
+  },
+  {
+    "id": "N061",
+    "name": "StoryBody — CAD 없이 만든 종이 인형의 줄 운동을 학습해 애니메이션 재현",
+    "status": "REJECTED",
+    "stage": "v3_round8",
+    "parent_id": "N049",
+    "duplicate_check": "N049와 직접 비교. 인형 설계 파일 대신 짧은 실제 동작 교정으로 모델을 얻는 변형.",
+    "reason": "G01/G07/G13 FAIL: CAD 입력을 교정 데이터로 바꾸지만 줄 인형에 목표 동작을 재현하는 핵심 사용자 흐름은 N049와 동일. 단순 녹화 재생·모터별 교정 대비 새로운 작업 가치도 부족하여 다시 집계해 통과시키지 않음.",
+    "sources": [
+      "https://crl.ethz.ch/papers/puppetMaster.pdf"
+    ]
+  },
+  {
+    "id": "N062",
+    "name": "PageMend — 찢어진 종이 경로를 찾아 보수지를 실제로 붙이는 수선기",
+    "duplicate_check": "N050/N037/N046 대조. 페이지 넘김·제본 고정·게임의 소거 대신 손상 종이를 실제 보강하는 작업.",
+    "reason": "G09/G10/G13 FAIL: 원문과 보수지의 정렬, 풀 양, 얇은 종이 이송과 눌러 말리기가 직렬로 필요하다. 테이프 한 줄만 붙이는 시연으로 줄이면 배경 잉크/찢김/누락 구분에 학습 모델을 추가할 사용자 이득이 약하다. 자동 손상 종이 수선 로봇 특허도 검색됨. 특허를 시판 구현으로 간주하지 않는다.",
+    "sources": [
+      "https://patents.google.com/patent/CN116497628B/en",
+      "https://ugalawlibrary.wordpress.com/2019/11/22/quick-dirty-how-to-run-your-own-book-repair-clinic/"
+    ],
+    "status": "REJECTED",
+    "stage": "v3_round9"
+  },
+  {
+    "id": "N063",
+    "name": "ChainRelease — 목걸이 매듭을 두 핀과 장력 센서로 풀어주는 받침",
+    "duplicate_check": "N025/N035/N036/N038/N039 대조. 빗질·실 공급·지퍼·매듭 지지·해체와 다르지만, 가려진 유연체 매듭을 복원하는 공통 문제가 있음.",
+    "reason": "G08/G09/G10 FAIL: 가는 금속 사슬의 아래/위 교차와 잠금 장식에 걸린 상태를 확인하고, 느슨하게 한 뒤 핀을 다시 삽입하는 정밀 기구가 필요하다. 굵은 단일 줄로 축소하면 실제 목걸이에서 어려운 조건이 사라짐. Berkeley의 케이블 매듭 해체 연구는 기술 근접 선행이며 목걸이 제품의 직접 중복이라고 주장하지 않는다.",
+    "sources": [
+      "https://www2.eecs.berkeley.edu/Pubs/TechRpts/2021/EECS-2021-121.html"
+    ],
+    "status": "REJECTED",
+    "stage": "v3_round9"
+  },
+  {
+    "id": "N064",
+    "name": "PaletteService — 구강 화가의 붓 세척과 다음 색 묻히기를 대신하는 받침",
+    "duplicate_check": "N026/N040/N060/N046 대조. 캔버스 위치·국소 건조·지우기 대신 붓 세척과 도료 보급.",
+    "reason": "G06/G13 FAIL: 입으로 작동하는 세척·배수 보조가 실제 REMAP 사례로 존재하며, 로봇의 붓 세척/색 찍기도 WaterColorBot에서 구현됐다. 명시적으로 다음 색을 선택하게 하면 순차 기구 제어로 충분하다. 다음 색을 추측하도록 바꾸는 것은 원하는 색을 관측하지 못하는 새 문제를 만든다.",
+    "sources": [
+      "https://remap.org.uk/solutions/mouth-operated-turps-and-water-dispenser/",
+      "https://bantamtools.com/products/bantam-tools-watercolorbot"
+    ],
+    "status": "REJECTED",
+    "stage": "v3_round9"
+  },
+  {
+    "id": "N065",
+    "name": "GraftHold — 줄기 단면을 맞춰 잡고 테이프를 감는 소형 접목 보조기",
+    "duplicate_check": "N008/N038/F07 대조. 접착 압력이나 공예 실 인계 대신 살아 있는 줄기의 접합면 정렬과 고정.",
+    "reason": "G07/G09/G11 FAIL: Horti Robotics가 3D 스캔과 제어 절단으로 형성층 정렬을 하는 접목 로봇을 제시한다. 소형/저가만으로 새 작업이 되지 않는다. 자르기·맞추기·테이핑 기구를 동시에 만들면서 며칠 뒤의 접목 성공을 현장 정렬 시연만으로 주장할 수도 없다.",
+    "sources": [
+      "https://hortirobotics.com/grafting-robot",
+      "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0189732"
+    ],
+    "status": "REJECTED",
+    "stage": "v3_round9"
+  },
+  {
+    "id": "N066",
+    "name": "TactileDock — 책상 밑 자석 구동으로 손가락을 원하는 실제 물건까지 안내",
+    "duplicate_check": "R06/R07/R28/N060 대조. 진동 신호 번역이나 이젤 이동 대신 움직이는 물체 배치에서 손가락의 실제 도달을 돕는 작업.",
+    "reason": "G07 FAIL: CHI 2023 FingerRover가 물체 찾기/책상 작업을 위해 손가락을 목표 지점까지 실제로 운반하는 핵심 흐름을 구현했다. AISLA/PalmSight에는 영상 인식과 손 안내도 있다. 자석 구동으로 바꾸는 것으로 핵심 사용자 흐름 차이가 생기지 않는다.",
+    "sources": [
+      "https://programs.sigchi.org/chi/2023/program/content/95848",
+      "https://www.aisla.org.uk/finding-objects",
+      "https://publications.ri.cmu.edu/palmsight-an-assistive-technology-helping-the-blind-to-locate-and-grasp-objects"
+    ],
+    "status": "REJECTED",
+    "stage": "v3_round9"
+  },
+  {
+    "id": "N067",
+    "name": "LaundryPact — 관리 라벨 조건으로 세탁 묶음을 정하고 실제 바구니로 분배",
+    "parent_id": "N057",
+    "duplicate_check": "N057/N023/N052 대조. 코스 다이얼·주머니 감지·건조 대신 의류 간 조건을 묶어 물리적으로 배분하는 변형.",
+    "reason": "G07/G09 FAIL: PickClothBot은 의류별 정보와 자유롭게 정의한 세탁 조건으로 실제 의류를 분류한다. 업체는 RFID 데이터를 사용하므로 자연 라벨 OCR까지 동일하다고 말하지 않는다. 그러나 OCR로 바꾸는 것만으로 새 작업 흐름이 되지 않으며, 뒤집힌/가려진 라벨을 펼치는 로봇까지 요구하면 범위도 커진다.",
+    "sources": [
+      "https://www.pi4.de/product-pck1.html",
+      "https://www.samsung.com/uk/support/apps-services/how-to-use-the-smartthings-scan-care-labels-and-detergent-features/"
+    ],
+    "status": "REJECTED",
+    "stage": "v3_round9"
+  },
+  {
+    "id": "N068",
+    "name": "ThrowPause — 도자기 벽이 무너지기 전에 물레 속도를 개입하는 보조기",
+    "duplicate_check": "N018/N033/N042 대조. 공예 힘 지도·파손 예측·악기 감쇠와 인접하나 실제 젖은 점토 성형 중 개입.",
+    "reason": "G08/G11/G13 FAIL: 보이는 실루엣과 모터 부하만으로 내부 벽 두께·젖음·손 압력에 따른 붕괴를 미리 구분할 근거가 부족하다. 회전을 멈추는 것이 붕괴를 막는다는 핵심 인과도 확보되지 않았다. 이미 무너진 것을 감지해 정지하는 시연은 사용자가 원하는 예방을 입증하지 못한다. Digital Pottery Wheel은 관련 디지털 공예 선행이며 같은 붕괴 방지 장치라는 주장은 하지 않는다.",
+    "sources": [
+      "https://doi.org/10.1145/3613904.3642361",
+      "https://www.mdpi.com/2076-3417/14/17/7989/xml"
+    ],
+    "status": "REJECTED",
+    "stage": "v3_round9"
+  },
+  {
+    "id": "N069",
+    "name": "WhisperHeist — 사람이 만든 소리 가림막을 돌아다니며 비밀 단어를 엿듣는 AI 상대",
+    "status": "OPEN",
+    "stage": "v3_round10",
+    "duplicate_check": "N004/R06/R07/N015/N046/F10/N034 대조. 방음 설비 최적화·소리 진동 번역·센서 위조·의미 지우기·고정 가설 구분·풍력 항해와 다르다. 두 사람의 실제 음성 전달은 성공시키되 이동 마이크의 ASR에는 들키지 않도록 물리 배치를 설계하는 도청 대결.",
+    "reason": "G02/G06/G07/G09/G12/G13/G14 OPEN: 실제 1축 이동 마이크와 작은 가림막에서 의미 있는 설계 선택이 생기는지, 고정 순회 ASR 대비 사용자 결과 차이, 능동 청취+iNNk 시연을 넘어서는 핵심 흐름, 선택 모델의 ExecuTorch 배포 경로를 추가 검토. 상세 미확인 사항을 카드에 남겼으며 통과 개수에는 포함하지 않음.",
+    "sources": [
+      "https://zenodo.org/records/20622100",
+      "https://www.jp.honda-ri.com/api/upload/document/entry/20110910/NakadaiK2003-ICRA_4150.pdf",
+      "https://blogit.itu.dk/pxlab/projects/innk/",
+      "https://pubmed.ncbi.nlm.nih.gov/39296048/",
+      "https://arxiv.org/abs/2504.00858",
+      "https://github.com/pytorch/executorch"
+    ],
+    "card": "research/N069_WHISPER_HEIST.md"
+  }
+]

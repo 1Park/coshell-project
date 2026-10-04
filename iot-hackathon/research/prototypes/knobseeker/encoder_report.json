@@ -1,0 +1,46 @@
+{
+  "scope": "Host model and runtime path; no physical pedal, target-tone, or listening test.",
+  "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+  "python": "3.14.3",
+  "torch": "2.14.1",
+  "executorch": "1.5.1",
+  "parameters": 81905344,
+  "encoder_state_bytes": 327713027,
+  "input_shape": [
+    1,
+    1,
+    144000
+  ],
+  "outputs": [
+    [
+      1,
+      512
+    ],
+    [
+      1,
+      512
+    ]
+  ],
+  "finite_outputs": true,
+  "first_host_forward_seconds": 0.037869834020966664,
+  "status": "export_and_host_runtime_succeeded",
+  "pte_bytes": 323418496,
+  "pte_sha256": "f74fef86e26ccaaf1ce3ec963bbe6547e5fff0f68fea007ca9c885b73f8cc90a",
+  "max_abs_errors": [
+    4.172325134277344e-06,
+    4.172325134277344e-06
+  ],
+  "allclose": [
+    true,
+    true
+  ],
+  "delegates": [
+    "XnnpackBackend",
+    "XnnpackBackend",
+    "XnnpackBackend",
+    "XnnpackBackend",
+    "XnnpackBackend",
+    "XnnpackBackend",
+    "XnnpackBackend"
+  ]
+}

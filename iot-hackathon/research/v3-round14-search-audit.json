@@ -1,0 +1,1480 @@
+{
+  "stage": "v3_round14",
+  "date": "2026-10-04",
+  "note": "Returned link metadata only; includes duplicates, irrelevant results, and failed opens. Not a count of papers read or candidate ideas. Source pages used for decisions are cited in registry and cards. UCI ZIP and PyPI package metadata were additionally fetched by Python; dataset SHA and package versions are recorded in the probe artifacts.",
+  "call_count": 17,
+  "returned_link_count": 347,
+  "calls": [
+    {
+      "cache_key": "r14film",
+      "links": [
+        {
+          "title": "BNT-23008-000 | Hangmo Automatic Screen Protector Applicator",
+          "url": "https://www.hangmotech.com/"
+        },
+        {
+          "title": "DIY Phone Case Fully Automated AI Screen Protector Application DIY Phone Case Printer Unattended Self-Service Customization Equipment for Startups",
+          "url": "https://kaisiai.com/"
+        },
+        {
+          "title": "BNT-23008-000 | Aplicador automático de protectores Hangmo",
+          "url": "https://www.hangmotech.com/es/"
+        },
+        {
+          "title": "Unattended Fully Automatic Screen Protector Vending Machine | Bubble-Free Self-Service Film Application-17837543603733 | LKS Kiosk",
+          "url": "https://www.lkskiosks.com/unattended-fully-automatic-screen-protector-vending-machine-bubble-free-self-service-film-application-1783754360373377.html"
+        },
+        {
+          "title": "Automatic Screen Protector Machine | 2-3 Month ROI | GOBEAR",
+          "url": "https://gobear8.com/screen-protector-vending-machine/"
+        },
+        {
+          "title": "automated screen protector solution for mass production - Automatic Label and Film Applicator - SHIHAO Technology",
+          "url": "https://www.shihao-int.com/product-772.html"
+        },
+        {
+          "title": "KeMore ProShield — Automatic Screen Protector Machine for Retail Self-Service",
+          "url": "https://www.kemorevending.com/a-products/kemore-proshield-automatic-screen-protector-machine/"
+        },
+        {
+          "title": "BNT-23008-000 | Applicateur automatique de protection d'écran Hangmo",
+          "url": "https://www.hangmotech.com/fr/"
+        },
+        {
+          "title": "China M40 All-in-One Screen Protector Cutter And Applicator Manufacturers Suppliers Factory - Purcell Haina Technology",
+          "url": "https://www.purcell-cut.com/film-cutting-machine/m40-all-in-one-screen-protector-cutter-and.html"
+        },
+        {
+          "title": "FW-9R Mini Film Beautified Machine | FORWARD - Forward Machine Factory",
+          "url": "https://forwardtools.com/products/fw-9r-mini-film-beautified-machine-forward"
+        },
+        {
+          "title": "U.S. Patent for Autowrap robotics: AI platform for automated vehicle surface treatment using humanoid robots Patent (Patent # 12,643,243 issued June 2, 2026) - Justia Patents Search",
+          "url": "https://patents.justia.com/patent/12643243"
+        },
+        {
+          "title": "SmoothVLA: Aligning Vision-Language-Action Models with Physical Constraints via Intrinsic Smoothness Optimization | arXiv Science",
+          "url": "https://arxiv.science/abs/2603.13925"
+        },
+        {
+          "title": "Smooth Exploration for Robotic Reinforcement Learning",
+          "url": "https://arxiv.org/abs/2005.05719"
+        },
+        {
+          "title": "US 20220176687A1",
+          "url": "https://patentimages.storage.googleapis.com/23/7e/60/3a8d746c9b32d5/US20220176687A1.pdf"
+        },
+        {
+          "title": "Smooth Exploration for Robotic Reinforcement Learning",
+          "url": "https://repository.tudelft.nl/file/File_54941908-aa79-46a1-96e7-53dcb52c93e9"
+        },
+        {
+          "title": "End-to-End Robotic Reinforcement Learning without Reward Engineering",
+          "url": "https://arxiv.org/abs/1904.07854"
+        },
+        {
+          "title": "Reinforcement learning in robotics: A survey",
+          "url": "https://www.cs.columbia.edu/~allen/S19/rl_robotics_survey.pdf"
+        },
+        {
+          "title": "Operating Blind. Most robots rely heavily on cameras to create a sense of vision. This means that light is needed to help create this sense of perception. The technical term for this is ‘visual occlusion.’ Traditionally, robots also have difficulty working around clutter or in confined spaces, where there’s no clear line of sight. Transparent, shiny or dark objects are also quite hard for robots to see. However, since a robot equipped with the Soft Bubble Gripper relies on sensors inside the bubble (and not an external camera) to recognize and manipulate objects, it works equally well in lit or darkened rooms. This also means the technology is ideally suited to situations in which it must reach into cluttered places (such as a sink full of miscellaneous objects and/or water) or has to manipulate in a way that would otherwise block its own view.",
+          "url": "https://pressroom.toyota.com/?generate_pdf=62340"
+        },
+        {
+          "title": "How to Train Your Robot with Deep Reinforcement Learning; Lessons We've Learned",
+          "url": "https://arxiv.org/abs/2102.02915"
+        },
+        {
+          "title": "Model-based Deep Reinforcement Learning for Robotic",
+          "url": "https://digicoll.lib.berkeley.edu/nanna/record/217053/files/EECS-2020-158.pdf?registerDownload=1&version=1&withMetadata=0&withWatermark=0"
+        },
+        {
+          "title": "Smoother movements for robot-based RL",
+          "url": "https://www.reddit.com/r/reinforcementlearning/comments/rzk4zv"
+        },
+        {
+          "title": "3D-DirectPrinting means innovation, versatility",
+          "url": "https://www.baumgartner-trading.com/_files/ugd/f96c81_9835ed3f7cf846f1ad9ecaf4ab129e8e.pdf"
+        },
+        {
+          "title": "Deep Reinforcement Learning for Robotic Manipulation with Asynchronous Off-Policy Updates",
+          "url": "https://arxiv.org/abs/1610.00633"
+        },
+        {
+          "title": "Vinyl cutter",
+          "url": "https://en.wikipedia.org/wiki/Vinyl_cutter"
+        }
+      ]
+    },
+    {
+      "cache_key": "r14tug",
+      "links": [
+        {
+          "title": "VEX IQ STEM Labs - Tug of War",
+          "url": "https://education.vex.com/stemlabs/iq/tug-of-war"
+        },
+        {
+          "title": "Iterating on Your Robot for IQ Tug of War | VEX Professional Development Plus",
+          "url": "https://pd.vex.com/videos/iq/iterating-on-your-robot-for-iq-tug-of-war"
+        },
+        {
+          "title": "KTH | Parag Khanna",
+          "url": "https://www.kth.se/profile/paragk?l=en"
+        },
+        {
+          "title": "Tug of war/Tractor pull challenge: How to deal with low traction/powerful motors - VEX IQ - VEX Professional Learning Community",
+          "url": "https://plc.pd.vex.com/t/tug-of-war-tractor-pull-challenge-how-to-deal-with-low-traction-powerful-motors/2158"
+        },
+        {
+          "title": "Student Robotics and the K-12 Curriculum · RobotLAB",
+          "url": "https://www.robotlab.com/blog/student-robotics-and-the-k-12-curriculum/"
+        },
+        {
+          "title": "DANCE",
+          "url": "https://www.learningresources.com/media/amasty/amfile/attach/CJwqYmIRbvP9FeKs4xJY7JOVaDP8rD2j.pdf"
+        },
+        {
+          "title": "Topic: Tug of War",
+          "url": "https://mechatronics.engineering.nyu.edu/pdf/tug-of-war.pdf"
+        },
+        {
+          "title": "IQ - Tug of War - Facilitation Guide | PDF | Force | Classroom",
+          "url": "https://www.scribd.com/document/734721598/IQ-Tug-of-War-Facilitation-Guide"
+        },
+        {
+          "title": "Frontiers | Improving engineering students’ understanding of classical physics through visuo-haptic simulations",
+          "url": "https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2024.1305615/full"
+        },
+        {
+          "title": "Tug of War Battle Bots - Activity - Teach Engineering",
+          "url": "https://www.teachengineering.org/activities/nyu_activity1_battlebots"
+        },
+        {
+          "title": "<visual_element id=\"e1\">",
+          "url": "https://openreview.net/pdf/37e007ee22de64d910b67b4b4a0097d9e67a4a25.pdf"
+        },
+        {
+          "title": "Exploring Robotics With Fun Projects and Activities - Superscienceforkids",
+          "url": "https://www.superscienceforkids.com/kids-robotics-camp/"
+        },
+        {
+          "title": "Human Arm Sensors Make Robot Smarter",
+          "url": "https://coe.gatech.edu/news/2014/01/human-arm-sensors-make-robot-smarter"
+        },
+        {
+          "title": "A sensorimotor reinforcement learning framework for physical Human-Robot Interaction — Lacuna",
+          "url": "https://lacuna.tiptreesystems.com/work/a-sensorimotor-reinforcement-learning-framework-for-physical-human-robot/wrk_aac440f29d7330aa90e59513f68d29cd"
+        },
+        {
+          "title": "PRO+ Racing Simulator 1-1-2024",
+          "url": "https://manuals.plus/m/38796d6bd3f9c426a4de8f85e468c264fa7956c98ef70a9077d00bf04feb22f0.pdf"
+        },
+        {
+          "title": "Emotional Robotics: Tug of War",
+          "url": "https://binds.cs.umass.edu/papers/2008_Cooper_NESCAI.pdf"
+        },
+        {
+          "title": "Robot Trust and Self-Confidence Role Arbitration Method for Physical Human-Robot Collaboration",
+          "url": "https://opus.lib.uts.edu.au/bitstream/10453/179548/1/thesis.pdf"
+        },
+        {
+          "title": "The Puzzle Place",
+          "url": "https://en.wikipedia.org/wiki/The_Puzzle_Place"
+        }
+      ]
+    },
+    {
+      "cache_key": "r14forcegames",
+      "links": [
+        {
+          "title": "Hypergame Theory: A Model for Conflict, Misperception, and Deception - Kovach - 2015 - Game Theory - Wiley Online Library",
+          "url": "https://onlinelibrary.wiley.com/doi/10.1155/2015/570639"
+        },
+        {
+          "title": "The Tight Game – Cybernetic Humanity",
+          "url": "https://shunichikasahara.com/portfolio/the-tight-game/"
+        },
+        {
+          "title": "Deception in two-player zero-sum stochastic games : theory and application to warfare games",
+          "url": "https://escholarship.org/uc/item/9m2366jx"
+        },
+        {
+          "title": "Towards the design and implementation of computer-modeled opponents for use in entertainment and educational software: Some initial considerations - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0747563297800039"
+        },
+        {
+          "title": "Deceptive algorithms in games: A systematic literature review - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/pii/S1875952125001582"
+        },
+        {
+          "title": "GentleHumanoid",
+          "url": "https://gentle-humanoid.axell.top/"
+        },
+        {
+          "title": "Healthlink Holdings Limited :: Healthlink - Gerontechnology Products",
+          "url": "https://www.healthlinkholdings.com/products/healthlink-gies-products/armmotus-emu-1/"
+        },
+        {
+          "title": "HAFO: A Force-Adaptive Control Framework for Humanoid Robots in Intense Interaction Environments",
+          "url": "https://hafo-robot.github.io/"
+        },
+        {
+          "title": "Haptic Battle Pong: High-Degree-of-Freedom Haptics in a Multiplayer Gaming Environment - Microsoft Research",
+          "url": "https://www.microsoft.com/en-us/research/publication/haptic-battle-pong-high-degree-freedom-haptics-multiplayer-gaming-environment-2/?lang=zh-cn"
+        },
+        {
+          "title": "Classical Deception Techniques and Perception Management",
+          "url": "https://users.monash.edu/~ckopp/InfoWar/Lectures/Deception-IWC6-05.pdf"
+        },
+        {
+          "title": "Flex off | Devpost",
+          "url": "https://devpost.com/software/flex-off"
+        },
+        {
+          "title": "The EAP/Human Armwrestling Match",
+          "url": "https://ndeaa.jpl.nasa.gov/nasa-nde/lommas/eap/EAP-armwrestling.htm"
+        },
+        {
+          "title": "In Proc. of the 2nd DARPA-JFACC Symposium on Advances in Enterprise Control, July 2000.",
+          "url": "https://web.ece.ucsb.edu/~hespanha/published/deception.pdf"
+        },
+        {
+          "title": "Games where you can employ deception?",
+          "url": "https://www.reddit.com/r/computerwargames/comments/17z5p9d"
+        },
+        {
+          "title": "Mortal Kombat: Deception",
+          "url": "https://en.wikipedia.org/wiki/Mortal_Kombat%3A_Deception"
+        },
+        {
+          "title": "Deception Game",
+          "url": "https://proceedings.mlr.press/v229/hu23b/hu23b.pdf"
+        },
+        {
+          "title": "Game of Travesty: Decoy-based Psychological Cyber Deception for Proactive Human Agents",
+          "url": "https://arxiv.org/abs/2309.13403"
+        },
+        {
+          "title": "Information, decision-making and deception in games",
+          "url": "https://scispace.com/pdf/information-decision-making-and-deception-in-games-592csiaier.pdf"
+        },
+        {
+          "title": "Force feedback for anthropomorphic",
+          "url": "https://calhoun.nps.edu/server/api/core/bitstreams/a65f2627-b542-4a6b-ad7f-def41f3f5434/content"
+        },
+        {
+          "title": "i-Sim2Real: Reinforcement Learning of Robotic Policies in Tight Human-Robot Interaction Loops",
+          "url": "https://arxiv.org/abs/2207.06572"
+        },
+        {
+          "title": "OPPONENT MODELING IN REAL-TIME STRATEGY GAMES",
+          "url": "https://citeseerx.ist.psu.edu/document?doi=76b074f4691ff1293a453b3e0df488ef534bc560&repid=rep1&type=pdf"
+        },
+        {
+          "title": "Armwrestling match of EAP robotic arm against human",
+          "url": "https://en.wikipedia.org/wiki/Armwrestling_match_of_EAP_robotic_arm_against_human"
+        },
+        {
+          "title": "One Must Fall: 2097",
+          "url": "https://en.wikipedia.org/wiki/One_Must_Fall%3A_2097"
+        },
+        {
+          "title": "Motivating Physical Activity via Competitive Human-Robot Interaction",
+          "url": "https://arxiv.org/abs/2202.07068"
+        },
+        {
+          "title": "Learning Reward Functions for Robotic Manipulation by Observing Humans",
+          "url": "https://arxiv.org/abs/2211.09019"
+        },
+        {
+          "title": "MAN VS ROBOT! Arm wrestle robot",
+          "url": "https://www.reddit.com/r/StuffMadeHere/comments/t9v4sw"
+        },
+        {
+          "title": "Novint Technologies",
+          "url": "https://en.wikipedia.org/wiki/Novint_Technologies"
+        },
+        {
+          "title": "Robot Arena 2: Design and Destroy",
+          "url": "https://en.wikipedia.org/wiki/Robot_Arena_2%3A_Design_and_Destroy"
+        },
+        {
+          "title": "World's First Human vs 6ft Terminator Robot Fight",
+          "url": "https://www.reddit.com/r/martialarts/comments/1wm6ezt/worlds_first_human_vs_6ft_terminator_robot_fight/"
+        },
+        {
+          "title": "A robot is beating human pros at table tennis. Its maker calls it a milestone for machines",
+          "url": "https://apnews.com/article/995b239945e0dc8d7bea918a850969dc"
+        },
+        {
+          "title": "Got 6/7-DoF robot arms running reinforcement learning in Isaac Lab",
+          "url": "https://www.reddit.com/r/reinforcementlearning/comments/1vriwpo/got_67dof_robot_arms_running_reinforcement/"
+        },
+        {
+          "title": "Sony's terrifyingly fast robot arm is finally beating pro-level table tennis players at their own game",
+          "url": "https://www.pcgamer.com/hardware/sonys-terrifyingly-fast-robot-arm-is-finally-beating-pro-level-table-tennis-players-at-their-own-game/"
+        },
+        {
+          "title": "'It totally blew my mind': Sony's Project Ace robot plays ping pong better than the pros and could mark a major robotics turning point",
+          "url": "https://www.techradar.com/ai-platforms-assistants/it-totally-blew-my-mind-sonys-project-ace-robot-plays-ping-pong-better-than-the-pros-and-could-mark-a-major-robotics-turning-point"
+        },
+        {
+          "title": "OpenAI Five",
+          "url": "https://en.wikipedia.org/wiki/OpenAI_Five"
+        },
+        {
+          "title": "Scientists taught an AI-powered 'robot dog' how to play badminton against humans - and it's actually really good",
+          "url": "https://www.livescience.com/technology/robotics/scientists-taught-an-ai-powered-robot-dog-how-to-play-badminton-against-humans-and-its-actually-really-good"
+        },
+        {
+          "title": "Been working on a human-like opponent for a table tennis game",
+          "url": "https://www.reddit.com/r/vrdev/comments/1whqpul/been_working_on_a_humanlike_opponent_for_a_table/"
+        },
+        {
+          "title": "Robot magician Vs UR3",
+          "url": "https://www.reddit.com/r/reinforcementlearning/comments/z7qpwd"
+        },
+        {
+          "title": "[Removed]",
+          "url": "https://www.reddit.com/r/robots/comments/1ubqqso/removed/"
+        },
+        {
+          "title": "[Removed]",
+          "url": "https://www.reddit.com/r/MMALabs/comments/1rfhig6/removed/"
+        },
+        {
+          "title": "A robot pulls off a double spin kick to disarm its opponent. Yushu Wang Xingxing, Founder and CEO of Unitree, sparred with the humanoid to demonstrate its combat skills in China.",
+          "url": "https://www.reddit.com/r/martialarts/comments/1jw7qbv"
+        },
+        {
+          "title": "Researchers Develop AI-Powered Robot That Plays Badminton Against Humans",
+          "url": "https://www.reddit.com/r/Wevolver/comments/1l453xd"
+        },
+        {
+          "title": "[R] Video of experiments from DeepMind's recent “Learning Agile Soccer Skills for a Bipedal Robot with Deep Reinforcement Learning” (OP3 Soccer) project",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/132w40c"
+        },
+        {
+          "title": "Which Reinforcement Learning Algorithms/Techniques would be used when training a Robotic Arm to pick up objects or mimic a human arm?",
+          "url": "https://www.reddit.com/r/learnmachinelearning/comments/eniceb"
+        }
+      ]
+    },
+    {
+      "cache_key": "r14fluid",
+      "links": [
+        {
+          "title": "Learning Predictive Representations for Deformable Objects Using Contrastive Estimation",
+          "url": "https://arxiv.org/abs/2003.05436"
+        },
+        {
+          "title": "IRI - Learning control from data: Convergence guarantees and applications to robotic cloth manipulation",
+          "url": "https://www.iri.upc.edu/thesis/show/168"
+        },
+        {
+          "title": "Learning Latent Graph Dynamics for Visual Manipulation of Deformable Objects",
+          "url": "https://arxiv.org/abs/2104.12149"
+        },
+        {
+          "title": "Data-Driven Robotic Manipulation of Cloth-like Deformable Objects: The Present, Challenges and Future Prospects - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10007406/"
+        },
+        {
+          "title": "Home",
+          "url": "https://sites.google.com/view/clothm"
+        },
+        {
+          "title": "Learning Structured World Model for Deformable Object Manipulation - Robotics Institute Carnegie Mellon University",
+          "url": "https://publications.ri.cmu.edu/learning-structured-world-model-for-deformable-object-manipulation"
+        },
+        {
+          "title": "Fast and Flexible Multi-Step Cloth Manipulation Planning Using an Encode-Manipulate-Decode Network (EM*D Net) - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6554328/"
+        },
+        {
+          "title": "Learning visual-based deformable object rearrangement with local graph neural networks",
+          "url": "https://arxiv.org/abs/2310.10307"
+        },
+        {
+          "title": "Learning to unfold cloth: Scaling up world models to deformable object manipulation | alphaXiv",
+          "url": "https://www.alphaxiv.org/abs/2602.16675"
+        },
+        {
+          "title": "Action-conditional implicit visual dynamics for deformable object manipulation - Bokui Shen, Zhenyu Jiang, Christopher Choy, Silvio Savarese, Leonidas J. Guibas, Anima Anandkumar, Yuke Zhu, 2024",
+          "url": "https://journals.sagepub.com/doi/10.1177/02783649231191222"
+        },
+        {
+          "title": "Sim-to-Real Reinforcement Learning for Deformable Object Manipulation",
+          "url": "https://arxiv.org/abs/1806.07851"
+        },
+        {
+          "title": "Controlled Gaussian process dynamical models with application to robotic cloth manipulation | International Journal of Dynamics and Control | Springer Nature Link",
+          "url": "https://link.springer.com/article/10.1007/s40435-023-01205-6"
+        },
+        {
+          "title": "Learning Cloth Dynamics",
+          "url": "https://tabithako.github.io/projects/cloth-dynamics"
+        },
+        {
+          "title": "Learning Bimanual Cloth Manipulation with Vision-based Tactile Sensing via Single Robotic Arm — Scifaro",
+          "url": "https://scifaro.com/en/abs/learning-bimanual-cloth-manipulation-with-vision-based-tactile-sensing-via-single-robotic-arm-2603.10609"
+        },
+        {
+          "title": "Learning-based control approaches for service robots on cloth manipulation and dressing assistance: a comprehensive review - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9635144/"
+        },
+        {
+          "title": "Learning Visible Connectivity Dynamics for Cloth",
+          "url": "https://xingyu-lin.github.io/papers/2021_vcd.pdf"
+        },
+        {
+          "title": "Learning Visible Connectivity Dynamics for Cloth Smoothing — Lacuna",
+          "url": "https://lacuna.tiptreesystems.com/paper/learning-visible-connectivity-dynamics-for-cloth-smoothing/art_e2b216444db34c9ab0773405624daf95"
+        },
+        {
+          "title": "Data-Driven Robotic Manipulation of Cloth-like Deformable Objects: The Present, Challenges and Future Prospects",
+          "url": "https://research-repository.st-andrews.ac.uk/bitstream/10023/27024/1/Kadi_2023_Sensors_Data_driven_CC.pdf"
+        },
+        {
+          "title": "Modeling, learning, perception, and control methods for deformable object manipulation",
+          "url": "https://scispace.com/pdf/modeling-learning-perception-and-control-methods-for-2lpto91t28.pdf"
+        },
+        {
+          "title": "Learning Predictive Representations for Deformable Objects",
+          "url": "https://sim2real.github.io/assets/papers/2020/yan.pdf"
+        },
+        {
+          "title": "Towards Versatile Manipulation of",
+          "url": "https://openreview.net/pdf/3b5ebb6a14632c27faa66335b0c4e4a5c4132319.pdf"
+        },
+        {
+          "title": "Cloth modeling",
+          "url": "https://en.wikipedia.org/wiki/Cloth_modeling"
+        },
+        {
+          "title": "Soft-body dynamics",
+          "url": "https://en.wikipedia.org/wiki/Soft-body_dynamics"
+        },
+        {
+          "title": "Visual servoing",
+          "url": "https://en.wikipedia.org/wiki/Visual_servoing"
+        },
+        {
+          "title": "Training real-world RL model of long-horizon manipulation of 3D deformable object",
+          "url": "https://www.reddit.com/r/robotics/comments/1e9b8ub"
+        },
+        {
+          "title": "Training real-world RL model of long-horizon manipulation of 3D deformable object",
+          "url": "https://www.reddit.com/r/reinforcementlearning/comments/1e8www2"
+        },
+        {
+          "title": "MuJoCo",
+          "url": "https://en.wikipedia.org/wiki/MuJoCo"
+        },
+        {
+          "title": "Visual servoing",
+          "url": "https://it.wikipedia.org/wiki/Visual_servoing"
+        },
+        {
+          "title": "Bayesian inference in motor learning",
+          "url": "https://en.wikipedia.org/wiki/Bayesian_inference_in_motor_learning"
+        }
+      ]
+    },
+    {
+      "cache_key": "r14thinfilm",
+      "links": [
+        {
+          "title": "Pancake making and surface coating: optimal control of a gravity-driven liquid film",
+          "url": "https://arxiv.org/abs/1901.06028"
+        },
+        {
+          "title": "Physics - Making the Perfect Crêpe",
+          "url": "https://physics.aps.org/articles/v12/s68"
+        },
+        {
+          "title": "Optimal Control of Thin Liquid Films and Transverse Mode Effects | SIAM Journal on Applied Dynamical Systems",
+          "url": "https://epubs.siam.org/doi/10.1137/18M1193906"
+        },
+        {
+          "title": "Pancake making and surface coating:",
+          "url": "https://ir.canterbury.ac.nz/bitstreams/a8a6d4ed-55c5-4c4d-9389-411d0a68570c/download"
+        },
+        {
+          "title": "(PDF) Pancake making and surface coating: Optimal control of a gravity-driven liquid film",
+          "url": "https://www.researchgate.net/publication/333714699_Pancake_making_and_surface_coating_Optimal_control_of_a_gravity-driven_liquid_film"
+        },
+        {
+          "title": "Thin liquid films on a slightly inclined heated plate - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S016727890300455X"
+        },
+        {
+          "title": "Perfect Crepes, by Way of Physics | Scientific American",
+          "url": "https://www.scientificamerican.com/article/perfect-crepes-by-way-of-physics/"
+        },
+        {
+          "title": "Robotic Arts: Painting a Red Canvas",
+          "url": "https://upcommons.upc.edu/bitstreams/25faf151-cf49-48f0-a511-bf98abe5f4c1/download"
+        },
+        {
+          "title": "Dynamics of anthropomorphic painting robot: Quality analysis and cost reduction - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0921889099001268"
+        },
+        {
+          "title": "The Pourtrait | Devpost",
+          "url": "https://devpost.com/software/the-pourtrait"
+        },
+        {
+          "title": "Article: An optimisation-based robot platform for the generation of action paintings Journal: International Journal of Arts and Technology (IJART) 2011 Vol.4 No.2 pp.181 - 195 Abstract: We present the robot JacksonBot which is capable to produce paintings inspired by the action painting style of Jackson Pollock. A dynamically moving robot arm splashes colour from a container at the end effector on the canvas. The paintings produced by this platform rely on a combination of the algorithmic generation of robot arm motions with random effects of the splashing colour. The robot can be considered as a complex and powerful tool to generate artworks programmed by a user. Desired end effector motions can be prescribed either by mathematical functions, by point sequences or by data glove motions. We have evaluated the effect of different shapes of input motions on the resulting painting. To compute the robot joint trajectories necessary to move along a desired end effector path, we use an optimal control-based approach to solve the inverse kinematics problem. Inderscience Publishers - linking academia, business and industry through research",
+          "url": "https://www.inderscience.com/info/inarticle.php?artid=39844"
+        },
+        {
+          "title": "Making the Perfect Crêpe: it's all in how you roll your wrist, according to predictions from a new model.",
+          "url": "https://www.reddit.com/r/Physics/comments/bzsuvy"
+        },
+        {
+          "title": "flm1000337a",
+          "url": "https://eugene.benilov.com/pubs/jfm10.pdf"
+        },
+        {
+          "title": "Non-isothermal spreading of a thin liquid film on an inclined plane - MaRDI portal",
+          "url": "https://portal.mardi4nfdi.de/wiki/Non-isothermal_spreading_of_a_thin_liquid_film_on_an_inclined_plane"
+        },
+        {
+          "title": "To Stir or Not to Stir: Online Estimation of Liquid Properties for Pouring Actions — Lacuna",
+          "url": "https://lacuna.tiptreesystems.com/work/to-stir-or-not-to-stir-online-estimation-of-liquid-properties-for-pouring/wrk_094a459bbd7b34103926859f38752569"
+        },
+        {
+          "title": "Hydrodynamics and instabilities of falling liquid film over a non-uniformly heated inclined wavy bottom | Physics of Fluids | AIP Publishing",
+          "url": "https://doi.org/10.1063/5.0010461"
+        },
+        {
+          "title": "Thin liquid film stability in the presence of bottom topography and surfactant - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0301932224003203"
+        },
+        {
+          "title": "An investigation into the flow of a solidifying liquid film over a hard surface to find for example the optimal way to make uniform thickness pancakes (or other coating application). \"Pancake making and surface coating: Optimal control of a gravity-driven liquid film\"",
+          "url": "https://www.reddit.com/r/autotldr/comments/c5vvf9"
+        },
+        {
+          "title": "It’s Time for Your Robot to Paint!",
+          "url": "https://www.paint.org/wp-content/uploads/2023/04/Painting-Robots_Mar-2022.pdf"
+        },
+        {
+          "title": "International Conference on Applied and Pure Sciences, 2021",
+          "url": "https://conf.kln.ac.lk/icaps/images/res/docs/ProceedingsICAPS2021.pdf"
+        },
+        {
+          "title": "Optimal control of thin liquid films and transverse mode effects",
+          "url": "https://arxiv.org/abs/1805.08236"
+        },
+        {
+          "title": "On the transition to dripping of an inverted liquid film",
+          "url": "https://arxiv.org/abs/2210.15522"
+        },
+        {
+          "title": "EDavid (robot)",
+          "url": "https://en.wikipedia.org/wiki/EDavid_%28robot%29"
+        },
+        {
+          "title": "Large-Scale Painting of Photographs by Interactive Optimization",
+          "url": "https://www.cs.columbia.edu/cg/pdfs/1459801595-spray-painting-cag-2015-prevost-et-al-preprint.pdf"
+        },
+        {
+          "title": "Nonlinear periodic wavetrains in thin liquid films falling on a uniformly heated horizontal plate",
+          "url": "https://arxiv.org/abs/1804.07359"
+        },
+        {
+          "title": "Pouring",
+          "url": "https://en.wikipedia.org/wiki/Pouring"
+        },
+        {
+          "title": "Lubrication theory",
+          "url": "https://en.wikipedia.org/wiki/Lubrication_theory"
+        },
+        {
+          "title": "Fluid flow of crepe batter and how to avoid lumps",
+          "url": "https://www.reddit.com/r/Physics/comments/c6pd4y"
+        },
+        {
+          "title": "Thin film flows down an inclined plane.",
+          "url": "https://www.reddit.com/r/FluidMechanics/comments/jm5vnw"
+        },
+        {
+          "title": "Paint robot",
+          "url": "https://en.wikipedia.org/wiki/Paint_robot"
+        },
+        {
+          "title": "Buckmaster equation",
+          "url": "https://en.wikipedia.org/wiki/Buckmaster_equation"
+        },
+        {
+          "title": "Landau–Levich problem",
+          "url": "https://en.wikipedia.org/wiki/Landau%E2%80%93Levich_problem"
+        },
+        {
+          "title": "A crepe maker that forms the batter into a perfect, thin circle",
+          "url": "https://www.reddit.com/r/specializedtools/comments/q4xclb"
+        }
+      ]
+    },
+    {
+      "cache_key": "r14paintmedium",
+      "links": [
+        {
+          "title": "Color Pouring Mediums (Gloss & Matte) | Golden Artist Colors",
+          "url": "https://goldenartistcolors.com/resources/color-pouring-mediums-gloss-and-matte"
+        },
+        {
+          "title": "Color Pouring Medium | Golden Artist Colors",
+          "url": "https://goldenartistcolors.com/products/color-pouring-medium"
+        },
+        {
+          "title": "OPEN Acrylic Medium | Golden Artist Colors",
+          "url": "https://goldenartistcolors.com/resources/open-acrylic-medium"
+        },
+        {
+          "title": "OIL BY VOLUME",
+          "url": "https://goldenartistcolors.com/static/4f92b5e96b8de407e752d04c0ac1c983/oil_by_volume_ref_041323_dr05.pdf"
+        },
+        {
+          "title": "Gloss Pouring Medium – Liquitex",
+          "url": "https://www.liquitex.com/en-ca/products/professional-pouring-medium"
+        },
+        {
+          "title": "Pouring Medium – Liquitex",
+          "url": "https://www.liquitex.com/en-ca/products/professional-pouring-effect"
+        },
+        {
+          "title": "Dutch Pour – Liquitex UK",
+          "url": "https://uk.liquitex.com/blogs/tips-techniques-how-tos/pouring-techniques"
+        },
+        {
+          "title": "OPEN - Controlling Drying Times | Golden Artist Colors",
+          "url": "https://goldenartistcolors.com/resources/golden-open-acrylics-controlling-drying-times"
+        },
+        {
+          "title": "Pouring Mediums – Liquitex EU",
+          "url": "https://eu.liquitex.com/collections/pouring-mediums"
+        },
+        {
+          "title": "Airbrush Medium | Golden Artist Colors",
+          "url": "https://goldenartistcolors.com/resources/airbrush-medium"
+        },
+        {
+          "title": "Glazing Liquid | Golden Artist Colors",
+          "url": "https://goldenartistcolors.com/resources/glazing-liquid"
+        },
+        {
+          "title": "Fluid Acrylics | Golden Artist Colors",
+          "url": "https://goldenartistcolors.com/products/golden-artist-acrylics/fluid"
+        },
+        {
+          "title": "OPEN Acrylic Colors | Golden Artist Colors",
+          "url": "https://goldenartistcolors.com/resources/open-acrylic-colors"
+        },
+        {
+          "title": "Williamsburg Handmade Oil Colors Dry Time Chart",
+          "url": "https://goldenartistcolors.com/static/f556e753a4d3a1330d85923dccb711a2/williamsburg-drytime-chart-091818.pdf"
+        },
+        {
+          "title": "Golden Artist Colors, Inc.",
+          "url": "https://www.georgeweil.com/wp-content/uploads/2021/02/golden-color-pouring-mediums.pdf"
+        },
+        {
+          "title": "CHAPTER 4: APPLICATIONS / POURING",
+          "url": "https://sites.harding.edu/gclayton/PDFs/2007AcrylicBook.pdf"
+        },
+        {
+          "title": "12 COLOR POURING TIPS",
+          "url": "https://www.justpaint.org/wp-content/uploads/2019/06/ColorPouringTips.pdf"
+        },
+        {
+          "title": "Help with Liquitex Pouring Medium (gloss)",
+          "url": "https://www.reddit.com/r/PourPainting/comments/1ui13e9/help_with_liquitex_pouring_medium_gloss/"
+        },
+        {
+          "title": "I usually use Floetrol but tried Liquitex pouring medium for this one",
+          "url": "https://www.reddit.com/r/PourPainting/comments/vn4w2w"
+        },
+        {
+          "title": "These are my 4th and 5th attempts at doing pours. I'm enjoying it but not getting the pop that many other pieces have. This just feels like a mess to me, but it isn't too bad! For those on the fence about starting, give it a shot! I started a week ago and am already having a great time!",
+          "url": "https://www.reddit.com/r/PourPainting/comments/odjjq2"
+        },
+        {
+          "title": "Whyyyy is this happening?!",
+          "url": "https://www.reddit.com/r/PourPainting/comments/jvjs0z"
+        },
+        {
+          "title": "THREAD FOR TIPS/TRICKS/PEOPLE TO HELP ANSWER QUESTIONS (DETAILS BELOW)",
+          "url": "https://www.reddit.com/r/PourPainting/comments/qoa6k6"
+        },
+        {
+          "title": "My colors are milky and they blur together when prepared with Liquitex pouring medium. Am I just using too much Liquitex?",
+          "url": "https://www.reddit.com/r/PourPainting/comments/yxcj9s"
+        },
+        {
+          "title": "Any tips to prevent wrinkles and creases from forming as a painting dries? There’s nothing like the glassy smoothness of a wet pour!",
+          "url": "https://www.reddit.com/r/PourPainting/comments/yymn0k"
+        },
+        {
+          "title": "Is this good? Bad? Ok?",
+          "url": "https://www.reddit.com/r/paintbynumbers/comments/1v5rz9r/is_this_good_bad_ok/"
+        },
+        {
+          "title": "10x10 canvas! My second dutch pour/my 4th pour came out beautiful! And ya know, sometimes the darkness taking over the light is okay💜I am LIVING for the cells!🍃 insta: @gypsy.lys.art @gypsy.lys",
+          "url": "https://www.reddit.com/r/PourPainting/comments/f8t7gn"
+        },
+        {
+          "title": "Muddy pour, huge cells, what did I do wrong?",
+          "url": "https://www.reddit.com/r/PourPainting/comments/1c6si11"
+        },
+        {
+          "title": "Can anyone tell me why I'm getting these fissures? In this piece, I don't mind them, but I'd like to avoid it in the future.",
+          "url": "https://www.reddit.com/r/PourPainting/comments/nbtc0g"
+        },
+        {
+          "title": "My first try at swiping any suggestions?",
+          "url": "https://www.reddit.com/r/PourPainting/comments/yg0jqi"
+        },
+        {
+          "title": "Pouring",
+          "url": "https://en.wikipedia.org/wiki/Pouring"
+        },
+        {
+          "title": "Acrylic painting techniques",
+          "url": "https://en.wikipedia.org/wiki/Acrylic_painting_techniques"
+        },
+        {
+          "title": "Liquitex",
+          "url": "https://en.wikipedia.org/wiki/Liquitex"
+        }
+      ]
+    },
+    {
+      "cache_key": "r14needs",
+      "links": [
+        {
+          "title": "How the CYBATHLON Competition Has Advanced Assistive Technologies - Technical University of Munich",
+          "url": "https://portal.fis.tum.de/en/publications/how-the-cybathlon-competition-has-advanced-assistive-technologies/"
+        },
+        {
+          "title": "Making Assistive Technology Search Actionable through a Multi-Source Retrieval Tool for TOM | PiTech",
+          "url": "https://www.pi.tech.cornell.edu/spotlight/making-assistive-technology-search-actionable-through-a-multi-source-retrieval-tool-for-tom"
+        },
+        {
+          "title": "Accessbility Design Competition | RMIT Vietnam",
+          "url": "https://industryhub.rmit.edu.vn/ADC/"
+        },
+        {
+          "title": "ETH Library",
+          "url": "https://www.research-collection.ethz.ch/bitstreams/47435ad5-f5ea-42b1-bd7d-821de7e143fc/download"
+        },
+        {
+          "title": "WADSIH Hardware Hack 2026 - WADSIH",
+          "url": "https://wadsih.org.au/wadsih-hardware-hack-2026/"
+        },
+        {
+          "title": "robot hackathon 2026 | robo.innovate",
+          "url": "https://roboinnovate.mirmi.tum.de/hackathon/hackathon-2026/"
+        },
+        {
+          "title": "Music & AI Hackathon 2026 in Austria",
+          "url": "https://music-ai-hackathon.com/"
+        },
+        {
+          "title": "AccessAIthon 2026",
+          "url": "https://accessaithon2026.netlify.app/"
+        },
+        {
+          "title": "Inclusion Innovation Hackathon for POD - Khalifa University",
+          "url": "https://www.ku.ac.ae/inclusive-innovation-accessibility-hackathon"
+        },
+        {
+          "title": "StarkHacks",
+          "url": "https://starkhacks.com/"
+        },
+        {
+          "title": "Physical AI Hacks 2026",
+          "url": "https://physicalaihack.com/"
+        },
+        {
+          "title": "Indegene helps a medical device maker identify opportunities for gastrointestinal cancer procedures in China",
+          "url": "https://resource.indegene.com/indegene/pdf/case-studies/global-pharma-identifies-market-opportunities-gi-cancer-procedures-china.pdf"
+        },
+        {
+          "title": "The Graphical Access Challenge for People with Visual Impairments: Positions and Pathways Forward | IntechOpen",
+          "url": "https://www.intechopen.com/chapters/64669"
+        },
+        {
+          "title": "PhysTech 2026: Physical Activity and Technology Hack Day: Move, Inspire and Innovate! Demonstrate your talent and showcase your hack for physical activity. - Devpost",
+          "url": "https://phystech-2026.devpost.com/?ref_feature=challenge&ref_medium=similar-hackathons"
+        },
+        {
+          "title": "Multi-faceted Sensory Substitution for Curb Alerting: A Pilot Investigation in Persons with Blindness and Low Vision",
+          "url": "https://arxiv.org/abs/2408.14578"
+        },
+        {
+          "title": "Dept. News Letter Jan - Mar 2026 CSE EDUINSIDE",
+          "url": "https://m.dsu.edu.in/images/Engineering/CSE-dept/Newsletter/CsJan-March_2026.pdf"
+        },
+        {
+          "title": "SLAM for Visually Impaired People: A Survey",
+          "url": "https://rpg.ifi.uzh.ch/docs/arxiv22_bamdad.pdf"
+        },
+        {
+          "title": "VIEW IN BROWSER - FORWARD BY EMAIL - MEMBERSHIP SUBSCRIPTION",
+          "url": "https://eufundingportal.eu/de/Europ%C3%A4ischer-B%C3%BCrger-Hackathon-Wettbewerb%3A-Aufruf-zur-Einreichung-von-Projektvorschl%C3%A4gen-zur-F%C3%B6rderung-gemeinschaftlicher-Projekte--die-gesellschaftliche-Herausforderungen-angehen./?print=pdf"
+        },
+        {
+          "title": "\"Can you feel the vibes?\": An exploration of novice programmer engagement with vibe coding",
+          "url": "https://eprints.soton.ac.uk/510996/1/ICSE_SEET_2026_VibeCoding.pdf"
+        },
+        {
+          "title": "Hackathon Community- we could really use some help making this happen",
+          "url": "https://www.reddit.com/r/hackathon/comments/1wfvs74/hackathon_community_we_could_really_use_some_help/"
+        },
+        {
+          "title": "Machine Monday! Everything and Anything Sewing Machine-Related: August 31, 2020",
+          "url": "https://www.reddit.com/r/sewing/comments/ik1ub8"
+        },
+        {
+          "title": "CAPTCHA",
+          "url": "https://en.wikipedia.org/wiki/CAPTCHA"
+        }
+      ]
+    },
+    {
+      "cache_key": "r14tom",
+      "links": [
+        {
+          "title": "TOM Global - Tikkun Olam Makers",
+          "url": "https://tomglobal.org/search"
+        },
+        {
+          "title": "Innovation And Technology Competition | 2023 Tom Global Innovation Challenge",
+          "url": "https://www.tomchallenge.org/"
+        },
+        {
+          "title": "Your GIC Project | 2025 TOM GIC",
+          "url": "https://www.tomchallenge.org/your-gic-project"
+        },
+        {
+          "title": "Past Winners | 2025 TOM GIC",
+          "url": "https://www.tomchallenge.org/past-challenges"
+        },
+        {
+          "title": "Braille Challenge | Braille Institute",
+          "url": "https://www.brailleinstitute.org/find-services/youth/braille-challenge/"
+        },
+        {
+          "title": "31 Day Drawing Challenge - The Big Draw",
+          "url": "https://www.thebigdraw.org/events/31-day-drawing-challenge"
+        },
+        {
+          "title": "Online Logo",
+          "url": "https://www.transum.org/software/logo/"
+        },
+        {
+          "title": "Drawing Challenge #10: Fill the Shape",
+          "url": "https://www.khouriamelia.com/free-drawing-challenge-10-w2dtogether-drawing-idea.html"
+        },
+        {
+          "title": "How It Works - Test Your Draw | Drawing Challenge Explained | Test Your Draw",
+          "url": "https://testyourdraw.com/how-it-works"
+        },
+        {
+          "title": "The Big Draw and Concepts Partnership • Concepts App • Infinite, Flexible Sketching",
+          "url": "https://concepts.app/en/news/the-big-draw-concepts-partnership/"
+        },
+        {
+          "title": "Proko - 4 Weeks to Better Perspective Drawing - Challenge",
+          "url": "https://www.proko.com/lesson/perspective-challenge"
+        },
+        {
+          "title": "Hand In Hand",
+          "url": "https://tearfund.ca/wp-content/uploads/2021/05/Hand-In-Hand-2021.pdf"
+        },
+        {
+          "title": "Drawing Challenges on Drawing Desk",
+          "url": "https://drawingdesk.com/blog/drawing-challenge-ideas"
+        },
+        {
+          "title": "au.ch",
+          "url": "https://za.challenge.news/public/pdf/Challenge_may_25_lowres.pdf"
+        },
+        {
+          "title": "62 World Needs",
+          "url": "https://www.yourchurchcanchangetheworld.org/wp-content/uploads/2010/04/G-World-Needs-51-62.pdf"
+        },
+        {
+          "title": "Understanding the Practice, Perception, and Challenge of Blind or Low Vision Students Learning through Accessible Technologies in Non-Inclusive 'Blind Colleges'",
+          "url": "https://arxiv.org/abs/2501.07736"
+        },
+        {
+          "title": "Academic Text-to-Music Grand Challenge: Datasets, Baselines, and Evaluation Methods",
+          "url": "https://arxiv.org/abs/2605.21538"
+        },
+        {
+          "title": "A challenge in A(G)I, cybernetics revived in the Ouroboros Model as one algorithm for all thinking",
+          "url": "https://arxiv.org/abs/2403.04292"
+        },
+        {
+          "title": "The challenge to Christian missions;",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/84/The_challenge_to_Christian_missions%3B_%28IA_challengetochris01wels%29.pdf"
+        },
+        {
+          "title": "a vision of a world fre",
+          "url": "https://www-staging.christianaid.ie/sites/default/files/2017-08/turning-hope-into-action-december-2009_1.pdf"
+        },
+        {
+          "title": "Challenging the Church to World Mission",
+          "url": "https://ijfm.com/Archives/PDFs_IJFM/13_1_PDFs/ijfm_13_1.pdf"
+        },
+        {
+          "title": "Blind Users Accessing Their Training Images in Teachable Object Recognizers",
+          "url": "https://arxiv.org/abs/2208.07968"
+        }
+      ]
+    },
+    {
+      "cache_key": "r14tremor",
+      "links": [
+        {
+          "title": "A digital assessment system for evaluating kinetic tremor in essential tremor and Parkinson’s disease - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5845296/"
+        },
+        {
+          "title": "Active Tremor Compensation in Handheld Instrument for Microsurgery - Robotics Institute Carnegie Mellon University",
+          "url": "https://publications.ri.cmu.edu/active-tremor-compensation-in-handheld-instrument-for-microsurgery"
+        },
+        {
+          "title": "Computerised analysis of writing and drawing by essential tremor phenotype",
+          "url": "https://neurologyopen.bmj.com/content/bmjno/3/2/e000212.full.pdf"
+        },
+        {
+          "title": "Manipulator Design and Operation for a Six-Degree-of-Freedom Handheld Tremor-Canceling Microsurgical Instrument - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4235034/"
+        },
+        {
+          "title": "Compact Sensing Design of a Handheld Active Tremor Compensation Instrument - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2832296/"
+        },
+        {
+          "title": "(Open Access) A Painting Tool with Blurring Compensation for People Having Involuntary Hand Motion (2004) | Masahiko Nawate | 12 Citations",
+          "url": "https://scispace.com/papers/a-painting-tool-with-blurring-compensation-for-people-having-ftqr6zyj48"
+        },
+        {
+          "title": "Standardized Handwriting to Assess Bradykinesia, Micrographia and Tremor in Parkinson's Disease | PLOS One",
+          "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0097614"
+        },
+        {
+          "title": "Transducer-based evaluation of tremor - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5014626/"
+        },
+        {
+          "title": "Vibration suppression drafting arm for tremor patients - California State University, Sacramento",
+          "url": "https://scholars.csus.edu/esploro/outputs/graduate/Vibration-suppression-drafting-arm-for-tremor/99257830975401671"
+        },
+        {
+          "title": "Task-specific tremor - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/chapter/handbook/pii/B9780444520142000501"
+        },
+        {
+          "title": "Microsoft Word - CMU-RI-TR-04-28.doc",
+          "url": "https://www.ri.cmu.edu/pub_files/pub4/ang_wei_tech_2004_1/ang_wei_tech_2004_1.pdf"
+        },
+        {
+          "title": "A writing device improves writing in primary writing tremor.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/15883338/"
+        },
+        {
+          "title": "Quantification of tremor with a digitizing tablet - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/016502709090140B"
+        },
+        {
+          "title": "Computerised analysis of writing and drawing by essential tremor phenotype | BMJ Neurology Open",
+          "url": "https://neurologyopen.bmj.com/content/3/2/e000212"
+        },
+        {
+          "title": "Drawing Direction Effect on a Task’s Performance Characteristics among People with Essential Tremor",
+          "url": "https://pdfs.semanticscholar.org/e882/f7d460e438632be585c063db5ad92d049c66.pdf"
+        },
+        {
+          "title": "Preliminary design of a device to assist handwriting in children with movement disorders",
+          "url": "https://arxiv.org/abs/1908.02221"
+        },
+        {
+          "title": "Microsoft Word - Thesis_08Oct2010_correctedagain.doc",
+          "url": "https://stax.strath.ac.uk/downloads/r207tp55q"
+        },
+        {
+          "title": "Active Tremor Compensation for Laser Medical Instruments",
+          "url": "https://ijomam.com/wp-content/uploads/2021/07/pag.-18-25_ACTIVE-TREMOR-COMPENSATION-FOR-LASER-MEDICAL-INSTRUMENTS.pdf"
+        },
+        {
+          "title": "EDavid (robot)",
+          "url": "https://en.wikipedia.org/wiki/EDavid_%28robot%29"
+        },
+        {
+          "title": "Dynamic Drawing Guidance via Electromagnetic Haptic Feedback",
+          "url": "https://arxiv.org/abs/1906.11753"
+        },
+        {
+          "title": "Active Tremor Compensation via",
+          "url": "https://www.lirmm.fr/uee07/presentations/lecturers/Ang.pdf"
+        },
+        {
+          "title": "Architectural-Scale Artistic Brush Painting with a Hybrid Cable Robot",
+          "url": "https://arxiv.org/abs/2403.12214"
+        },
+        {
+          "title": "Paint robot",
+          "url": "https://en.wikipedia.org/wiki/Paint_robot"
+        },
+        {
+          "title": "Compliance error compensation in robotic-based milling",
+          "url": "https://arxiv.org/abs/1409.6231"
+        },
+        {
+          "title": "Can't Help Myself (Sun Yuan and Peng Yu)",
+          "url": "https://en.wikipedia.org/wiki/Can%27t_Help_Myself_%28Sun_Yuan_and_Peng_Yu%29"
+        }
+      ]
+    },
+    {
+      "cache_key": "r14tremor2",
+      "links": [
+        {
+          "title": "Hold the line: Restoring artistic expression in VR for people with Parkinson’s - ScienceDirect",
+          "url": "https://doi.org/10.1016/j.ijhcs.2026.103862"
+        },
+        {
+          "title": "COMPUTER SCIENCE",
+          "url": "https://eu-conf.com/wp-content/uploads/2026/01/DYNAMICS-OF-DEVELOPMENT-OF-SCIENCE-AND-EDUCATION-INTEGRATION-AND-INNOVATION.pdf"
+        },
+        {
+          "title": "RESTLESS EARTH",
+          "url": "https://assets.ctfassets.net/pc40tpn1u6ef/file-16711/d57b74352ddc7b71b92770d87e6c7ecb/11795-Restless_Earth.pdf"
+        },
+        {
+          "title": "Transducer-based evaluation of tremor - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5014626/"
+        },
+        {
+          "title": "Clinical Data - Horao Neurolabs",
+          "url": "https://horao-neuro.com/index.html"
+        },
+        {
+          "title": "A computerized tablet system for evaluating treatment of essential tremor by magnetic resonance guided focused ultrasound | BMC Neurology | Springer Nature Link",
+          "url": "https://link.springer.com/article/10.1186/s12883-017-0856-8"
+        },
+        {
+          "title": "A digital assessment system for evaluating kinetic tremor in essential tremor and Parkinson’s disease",
+          "url": "https://d-nb.info/1159505322/34"
+        },
+        {
+          "title": "Handheld Surgical Instrument Tremor Compensation via IMU and Laser Tracking",
+          "url": "https://eureka.patsnap.com/triz-case/surgical-instrument-tremor-compensation"
+        },
+        {
+          "title": "STYLUS DERIVED METRICS TO DETECT CENTRAL AND PERIPHERAL NERVOUS SYSTEM ATTRIBUTES | TREA",
+          "url": "https://trea.com/information/stylus-derived-metrics-to-detect-central-and-peripheral-nervous-system-attribute/patentapplication/f3a1ef04-d177-43b3-93cf-5c84f4993b96"
+        },
+        {
+          "title": "RECORDING EARTHQUAKES.",
+          "url": "https://newspapers.swco.ttu.edu/bitstreams/4737cc43-174c-49c2-b9f3-5bb725329ebf/download"
+        },
+        {
+          "title": "US010600596B2",
+          "url": "https://patentimages.storage.googleapis.com/4b/68/e3/74a3a2d50a6e85/US10600596.pdf"
+        },
+        {
+          "title": "A digital assessment system for evaluating kinetic tremor in essential tremor and Parkinson’s disease - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5845296/"
+        },
+        {
+          "title": "Deep Neural Skill Assessment and Transfer:",
+          "url": "https://www.ece.ualberta.ca/~xingyu/resources/C-IROS2021.pdf"
+        },
+        {
+          "title": "Deep Learning–Based Artificial Intelligence Algorithm to Classify Tremors from Hand‐Drawn Spirals - Anandapadmanabhan - 2025 - Movement Disorders - Wiley Online Library",
+          "url": "https://movementdisorders.onlinelibrary.wiley.com/doi/10.1002/mds.30176"
+        },
+        {
+          "title": "Trsper: a web-based application for Archimedes spiral analysis - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8800200/"
+        },
+        {
+          "title": "Quantification of tremor severity with a mobile tremor pen - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7452531/"
+        },
+        {
+          "title": "Digital Spiral Drawing in Parkinson's Research | NeuralCipher.ai",
+          "url": "https://api.neuralcipher.ai/en/blog/parkinson-dijital-spiral-cizim-testi"
+        },
+        {
+          "title": "NeuroSketch | Devpost",
+          "url": "https://devpost.com/software/neurosketch-k95rdj"
+        }
+      ]
+    },
+    {
+      "cache_key": "r14tremor3",
+      "links": [
+        {
+          "title": "Prediction of Essential Tremor Severity Based on TETRAS Using an LSTM Regression Model | Letters Dyn. Sys. Control | ASME Digital Collection",
+          "url": "https://doi.org/10.1115/1.4071058"
+        },
+        {
+          "title": "Frontiers | Accurate earthquake and mining tremor identification via a CEEMDAN-LSTM framework",
+          "url": "https://www.frontiersin.org/journals/physics/articles/10.3389/fphy.2025.1510629/full"
+        },
+        {
+          "title": "IEEE TRANSACTIONS ON NEURAL SYSTEMS AND REHABILITATION ENGINEERING, VOL. 15, NO. 3, SEPTEMBER 2007",
+          "url": "https://www.neuralrehabilitation.org/projects/tremor/Documents/TNSRE_Rocon%20et%20al_2007.pdf"
+        },
+        {
+          "title": "Essential Tremor is a disorder of the ne",
+          "url": "https://www.robolabo.etsit.upm.es/publications/TFG/TFG_VictorLopo.pdf"
+        },
+        {
+          "title": "",
+          "url": "https://www.robolabo.etsit.upm.es/aguti/publications/PasLopSen_etal22JBHI.pdf"
+        },
+        {
+          "title": "Manipulator Design and Operation for a Six-Degree-of-Freedom Handheld Tremor-Canceling Microsurgical Instrument - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4235034/"
+        },
+        {
+          "title": "Design and Control of an Ergonomic Wearable Full-Wrist",
+          "url": "https://vtechworks.lib.vt.edu/bitstream/handle/10919/113606/Wang_J_D_2023.pdf?sequence=1"
+        },
+        {
+          "title": "Estimation of time delay by coherence analysis - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S037843710401502X"
+        },
+        {
+          "title": "Microsoft Word - 46_ArnoKrueger.doc",
+          "url": "https://www.vismd.de/wp-content/uploads/legacy/krueger_2007_curac.pdf"
+        },
+        {
+          "title": "Hybrid Adaptive Sensor‑Fusion for Physiological Tremor Compensation in Miniaturized Surgical Robots — FREEDERIA",
+          "url": "https://freederia.com/hybrid-adaptive-sensor-fusion-for-physiological-tremor-compensation-in-miniaturized-surgical-robots/"
+        },
+        {
+          "title": "American Society of Mechanical Engineers - Submission",
+          "url": "https://idetc.secure-platform.com/a/solicitations/228/sessiongallery/15537/application/146284"
+        },
+        {
+          "title": "*A Real‑Time Multimodal Deep‑Learning System for Vision‑Guided Surgical Hand‑Tremor Compensation and Precision Enhancement* — FREEDERIA",
+          "url": "https://freederia.com/a-real-time-multimodal-deep-learning-system-for-vision-guided-surgical-hand-tremor-compensation-and-precision-enhancement/"
+        },
+        {
+          "title": "MEMS-based thermally-actuated image stabilizer for cellular phone camera",
+          "url": "https://ir.lib.nycu.edu.tw/server/api/core/bitstreams/35d68efe-320e-4b67-908d-b998e1ab7756/content"
+        },
+        {
+          "title": "Prediction of Pathological Tremor Signals Using Long Short-Term Memory Neural Networks",
+          "url": "https://openalex.org/W4297965196"
+        },
+        {
+          "title": "Classification of Kinematic and Electromyographic Signals Associated with Pathological Tremor Using Machine and Deep Learning - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9858124/"
+        },
+        {
+          "title": "Predicting the occurrence of wrist tremor based on electromyography using a hidden Markov model and entropy based learning algorithm - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S1746809419303209"
+        },
+        {
+          "title": "Development of a Laser Surgical Device with Vibration Compensation: Mechanical Design and Validation of Its Compliant Mechanism | MDPI",
+          "url": "https://www.mdpi.com/2076-3417/15/7/3686"
+        },
+        {
+          "title": "Vision-Based Control of a Handheld Surgical Micromanipulator with Virtual Fixtures - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3955368/"
+        }
+      ]
+    },
+    {
+      "cache_key": "r14tremor4",
+      "links": [
+        {
+          "title": "CEC — eContact! 12.4 — Sound-Initiated Drawing and Memory Impairment by Brenda Hutchinson",
+          "url": "https://econtact.ca/12_4/hutchinson_memory.html"
+        },
+        {
+          "title": "Full article: Introducing TRECEY: An algorithm for tremor compensation using eye-tracking during multimedia remote controller operation in Parkinson’s disease (PD)",
+          "url": "https://www.tandfonline.com/doi/full/10.1080/10400435.2025.2580504"
+        },
+        {
+          "title": "Development of a Laser Surgical Device with Vibration Compensation: Mechanical Design and Validation of Its Compliant Mechanism | MDPI",
+          "url": "https://www.mdpi.com/2076-3417/15/7/3686"
+        },
+        {
+          "title": "Combined accelerometry and writing analysis for quantifying tremor during focused ultrasound thalamotomy",
+          "url": "https://www.medrxiv.org/content/10.1101/2025.07.29.25332395v1.full.pdf"
+        },
+        {
+          "title": "Microsoft Word - TMECH_yang_finalv4.2",
+          "url": "https://publications.ri.cmu.edu/storage/publications/pub_files/2015/4/TMECH_Yang_accepted.pdf"
+        },
+        {
+          "title": "Mechanical vibration does not systematically reduce the tremor in essential tremor patients | Scientific Reports",
+          "url": "https://www.nature.com/articles/s41598-019-52988-8"
+        },
+        {
+          "title": "APPARATUS FOR USE IN DIAGNOSING AND/OR TREATING NEUROLOGICAL DISORDER - European Patent Office - EP 2568881 B1",
+          "url": "https://data.epo.org/publication-server/rest/v1.2/publication-dates/20210825/patents/EP2568881NWB1/document.pdf"
+        },
+        {
+          "title": "U.S. Patent for Apparatus for use in diagnosing and/or treating neurological disorder Patent (Patent # 9,005,133 issued April 14, 2015) - Justia Patents Search",
+          "url": "https://patents.justia.com/patent/9005133"
+        },
+        {
+          "title": "(PDF) Combined accelerometry and writing analysis for quantifying tremor during focused ultrasound thalamotomy",
+          "url": "https://www.researchgate.net/publication/394127848_Combined_accelerometry_and_writing_analysis_for_quantifying_tremor_during_focused_ultrasound_thalamotomy?_tp=eyJjb250ZXh0Ijp7InBhZ2UiOiJzY2llbnRpZmljQ29udHJpYnV0aW9ucyIsInByZXZpb3VzUGFnZSI6bnVsbCwic3ViUGFnZSI6bnVsbH19"
+        },
+        {
+          "title": "Technical report",
+          "url": "https://ailab.si/parkinsoncheck/pc-tr.pdf"
+        },
+        {
+          "title": "Design and validation of a novel mechatronic transmission system for a wearable tremor suppression device - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0921889016303190"
+        },
+        {
+          "title": "Tremoroton, a new free online platform for tremor analysis",
+          "url": "https://repositorio.udd.cl/bitstreams/8b416539-9567-4d10-a3fd-ddfb05aeba26/download"
+        },
+        {
+          "title": "Tremor Compensation by Use of a Mechatronic",
+          "url": "https://eudl.eu/pdf/10.4108/ICST.PERVASIVEHEALTH2010.8885"
+        },
+        {
+          "title": "Towards a Modular Pathological Tremor Simulation System Based on the Stewart Platform",
+          "url": "https://www.mdpi.com/1424-8220/23/22/9020"
+        },
+        {
+          "title": "How To Use The Calligraphy Tool In Inkscape (Settings, Strokes & Pen Tablet Guide)",
+          "url": "https://learnwithmn.com/tutorial/calligraphy-tool-inkscape/"
+        },
+        {
+          "title": "A robotic and virtual testing platform highlighting the promise of soft wearable actuators for wrist tremor suppression: Device",
+          "url": "https://doi.org/10.1016/j.device.2025.100719"
+        },
+        {
+          "title": "Robotic Tremor Simulation for Experimental Validation of Inertial Sensors in Neurodegenerative Disease Monitoring",
+          "url": "https://www.iris.unisa.it/handle/11386/4918598"
+        },
+        {
+          "title": "Active Control Experiments on a Smart Robotic Glass with End‐Point Control for Parkinson’s Patients - Ayana - 2023 - Applied Bionics and Biomechanics - Wiley Online Library",
+          "url": "https://doi.org/10.1155/2023%2F8310673"
+        },
+        {
+          "title": "Kinematic and Ergonomic Design of a Robotic Arm for Precision Laparoscopic Surgery",
+          "url": "https://arxiv.org/abs/2511.02167"
+        },
+        {
+          "title": "Brain Electrical Stimulation for Animal Navigation",
+          "url": "https://arxiv.org/abs/1901.02943"
+        }
+      ]
+    },
+    {
+      "cache_key": "r14tremorpapers",
+      "links": []
+    },
+    {
+      "cache_key": "r14tremorpapers2",
+      "links": [
+        {
+          "title": "Essential Tremor is a disorder of the ne",
+          "url": "https://www.robolabo.etsit.upm.es/publications/TFG/TFG_VictorLopo.pdf"
+        },
+        {
+          "title": "Classification of Kinematic and Electromyographic Signals Associated with Pathological Tremor Using Machine and Deep Learning - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9858124/"
+        },
+        {
+          "title": "IJABC: International Journal of Activity and Behavior Computing",
+          "url": "https://www.jstage.jst.go.jp/article/ijabc/2025/3/2025_127/_pdf/-char/en"
+        },
+        {
+          "title": "Prediction of Pathological Tremor Signals Using Long Short-Term Memory Neural Networks.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36170410/"
+        },
+        {
+          "title": "",
+          "url": "https://www.robolabo.etsit.upm.es/aguti/publications/PasLopSen_etal22JBHI.pdf"
+        },
+        {
+          "title": "Classification of Kinematic and Electromyographic Signals Associated with Pathological Tremor Using Machine and Deep Learning",
+          "url": "https://mdpi-res.com/d_attachment/entropy/entropy-25-00114/article_deploy/entropy-25-00114.pdf?version=1672913829"
+        },
+        {
+          "title": "Using Machine Learning for Predicting the Best Outcomes With Electrical Muscle Stimulation for Tremors in Parkinson’s Disease - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8461308/"
+        },
+        {
+          "title": "available",
+          "url": "https://storage.prod.researchhub.com/uploads/papers/2024/01/13/2024.01.11.575155.full.pdf"
+        },
+        {
+          "title": "Biological Cybernetics (2021) 115:219–235",
+          "url": "https://sites.me.ucsb.edu/~moehlis/moehlis_papers/tim_leveraging.pdf"
+        },
+        {
+          "title": "Differentiable Allpass Filters for Phase Response Estimation and Automatic Signal Alignment",
+          "url": "https://arxiv.org/abs/2306.00860"
+        },
+        {
+          "title": "Frontiers | Explainable multimodal feature fusion networks for Parkinson's disease prediction",
+          "url": "https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2026.1771281/full"
+        },
+        {
+          "title": "Peripheral nerve electrical stimulation system for inhibiting essential tremor - CN-117797404-A | GoVeda",
+          "url": "https://www.goveda.com/patent/CN-117797404-A"
+        },
+        {
+          "title": "Siamese Earthquake Transformer: A Pair‐Input Deep‐Learning Model for Earthquake Detection and Phase Picking on a Seismic Array - Xiao - 2021 - Journal of Geophysical Research: Solid Earth - Wiley Online Library",
+          "url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020JB021444"
+        },
+        {
+          "title": "CrossPan: A Comprehensive Benchmark for Cross-Sequence Pancreas MRI Segmentation and Generalization",
+          "url": "https://arxiv.org/abs/2604.18797"
+        },
+        {
+          "title": "Deep learning based time series analysis for breathing phase prediction in phase-gated proton therapy - IOPscience",
+          "url": "https://doi.org/10.1088/1361-6560%2Fae7eec"
+        },
+        {
+          "title": "Testing a multistation deep learning seismic phase picker trained on surface array data in a high frequency downhole setting | Geophysical Journal International | Oxford Academic",
+          "url": "https://dbpia.nl.go.kr/gji/article/247/1/ggag326/8762614?searchresult=1"
+        },
+        {
+          "title": "Learning Spatio-Temporal Radon Footprints for Assessment of Parkinson’s Dyskinesia | MDPI",
+          "url": "https://www.mdpi.com/2079-9292/13/3/635"
+        },
+        {
+          "title": "Microseismic monitoring with the quake neural operator | Nature Communications",
+          "url": "https://www.nature.com/articles/s41467-026-73965-6"
+        },
+        {
+          "title": "Frontiers | How Wearable Sensors Can Support Parkinson's Disease Diagnosis and Treatment: A Systematic Review",
+          "url": "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2017.00555/full"
+        }
+      ]
+    },
+    {
+      "cache_key": "r14handdata",
+      "links": [
+        {
+          "title": "UCI Machine Learning Repository",
+          "url": "https://archive.ics.uci.edu/dataset/395/parkinson%2B"
+        },
+        {
+          "title": "Screening of Parkinson’s Disease Using Geometric Features Extracted from Spiral Drawings - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8533717/"
+        },
+        {
+          "title": "GitHub - firekern/parkinson-handwriting-dl: Time-frequency analysis and a structure-preserving colour encoding for Parkinson's disease detection from PaHaW handwriting — evaluated under repeated nested cross-validation with the Nadeau–Bengio corrected t-test. · GitHub",
+          "url": "https://github.com/firekern/parkinson-handwriting-dl"
+        },
+        {
+          "title": "HandPD37: advanced handwriting dataset for Parkinson’s disease diagnosis using stack ensemble ML | Scientific Reports",
+          "url": "https://www.nature.com/articles/s41598-026-63031-y"
+        },
+        {
+          "title": "Subtle Micro-Tremor Fusion: A Cross-Modal AI Framework for Early Detection of Parkinson’s Disease from Voice and Handwriting Dynamics - ScienceDirect",
+          "url": "https://www.sciencedirect.com/org/science/article/pii/S1526149226000871"
+        },
+        {
+          "title": "A versatile computational algorithm for time-series data analysis and machine-learning models | npj Parkinson's Disease",
+          "url": "https://www.nature.com/articles/s41531-021-00240-4"
+        },
+        {
+          "title": "Pen-Based Recognition of Handwritten Digits - UCI Machine Learning Repository",
+          "url": "https://archive-beta.ics.uci.edu/dataset/81/pen%2Bbased%2Brecognition%2Bof%2Bhandwritten%2Bdigits"
+        },
+        {
+          "title": "Parkinson",
+          "url": "https://figshare.com/articles/dataset/Parkinson/21800738"
+        },
+        {
+          "title": "Bio-Inspired Deep Learning for Parkinson’s Disease Detection: A Comparative Study Based on Vocal Biomarkers and Archimedean Spiral Analysis",
+          "url": "https://www.mdpi.com/2313-7673/11/6/369"
+        },
+        {
+          "title": "Applications of machine learning for computer-aided diagnosis of Parkinson’s disease: progress and benchmark case study - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12397128/"
+        },
+        {
+          "title": "GitHub - PaulLerner/deep_parkinson_handwriting · GitHub",
+          "url": "https://github.com/PaulLerner/deep_parkinson_handwriting"
+        },
+        {
+          "title": "Transaction / Regular Paper Title",
+          "url": "https://archive.ics.uci.edu/ml/machine-learning-databases/00507/WISDM-dataset-description.pdf"
+        },
+        {
+          "title": "Microsoft Word - IJDDT,Vol16,Issue53s,Article15",
+          "url": "https://impactfactor.org/PDF/IJDDT/16/IJDDT%2CVol16%2CIssue53s%2CArticle15.pdf"
+        },
+        {
+          "title": "Identification and Monitoring of Parkinson's Disease Dysgraphia Based on Fractional-Order Derivatives of Online Handwriting",
+          "url": "https://dspace.vut.cz/bitstreams/fc80c5c6-5dd1-4c53-8f0d-7e16e7387545/download"
+        },
+        {
+          "title": "DOCTORAL THESIS",
+          "url": "https://digikogu.taltech.ee/en/Download/949b4d7b-091d-43c5-a4a1-cbb485f779d9"
+        },
+        {
+          "title": "The “Parkinson’s disease h",
+          "url": "https://assets-eu.researchsquare.com/files/rs-2343531/v1_covered.pdf?c=1670519682"
+        },
+        {
+          "title": "UNIVERSIDAD POLITÉCNICA DE MADRID",
+          "url": "https://theses.eurasip.org/wp-content/uploads/gil-martin-manuel-contributions-to-human-motion-modeling-and-recognition-using-non-intrusive-wearable-sensors.pdf"
+        },
+        {
+          "title": "Evaluation of handwriting kinematics and pressure for differential diagnosis of Parkinson's disease",
+          "url": "https://arxiv.org/abs/2411.03044"
+        },
+        {
+          "title": "Sequence-based Dynamic Handwriting Analysis for Parkinson's Disease Detection with One-dimensional Convolutions and BiGRUs",
+          "url": "https://arxiv.org/abs/2101.09461"
+        },
+        {
+          "title": "Dynamically enhanced static handwriting representation for Parkinson's disease detection",
+          "url": "https://arxiv.org/abs/2405.13438"
+        },
+        {
+          "title": "A comparative study of in-air trajectories at short and long distances in online handwriting",
+          "url": "https://arxiv.org/abs/2202.12237"
+        },
+        {
+          "title": "Does anyone have a copy of the ICDAR2013 Chinese Handwriting Competition Dataset? [R]",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1tr9cls/does_anyone_have_a_copy_of_the_icdar2013_chinese/"
+        },
+        {
+          "title": "MovAlyzeR",
+          "url": "https://en.wikipedia.org/wiki/MovAlyzeR"
+        }
+      ]
+    },
+    {
+      "cache_key": "r14ucidata",
+      "links": [
+        {
+          "title": "UCI Machine Learning Repository",
+          "url": "https://archive.ics.uci.edu/dataset/395/parkinson%2B"
+        }
+      ]
+    },
+    {
+      "cache_key": "r14ucidownload",
+      "links": []
+    }
+  ]
+}

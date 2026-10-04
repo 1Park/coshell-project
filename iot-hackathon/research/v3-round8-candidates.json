@@ -1,0 +1,94 @@
+[
+  {
+    "id": "N054",
+    "name": "SeamRain — 재사용 방수 의류의 누수 경로를 능동 분사로 찾는 수선 받침",
+    "status": "OPEN",
+    "stage": "v3_round8",
+    "duplicate_check": "F07/S2-03/R13 대조. 강도 곡선이나 영상 불량 대신 실제 통과한 물로 누수 경로를 찾는 작업.",
+    "reason": "G06/G08/G09 OPEN: 물이 번져 나온 위치와 실제 유입 위치를 구분할 능동 분사, 순차 분사와 비교한 학습 이득, 젖은 의류를 지지하는 기구 범위 필요.",
+    "sources": []
+  },
+  {
+    "id": "N055",
+    "name": "RopeRecovery — 사람이 놓친 리듬에 맞춰 다시 진입할 틈을 만드는 자동 줄넘기",
+    "status": "REJECTED",
+    "stage": "v3_round8",
+    "duplicate_check": "N001/N018 대조. 힘 재현이나 운반 동기화 대신 실제 회전 줄과 사람의 재진입 리듬을 조정.",
+    "reason": "G07/G09 FAIL: 인간-로봇 협동 줄 돌리기와 리듬 동조 연구가 이미 있음. 큰 회전 줄의 위상·토크·동기화 지그를 작은 안전한 시연으로 줄이면 원래 사람의 재진입 과제를 보여주기 어려움.",
+    "sources": [
+      "https://www.tandfonline.com/doi/abs/10.1163/156855303321125631",
+      "https://link.springer.com/article/10.1186/1687-4722-2012-12",
+      "https://www.pbs.org/video/creating-a-robotic-double-dutch-machine-kczi0v/"
+    ]
+  },
+  {
+    "id": "N056",
+    "name": "FeedRecall — 먹고 남은 수조 사료만 골라 회수하는 급식 받침",
+    "status": "REJECTED",
+    "stage": "v3_round8",
+    "duplicate_check": "N044/N048과 대조. 사람의 배수 이물질 보존/음식 배분 대신 수조 잔여 사료 회수.",
+    "reason": "G07/G13 FAIL: 미섭취 사료를 찾아 제거하는 자율 수조 청소 연구가 있음. 고정 급식 받침으로 좁히면 일정 시간 뒤 통째로 회수하는 간단한 방식이 강하며, AI로 달라지는 사용자 결과가 부족.",
+    "sources": [
+      "https://arxiv.org/abs/2304.08185",
+      "https://par.nsf.gov/servlets/purl/10169904"
+    ]
+  },
+  {
+    "id": "N057",
+    "name": "LabelLock — 옷의 관리 라벨을 읽어 실제 세탁 다이얼의 선택 범위를 촉각으로 제한",
+    "status": "OPEN",
+    "stage": "v3_round8",
+    "duplicate_check": "R07/R28/N010 대조. 개인 진동 언어/제스처 리모컨/전력 배분 대신 라벨의 조건과 실제 기계 옵션을 연결하는 물리 조작 보조.",
+    "reason": "G02/G07/G09/G13 OPEN: 관리 라벨 앱·자동 세탁 설정·햅틱 가전 노브와 핵심 흐름 차이, 실제 다이얼 부착과 직접 시연, 종이 라벨만 읽고 보편적 세탁 안전을 주장하지 않는 범위 필요.",
+    "sources": [
+      "https://patents.google.com/patent/US20080127999A1"
+    ]
+  },
+  {
+    "id": "N058",
+    "name": "FootTypeGuard — 장착 노루발을 보고 부적합한 재봉 다이얼 선택을 막기",
+    "status": "REJECTED",
+    "stage": "v3_round8",
+    "duplicate_check": "R05/R13/N057 대조. 범용 모터 안전이나 천 결함 검사 대신 장착 공구와 선택된 스티치의 호환 확인.",
+    "reason": "G07 FAIL: HUSQVARNA VIKING 계열 공식 설명서에 카메라·신경망 노루발 인식, 권장 스티치와의 불일치 및 장착 오류 안내가 있음. 경고를 다이얼 저항으로 바꾸는 것만으로 핵심 문제·흐름의 차별화가 부족.",
+    "sources": [
+      "https://svpworldwide.widen.net/content/p38crai6az/pdf/User-Manual_DE3_FR.pdf?u=cko5pg",
+      "https://ultimatesewingcompany.com/wp-content/uploads/2025/10/User-Manual_DE3_EN.pdf"
+    ]
+  },
+  {
+    "id": "N059",
+    "name": "RedactRoll — 택배 라벨의 개인정보를 찾아 실제 표면에 가림 인쇄",
+    "status": "REJECTED",
+    "stage": "v3_round8",
+    "duplicate_check": "N046과 대조. 의미 소거 게임 대신 재사용 포장의 개인정보 제거. 같은 XY 접촉 기구를 사용하는 응용 변형.",
+    "reason": "G02/G06/G13 FAIL: 택배 상자 재사용에서는 라벨 전체를 제거/덮는 간단한 대안이 강함. 기존 운송 바코드를 굳이 보존할 이유가 약함. AI로 영역만 선택해도 잉크 밑 원문의 복구 가능성은 해결되지 않음. 검색에서 나온 AI 블로그의 스마트 파쇄기 주장을 실제 제품 근거로 사용하지 않음.",
+    "sources": [
+      "https://www.mdpi.com/2076-3417/15/9/4923",
+      "https://help.shipstation.com/hc/en-us/articles/360045435152-Why-does-my-label-say-it-s-been-redacted"
+    ]
+  },
+  {
+    "id": "N060",
+    "name": "ReachCanvas — 머리 붓으로 그리는 사람에게 다음 작업 영역을 가져오는 이동 이젤",
+    "status": "OPEN",
+    "stage": "v3_round8",
+    "duplicate_check": "N018/N037/R28 대조. 힘 지도·고정 클램프·제스처 리모컨 대신 물리 캔버스의 도달 범위를 옮기는 보조.",
+    "reason": "G06/G07/G08/G13 OPEN: 수동 위치 조절 이젤·스위치 이동 대비 학습이 필요한가. 붓이 닿는 중과 이동을 원하는 순간의 의도를 혼동하지 않는 명시적 입력/관측 필요.",
+    "sources": [
+      "https://remap.org.uk/solutions/artists-head-harness/"
+    ]
+  },
+  {
+    "id": "N061",
+    "name": "StoryBody — CAD 없이 만든 종이 인형의 줄 운동을 학습해 애니메이션 재현",
+    "status": "REJECTED",
+    "stage": "v3_round8",
+    "parent_id": "N049",
+    "duplicate_check": "N049와 직접 비교. 인형 설계 파일 대신 짧은 실제 동작 교정으로 모델을 얻는 변형.",
+    "reason": "G01/G07/G13 FAIL: CAD 입력을 교정 데이터로 바꾸지만 줄 인형에 목표 동작을 재현하는 핵심 사용자 흐름은 N049와 동일. 단순 녹화 재생·모터별 교정 대비 새로운 작업 가치도 부족하여 다시 집계해 통과시키지 않음.",
+    "sources": [
+      "https://crl.ethz.ch/papers/puppetMaster.pdf"
+    ]
+  }
+]

@@ -1,0 +1,48 @@
+W1004 22:19:38.806000 32114 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+W1004 22:19:38.828000 32114 torch/utils/_pytree.py:630] <enum 'KernelPreference'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+[cpuinfo_utils.cpp:71] Reading file /sys/devices/soc0/image_version
+[cpuinfo_utils.cpp:87] Failed to open midr file /sys/devices/soc0/image_version
+[cpuinfo_utils.cpp:167] Number of efficient cores 4
+{
+  "scope": "Actual local macOS CPU ExecuTorch/XNNPACK export and inference, not VENTUNO or NPU.",
+  "python": "3.14.3",
+  "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+  "torch": "2.14.1",
+  "executorch": "1.5.1",
+  "model_bytes": 318400,
+  "input_shape": [
+    1,
+    32
+  ],
+  "output_shape": [
+    1,
+    32,
+    16
+  ],
+  "cases": 52,
+  "max_abs_logit_error": 2.384185791015625e-06,
+  "allclose_rtol": 0.001,
+  "allclose_atol": 0.0001,
+  "local_call_median_ms": 0.2732920111157,
+  "delegates": [
+    "XnnpackBackend",
+    "XnnpackBackend",
+    "XnnpackBackend",
+    "XnnpackBackend",
+    "XnnpackBackend",
+    "XnnpackBackend",
+    "XnnpackBackend",
+    "XnnpackBackend",
+    "XnnpackBackend",
+    "XnnpackBackend",
+    "XnnpackBackend",
+    "XnnpackBackend",
+    "XnnpackBackend",
+    "XnnpackBackend",
+    "XnnpackBackend"
+  ],
+  "limits": [
+    "Host CPU parity does not validate embedded wiring, punching, or music quality.",
+    "Timing includes Python execute and output clone; no controlled benchmark or board speed claim."
+  ]
+}

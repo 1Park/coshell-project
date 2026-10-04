@@ -1,0 +1,564 @@
+{
+  "scope": "Offline symbolic infilling only; no physical punch, listening study, or VENTUNO/ExecuTorch runtime test.",
+  "torch_version": "2.14.1",
+  "training_device": "mps",
+  "seed": 86,
+  "preprocessing_counts": {
+    "files_seen": 433,
+    "nonmonophonic_or_off_grid": 74,
+    "nonmajor_or_no_key_parts": 194,
+    "files_with_windows": 158,
+    "files_without_windows": 7
+  },
+  "windows_by_partition": {
+    "train": 406,
+    "val": 68,
+    "test": 52
+  },
+  "pieces_by_partition": {
+    "train": [
+      "bwv115.6",
+      "bwv116.6",
+      "bwv119.9",
+      "bwv127.5",
+      "bwv13.6",
+      "bwv133.6",
+      "bwv139.6",
+      "bwv144.3",
+      "bwv151.5",
+      "bwv153.9",
+      "bwv154.3",
+      "bwv156.6",
+      "bwv157.5",
+      "bwv159.5",
+      "bwv169.7",
+      "bwv17.7",
+      "bwv174.5",
+      "bwv180.7",
+      "bwv19.7",
+      "bwv190.7",
+      "bwv197.5",
+      "bwv20.7",
+      "bwv244.10",
+      "bwv244.17",
+      "bwv244.32",
+      "bwv245.22",
+      "bwv245.26",
+      "bwv245.3",
+      "bwv245.40",
+      "bwv248.12",
+      "bwv248.23",
+      "bwv248.33",
+      "bwv248.46",
+      "bwv248.53",
+      "bwv248.9",
+      "bwv252",
+      "bwv253",
+      "bwv255",
+      "bwv262",
+      "bwv263",
+      "bwv264",
+      "bwv267",
+      "bwv268",
+      "bwv269",
+      "bwv27.6",
+      "bwv271",
+      "bwv281",
+      "bwv282",
+      "bwv287",
+      "bwv292",
+      "bwv293",
+      "bwv294",
+      "bwv298",
+      "bwv299",
+      "bwv3.6",
+      "bwv302",
+      "bwv306",
+      "bwv317",
+      "bwv318",
+      "bwv32.6",
+      "bwv320",
+      "bwv321",
+      "bwv325",
+      "bwv327",
+      "bwv329",
+      "bwv33.6",
+      "bwv339",
+      "bwv340",
+      "bwv355",
+      "bwv359",
+      "bwv361",
+      "bwv367",
+      "bwv370",
+      "bwv373",
+      "bwv375",
+      "bwv376",
+      "bwv378",
+      "bwv379",
+      "bwv385",
+      "bwv388",
+      "bwv39.7",
+      "bwv390",
+      "bwv391",
+      "bwv394",
+      "bwv397",
+      "bwv401",
+      "bwv407",
+      "bwv414",
+      "bwv415",
+      "bwv426",
+      "bwv427",
+      "bwv428",
+      "bwv429",
+      "bwv431",
+      "bwv433",
+      "bwv436",
+      "bwv438",
+      "bwv44.7",
+      "bwv45.7",
+      "bwv46.6",
+      "bwv48.3",
+      "bwv52.6",
+      "bwv55.5",
+      "bwv59.3",
+      "bwv60.5",
+      "bwv64.4",
+      "bwv69.6",
+      "bwv70.7",
+      "bwv79.6",
+      "bwv9.7",
+      "bwv99.6"
+    ],
+    "val": [
+      "bwv104.6",
+      "bwv124.6",
+      "bwv140.7",
+      "bwv145",
+      "bwv164.6",
+      "bwv165.6",
+      "bwv194.12",
+      "bwv290",
+      "bwv296",
+      "bwv304",
+      "bwv346",
+      "bwv349",
+      "bwv368",
+      "bwv37.6",
+      "bwv400",
+      "bwv402",
+      "bwv411",
+      "bwv57.8",
+      "bwv67.7"
+    ],
+    "test": [
+      "bwv11.6",
+      "bwv130.6",
+      "bwv248.28",
+      "bwv248.59",
+      "bwv29.8",
+      "bwv303",
+      "bwv307",
+      "bwv308",
+      "bwv322",
+      "bwv365",
+      "bwv371",
+      "bwv377",
+      "bwv409",
+      "bwv43.11",
+      "bwv65.2",
+      "bwv67.4",
+      "bwv80.8"
+    ]
+  },
+  "shared_window_components": 127,
+  "params": 71120,
+  "epochs": 40,
+  "validation_log": [
+    {
+      "epoch": 1,
+      "validation_masked_nll": 1.598324179649353
+    },
+    {
+      "epoch": 2,
+      "validation_masked_nll": 1.5632699728012085
+    },
+    {
+      "epoch": 3,
+      "validation_masked_nll": 1.563595175743103
+    },
+    {
+      "epoch": 4,
+      "validation_masked_nll": 1.5301793813705444
+    },
+    {
+      "epoch": 5,
+      "validation_masked_nll": 1.499504566192627
+    },
+    {
+      "epoch": 6,
+      "validation_masked_nll": 1.4757628440856934
+    },
+    {
+      "epoch": 7,
+      "validation_masked_nll": 1.4510469436645508
+    },
+    {
+      "epoch": 8,
+      "validation_masked_nll": 1.3841253519058228
+    },
+    {
+      "epoch": 9,
+      "validation_masked_nll": 1.2284690141677856
+    },
+    {
+      "epoch": 10,
+      "validation_masked_nll": 1.1712757349014282
+    },
+    {
+      "epoch": 11,
+      "validation_masked_nll": 1.1633834838867188
+    },
+    {
+      "epoch": 12,
+      "validation_masked_nll": 1.1496765613555908
+    },
+    {
+      "epoch": 13,
+      "validation_masked_nll": 1.1488059759140015
+    },
+    {
+      "epoch": 14,
+      "validation_masked_nll": 1.1346831321716309
+    },
+    {
+      "epoch": 15,
+      "validation_masked_nll": 1.1280336380004883
+    },
+    {
+      "epoch": 16,
+      "validation_masked_nll": 1.129978060722351
+    },
+    {
+      "epoch": 17,
+      "validation_masked_nll": 1.121854543685913
+    },
+    {
+      "epoch": 18,
+      "validation_masked_nll": 1.1417293548583984
+    },
+    {
+      "epoch": 19,
+      "validation_masked_nll": 1.1311686038970947
+    },
+    {
+      "epoch": 20,
+      "validation_masked_nll": 1.1206694841384888
+    },
+    {
+      "epoch": 21,
+      "validation_masked_nll": 1.124507188796997
+    },
+    {
+      "epoch": 22,
+      "validation_masked_nll": 1.1241425275802612
+    },
+    {
+      "epoch": 23,
+      "validation_masked_nll": 1.1192704439163208
+    },
+    {
+      "epoch": 24,
+      "validation_masked_nll": 1.1240644454956055
+    },
+    {
+      "epoch": 25,
+      "validation_masked_nll": 1.119712233543396
+    },
+    {
+      "epoch": 26,
+      "validation_masked_nll": 1.1213479042053223
+    },
+    {
+      "epoch": 27,
+      "validation_masked_nll": 1.120117425918579
+    },
+    {
+      "epoch": 28,
+      "validation_masked_nll": 1.1161710023880005
+    },
+    {
+      "epoch": 29,
+      "validation_masked_nll": 1.1149216890335083
+    },
+    {
+      "epoch": 30,
+      "validation_masked_nll": 1.134619951248169
+    },
+    {
+      "epoch": 31,
+      "validation_masked_nll": 1.1210339069366455
+    },
+    {
+      "epoch": 32,
+      "validation_masked_nll": 1.1277868747711182
+    },
+    {
+      "epoch": 33,
+      "validation_masked_nll": 1.1205432415008545
+    },
+    {
+      "epoch": 34,
+      "validation_masked_nll": 1.1219804286956787
+    },
+    {
+      "epoch": 35,
+      "validation_masked_nll": 1.1183010339736938
+    },
+    {
+      "epoch": 36,
+      "validation_masked_nll": 1.1181784868240356
+    },
+    {
+      "epoch": 37,
+      "validation_masked_nll": 1.113032341003418
+    },
+    {
+      "epoch": 38,
+      "validation_masked_nll": 1.1200929880142212
+    },
+    {
+      "epoch": 39,
+      "validation_masked_nll": 1.124362826347351
+    },
+    {
+      "epoch": 40,
+      "validation_masked_nll": 1.1160392761230469
+    }
+  ],
+  "best_validation_nll": 1.113032341003418,
+  "transformer": {
+    "masked_nll": 1.0115605592727661,
+    "masked_accuracy": 0.6612215909090909,
+    "masked_onset_pitch_accuracy": 0.1145374449339207,
+    "masked_cells": 1408,
+    "masked_true_onsets": 454
+  },
+  "order2_phase_markov_bridge": {
+    "masked_nll": 1.3007897771605867,
+    "masked_accuracy": 0.6512784090909091,
+    "masked_onset_pitch_accuracy": 0.2511013215859031,
+    "masked_cells": 1408,
+    "masked_true_onsets": 454
+  },
+  "trace_initial_tokens": [
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    9,
+    16,
+    10,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16
+  ],
+  "trace": [
+    {
+      "turn": 1,
+      "additions": [
+        {
+          "column": 0,
+          "midi": 72
+        },
+        {
+          "column": 16,
+          "midi": 72
+        },
+        {
+          "column": 8,
+          "midi": 76
+        },
+        {
+          "column": 24,
+          "midi": 76
+        }
+      ],
+      "tokens": [
+        8,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        10,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        8,
+        16,
+        9,
+        16,
+        10,
+        16,
+        16,
+        16,
+        10,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16
+      ]
+    },
+    {
+      "turn": 2,
+      "additions": [
+        {
+          "column": 4,
+          "midi": 74
+        },
+        {
+          "column": 2,
+          "midi": 74
+        },
+        {
+          "column": 10,
+          "midi": 74
+        },
+        {
+          "column": 6,
+          "midi": 74
+        }
+      ],
+      "tokens": [
+        8,
+        16,
+        9,
+        16,
+        9,
+        16,
+        9,
+        16,
+        10,
+        16,
+        9,
+        16,
+        16,
+        16,
+        16,
+        16,
+        8,
+        16,
+        9,
+        16,
+        10,
+        16,
+        16,
+        16,
+        10,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16
+      ]
+    },
+    {
+      "turn": 3,
+      "additions": [
+        {
+          "column": 26,
+          "midi": 76
+        },
+        {
+          "column": 22,
+          "midi": 76
+        },
+        {
+          "column": 28,
+          "midi": 76
+        },
+        {
+          "column": 12,
+          "midi": 76
+        }
+      ],
+      "tokens": [
+        8,
+        16,
+        9,
+        16,
+        9,
+        16,
+        9,
+        16,
+        10,
+        16,
+        9,
+        16,
+        10,
+        16,
+        16,
+        16,
+        8,
+        16,
+        9,
+        16,
+        10,
+        16,
+        10,
+        16,
+        10,
+        16,
+        10,
+        16,
+        10,
+        16,
+        16,
+        16
+      ]
+    }
+  ],
+  "original_holes_preserved": true,
+  "export_status": "torch_export_succeeded_not_executorch",
+  "wall_seconds": 4.861722230911255,
+  "limits": [
+    "Historical score infilling is not preference, musical quality, or co-creation value.",
+    "Music21 supplies 433 Bach corpus files; filtered windows are not 433 independent compositions.",
+    "Only major-key monophonic eighth-grid diatonic windows; chromatic windows omitted, not rounded.",
+    "Physical music-box range and minimum repeat distance must be calibrated on actual kit.",
+    "Export to Torch IR is not ExecuTorch execution or NPU acceleration."
+  ]
+}
